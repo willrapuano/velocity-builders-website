@@ -1,25 +1,7 @@
-import { createClient } from "@sanity/client";
+import { client } from "@/sanity/client";
 import { fallbackContent, SiteContent } from "@/data/site";
 
-const sanityProjectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
-const sanityDataset = process.env.NEXT_PUBLIC_SANITY_DATASET ?? "production";
-const sanityToken = process.env.SANITY_TOKEN_VELOCITY ?? process.env.SANITY_API_TOKEN ?? process.env.SANITY_AUTH_TOKEN;
-
-const hasSanityConfig = Boolean(sanityProjectId && sanityDataset && sanityToken);
-
-const client = hasSanityConfig
-  ? createClient({
-      projectId: sanityProjectId!,
-      dataset: sanityDataset,
-      apiVersion: "2024-01-01",
-      token: sanityToken,
-      useCdn: false,
-    })
-  : null;
-
 export async function getSiteContent(): Promise<SiteContent> {
-  if (!client) return fallbackContent;
-
   try {
     const [homepage, settings, services, testimonials] = await Promise.all([
       client.fetch(`*[_type == "homepage"][0]`),
@@ -28,7 +10,6 @@ export async function getSiteContent(): Promise<SiteContent> {
       client.fetch(`*[_type == "testimonial"] | order(order asc)`),
     ]);
 
-    // Map Sanity services → SiteContent services
     const mappedServices = services?.length
       ? services.map((s: any) => ({
           title: s.title ?? "",
@@ -38,7 +19,6 @@ export async function getSiteContent(): Promise<SiteContent> {
         }))
       : fallbackContent.services;
 
-    // Map Sanity testimonials → SiteContent testimonials
     const mappedTestimonials = testimonials?.length
       ? testimonials.map((t: any) => ({
           quote: t.quote ?? "",
@@ -48,7 +28,6 @@ export async function getSiteContent(): Promise<SiteContent> {
         }))
       : fallbackContent.testimonials;
 
-    // Map Sanity homepage stats → hero stats
     const mappedStats = homepage?.stats?.length
       ? homepage.stats.map((s: any) => ({ label: s.label, value: s.value }))
       : fallbackContent.hero.stats;
