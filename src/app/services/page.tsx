@@ -1,16 +1,49 @@
 import { getSiteContent } from "@/lib/content";
 import { SectionHeader } from "@/components/SectionHeader";
 import { ServiceCard } from "@/components/ServiceCard";
+import { breadcrumbSchema, faqSchema, professionalServiceSchema } from "@/lib/seo/schema";
+
+const path = "/services";
 
 export const metadata = {
   title: "Services | Velocity Builders, LLC",
   description: "CRM automation, IDX websites, listing launch marketing, and nurture campaigns built for growth teams.",
+  alternates: {
+    canonical: path,
+  },
 };
+
+const serviceFaqs = [
+  {
+    question: "How fast can Velocity launch a new automation or campaign sprint?",
+    answer: "Most launch intensives go live in roughly 10 business days after kickoff and data intake.",
+  },
+  {
+    question: "Do these services support both title and real estate growth goals?",
+    answer: "Yes. Engagements are structured to improve lead conversion while reinforcing partner relationships that drive title referrals.",
+  },
+];
 
 export default async function ServicesPage() {
   const content = await getSiteContent();
+  const crumbs = [
+    { name: "Home", path: "/" },
+    { name: "Services", path },
+  ];
+  const schemaBlocks = [
+    professionalServiceSchema({
+      description: "CRM automation, IDX websites, and listing launch marketing for Northern Virginia growth teams.",
+      path,
+    }),
+    breadcrumbSchema(crumbs),
+    faqSchema(serviceFaqs),
+  ];
+
   return (
     <div className="mx-auto max-w-5xl space-y-12 px-6 py-16">
+      {schemaBlocks.map((schema, index) => (
+        <script key={index} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      ))}
       <SectionHeader
         eyebrow="Offerings"
         title="Everything a modern title + marketing team needs"

@@ -31,6 +31,12 @@ export default async function Home() {
             >
               {content.hero.secondaryCta}
             </Link>
+            <Link
+              href="/locations"
+              className="rounded-full border border-emerald-300/60 px-6 py-3 text-center text-sm font-semibold text-emerald-200 transition hover:bg-emerald-300/10"
+            >
+              Explore local SEO hubs
+            </Link>
           </div>
         </div>
         <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 to-transparent p-6 shadow-glow">
