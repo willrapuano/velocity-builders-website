@@ -2,7 +2,7 @@
 title: "How Real Estate Agents Can Generate More Leads with Automated Marketing"
 date: "2026-03-06"
 excerpt: "Most agents are still manually chasing leads. Here's how automation can 3x your pipeline without hiring another assistant."
-author: "Velocity Builders"
+author: "Will Rapuano | Velocity Builders"
 tags: ["marketing systems", "lead generation", "automation", "real estate agents", "CRM"]
 featuredImage: "/blog/automated-leads.jpg"
 slug: "real-estate-agents-automated-marketing-leads"
@@ -72,4 +72,4 @@ The agents who build these systems now will dominate their markets for the next 
 
 ---
 
-*Velocity Builders helps real estate agents and teams build automated marketing systems that generate leads, nurture prospects, and close more deals. [Get in touch](/contact) to see what we can build for you.*
+*— Will Rapuano, Velocity Builders. We help real estate agents and teams build automated marketing systems that generate leads, nurture prospects, and close more deals. [Get in touch](/contact) to see what we can build for you.*

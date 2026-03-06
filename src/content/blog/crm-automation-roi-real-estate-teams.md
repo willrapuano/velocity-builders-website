@@ -2,7 +2,7 @@
 title: "The ROI of CRM Automation for Real Estate Teams"
 date: "2026-03-01"
 excerpt: "Real estate teams spend thousands on CRMs they barely use. Here's how to actually get ROI from your tech stack."
-author: "Velocity Builders"
+author: "Will Rapuano | Velocity Builders"
 tags: ["marketing systems", "CRM", "automation", "real estate teams", "ROI"]
 featuredImage: "/blog/crm-roi.jpg"
 slug: "crm-automation-roi-real-estate-teams"
@@ -113,4 +113,4 @@ That's why the ROI isn't in the software purchase — it's in the setup, trainin
 
 ---
 
-*Velocity Builders specializes in CRM implementation and automation for real estate teams. We build the workflows, train your agents, and optimize your system so you actually get the ROI you're paying for. [See what we can do for your team](/contact).*
+*— Will Rapuano, Velocity Builders. We specialize in CRM implementation and automation for real estate teams. We build the workflows, train your agents, and optimize your system so you actually get the ROI you're paying for. [See what we can do for your team](/contact).*

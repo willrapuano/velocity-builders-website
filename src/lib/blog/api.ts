@@ -46,7 +46,7 @@ export function getPostMeta(slug: string): PostMeta | null {
     title: data.title || "",
     date: data.date || "",
     excerpt: data.excerpt || "",
-    author: data.author || "Velocity Builders",
+    author: data.author || "Will Rapuano | Velocity Builders",
     tags: data.tags || [],
     featuredImage: data.featuredImage || undefined,
   };
@@ -63,7 +63,7 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
     title: data.title || "",
     date: data.date || "",
     excerpt: data.excerpt || "",
-    author: data.author || "Velocity Builders",
+    author: data.author || "Will Rapuano | Velocity Builders",
     tags: data.tags || [],
     featuredImage: data.featuredImage || undefined,
     contentHtml: processed.toString(),

@@ -2,7 +2,7 @@
 title: "Why Loan Officers Need a Digital Marketing Strategy in 2026"
 date: "2026-03-04"
 excerpt: "Referral-only pipelines are drying up. Loan officers who invest in digital marketing now will own the next rate cycle."
-author: "Velocity Builders"
+author: "Will Rapuano | Velocity Builders"
 tags: ["marketing systems", "loan officers", "digital marketing", "mortgage", "lead generation"]
 featuredImage: "/blog/lo-digital-marketing.jpg"
 slug: "loan-officers-digital-marketing-strategy-2026"
@@ -79,4 +79,4 @@ The best time to build your marketing machine is before the next rate cycle. Whe
 
 ---
 
-*Velocity Builders builds digital marketing systems for loan officers and mortgage teams — websites, lead funnels, CRM automation, and content strategies that generate inbound business. [Let's talk](/contact).*
+*— Will Rapuano, Velocity Builders. We build digital marketing systems for loan officers and mortgage teams — websites, lead funnels, CRM automation, and content strategies that generate inbound business. [Let's talk](/contact).*

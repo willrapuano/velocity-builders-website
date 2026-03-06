@@ -31,21 +31,15 @@ export default function BlogIndex() {
       {
         "@type": "CollectionPage",
         name: "Blog — Velocity Builders",
-        description:
-          "Marketing strategies, automation tips, and growth insights for real estate agents and loan officers.",
+        description: "Marketing strategies, automation tips, and growth insights for real estate agents and loan officers.",
         url: "https://velocitybuilders.io/blog/",
-        isPartOf: {
-          "@type": "WebSite",
-          name: "Velocity Builders",
-          url: "https://velocitybuilders.io",
-        },
+        isPartOf: { "@type": "WebSite", name: "Velocity Builders", url: "https://velocitybuilders.io" },
       },
       {
         "@type": "Organization",
         name: "Velocity Builders",
         url: "https://velocitybuilders.io",
-        description:
-          "Real estate marketing agency specializing in automation, CRM, SEO, and lead generation for realtors and loan officers.",
+        description: "Real estate marketing agency specializing in automation, CRM, SEO, and lead generation for realtors and loan officers.",
         founder: { "@type": "Person", name: "Will Rapuano" },
       },
     ],
@@ -53,13 +47,10 @@ export default function BlogIndex() {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <main className="max-w-5xl mx-auto px-6 py-16">
-        <h1 className="text-4xl font-bold mb-4">Blog</h1>
-        <p className="text-gray-600 mb-8 text-lg">
+        <h1 className="text-4xl font-bold text-white mb-4">Blog</h1>
+        <p className="text-slate-400 mb-8 text-lg">
           Growth strategies for real estate agents and loan officers — lead gen,
           CRM automation, AI tools, title insurance, and more.
         </p>
@@ -70,7 +61,7 @@ export default function BlogIndex() {
             <Link
               key={cat.slug}
               href={`/blog/category/${cat.slug}`}
-              className="px-4 py-2 rounded-full border border-gray-300 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:border-gray-400 transition"
+              className="px-4 py-2 rounded-full border border-slate-600 text-sm font-medium text-slate-300 hover:border-emerald-400 hover:text-emerald-400 transition"
             >
               {cat.name}
             </Link>
@@ -78,17 +69,17 @@ export default function BlogIndex() {
         </div>
 
         {posts.length === 0 ? (
-          <p className="text-gray-500">No posts yet. Check back soon.</p>
+          <p className="text-slate-500">No posts yet. Check back soon.</p>
         ) : (
-          <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {posts.map((post) => (
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
-                className="group block rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow"
+                className="group block rounded-xl border border-white/10 bg-white/5 overflow-hidden hover:border-emerald-400/40 hover:bg-white/10 transition-all"
               >
                 {post.featuredImage && (
-                  <div className="aspect-video bg-gray-100 overflow-hidden">
+                  <div className="aspect-video overflow-hidden bg-slate-800">
                     <img
                       src={post.featuredImage}
                       alt={post.title}
@@ -97,19 +88,14 @@ export default function BlogIndex() {
                   </div>
                 )}
                 <div className="p-5">
-                  <time className="text-sm text-gray-400">{post.date}</time>
-                  <h2 className="text-xl font-semibold mt-1 mb-2 group-hover:text-blue-600 transition-colors">
+                  <time className="text-xs text-slate-500">{post.date}</time>
+                  <h2 className="text-base font-semibold text-white mt-1 mb-2 group-hover:text-emerald-400 transition-colors leading-snug">
                     {post.title}
                   </h2>
-                  <p className="text-gray-600 text-sm line-clamp-3">
-                    {post.excerpt}
-                  </p>
+                  <p className="text-slate-400 text-sm line-clamp-3">{post.excerpt}</p>
                   <div className="flex flex-wrap gap-2 mt-3">
-                    {post.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded"
-                      >
+                    {post.tags.slice(0, 3).map((tag) => (
+                      <span key={tag} className="text-xs bg-white/5 text-slate-400 border border-white/10 px-2 py-0.5 rounded">
                         {tag}
                       </span>
                     ))}
