@@ -4,7 +4,7 @@ import imageUrlBuilder from "@sanity/image-url";
 type SanityImageSource = any;
 
 export const projectId = "xifumfa3";
-export const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET ?? "production";
+export const dataset = "production";
 export const apiVersion = "2024-01-01";
 
 export const client = createClient({
