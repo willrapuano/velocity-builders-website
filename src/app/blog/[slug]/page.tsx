@@ -145,20 +145,24 @@ export default async function BlogPost({ params }: Props) {
         <div
           className="
             prose prose-invert max-w-none
-            prose-p:text-slate-300 prose-p:leading-relaxed prose-p:text-base
-            prose-headings:text-white prose-headings:font-bold prose-headings:mt-10 prose-headings:mb-4
-            prose-h2:text-2xl prose-h3:text-xl
-            prose-a:text-emerald-400 prose-a:no-underline hover:prose-a:underline
+            prose-p:text-slate-300 prose-p:text-[17px] prose-p:leading-[1.85] prose-p:mb-5
+            prose-headings:text-white prose-headings:font-bold
+            prose-h2:text-[1.6rem] prose-h2:mt-14 prose-h2:mb-4 prose-h2:pb-3 prose-h2:border-b prose-h2:border-white/10
+            prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-3 prose-h3:text-emerald-300
+            prose-h4:text-base prose-h4:mt-6 prose-h4:mb-2 prose-h4:text-slate-200 prose-h4:font-semibold
+            prose-a:text-emerald-400 prose-a:no-underline hover:prose-a:underline prose-a:font-medium
             prose-strong:text-white prose-strong:font-semibold
-            prose-ul:text-slate-300 prose-ol:text-slate-300
-            prose-li:my-1 prose-li:leading-relaxed
-            prose-blockquote:border-l-emerald-400 prose-blockquote:text-slate-400 prose-blockquote:italic
-            prose-img:rounded-xl prose-img:my-8
-            prose-hr:border-white/10
-            prose-table:text-sm
-            prose-th:text-white prose-th:font-semibold prose-th:border-slate-700 prose-th:bg-white/5
-            prose-td:text-slate-300 prose-td:border-slate-800
-            prose-code:text-emerald-300 prose-code:bg-white/5 prose-code:px-1 prose-code:rounded
+            prose-ul:text-slate-300 prose-ul:my-4 prose-ul:space-y-2
+            prose-ol:text-slate-300 prose-ol:my-4 prose-ol:space-y-2
+            prose-li:text-[17px] prose-li:leading-[1.8] prose-li:pl-1
+            prose-blockquote:border-l-4 prose-blockquote:border-emerald-400 prose-blockquote:bg-white/5 prose-blockquote:px-6 prose-blockquote:py-4 prose-blockquote:rounded-r-xl prose-blockquote:not-italic
+            prose-blockquote:text-slate-300 prose-blockquote:text-[17px]
+            prose-img:rounded-xl prose-img:my-10 prose-img:w-full
+            prose-hr:border-white/10 prose-hr:my-10
+            prose-table:text-sm prose-table:w-full
+            prose-th:text-white prose-th:font-semibold prose-th:border prose-th:border-slate-700 prose-th:bg-white/5 prose-th:px-4 prose-th:py-2
+            prose-td:text-slate-300 prose-td:border prose-td:border-slate-800 prose-td:px-4 prose-td:py-2
+            prose-code:text-emerald-300 prose-code:bg-white/5 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm
           "
           dangerouslySetInnerHTML={{ __html: post.contentHtml }}
         />
