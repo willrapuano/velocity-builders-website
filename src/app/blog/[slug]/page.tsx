@@ -102,7 +102,7 @@ export default async function BlogPost({ params }: Props) {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <div className="max-w-4xl mx-auto px-6 py-12">
+      <div className="max-w-3xl mx-auto px-6 py-12">
         {/* Breadcrumb */}
         <nav className="text-sm text-slate-500 mb-8 flex flex-wrap items-center gap-1.5">
           <Link href="/" className="hover:text-white transition">Home</Link>
