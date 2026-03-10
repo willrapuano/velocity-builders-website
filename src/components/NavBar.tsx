@@ -10,8 +10,10 @@ const links = [
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
   { href: "/portal", label: "Portal" },
-  { href: "/legal", label: "Legal" },
+  { href: "/legal", label: "Legal", desktopOnly: true },
 ];
+
+const mobileLinks = links.filter((l) => !l.desktopOnly);
 
 export function NavBar() {
   const [open, setOpen] = useState(false);
@@ -66,7 +68,7 @@ export function NavBar() {
       {open && (
         <nav className="border-t border-white/10 bg-slate-950 px-6 pb-6 pt-4 md:hidden">
           <div className="flex flex-col gap-4">
-            {links.map((link) => (
+            {mobileLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
