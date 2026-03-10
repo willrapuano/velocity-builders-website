@@ -3,25 +3,25 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Services | Velocity Builders",
   description:
-    "NoVA real estate and lending services: SEO websites, CRM automation, listing workflows, and follow-up systems that improve response speed and closing outcomes.",
+    "Real estate and lending services: SEO websites, CRM automation, listing workflows, and follow-up systems that improve response speed and closing outcomes.",
   alternates: { canonical: "/services" },
 };
 
 const services = [
   {
-    title: "NoVA SEO Website Systems",
+    title: "Hyper-Local SEO Website Systems",
     solve: "Traffic without conversion.",
     build: "Local landing pages, neighborhood content clusters, and clear conversion paths tied to intent.",
-    outcome: "More qualified inquiries from NoVA search terms and fewer dead-end visits.",
+    outcome: "More qualified inquiries from local search terms and fewer dead-end visits.",
     proof: "We structure pages around county and neighborhood behavior so people self-select faster.",
-    cta: "Get a NoVA SEO Site Plan",
+    cta: "Get a Hyper-Local SEO Site Plan",
   },
   {
     title: "CRM Automation and Speed-to-Lead",
     solve: "Slow first response and lead drop-off.",
     build: "Instant routing, channel-triggered follow-up, and stage-based task automation.",
     outcome: "Faster first touch, better consult booking consistency, less pipeline drift.",
-    proof: "In competitive Fairfax and Loudoun pockets, the first clear response often sets the appointment.",
+    proof: "In competitive local markets, the first clear response often sets the appointment.",
     cta: "Find My Response-Time Gaps",
   },
   {
@@ -37,7 +37,7 @@ const services = [
     solve: "Warm leads that go cold before consult.",
     build: "Segment-specific nurture for move-up buyers, relocations, and value-driven shoppers.",
     outcome: "More conversations from leads already in your database.",
-    proof: "Commute patterns, school-zone questions, and financing clarity drive response behavior.",
+    proof: "Commute patterns, school-zone questions, and financing clarity drive buyer response behavior.",
     cta: "Turn Warm Leads into Consults",
   },
   {
@@ -72,7 +72,7 @@ export default function ServicesPage() {
             <p className="mt-4 text-slate-300"><span className="font-semibold text-white">What we solve:</span> {service.solve}</p>
             <p className="mt-2 text-slate-300"><span className="font-semibold text-white">What we build:</span> {service.build}</p>
             <p className="mt-2 text-slate-300"><span className="font-semibold text-white">Outcome focus:</span> {service.outcome}</p>
-            {service.proof && <p className="mt-2 text-slate-300"><span className="font-semibold text-white">NoVA context:</span> {service.proof}</p>}
+            {service.proof && <p className="mt-2 text-slate-300"><span className="font-semibold text-white">Why it matters:</span> {service.proof}</p>}
             <a href="/contact" className="mt-5 inline-block text-sm font-semibold text-emerald-300 hover:text-emerald-200">{service.cta}</a>
           </article>
         ))}

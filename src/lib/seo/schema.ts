@@ -29,7 +29,7 @@ export function professionalServiceSchema(input: {
       addressRegion: "VA",
       addressCountry: "US",
     },
-    areaServed: input.areaServed ?? "Northern Virginia",
+    areaServed: input.areaServed ?? "DC, Maryland, and Virginia",
   };
 }
 

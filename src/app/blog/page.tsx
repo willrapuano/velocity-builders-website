@@ -5,11 +5,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Blog | Velocity Builders",
   description:
-    "NoVA real estate growth blog: practical playbooks for lead response, CRM automation, local SEO, and retention across Fairfax, Loudoun, and Prince William.",
+    "Real estate growth blog: practical playbooks for lead response, CRM automation, local SEO, and retention across Fairfax, Loudoun, and Prince William.",
   openGraph: {
     title: "Blog | Velocity Builders",
     description:
-      "NoVA real estate growth blog: practical playbooks for lead response, CRM automation, local SEO, and retention across Fairfax, Loudoun, and Prince William.",
+      "Real estate growth blog: practical playbooks for lead response, CRM automation, local SEO, and retention across Fairfax, Loudoun, and Prince William.",
     type: "website",
     url: "/blog",
   },
@@ -28,7 +28,7 @@ export default function BlogIndex() {
   return (
     <main className="max-w-6xl mx-auto px-6 py-16">
       <div className="mb-12">
-        <h1 className="text-4xl font-bold text-white mb-3">No-Fluff Growth Playbooks for NoVA Agents and Lenders.</h1>
+        <h1 className="text-4xl font-bold text-white mb-3">No-Fluff Growth Playbooks for real estate Agents and Lenders.</h1>
         <p className="text-slate-400 text-lg max-w-3xl">
           What’s working now in Fairfax, Loudoun, and Prince William—from speed-to-lead to post-close retention.
         </p>

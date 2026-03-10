@@ -34,7 +34,7 @@ export type LocationSeed = {
 };
 
 export const locationSeed: LocationSeed = {
-  region: "Northern Virginia",
+  region: "DC, Maryland, and Virginia",
   topics: [
     {
       title: "Listing launch systems",

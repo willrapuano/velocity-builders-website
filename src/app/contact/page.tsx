@@ -3,7 +3,7 @@ import { ContactForm } from "@/components/ContactForm";
 export const metadata = {
   title: "Contact Velocity Builders",
   description:
-    "Contact Velocity Builders for a NoVA growth blueprint: identify pipeline leaks, improve lead response, and automate follow-up to drive more closings.",
+    "Contact Velocity Builders for a growth blueprint: identify pipeline leaks, improve lead response, and automate follow-up to drive more closings.",
 };
 
 export default function ContactPage() {

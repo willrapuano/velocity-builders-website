@@ -6,13 +6,13 @@ import type { Metadata } from "next";
 const CATEGORIES: Record<string, { name: string; header: string; description: string; meta: string }> = {
   "marketing-systems": {
     name: "Marketing Systems",
-    header: "Marketing Systems That Convert Faster in NoVA",
+    header: "Marketing Systems That Convert Faster in the DMV",
     description: "CRM and automation workflows that help agents and lenders respond faster, book more consults, and keep referrals warm.",
-    meta: "CRM and automation systems that help NoVA agents and lenders respond faster, convert more leads, and keep referrals warm.",
+    meta: "CRM and automation systems that help Agents and lenders respond faster, convert more leads, and keep referrals warm.",
   },
   "real-estate-news": {
     name: "Real Estate News",
-    header: "NoVA Real Estate News That Affects Your Next 90 Days",
+    header: "Real Estate News That Affects Your Next 90 Days",
     description: "Local market shifts, policy changes, and demand signals translated into clear action for agents, lenders, and title partners.",
     meta: "Real estate market shifts, regulation updates, and what they mean for agents, lenders, and title partners.",
   },
@@ -26,7 +26,7 @@ const CATEGORIES: Record<string, { name: string; header: string; description: st
     name: "Title Insurance",
     header: "Title Workflows and Partner Playbooks",
     description: "Systems for cleaner lender-agent-title coordination, fewer surprises, and better client communication from contract to close.",
-    meta: "Title workflow insights for NoVA teams: cleaner handoffs, better communication, and fewer closing-stage surprises.",
+    meta: "Title workflow insights for Real estate teams: cleaner handoffs, better communication, and fewer closing-stage surprises.",
   },
 };
 

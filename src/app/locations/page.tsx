@@ -12,8 +12,8 @@ const path = "/locations";
 const hubQuality = getQualityForHubPage();
 
 export const metadata: Metadata = {
-  title: "Northern Virginia Locations | Velocity Builders",
-  description: "Explore county and city-specific real estate marketing systems across Northern Virginia.",
+  title: "DMV Locations | Velocity Builders",
+  description: "Explore county and city-specific real estate marketing systems across DC, Maryland, and Virginia.",
   alternates: {
     canonical: path,
   },
@@ -31,8 +31,8 @@ export default function LocationsHubPage() {
 
   const schemas = [
     professionalServiceSchema({
-      description: "County and city-level marketing operations for Northern Virginia real estate teams.",
-      areaServed: "Northern Virginia",
+      description: "County and city-level marketing operations for real estate teams.",
+      areaServed: "DC, Maryland, and Virginia",
       path,
     }),
     breadcrumbSchema(crumbs),

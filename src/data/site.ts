@@ -56,7 +56,7 @@ export const fallbackContent: SiteContent = {
     name: "Velocity Builders, LLC",
     tagline: "The Title Rep Who Helps You Scale",
     summary:
-      "Velocity Builders designs the systems Northern Virginia agents, lenders, builders, and banks need to convert listings into lifetime clients. From IDX websites to post-close nurture automation, everything is wired for measurable ROI.",
+      "Velocity Builders designs the systems agents, lenders, builders, and banks need to convert listings into lifetime clients. From IDX websites to post-close nurture automation, everything is wired for measurable ROI.",
     focusAreas: [
       "CRM automation",
       "IDX-enabled agent websites",

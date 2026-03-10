@@ -5,9 +5,9 @@ import { NavBar } from "@/components/NavBar";
 import { Footer } from "@/components/Footer";
 
 const siteUrl = "https://velocitybuilders.io";
-const title = "Velocity Builders | NoVA Growth Systems";
+const title = "Velocity Builders | Real Estate Growth Systems";
 const description =
-  "NoVA agents and lenders: get faster lead response, better follow-up, and more closings with websites and CRM systems built for Fairfax, Loudoun, and Prince William.";
+  "Agents and lenders: get faster lead response, better follow-up, and more closings with websites and CRM systems built for Fairfax, Loudoun, and Prince William.";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -67,7 +67,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 addressRegion: "VA",
                 addressCountry: "US",
               },
-              areaServed: "Northern Virginia",
+              areaServed: "DC, Maryland, and Virginia",
             }),
           }}
         />

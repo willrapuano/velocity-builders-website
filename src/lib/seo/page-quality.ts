@@ -81,7 +81,7 @@ export function getQualityForHubPage() {
 
   const result = scoreProgrammaticPage({
     depth: "hub",
-    title: "Northern Virginia Locations",
+    title: "DMV Locations",
     description: "Explore county, city, and community-level pages designed for discoverability and conversion.",
     highlightsCount: highlights,
     faqCount: 0,

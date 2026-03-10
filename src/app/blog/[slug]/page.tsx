@@ -28,9 +28,9 @@ export async function generateStaticParams() {
 }
 
 const META_OVERRIDES: Record<string, string> = {
-  "crm-automation-roi-real-estate-teams": "See how NoVA teams improve speed-to-lead and consult conversion with CRM automation that removes pipeline bottlenecks.",
-  "loan-officers-digital-marketing-strategy-2026": "NoVA loan officer marketing strategy: local search visibility, trust-building follow-up, and funnel improvements that increase consult volume.",
-  "real-estate-agents-automated-marketing-leads": "Automated marketing for NoVA agents: faster response systems, smarter nurture, and practical fixes that recover missed opportunities.",
+  "crm-automation-roi-real-estate-teams": "See how Real estate teams improve speed-to-lead and consult conversion with CRM automation that removes pipeline bottlenecks.",
+  "loan-officers-digital-marketing-strategy-2026": "Loan officer marketing strategy: local search visibility, trust-building follow-up, and funnel improvements that increase consult volume.",
+  "real-estate-agents-automated-marketing-leads": "Automated marketing for Agents: faster response systems, smarter nurture, and practical fixes that recover missed opportunities.",
 };
 
 const CTA_OVERRIDES: Record<string, { title: string; body: string; button: string }> = {
