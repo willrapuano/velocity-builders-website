@@ -46,7 +46,7 @@ export default function Home() {
         <div className="grid gap-6 md:grid-cols-3">
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
             <h3 className="text-lg font-semibold text-white">Hyper-Local SEO Websites That Convert</h3>
-            <p className="mt-3 text-sm text-slate-300">Local pages built around real search behavior in Northern Virginia. Clear calls to action. Clean routing into your CRM.</p>
+            <p className="mt-3 text-sm text-slate-300">Local pages built around real search behavior in your market. Clear calls to action. Clean routing into your CRM.</p>
           </div>
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
             <h3 className="text-lg font-semibold text-white">Speed-to-Lead Automation</h3>
