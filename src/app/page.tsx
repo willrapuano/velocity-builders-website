@@ -1,95 +1,113 @@
-import { getSiteContent } from "@/lib/content";
-import { StatGroup } from "@/components/StatGroup";
-import { SectionHeader } from "@/components/SectionHeader";
-import { ServiceCard } from "@/components/ServiceCard";
-import { EngagementCard } from "@/components/EngagementCard";
-import { ProcessTimeline } from "@/components/ProcessTimeline";
-import { TestimonialCard } from "@/components/TestimonialCard";
 import Link from "next/link";
 
-export default async function Home() {
-  const content = await getSiteContent();
+export default function Home() {
   return (
-    <div className="mx-auto flex max-w-6xl flex-col gap-24 px-6 py-16">
+    <div className="mx-auto flex max-w-6xl flex-col gap-20 px-6 py-16">
       <section className="grid gap-10 md:grid-cols-2 md:items-center">
         <div className="space-y-6">
-          <p className="text-sm uppercase tracking-[0.3em] text-emerald-300/80">{content.hero.eyebrow}</p>
+          <p className="text-sm uppercase tracking-[0.3em] text-emerald-300/80">Velocity Builders LLC</p>
           <h1 className="text-4xl font-semibold leading-tight text-white sm:text-5xl">
-            {content.hero.title}
+            Get More Closings from the Leads You Already Have.
           </h1>
-          <p className="text-lg text-slate-300">{content.hero.subtitle}</p>
+          <p className="text-lg text-slate-300">
+            We build real estate focused websites, CRM automations, and follow-up systems that turn inquiries into appointments, contracts, and repeat business.
+          </p>
           <div className="flex flex-col gap-4 sm:flex-row">
-            <Link
-              href="/contact"
-              className="rounded-full bg-emerald-400/90 px-6 py-3 text-center text-sm font-semibold text-slate-900 transition hover:bg-emerald-300"
-            >
-              {content.hero.primaryCta}
+            <Link href="/contact" className="rounded-full bg-emerald-400/90 px-6 py-3 text-center text-sm font-semibold text-slate-900 transition hover:bg-emerald-300">
+              Book a 20-Minute Growth Blueprint
             </Link>
-            <Link
-              href="/services"
-              className="rounded-full border border-white/20 px-6 py-3 text-center text-sm font-semibold text-white transition hover:border-emerald-300"
-            >
-              {content.hero.secondaryCta}
-            </Link>
-            <Link
-              href="/locations"
-              className="rounded-full border border-emerald-300/60 px-6 py-3 text-center text-sm font-semibold text-emerald-200 transition hover:bg-emerald-300/10"
-            >
-              Explore local SEO hubs
+            <Link href="/services" className="rounded-full border border-white/20 px-6 py-3 text-center text-sm font-semibold text-white transition hover:border-emerald-300">
+              See 3 NoVA System Builds
             </Link>
           </div>
         </div>
         <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 to-transparent p-6 shadow-glow">
-          <StatGroup stats={content.hero.stats} />
+          <p className="text-xs uppercase tracking-[0.25em] text-emerald-300/80">Trusted across Northern Virginia</p>
+          <p className="mt-4 text-lg text-slate-100">
+            Used by agents, lenders, and title partners across Fairfax, Loudoun, and Prince William.
+          </p>
         </div>
       </section>
 
-      <section className="space-y-10">
-        <SectionHeader
-          eyebrow="Solutions"
-          title="Full-stack marketing operations for modern real estate partners"
-          description={content.company.summary}
-        />
-        <div className="grid gap-6 lg:grid-cols-2">
-          {content.services.map((service) => (
-            <ServiceCard key={service.title} {...service} />
-          ))}
-        </div>
+      <section className="rounded-3xl border border-white/10 bg-white/5 p-8">
+        <h2 className="text-2xl font-semibold text-white">Where Most Teams Lose Deals</h2>
+        <p className="mt-4 text-slate-300">Most teams don’t lose business on branding. They lose it in the handoff.</p>
+        <ul className="mt-6 space-y-2 text-slate-200">
+          <li>• Lead comes in. No fast response.</li>
+          <li>• Inquiry gets buried in a busy inbox.</li>
+          <li>• Follow-up stops after one call.</li>
+          <li>• Past clients never hear from you again.</li>
+        </ul>
+        <p className="mt-4 text-slate-300">We fix those gaps with systems your team will actually use.</p>
       </section>
 
-      <section className="space-y-10">
-        <SectionHeader
-          eyebrow="Ways to work together"
-          title="Pick a model that matches your velocity"
-          description="Every engagement includes measurement dashboards, enablement, and post-launch optimization."
-        />
-        <div className="grid gap-6 lg:grid-cols-3">
-          {content.engagement.map((plan) => (
-            <EngagementCard key={plan.title} {...plan} />
-          ))}
-        </div>
-      </section>
-
-      <section className="grid gap-12 md:grid-cols-2">
-        <SectionHeader
-          eyebrow="How we build"
-          title="Blueprint to scale with you"
-          description="Systems launches are fast, collaborative, and relentlessly measured."
-        />
-        <ProcessTimeline steps={content.processSteps} />
-      </section>
-
-      <section className="space-y-10">
-        <SectionHeader
-          eyebrow="Proof"
-          title="Teams we help stay top of mind"
-          description="Velocity partners are producers, lenders, and builders across Northern Virginia."
-          align="center"
-        />
+      <section className="space-y-6">
+        <h2 className="text-2xl font-semibold text-white">What We Build</h2>
         <div className="grid gap-6 md:grid-cols-3">
-          {content.testimonials.map((testimonial) => (
-            <TestimonialCard key={testimonial.name} {...testimonial} />
-          ))}
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+            <h3 className="text-lg font-semibold text-white">NoVA SEO Websites That Convert</h3>
+            <p className="mt-3 text-sm text-slate-300">Local pages built around real search behavior in Northern Virginia. Clear calls to action. Clean routing into your CRM.</p>
+          </div>
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+            <h3 className="text-lg font-semibold text-white">Speed-to-Lead Automation</h3>
+            <p className="mt-3 text-sm text-slate-300">Instant routing, text/email triggers, and task creation so every inquiry gets a fast first touch.</p>
+          </div>
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+            <h3 className="text-lg font-semibold text-white">Follow-Up That Runs Without Babysitting</h3>
+            <p className="mt-3 text-sm text-slate-300">Nurture flows for buyers, sellers, and referral partners tied to real pipeline stages.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="rounded-3xl border border-white/10 bg-white/5 p-8">
+        <h2 className="text-2xl font-semibold text-white">What “Better” Looks Like</h2>
+        <ul className="mt-5 space-y-2 text-slate-200">
+          <li>• Faster first response across new inquiries</li>
+          <li>• More consults booked from existing lead flow</li>
+          <li>• Fewer dead leads sitting unworked</li>
+          <li>• More repeat and referral business post-close</li>
+        </ul>
+      </section>
+
+      <section className="rounded-3xl border border-white/10 bg-white/5 p-8">
+        <h2 className="text-2xl font-semibold text-white">Built for How NoVA Actually Moves</h2>
+        <p className="mt-4 text-slate-300">Northern Virginia is not one market.</p>
+        <ul className="mt-5 space-y-2 text-slate-200">
+          <li>• Fairfax: move-up and school-bound decisions</li>
+          <li>• Loudoun: growth corridors and relocation flow</li>
+          <li>• Prince William: value-first buyers who need fast clarity</li>
+        </ul>
+        <p className="mt-4 text-slate-300">Your funnel has to match local behavior, not generic national playbooks.</p>
+      </section>
+
+      <section className="space-y-6">
+        <h2 className="text-2xl font-semibold text-white">How We Work</h2>
+        <div className="grid gap-4 md:grid-cols-3">
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+            <p className="text-sm font-semibold text-emerald-300">Step 1: Diagnose the leak</p>
+            <p className="mt-2 text-sm text-slate-300">We map where leads stall between inquiry and consult.</p>
+          </div>
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+            <p className="text-sm font-semibold text-emerald-300">Step 2: Build the system</p>
+            <p className="mt-2 text-sm text-slate-300">We deploy page, CRM, and follow-up improvements in priority order.</p>
+          </div>
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+            <p className="text-sm font-semibold text-emerald-300">Step 3: Launch and tune</p>
+            <p className="mt-2 text-sm text-slate-300">We monitor response, consult bookings, and handoff quality.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="rounded-3xl border border-emerald-400/20 bg-emerald-400/5 p-8 text-center">
+        <h2 className="text-3xl font-semibold text-white">Ready to Turn Pipeline Chaos Into Predictable Closings?</h2>
+        <p className="mx-auto mt-3 max-w-2xl text-slate-300">We’ll show you what to fix first, what to automate next, and what to ignore.</p>
+        <div className="mt-6 flex flex-col justify-center gap-4 sm:flex-row">
+          <Link href="/contact" className="rounded-full bg-emerald-400 px-6 py-3 text-sm font-semibold text-slate-900 hover:bg-emerald-300">
+            Book a 20-Minute Growth Blueprint
+          </Link>
+          <Link href="/services" className="rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white hover:border-emerald-300">
+            See 3 NoVA System Builds
+          </Link>
         </div>
       </section>
     </div>
