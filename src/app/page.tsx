@@ -17,7 +17,7 @@ export default function Home() {
               Book a 20-Minute Growth Blueprint
             </Link>
             <Link href="/services" className="rounded-full border border-white/20 px-6 py-3 text-center text-sm font-semibold text-white transition hover:border-emerald-300">
-              See 3 NoVA System Builds
+              See Our Build Velocity™ Systems
             </Link>
           </div>
         </div>
@@ -107,7 +107,7 @@ export default function Home() {
             Book a 20-Minute Growth Blueprint
           </Link>
           <Link href="/services" className="rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white hover:border-emerald-300">
-            See 3 NoVA System Builds
+            See Our Build Velocity™ Systems
           </Link>
         </div>
       </section>
