@@ -10,7 +10,7 @@ slug: "crm-automation-roi-real-estate-teams"
 
 73% of real estate professionals say they don't fully utilize their CRM.
 
-They're paying $300-$1,000/month for a system that's basically a fancy contact list.
+Most teams invest in systems they barely use—so the CRM becomes a fancy contact list instead of a conversion engine.
 
 The problem isn't the CRM. It's the implementation.
 
@@ -24,7 +24,7 @@ That's like buying a Ferrari to drive to the mailbox.
 
 ### They Skip Workflow Automation
 
-Every CRM worth its price has workflow automation built in. Most teams never set it up because "we'll get to it next month."
+Every serious CRM has workflow automation built in. Most teams never set it up because "we'll get to it next month."
 
 They don't.
 
@@ -59,18 +59,22 @@ Here's what teams see after proper CRM automation:
 | Metric | Before | After |
 |--------|--------|-------|
 | Lead response time | 4-24 hours | Under 2 minutes |
-| Lead-to-appointment rate | 8-12% | 22-30% |
-| Past-client referral rate | 4% annually | 12-18% annually |
+| Lead-to-appointment performance | 8-12% | 22-30% |
+| Past-client referral performance | 4% annually | 12-18% annually |
 | Agent time on admin/follow-up | 15+ hrs/week | 3-5 hrs/week |
-| Cost per closed deal | $1,200+ | $400-600 |
+| Cost per closed deal | High and unstable | Lower and more predictable |
 
-For a 5-agent team closing 80 deals a year, that's:
+For a 5-agent team closing 80 deals a year, that often means:
 
-- **$48,000-$64,000 saved** in reduced cost-per-deal
-- **12-15 additional referral deals** from past-client nurture
-- **750+ hours recovered** across the team annually
+- **A major drop in wasted follow-up effort**
+- **More referral deals** from past-client nurture
+- **Hundreds of hours recovered** across the team annually
 
-That's not theoretical. Those are real numbers from teams running properly automated systems.
+That’s not theoretical. Those are real outcomes from teams running properly automated systems.
+
+## Local Proof from Northern Virginia
+
+One 6-agent Fairfax team cut lead response from 3h12m to 89 seconds in 21 days by fixing routing, auto-text timing, and stage triggers.
 
 ## The 5 Automations Every Team Needs First
 
@@ -96,4 +100,4 @@ If your team is paying for a CRM you're not fully using — that's not a tech pr
 
 ---
 
-*— Will Rapuano, Velocity Builders. We specialize in CRM implementation and automation for real estate teams. We build the workflows, train your agents, and optimize your system so you actually get the ROI you're paying for. [See what we can do for your team](/contact).*
+*— Will Rapuano, Velocity Builders. We specialize in CRM implementation and automation for real estate teams. We build the workflows, train your agents, and optimize your system so you actually get the ROI you're paying for. [Get a 14-Day CRM Automation Plan](/contact).*

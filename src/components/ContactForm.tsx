@@ -72,7 +72,7 @@ export function ContactForm() {
         disabled={status === "sending"}
         className="w-full rounded-full bg-emerald-400/90 px-4 py-2 text-center text-sm font-semibold text-slate-950 transition hover:bg-emerald-300 disabled:cursor-not-allowed"
       >
-        {status === "sending" ? "Sending..." : "Submit"}
+        {status === "sending" ? "Sending..." : "Get My Growth Blueprint"}
       </button>
       {status === "success" && (
         <p className="text-sm text-emerald-300">Thanks! We’ll reach out within one business day.</p>

@@ -1,122 +1,67 @@
-import { SectionHeader } from "@/components/SectionHeader";
-import { client, aboutQuery, siteSettingsQuery } from "@/sanity/client";
-import { fallbackContent } from "@/data/site";
 import type { Metadata } from "next";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const about = await client.fetch(aboutQuery).catch(() => null);
-  return {
-    title: about?.seoTitle ?? "About Velocity Builders",
-    description: about?.seoDescription ?? "Learn why Will Rapuano built Velocity Builders to be the marketing ops engine for real estate professionals across the country.",
-    alternates: { canonical: "/about" },
-  };
-}
+export const metadata: Metadata = {
+  title: "About Velocity Builders",
+  description:
+    "About Velocity Builders: a Northern Virginia growth partner helping agents, lenders, and title teams improve lead response, handoffs, and closing consistency.",
+  alternates: { canonical: "/about" },
+};
 
-export default async function AboutPage() {
-  const [about, settings] = await Promise.all([
-    client.fetch(aboutQuery).catch(() => null),
-    client.fetch(siteSettingsQuery).catch(() => null),
-  ]);
-
-  const founderName = about?.founderName ?? fallbackContent.company.owner;
-  const mission = about?.mission ?? fallbackContent.company.mission;
-  const focusAreas = fallbackContent.company.focusAreas;
-  const email = settings?.email ?? fallbackContent.company.email;
-  const phone = settings?.phone ?? fallbackContent.company.phone;
-  const hq = settings?.address ?? fallbackContent.company.hq;
-  const headline = about?.headline ?? "About Velocity Builders";
-  const subheadline = about?.subheadline ?? fallbackContent.company.summary;
-  const values = about?.values ?? [];
-  const credentials = about?.credentials ?? [];
-
+export default function AboutPage() {
   return (
-    <div className="mx-auto flex max-w-5xl flex-col gap-16 px-6 py-16">
-      <SectionHeader
-        eyebrow="About"
-        title={headline}
-        description={subheadline}
-        align="center"
-      />
+    <div className="mx-auto flex max-w-5xl flex-col gap-12 px-6 py-16">
+      <section className="text-center">
+        <p className="text-sm uppercase tracking-[0.3em] text-emerald-300/80">About</p>
+        <h1 className="mt-3 text-4xl font-bold text-white">Built in Northern Virginia. Built for Teams That Want Results.</h1>
+        <p className="mx-auto mt-4 max-w-3xl text-lg text-slate-300">
+          Velocity Builders helps agents, lenders, and title partners turn lead flow into closings through practical systems, not theory.
+        </p>
+      </section>
 
-      <div className="grid gap-8 md:grid-cols-2">
-        {/* Founder bio */}
-        <article className="space-y-4 text-sm leading-relaxed text-slate-300">
-          {about?.founderBio ? (
-            // Render Portable Text as plain paragraphs for now
-            about.founderBio.map((block: any, i: number) => (
-              <p key={i}>
-                {block.children?.map((child: any) => child.text).join("") ?? ""}
-              </p>
-            ))
-          ) : (
-            <>
-              <p>
-                Velocity Builders was founded by {founderName}, Business Development Officer at Pruitt Title LLC. After helping hundreds of top agents and lenders, it became obvious that the missing ingredient wasn't ambition—it was bandwidth. The best relationship builders were drowning in tech and follow-up.
-              </p>
-              <p>
-                We assembled a pod of marketers, developers, and automation architects who know real estate markets across the country. Every engagement is run like an ops sprint: discovery, build, enable, optimize.
-              </p>
-              <p>
-                The result: partners stay front-of-mind, their data stays clean, and every launch is tied back to revenue.
-              </p>
-            </>
-          )}
-          {credentials.length > 0 && (
-            <div className="mt-4 flex flex-wrap gap-2">
-              {credentials.map((c: string) => (
-                <span key={c} className="rounded-full border border-emerald-400/30 px-3 py-1 text-xs text-emerald-300">
-                  {c}
-                </span>
-              ))}
-            </div>
-          )}
-        </article>
+      <section className="space-y-4 text-slate-300">
+        <p>I built Velocity Builders after seeing the same problem on repeat: good people losing real business because follow-up was slow, handoffs were messy, and marketing looked busy but didn’t convert.</p>
+        <p>In NoVA, that gets expensive fast.</p>
+        <p>Leads compare options quickly. Sellers expect precision. Buyers need answers now. If your systems lag, someone else wins.</p>
+        <p>So we built a company around one job: make growth execution simple, local, and measurable.</p>
+      </section>
 
-        {/* Info card */}
-        <div className="space-y-6">
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
-            <h3 className="text-lg font-semibold text-white">Who we serve</h3>
-            <ul className="mt-4 space-y-2 text-sm text-slate-200">
-              {focusAreas.map((area) => (
-                <li key={area} className="flex items-start gap-3">
-                  <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-emerald-300" />
-                  <span>{area}</span>
-                </li>
-              ))}
-            </ul>
-            <div className="mt-6 rounded-2xl border border-white/10 bg-slate-900/60 p-4 text-sm text-slate-200">
-              <p className="font-semibold text-white">Headquarters</p>
-              <p>{hq}</p>
-              <p className="mt-2 font-semibold text-white">Contact</p>
-              <p>{email}</p>
-              <p>{phone}</p>
-            </div>
-          </div>
+      <section className="rounded-3xl border border-white/10 bg-white/5 p-8">
+        <h2 className="text-2xl font-semibold text-white">Our Position</h2>
+        <p className="mt-3 text-slate-300">We’re built in Northern Virginia for Northern Virginia teams first.</p>
+        <p className="mt-3 text-slate-300">We know the referral dynamics, listing cycles, and lender-agent-title handoff points here because we work inside them.</p>
+        <ul className="mt-5 space-y-2 text-slate-200">
+          <li>• Fairfax County: school-bound timing and move-up pressure</li>
+          <li>• Loudoun County: relocation demand and new-construction velocity</li>
+          <li>• Prince William County: value-first buyers and speed-first decision windows</li>
+        </ul>
+      </section>
 
-          {/* Mission */}
-          {mission && (
-            <div className="rounded-3xl border border-emerald-400/20 bg-emerald-400/5 p-6">
-              <p className="text-sm font-semibold uppercase tracking-widest text-emerald-400">Mission</p>
-              <p className="mt-2 text-sm leading-relaxed text-slate-300">{mission}</p>
-            </div>
-          )}
+      <section className="grid gap-6 md:grid-cols-2">
+        <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <h3 className="text-xl font-semibold text-white">What We Believe</h3>
+          <ul className="mt-4 space-y-2 text-slate-200">
+            <li>• Fast response beats perfect branding.</li>
+            <li>• Clear process beats more software.</li>
+            <li>• Local relevance beats generic content every time.</li>
+          </ul>
         </div>
-      </div>
+        <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <h3 className="text-xl font-semibold text-white">Who We Work With</h3>
+          <ul className="mt-4 space-y-2 text-slate-200">
+            <li>• Real estate teams who need better conversion from existing leads</li>
+            <li>• Loan officers who want consistent consult flow</li>
+            <li>• Title professionals who want tighter partner systems and cleaner communication</li>
+          </ul>
+        </div>
+      </section>
 
-      {/* Values */}
-      {values.length > 0 && (
-        <section className="space-y-6">
-          <h2 className="text-2xl font-bold text-white">Core Values</h2>
-          <div className="grid gap-4 md:grid-cols-3">
-            {values.map((v: any) => (
-              <div key={v.title} className="rounded-2xl border border-white/10 bg-white/5 p-5">
-                <p className="font-semibold text-white">{v.title}</p>
-                <p className="mt-1 text-sm text-slate-400">{v.description}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
+      <section className="rounded-3xl border border-emerald-400/20 bg-emerald-400/5 p-8 text-center">
+        <h2 className="text-2xl font-semibold text-white">Want Us to Diagnose Your Follow-Up?</h2>
+        <p className="mt-3 text-slate-300">We’ll show you exactly where deals are stalling and what to fix first.</p>
+        <a href="/contact" className="mt-6 inline-block rounded-full bg-emerald-400 px-6 py-3 text-sm font-semibold text-slate-900 hover:bg-emerald-300">
+          See How We’d Fix Your Follow-Up in 14 Days
+        </a>
+      </section>
     </div>
   );
 }

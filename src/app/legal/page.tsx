@@ -3,7 +3,7 @@ import { SectionHeader } from "@/components/SectionHeader";
 
 export const metadata = {
   title: "Legal | Velocity Builders",
-  description: "Refund policy, cancellation terms, and service-level commitments for Velocity Builders.",
+  description: "Velocity Builders legal terms and privacy details, with clear contact options for policy and compliance questions.",
 };
 
 export default async function LegalPage() {

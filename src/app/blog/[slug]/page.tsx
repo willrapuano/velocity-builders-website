@@ -27,23 +27,48 @@ export async function generateStaticParams() {
   return getAllPostSlugs().map((slug) => ({ slug }));
 }
 
+const META_OVERRIDES: Record<string, string> = {
+  "crm-automation-roi-real-estate-teams": "See how NoVA teams improve speed-to-lead and consult conversion with CRM automation that removes pipeline bottlenecks.",
+  "loan-officers-digital-marketing-strategy-2026": "NoVA loan officer marketing strategy: local search visibility, trust-building follow-up, and funnel improvements that increase consult volume.",
+  "real-estate-agents-automated-marketing-leads": "Automated marketing for NoVA agents: faster response systems, smarter nurture, and practical fixes that recover missed opportunities.",
+};
+
+const CTA_OVERRIDES: Record<string, { title: string; body: string; button: string }> = {
+  "crm-automation-roi-real-estate-teams": {
+    title: "Get a 14-Day CRM Automation Plan",
+    body: "We’ll map the exact sequence changes to improve response time and consult conversion.",
+    button: "Get a 14-Day CRM Automation Plan",
+  },
+  "loan-officers-digital-marketing-strategy-2026": {
+    title: "Audit My LO Funnel",
+    body: "See where local search visibility, follow-up cadence, and trust signals are leaking consult volume.",
+    button: "Audit My LO Funnel",
+  },
+  "real-estate-agents-automated-marketing-leads": {
+    title: "Fix My Speed-to-Lead in 10 Days",
+    body: "We’ll prioritize the response-time and nurture fixes that recover missed opportunities fast.",
+    button: "Fix My Speed-to-Lead in 10 Days",
+  },
+};
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = await getPostBySlug(slug);
   if (!post) return {};
+  const description = META_OVERRIDES[slug] ?? post.excerpt;
   return {
     title: `${post.title} | Velocity Builders Blog`,
-    description: post.excerpt,
+    description,
     openGraph: {
       title: post.title,
-      description: post.excerpt,
+      description,
       type: "article",
       publishedTime: post.date,
       authors: [post.author],
       url: `/blog/${slug}`,
       ...(post.featuredImage && { images: [post.featuredImage] }),
     },
-    twitter: { card: "summary_large_image", title: post.title, description: post.excerpt },
+    twitter: { card: "summary_large_image", title: post.title, description },
   };
 }
 
@@ -56,6 +81,11 @@ export default async function BlogPost({ params }: Props) {
   const articleType = isNews ? "NewsArticle" : "BlogPosting";
   const categorySlug = detectCategory(post.tags);
   const category = CATEGORY_MAP[categorySlug];
+  const cta = CTA_OVERRIDES[slug] ?? {
+    title: "Book a 20-Minute Growth Blueprint",
+    body: "See where your lead handoff and follow-up are leaking deals, then fix the right things first.",
+    button: "Book a 20-Minute Growth Blueprint",
+  };
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -180,10 +210,10 @@ export default async function BlogPost({ params }: Props) {
 
         {/* CTA */}
         <div className="mt-8 p-8 rounded-2xl border border-emerald-400/20 bg-emerald-400/5 text-center">
-          <h3 className="text-xl font-bold text-white mb-2">Ready to grow your real estate business?</h3>
-          <p className="text-slate-400 text-sm mb-5">Velocity Builders builds marketing systems for agents and loan officers nationwide — CRM automation, websites, lead generation, and more.</p>
+          <h3 className="text-xl font-bold text-white mb-2">{cta.title}</h3>
+          <p className="text-slate-400 text-sm mb-5">{cta.body}</p>
           <Link href="/contact" className="inline-block rounded-full bg-emerald-400 px-8 py-3 text-sm font-bold text-slate-900 hover:bg-emerald-300 transition">
-            Work With Us →
+            {cta.button}
           </Link>
         </div>
 

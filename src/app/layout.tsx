@@ -5,9 +5,9 @@ import { NavBar } from "@/components/NavBar";
 import { Footer } from "@/components/Footer";
 
 const siteUrl = "https://velocitybuilders.io";
-const title = "Velocity Builders, LLC | The Title Rep Who Helps You Scale";
+const title = "Velocity Builders | NoVA Growth Systems";
 const description =
-  "Velocity Builders is the marketing-ops engine for Northern Virginia agents, lenders, builders, and banks. Automations, IDX sites, and listing campaigns built for scale.";
+  "NoVA agents and lenders: get faster lead response, better follow-up, and more closings with websites and CRM systems built for Fairfax, Loudoun, and Prince William.";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
