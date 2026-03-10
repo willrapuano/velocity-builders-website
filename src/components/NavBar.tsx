@@ -12,21 +12,25 @@ const links = [
 
 export function NavBar() {
   return (
-    <header className="sticky top-0 z-40 border-b border-white/5 bg-slate-950/80 backdrop-blur-xl">
+    <header className="sticky top-0 z-40 border-b border-white/10 bg-slate-950/95 backdrop-blur-xl shadow-lg shadow-black/20">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link href="/" className="text-lg font-semibold text-white">
+        <Link href="/" className="text-xl font-bold tracking-tight text-white">
           Velocity Builders
         </Link>
-        <nav className="hidden items-center gap-6 text-sm text-slate-200 md:flex">
+        <nav className="hidden items-center gap-7 text-sm font-medium md:flex">
           {links.map((link) => (
-            <Link key={link.href} href={link.href} className="transition hover:text-white">
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-slate-300 transition hover:text-emerald-300"
+            >
               {link.label}
             </Link>
           ))}
         </nav>
         <Link
           href="/contact"
-          className="rounded-full border border-emerald-400 px-4 py-1.5 text-sm font-semibold text-white transition hover:bg-emerald-400/10"
+          className="rounded-full bg-emerald-400 px-5 py-2 text-sm font-semibold text-slate-900 transition hover:bg-emerald-300"
         >
           Work With Us
         </Link>
