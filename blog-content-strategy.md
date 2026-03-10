@@ -227,7 +227,83 @@
 
 ---
 
-## 5. Cross-Linking Map
+## 5. Content Review Council
+
+### 4-Stage Pipeline
+
+| Stage | Agent | Role | Output |
+|-------|-------|------|--------|
+| 1. Writer | Taz | Generate draft from template + variables, apply pillar tone/structure | Raw draft |
+| 2. Editor | TBD | Readability, flow, voice enforcement ("professor meets closer"), kill fluff, verify no GHL/Pruitt selling/geographic pigeon-holing | Edited draft |
+| 3. Fact-Checker | TBD | Validate stats, regulations, legal claims, compliance language. Flag AI hallucinations. Critical for Title, Regulations, News pillars | Verified draft or FLAGGED |
+| 4. SEO Optimizer | Stephen | Slug structure, meta description, H2/H3 hierarchy, keyword placement, internal cross-links, cannibalization check, year-tags, schema, OG tags | Publish-ready post |
+
+### Review Flow
+```
+Taz (write) → Editor (tighten) → Fact-Check (verify) → SEO (optimize) → Sanity → Publish
+                                        ↓
+                              [FLAGGED] → Will's review queue
+```
+
+- **Fully auto pillars:** All 4 stages, no Will queue unless flagged
+- **Semi-auto pillars:** All 4 stages + Will's queue for final approval
+- **Manual pillars:** Will's direction first, then stages 2-4
+
+## 6. Anti-Duplication System
+
+### 5 Layers of Protection
+
+**Layer 1: Pre-Write — Topic Registry**
+- Every post registered in central database BEFORE writing
+- Fields: title, target keyword, pillar, audience, city/county, angle, status
+- Pre-write query checks:
+  - Exact keyword match → BLOCKED
+  - Semantic similarity >80% → FLAGGED
+  - Same city + pillar combo published this quarter → BLOCKED
+
+**Layer 2: Pre-Write — Content Calendar Deconfliction**
+- Weekly publishing manifest generated in advance (not real-time)
+- Calendar view: all 84 posts for the week visible before any are written
+- Audience × pillar matrix ensures no audience gets same angle twice per week
+
+**Layer 3: Mid-Write — Semantic Comparison**
+- After draft generation, similarity check against ALL published posts via vector embeddings
+- Catches sneaky duplicates: "5 CRM Mistakes" vs "Top CRM Errors" vs "Why Your CRM Isn't Working"
+- Threshold: >70% similarity → rewrite with different angle or kill
+
+**Layer 4: Council Stage — Editor Check**
+- Editor explicitly checks draft against last 30 days of published content
+- Human-readable diff: "This post overlaps 60% with [Post Title] published [Date]. Recommend: cut section or differentiate angle."
+
+**Layer 5: Post-Publish — Cannibalization Monitor**
+- Weekly GSC audit: which posts compete for the same keyword?
+- Two posts ranking for same query → merge into one stronger post or 301 redirect weaker
+- Prevents splitting authority across duplicate pages
+
+### Topic Registry Schema
+```json
+{
+  "id": "post-2026-0310-001",
+  "title": "...",
+  "slug": "...",
+  "pillar": "follow-up-automation",
+  "audience": ["agents", "loan-officers"],
+  "primaryKeyword": "automated follow-up real estate",
+  "secondaryKeywords": ["drip campaign", "post-closing"],
+  "city": null,
+  "county": null,
+  "state": null,
+  "angle": "why most agents lose referrals after closing",
+  "publishDate": "2026-03-15",
+  "status": "draft|review|published|killed",
+  "similarityScore": null,
+  "flagged": false
+}
+```
+
+Every post gets a registry entry before writing starts. If it's not in the registry, it doesn't get written.
+
+## 7. Cross-Linking Map
 
 ### Pillar-to-Pillar Links
 
