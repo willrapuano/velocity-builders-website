@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { getIndexableLocationPaths, getQualityForHubPage, shouldIndexPage } from "@/lib/seo/page-quality";
 import { getAllPostSlugs } from "@/lib/blog/api";
 
-const siteUrl = "https://velocitybuilders.io";
+const siteUrl = "https://velocity-builders.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const locationHub = shouldIndexPage(getQualityForHubPage()) ? ["/locations"] : [];

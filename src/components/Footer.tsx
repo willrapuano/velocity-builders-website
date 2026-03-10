@@ -10,8 +10,8 @@ export function Footer() {
           <Link href="/legal" className="transition hover:text-white">
             Legal
           </Link>
-          <a href="mailto:hello@velocitybuilders.io" className="transition hover:text-white">
-            hello@velocitybuilders.io
+          <a href="mailto:hello@velocity-builders.com" className="transition hover:text-white">
+            hello@velocity-builders.com
           </a>
         </div>
       </div>

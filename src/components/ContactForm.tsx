@@ -78,7 +78,7 @@ export function ContactForm() {
         <p className="text-sm text-emerald-300">Thanks! We’ll reach out within one business day.</p>
       )}
       {status === "error" && (
-        <p className="text-sm text-red-400">Something went wrong. Email hello@velocitybuilders.io instead.</p>
+        <p className="text-sm text-red-400">Something went wrong. Email hello@velocity-builders.com instead.</p>
       )}
     </form>
   );

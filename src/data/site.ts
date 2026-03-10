@@ -67,8 +67,8 @@ export const fallbackContent: SiteContent = {
     owner: "Will Rapuano",
     mission:
       "Give every partner the leverage of a full-stack marketing team without the overhead, so their title, lending, and brokerage deals stay sticky.",
-    email: "hello@velocitybuilders.io",
-    phone: "(703) 555-0145",
+    email: "hello@velocity-builders.com",
+    phone: "(703) 859-1467",
     hq: "Vienna, Virginia",
   },
   hero: {
@@ -88,7 +88,7 @@ export const fallbackContent: SiteContent = {
     {
       title: "CRM Automation Sprints",
       description:
-        "End-to-end automation builds for GoHighLevel, Follow Up Boss, or Salesforce. Includes pipeline design, scoring logic, alerts, and reporting dashboards.",
+        "End-to-end CRM automation builds — pipeline design, scoring logic, alerts, and reporting dashboards — platform-agnostic and ready for your existing stack.",
       bullets: [
         "Lead routing + agent accountability alerts",
         "Automated post-close + refinance nurture",

@@ -1,4 +1,4 @@
-const siteUrl = "https://velocitybuilders.io";
+const siteUrl = "https://velocity-builders.com";
 
 export type Crumb = {
   name: string;
@@ -21,8 +21,8 @@ export function professionalServiceSchema(input: {
     name: input.name ?? "Velocity Builders, LLC",
     url: buildCanonical(input.path ?? "/"),
     description: input.description,
-    telephone: "(703) 555-0145",
-    email: "hello@velocitybuilders.io",
+    telephone: "(703) 859-1467",
+    email: "hello@velocity-builders.com",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Vienna",

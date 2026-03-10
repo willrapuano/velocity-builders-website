@@ -1,0 +1,29 @@
+{
+  "meta": {
+    "description": "Central topic registry — every post must be registered here before writing",
+    "version": "1.0.0",
+    "lastUpdated": "2026-03-10",
+    "schema": {
+      "id": "string — format: post-YYYY-MMDD-NNN",
+      "title": "string — full post title",
+      "slug": "string — URL slug",
+      "pillar": "string — pillar ID from pillars.json",
+      "audiences": "string[] — target audiences",
+      "primaryKeyword": "string — main SEO target keyword",
+      "secondaryKeywords": "string[] — supporting keywords",
+      "city": "string|null — target city if geo-specific",
+      "county": "string|null — target county if geo-specific",
+      "state": "string|null — DC/MD/VA",
+      "angle": "string — unique angle/hook differentiating from similar posts",
+      "publishDate": "string — ISO date YYYY-MM-DD",
+      "status": "string — draft|writing|review|editor|fact-check|seo|published|killed|flagged",
+      "similarityScore": "number|null — highest similarity to existing posts (0-1)",
+      "similarTo": "string|null — ID of most similar existing post",
+      "flagged": "boolean — true if needs Will's review",
+      "flagReason": "string|null — reason for flagging",
+      "createdAt": "string — ISO datetime",
+      "updatedAt": "string — ISO datetime"
+    }
+  },
+  "entries": []
+}

@@ -8,7 +8,7 @@ export const siteSettings = defineType({
   fields: [
     defineField({ name: "siteName", title: "Site Name", type: "string", initialValue: "Velocity Builders" }),
     defineField({ name: "tagline", title: "Tagline", type: "string" }),
-    defineField({ name: "email", title: "Contact Email", type: "string", initialValue: "hello@velocitybuilders.io" }),
+    defineField({ name: "email", title: "Contact Email", type: "string", initialValue: "hello@velocity-builders.com" }),
     defineField({ name: "phone", title: "Phone", type: "string" }),
     defineField({ name: "address", title: "Address", type: "string" }),
     defineField({

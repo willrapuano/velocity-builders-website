@@ -13,7 +13,7 @@ const links = [
 
 ];
 
-const mobileLinks = links.filter((l) => !l.desktopOnly);
+const mobileLinks = links;
 
 export function NavBar() {
   const [open, setOpen] = useState(false);

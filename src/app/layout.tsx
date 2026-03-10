@@ -4,7 +4,7 @@ import "./globals.css";
 import { NavBar } from "@/components/NavBar";
 import { Footer } from "@/components/Footer";
 
-const siteUrl = "https://velocitybuilders.io";
+const siteUrl = "https://velocity-builders.com";
 const title = "Velocity Builders | Real Estate Growth Systems";
 const description =
   "Agents and lenders: get faster lead response, better follow-up, and more closings with websites and CRM systems built for Fairfax, Loudoun, and Prince William.";
@@ -59,8 +59,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               name: "Velocity Builders, LLC",
               url: siteUrl,
               description,
-              email: "hello@velocitybuilders.io",
-              telephone: "(703) 555-0145",
+              email: "hello@velocity-builders.com",
+              telephone: "(703) 859-1467",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Vienna",

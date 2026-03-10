@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: "Velocity Builders Realtor Portal",
     description:
       "Aggregated performance snapshots built for realtor partners. Privacy-safe, PII-free metrics only.",
-    url: "https://velocitybuilders.io/portal",
+    url: "https://velocity-builders.com/portal",
     type: "website",
   },
   robots: {
