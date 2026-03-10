@@ -10,7 +10,7 @@ const links = [
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
   { href: "/portal", label: "Portal" },
-  { href: "/legal", label: "Legal", desktopOnly: true },
+
 ];
 
 const mobileLinks = links.filter((l) => !l.desktopOnly);
