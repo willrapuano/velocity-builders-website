@@ -77,7 +77,7 @@
 - **Description:** Marketing, pre-sale, and digital strategies for residential builders
 - **Example Posts:**
   - "How [City] Builders Are Using SEO to Sell Out Communities Before Groundbreak"
-  - "The Builder's Guide to Agent Co-Marketing in Northern Virginia"
+  - "The Builder's Guide to Agent Co-Marketing in the DMV"
   - "New Construction Landing Pages That Convert: [Year] Best Practices"
   - "Pre-Sale Funnel Automation for Residential Builders"
   - "Builder CRM Setup: Tracking Prospects from Lot Interest to Closing"
@@ -97,7 +97,7 @@
 - **Description:** DMV market data, trends, and local market snapshots
 - **Example Posts:**
   - "[County] Real Estate Market Report — [Month] [Year]"
-  - "New Construction Permits in Northern Virginia: [Quarter] [Year] Trends"
+  - "New Construction Permits in the DMV: [Quarter] [Year] Trends"
   - "Interest Rate Impact on [City] Home Sales — [Month] [Year]"
   - "Inventory Watch: [County] Active Listings vs Closed Sales — [Month] [Year]"
   - "Top 5 DMV Zip Codes for Agent Opportunity in [Year]"
@@ -128,7 +128,7 @@
 - **Example Posts:**
   - "How [Agent Name] Went from 12 to 47 Transactions with CRM Automation"
   - "Case Study: [Builder] Sold 80% of Phase 1 Using Hyper-Local SEO"
-  - "From 0 to 500 Organic Visits/Month: A NoVA Agent's Website Transformation"
+  - "From 0 to 500 Organic Visits/Month: An Agent's Website Transformation"
   - "[Credit Union] Increased Mortgage Leads 3X with Automated Follow-Up"
   - "ROI Breakdown: What a $500/Month Content System Actually Returns"
 
@@ -181,29 +181,49 @@
 
 ## 4. Publishing Cadence
 
-**Target: 35-45 posts/week** (5-7/day)
+**Target: 12 posts/day (84/week) — evenly balanced across all 4 audiences**
+**Audience split: ~3 posts/day per audience (Agents, Loan Officers, Builders, Credit Unions)**
 
-| Pillar | Posts/Week | Auto Level | Daily Slot |
-|--------|-----------|------------|------------|
-| Hyper-Local SEO | 7 | Fully auto | 1/day (Mon-Sun) |
-| Market Intelligence | 5 | Fully auto | 1/day (Mon-Fri) |
-| Tech & Tools | 5 | Fully auto | 1/day (Mon-Fri) |
-| Lead Generation | 4 | Semi-auto | Mon, Tue, Thu, Fri |
-| CRM & Automation | 3 | Semi-auto | Mon, Wed, Fri |
-| Business Systems | 3 | Semi-auto | Tue, Thu, Sat |
-| Title Insurance | 2 | Semi-auto | Tue, Thu |
-| Regulations | 2 | Semi-auto | Mon, Wed |
-| Builder Marketing | 2 | Semi-auto | Tue, Fri |
-| Lender Marketing | 2 | Semi-auto | Wed, Sat |
-| Title & RE News | 2 | Manual | As-needed (min 2/wk) |
-| Case Studies | 1 | Manual | Wednesday |
+### Phase 1: Foundation (Weeks 1-4) — 12 posts/day
 
-**Total: ~38 posts/week**
+| Pillar | Posts/Day | Primary Audience | Auto Level |
+|--------|----------|------------------|------------|
+| Follow-Up Automation | 2 | ALL 4 | Semi-auto |
+| CRM & Automation | 2 | Agents, Loan Officers | Semi-auto |
+| Hyper-Local SEO | 2 | Agents, Builders | Fully auto |
+| Lead Generation | 2 | Agents, Loan Officers | Semi-auto |
+| Lender Marketing | 2 | Loan Officers, Credit Unions | Semi-auto |
+| Builder Marketing | 2 | Builders | Semi-auto |
 
-**Ramp plan:**
-- **Weeks 1-4:** Fully auto pillars only (17/wk) — build engine, validate quality
-- **Weeks 5-8:** Add semi-auto pillars (31/wk) — editorial workflow proven
-- **Week 9+:** Full cadence (38/wk) — all pillars live
+**Why this mix:** Follow-Up Automation is the anchor — it's the product. Hyper-Local SEO scales fastest (city × topic matrix). Lender + Builder pillars launch day 1 to avoid agent-heavy skew.
+
+### Phase 2: Authority Layer (Weeks 5-8) — add 4/day (16 total)
+
+| Pillar | Posts/Day | Primary Audience | Auto Level |
+|--------|----------|------------------|------------|
+| Title Insurance & Settlement | 1 | Agents, LOs, Builders | Semi-auto |
+| Market Intelligence | 1 | ALL 4 | Fully auto |
+| Business Systems | 1 | Agents, Loan Officers | Semi-auto |
+| Tech & Tools | 1 | Agents, Loan Officers | Fully auto |
+
+### Phase 3: Full Machine (Week 9+) — add remaining (18-20 total)
+
+| Pillar | Posts/Day | Primary Audience | Auto Level |
+|--------|----------|------------------|------------|
+| Regulations & Compliance | 1 | Agents, LOs, Credit Unions | Semi-auto |
+| Title & RE News | 1 | ALL 4 | Manual |
+| Case Studies | 0.5 (3-4/wk) | ALL 4 | Manual |
+
+### Tone & Voice
+- **Structure:** Thought leadership — teach frameworks, show data, explain systems
+- **Voice:** Aggressive and direct — no soft language, no hedging
+- **Formula:** "Here's what's broken. Here's how to fix it. Here's what it costs you to wait."
+- **Think:** Teach like a professor, write like a closer
+
+### Author / Pruitt Title Positioning
+- Author bio mentions: "Will Rapuano also leads Business Development for Pruitt Title, a settlement services company in Vienna, VA."
+- No CTAs, endorsements, or "choose Pruitt" language anywhere
+- Title insurance content educates — the relationship sells itself
 
 ---
 
