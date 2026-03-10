@@ -1,0 +1,244 @@
+# Velocity Builders — Automated Blog Content Strategy
+
+## 1. Content Pillars (12)
+
+### Pillar 1: Lead Generation Tactics
+- **Audience:** Agents, Loan Officers
+- **Description:** Actionable lead gen strategies for real estate professionals
+- **Example Posts:**
+  - "7 Automated Lead Follow-Up Sequences Every Agent Needs in 2026"
+  - "How Top-Producing Agents in [City] Generate 30+ Referrals/Month"
+  - "The Lead Response Time Study: Why 5 Minutes Costs You $50K/Year"
+  - "Facebook Lead Ads vs Google PPC for Real Estate Agents — 2026 Breakdown"
+  - "Sphere of Influence Marketing: The System That Replaces Cold Leads"
+
+### Pillar 2: CRM & Automation Playbooks
+- **Audience:** Agents, Loan Officers
+- **Description:** Platform-agnostic CRM strategy, workflow design, and automation ROI
+- **Example Posts:**
+  - "5 CRM Automations That Recover Dead Leads Without Lifting a Finger"
+  - "The 90-Day CRM Setup Plan for Solo Agents"
+  - "How to Build a Pipeline That Tracks Every Lead from Inquiry to Closing"
+  - "The CRM Mistake That's Costing Agents 40% of Their Referrals"
+  - "CRM Automation ROI Calculator: What's Your Follow-Up Actually Worth?"
+
+### Pillar 3: Hyper-Local SEO
+- **Audience:** Agents, Builders
+- **Description:** City/neighborhood-level SEO strategies and ranking tactics
+- **Example Posts:**
+  - "How to Rank #1 for 'Best Realtor in [City]' — 2026 SEO Playbook"
+  - "Hyper-Local SEO for Real Estate: [City] Neighborhood Page Strategy"
+  - "Google Business Profile Optimization for Agents in [County], VA"
+  - "The Neighborhood Blog Strategy That Generates 200+ Organic Leads/Month"
+  - "Local SEO Audit Checklist for Real Estate Agents — [Year]"
+
+### Pillar 4: Business Systems & Scaling
+- **Audience:** Agents, Loan Officers
+- **Description:** Operations, team building, and systems for scaling production
+- **Example Posts:**
+  - "The $10M Agent Tech Stack: Tools That Replace 3 Assistants"
+  - "How to Build a Referral Machine That Runs Without You"
+  - "Transaction Coordinator Automation: What to Delegate vs Automate"
+  - "From Solo Agent to Team: The Systems You Need Before Hiring"
+  - "5 Business Systems Every Loan Officer Needs to Hit 100+ Units/Year"
+
+### Pillar 5: Title Insurance & Settlement
+- **Audience:** Agents, Loan Officers, Builders
+- **Description:** Title process education, common issues, and how-to guides
+- **Example Posts:**
+  - "Title Insurance Explained: What Every [City] Agent Should Tell Buyers"
+  - "Wire Fraud Prevention Checklist for Real Estate Closings — [Year]"
+  - "How Title Issues Kill Deals (And How to Catch Them Early)"
+  - "Settlement Timeline in Virginia: What Agents Need to Know in [Year]"
+  - "Owner's Title Insurance vs Lender's Title Insurance — The Agent's Script"
+
+### Pillar 6: Title & Real Estate News
+- **Audience:** All four audiences
+- **Description:** Breaking regulatory, legal, and industry news with analysis
+- **Example Posts:**
+  - "NAR Settlement Update [Month] [Year]: What Changes for Virginia Agents"
+  - "New CFPB Rule on [Topic]: What Loan Officers Need to Know"
+  - "Virginia Real Estate Commission Update — [Month] [Year] Recap"
+  - "[County] Recording Fee Changes: Impact on Settlement Costs"
+  - "RESPA Enforcement Trends [Year]: What Title Companies Are Watching"
+
+### Pillar 7: Real Estate Regulations & Compliance
+- **Audience:** Agents, Loan Officers, Credit Unions
+- **Description:** Regulatory explainers and compliance checklists
+- **Example Posts:**
+  - "Virginia Real Estate License Renewal Checklist — [Year]"
+  - "TRID Compliance for Loan Officers: The [Year] Quick Reference"
+  - "Marketing Compliance for Real Estate Agents: What You Can't Say in [Year]"
+  - "Fair Housing Advertising Rules Every Agent Should Know"
+  - "Anti-Kickback & RESPA: Co-Marketing Dos and Don'ts for [Year]"
+
+### Pillar 8: Builder Marketing & Sales
+- **Audience:** Builders
+- **Description:** Marketing, pre-sale, and digital strategies for residential builders
+- **Example Posts:**
+  - "How [City] Builders Are Using SEO to Sell Out Communities Before Groundbreak"
+  - "The Builder's Guide to Agent Co-Marketing in Northern Virginia"
+  - "New Construction Landing Pages That Convert: [Year] Best Practices"
+  - "Pre-Sale Funnel Automation for Residential Builders"
+  - "Builder CRM Setup: Tracking Prospects from Lot Interest to Closing"
+
+### Pillar 9: Lender Marketing & Growth
+- **Audience:** Loan Officers, Credit Unions/Banks
+- **Description:** Marketing, referral, and tech strategies for mortgage professionals
+- **Example Posts:**
+  - "How Loan Officers Build Agent Referral Pipelines That Last"
+  - "Credit Union Mortgage Marketing: Digital Strategies for [Year]"
+  - "The Loan Officer's Guide to Co-Branded Content with Agents"
+  - "Community Bank vs Big Lender: How to Win on Local Service"
+  - "Automated Rate Alert Systems That Keep Borrowers Engaged"
+
+### Pillar 10: Market Intelligence
+- **Audience:** All four audiences
+- **Description:** DMV market data, trends, and local market snapshots
+- **Example Posts:**
+  - "[County] Real Estate Market Report — [Month] [Year]"
+  - "New Construction Permits in Northern Virginia: [Quarter] [Year] Trends"
+  - "Interest Rate Impact on [City] Home Sales — [Month] [Year]"
+  - "Inventory Watch: [County] Active Listings vs Closed Sales — [Month] [Year]"
+  - "Top 5 DMV Zip Codes for Agent Opportunity in [Year]"
+
+### Pillar 11: Tech Stack & Tools
+- **Audience:** Agents, Loan Officers
+- **Description:** Reviews, comparisons, and setup guides for real estate technology
+- **Example Posts:**
+  - "Best Real Estate Website Platforms for Agents — [Year] Ranked"
+  - "Zapier vs Make.com for Real Estate Automations: Which Saves More Time?"
+  - "AI Tools Every Real Estate Agent Should Be Using in [Year]"
+  - "IDX Website Setup Guide: From Zero to Lead-Generating in 7 Days"
+  - "The Best Email Marketing Platforms for Real Estate — [Year] Comparison"
+
+### Pillar 12: Follow-Up Automation
+- **Audience:** All four audiences
+- **Description:** Automated follow-up systems, drip sequences, and touchpoint strategies for repeat/referral capture
+- **Example Posts:**
+  - "The Agent's Follow-Up System: 12 Automated Touchpoints That Turn Past Clients Into Repeat Business"
+  - "Follow-Up Automation for Loan Officers: How to Stay Top-of-Mind With Realtors Without Lifting a Finger"
+  - "Builder Follow-Up Sequences: From Model Home Visit to Contract in 90 Days"
+  - "Credit Union Member Follow-Up: Automated Mortgage Nurture Campaigns That Convert"
+  - "The Post-Closing Follow-Up Blueprint: How to Generate 3 Referrals Per Closed Transaction"
+
+### Pillar 13: Case Studies & ROI Proof
+- **Audience:** All four audiences
+- **Description:** Client wins, before/after results, and system ROI documentation
+- **Example Posts:**
+  - "How [Agent Name] Went from 12 to 47 Transactions with CRM Automation"
+  - "Case Study: [Builder] Sold 80% of Phase 1 Using Hyper-Local SEO"
+  - "From 0 to 500 Organic Visits/Month: A NoVA Agent's Website Transformation"
+  - "[Credit Union] Increased Mortgage Leads 3X with Automated Follow-Up"
+  - "ROI Breakdown: What a $500/Month Content System Actually Returns"
+
+---
+
+## 2. Template Formulas
+
+| Pillar | Template Pattern | Variables |
+|--------|-----------------|-----------|
+| **Lead Generation** | `[#] [Tactic Type] for [Audience] in [Year]` | tactic, audience, year |
+| **CRM & Automation** | `[CRM Concept/Workflow] for [Audience] — [Year]` | concept, audience, year |
+| **Hyper-Local SEO** | `[SEO Strategy] for [Audience] in [City/County] — [Year]` | strategy, audience, city, year |
+| **Business Systems** | `How to [Outcome] as a [Role] Using [System Type]` | outcome, role, system |
+| **Title Insurance** | `[Title Topic] Explained: What [Audience] in [State] Should Know` | topic, audience, state |
+| **Title & RE News** | `[Regulation/Event] Update [Month] [Year]: Impact on [Audience]` | event, month, year, audience |
+| **Regulations** | `[Regulation Name] Compliance for [Audience] — [Year] Guide` | regulation, audience, year |
+| **Builder Marketing** | `[Strategy] for [City/Region] Builders — [Year] Playbook` | strategy, city, year |
+| **Lender Marketing** | `[Strategy] for Loan Officers/[Bank Type] in [Year]` | strategy, institution, year |
+| **Market Intelligence** | `[County/City] [Report Type] — [Month/Quarter] [Year]` | location, report, period, year |
+| **Tech & Tools** | `Best [Tool Category] for [Audience] — [Year] [Format]` | category, audience, year, format |
+| **Follow-Up Automation** | `[Follow-Up Type] for [Audience]: [Outcome] in [Year]` | type, audience, outcome, year |
+| **Case Studies** | `How [Client Type] [Achieved Result] with [Velocity Service]` | client, result, service |
+
+---
+
+## 3. Automation Level
+
+| Pillar | Auto Level | Rationale |
+|--------|-----------|-----------|
+| Lead Generation | **Semi-auto** | Templates + AI draft → human review for accuracy |
+| CRM & Automation | **Semi-auto** | Screenshots/specifics need human input; structure is templated |
+| Hyper-Local SEO | **Fully auto** | City × topic matrix, data-pullable, year-tagged — Fox model |
+| Business Systems | **Semi-auto** | Thought leadership tone needs editorial pass |
+| Title Insurance | **Semi-auto** | Legal accuracy matters — AI draft, human verify |
+| Title & RE News | **Manual** | Time-sensitive, requires editorial judgment and source verification |
+| Regulations | **Semi-auto** | Template structure, but compliance content needs legal review |
+| Builder Marketing | **Semi-auto** | Smaller volume, more strategic — AI draft + edit |
+| Lender Marketing | **Semi-auto** | Compliance-sensitive, needs review |
+| Market Intelligence | **Fully auto** | Data-driven, API-feedable (MLS stats, permit data, rates) |
+| Tech & Tools | **Fully auto** | Comparison templates, feature lists, year-rotate |
+| Follow-Up Automation | **Semi-auto** | Template structures per audience, AI draft + review |
+| Case Studies | **Manual** | Requires real client data, interviews, approval |
+
+**Automation summary:**
+- Fully auto (3): Hyper-Local SEO, Market Intelligence, Tech & Tools
+- Semi-auto (7): Lead Gen, CRM, Biz Systems, Title Insurance, Regulations, Builder Mktg, Lender Mktg
+- Manual (2): Title News, Case Studies
+
+---
+
+## 4. Publishing Cadence
+
+**Target: 35-45 posts/week** (5-7/day)
+
+| Pillar | Posts/Week | Auto Level | Daily Slot |
+|--------|-----------|------------|------------|
+| Hyper-Local SEO | 7 | Fully auto | 1/day (Mon-Sun) |
+| Market Intelligence | 5 | Fully auto | 1/day (Mon-Fri) |
+| Tech & Tools | 5 | Fully auto | 1/day (Mon-Fri) |
+| Lead Generation | 4 | Semi-auto | Mon, Tue, Thu, Fri |
+| CRM & Automation | 3 | Semi-auto | Mon, Wed, Fri |
+| Business Systems | 3 | Semi-auto | Tue, Thu, Sat |
+| Title Insurance | 2 | Semi-auto | Tue, Thu |
+| Regulations | 2 | Semi-auto | Mon, Wed |
+| Builder Marketing | 2 | Semi-auto | Tue, Fri |
+| Lender Marketing | 2 | Semi-auto | Wed, Sat |
+| Title & RE News | 2 | Manual | As-needed (min 2/wk) |
+| Case Studies | 1 | Manual | Wednesday |
+
+**Total: ~38 posts/week**
+
+**Ramp plan:**
+- **Weeks 1-4:** Fully auto pillars only (17/wk) — build engine, validate quality
+- **Weeks 5-8:** Add semi-auto pillars (31/wk) — editorial workflow proven
+- **Week 9+:** Full cadence (38/wk) — all pillars live
+
+---
+
+## 5. Cross-Linking Map
+
+### Pillar-to-Pillar Links
+
+```
+Lead Generation ←→ CRM & Automation (lead capture → follow-up)
+Lead Generation ←→ Hyper-Local SEO (organic leads → local ranking)
+CRM & Automation ←→ Business Systems (CRM → full ops stack)
+CRM & Automation ←→ Tech & Tools (CRM → tool ecosystem)
+Hyper-Local SEO ←→ Market Intelligence (local SEO → market data)
+Hyper-Local SEO ←→ Builder Marketing (neighborhood pages → builder communities)
+Title Insurance ←→ Regulations (title process → compliance)
+Title Insurance ←→ Title News (education → breaking updates)
+Title News ←→ Regulations (news events → regulatory impact)
+Builder Marketing ←→ Lender Marketing (builder → lender co-marketing)
+Market Intelligence ←→ Lead Generation (data insights → prospecting strategy)
+Case Studies ←→ ALL PILLARS (proof layer for every topic)
+```
+
+### Pillar-to-Service Page Links
+
+| Pillar | Links to Service Page |
+|--------|----------------------|
+| Lead Generation | → `/services/crm-automation`, `/services/follow-up-systems` |
+| CRM & Automation | → `/services/crm-automation`, `/services/ghl-setup` |
+| Hyper-Local SEO | → `/services/local-seo`, `/services/custom-websites` |
+| Business Systems | → `/services/crm-automation`, `/services/follow-up-systems` |
+| Title Insurance | → `/partners/pruitt-title` (cross-brand) |
+| Title & RE News | → `/partners/pruitt-title`, `/resources/industry-news` |
+| Regulations | → `/resources/compliance`, `/partners/pruitt-title` |
+| Builder Marketing | → `/services/builder-marketing`, `/services/custom-websites` |
+| Lender Marketing | → `/services/lender-marketing`, `/services/crm-automation` |
+| Market Intelligence | → `/resources/market-data`, `/services/local-seo` |
+| Tech & Tools | → `/services/crm-automation`, `/services/custom-websites` |
+| Case Studies | → ALL service pages (contextual) |
