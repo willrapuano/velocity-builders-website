@@ -70,14 +70,15 @@ export default function Home() {
       </section>
 
       <section className="rounded-3xl border border-white/10 bg-white/5 p-8">
-        <h2 className="text-2xl font-semibold text-white">Built for How NoVA Actually Moves</h2>
-        <p className="mt-4 text-slate-300">Northern Virginia is not one market.</p>
-        <ul className="mt-5 space-y-2 text-slate-200">
-          <li>• Fairfax: move-up and school-bound decisions</li>
-          <li>• Loudoun: growth corridors and relocation flow</li>
-          <li>• Prince William: value-first buyers who need fast clarity</li>
+        <h2 className="text-2xl font-semibold text-white">You Don&#39;t Have a Lead Problem. You Have a Follow-Up Problem.</h2>
+        <p className="mt-4 text-slate-300">Top producers in the DMV aren&#39;t grinding Zillow for strangers. They&#39;re closing referrals, repeat clients, and sphere business — and the ones pulling away have systems doing the work their memory can&#39;t.</p>
+        <ul className="mt-5 space-y-3 text-slate-200">
+          <li><span className="font-semibold text-emerald-300">You close 30+ deals a year</span> but couldn&#39;t tell me which past clients are 6 months from their next move. That&#39;s money walking.</li>
+          <li><span className="font-semibold text-emerald-300">You get referrals</span> — when someone happens to remember you. &ldquo;Happens to&rdquo; is not a strategy.</li>
+          <li><span className="font-semibold text-emerald-300">Your lender and builder partners send you business</span> when you&#39;re top of mind. Without automated touchpoints, you&#39;re not top of mind. You&#39;re top of the pile.</li>
+          <li><span className="font-semibold text-emerald-300">You know follow-up matters.</span> You also know you&#39;re not doing it. Not consistently. Not at scale.</li>
         </ul>
-        <p className="mt-4 text-slate-300">Your funnel has to match local behavior, not generic national playbooks.</p>
+        <p className="mt-4 text-slate-300">Velocity builds the repeat-and-referral capture engine you keep saying you&#39;ll build yourself. Then we layer in the SEO and content that brings new business to the front door.</p>
       </section>
 
       <section className="space-y-6">
