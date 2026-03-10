@@ -84,16 +84,16 @@ export default function Home() {
         <h2 className="text-2xl font-semibold text-white">How We Work</h2>
         <div className="grid gap-4 md:grid-cols-3">
           <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-            <p className="text-sm font-semibold text-emerald-300">Step 1: Diagnose the leak</p>
-            <p className="mt-2 text-sm text-slate-300">We map where leads stall between inquiry and consult.</p>
+            <p className="text-sm font-semibold text-emerald-300">Step 1: Stop the Bleed</p>
+            <p className="mt-2 text-sm text-slate-300">You already have a database full of past clients and referral partners. You&#39;re just not working it. We install CRM automations and follow-up systems that turn your existing sphere into a repeat-business machine — before you spend a dime chasing strangers.</p>
           </div>
           <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-            <p className="text-sm font-semibold text-emerald-300">Step 2: Build the system</p>
-            <p className="mt-2 text-sm text-slate-300">We deploy page, CRM, and follow-up improvements in priority order.</p>
+            <p className="text-sm font-semibold text-emerald-300">Step 2: Make the Follow-Up Automatic</p>
+            <p className="mt-2 text-sm text-slate-300">Drip campaigns, anniversary triggers, referral nudges, market updates — all running without you. Every warm contact stays warm. Every closed client becomes a future closing.</p>
           </div>
           <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-            <p className="text-sm font-semibold text-emerald-300">Step 3: Launch and tune</p>
-            <p className="mt-2 text-sm text-slate-300">We monitor response, consult bookings, and handoff quality.</p>
+            <p className="text-sm font-semibold text-emerald-300">Step 3: Turn On the Traffic</p>
+            <p className="mt-2 text-sm text-slate-300">Now that you&#39;re capturing what&#39;s already yours, we build the growth layer: a high-converting website, local SEO, and automated blog content that brings new leads to your door on autopilot.</p>
           </div>
         </div>
       </section>
