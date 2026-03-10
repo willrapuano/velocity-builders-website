@@ -22,9 +22,9 @@ export default function Home() {
           </div>
         </div>
         <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 to-transparent p-6 shadow-glow">
-          <p className="text-xs uppercase tracking-[0.25em] text-emerald-300/80">Trusted across Northern Virginia</p>
+          <p className="text-xs uppercase tracking-[0.25em] text-emerald-300/80">Trusted across DC, Maryland, & Virginia</p>
           <p className="mt-4 text-lg text-slate-100">
-            Used by agents, lenders, and title partners across Fairfax, Loudoun, and Prince William.
+            Used by agents, lenders, builders, and credit union partners across Fairfax, Loudoun, Prince William, Montgomery, Prince George&#39;s and the District of Columbia.
           </p>
         </div>
       </section>
