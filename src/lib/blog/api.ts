@@ -1,10 +1,16 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import { remark } from "remark";
-import html from "remark-html";
+/**
+ * Blog API — reads from Sanity CMS (blogPost documents).
+ * Previously read from local markdown files; rewired 2026-03-12.
+ */
+import { client } from "@/sanity/client";
 
-const POSTS_DIR = path.join(process.cwd(), "src/content/blog");
+// Map Sanity category values to frontend URL slugs
+const SANITY_CATEGORY_TO_SLUG: Record<string, string> = {
+  marketingSystems: "marketing-systems",
+  realEstateNews: "real-estate-news",
+  aiTools: "ai-tools",
+  titleInsurance: "title-insurance",
+};
 
 export interface PostMeta {
   slug: string;
@@ -13,59 +19,105 @@ export interface PostMeta {
   excerpt: string;
   author: string;
   tags: string[];
+  category: string; // frontend slug, e.g. "marketing-systems"
   featuredImage?: string;
 }
 
 export interface Post extends PostMeta {
-  contentHtml: string;
+  body: unknown[]; // Portable Text blocks
+  seoTitle?: string;
+  seoDescription?: string;
 }
 
-export function getAllPostSlugs(): string[] {
-  if (!fs.existsSync(POSTS_DIR)) return [];
-  return fs
-    .readdirSync(POSTS_DIR)
-    .filter((f) => f.endsWith(".md"))
-    .map((f) => f.replace(/\.md$/, ""));
-}
+const META_FIELDS = `
+  _id,
+  title,
+  "slug": slug.current,
+  category,
+  excerpt,
+  publishedAt,
+  seoTitle,
+  seoDescription,
+  featured
+`;
 
-export function getAllPosts(): PostMeta[] {
-  const slugs = getAllPostSlugs();
-  return slugs
-    .map((slug) => getPostMeta(slug))
-    .filter(Boolean)
-    .sort((a, b) => (a!.date > b!.date ? -1 : 1)) as PostMeta[];
-}
+const FULL_FIELDS = `
+  ${META_FIELDS},
+  body
+`;
 
-export function getPostMeta(slug: string): PostMeta | null {
-  const filePath = path.join(POSTS_DIR, `${slug}.md`);
-  if (!fs.existsSync(filePath)) return null;
-  const raw = fs.readFileSync(filePath, "utf-8");
-  const { data } = matter(raw);
+function toPostMeta(doc: Record<string, unknown>): PostMeta {
   return {
-    slug,
-    title: data.title || "",
-    date: data.date || "",
-    excerpt: data.excerpt || "",
-    author: data.author || "Will Rapuano | Velocity Builders",
-    tags: data.tags || [],
-    featuredImage: data.featuredImage || undefined,
+    slug: (doc.slug as string) || "",
+    title: (doc.title as string) || "",
+    date: doc.publishedAt
+      ? new Date(doc.publishedAt as string).toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        })
+      : "",
+    excerpt: (doc.excerpt as string) || "",
+    author: "Will Rapuano | Velocity Builders",
+    tags: [],
+    category:
+      SANITY_CATEGORY_TO_SLUG[(doc.category as string) || ""] ||
+      "marketing-systems",
+    featuredImage: undefined,
   };
 }
 
+/** Fetch all published blog posts, newest first. */
+export async function getAllPosts(): Promise<PostMeta[]> {
+  const docs = await client.fetch(
+    `*[_type == "blogPost"] | order(publishedAt desc) {${META_FIELDS}}`,
+    {},
+    { next: { revalidate: 60 } }
+  );
+  return (docs as Record<string, unknown>[]).map(toPostMeta);
+}
+
+/** Fetch all post slugs (for generateStaticParams). */
+export async function getAllPostSlugs(): Promise<string[]> {
+  const docs = await client.fetch(
+    `*[_type == "blogPost"] { "slug": slug.current }`,
+    {},
+    { next: { revalidate: 3600 } }
+  );
+  return (docs as { slug: string }[]).map((d) => d.slug).filter(Boolean);
+}
+
+/** Fetch a single post by its slug. */
 export async function getPostBySlug(slug: string): Promise<Post | null> {
-  const filePath = path.join(POSTS_DIR, `${slug}.md`);
-  if (!fs.existsSync(filePath)) return null;
-  const raw = fs.readFileSync(filePath, "utf-8");
-  const { data, content } = matter(raw);
-  const processed = await remark().use(html).process(content);
+  const doc = await client.fetch(
+    `*[_type == "blogPost" && slug.current == $slug][0] {${FULL_FIELDS}}`,
+    { slug },
+    { next: { revalidate: 60 } }
+  );
+  if (!doc) return null;
+  const meta = toPostMeta(doc as Record<string, unknown>);
   return {
-    slug,
-    title: data.title || "",
-    date: data.date || "",
-    excerpt: data.excerpt || "",
-    author: data.author || "Will Rapuano | Velocity Builders",
-    tags: data.tags || [],
-    featuredImage: data.featuredImage || undefined,
-    contentHtml: processed.toString(),
+    ...meta,
+    body: (doc.body as unknown[]) || [],
+    seoTitle: (doc.seoTitle as string) || undefined,
+    seoDescription: (doc.seoDescription as string) || undefined,
   };
+}
+
+/** Fetch posts filtered by a frontend category slug. */
+export async function getPostsByCategory(
+  categorySlug: string
+): Promise<PostMeta[]> {
+  const sanityCategories = Object.entries(SANITY_CATEGORY_TO_SLUG)
+    .filter(([, slug]) => slug === categorySlug)
+    .map(([key]) => key);
+
+  if (sanityCategories.length === 0) return [];
+
+  const docs = await client.fetch(
+    `*[_type == "blogPost" && category in $cats] | order(publishedAt desc) {${META_FIELDS}}`,
+    { cats: sanityCategories },
+    { next: { revalidate: 60 } }
+  );
+  return (docs as Record<string, unknown>[]).map(toPostMeta);
 }

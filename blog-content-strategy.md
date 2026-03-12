@@ -1,6 +1,6 @@
 # Velocity Builders — Automated Blog Content Strategy
 
-## 1. Content Pillars (12)
+## 1. Content Pillars (14)
 
 ### Pillar 1: Lead Generation Tactics
 - **Audience:** Agents, Loan Officers
@@ -132,6 +132,16 @@
   - "[Credit Union] Increased Mortgage Leads 3X with Automated Follow-Up"
   - "ROI Breakdown: What a $500/Month Content System Actually Returns"
 
+### Pillar 14: Credit Union & Community Bank Marketing
+- **Audience:** Credit Unions, Community Banks (primary); Loan Officers at these institutions (secondary)
+- **Description:** Digital marketing strategies, agent partnerships, member-to-mortgage pipelines, and growth systems for credit unions and community banks competing against big lenders and fintechs
+- **Example Posts:**
+  - "The Credit Union Growth Playbook: How Community Lenders Win With Digital Marketing"
+  - "Credit Union Agent Partnership Program: The System That 3X's Mortgage Referrals"
+  - "Member-to-Mortgage Pipeline: 5 Automated Triggers Every Credit Union Needs"
+  - "Community Bank vs Fintech: Why Local Lenders Win on Trust (and How to Prove It)"
+  - "How [Credit Union] Grew Purchase Loan Volume 40% in 6 Months With Hyper-Local Content"
+
 ---
 
 ## 2. Template Formulas
@@ -151,6 +161,7 @@
 | **Tech & Tools** | `Best [Tool Category] for [Audience] — [Year] [Format]` | category, audience, year, format |
 | **Follow-Up Automation** | `[Follow-Up Type] for [Audience]: [Outcome] in [Year]` | type, audience, outcome, year |
 | **Case Studies** | `How [Client Type] [Achieved Result] with [Velocity Service]` | client, result, service |
+| **Credit Union & Community Bank** | `[Strategy/Topic] for Credit Unions/Community Banks — [Year] [Format]` | strategy, institution, year, format |
 
 ---
 
@@ -171,20 +182,21 @@
 | Tech & Tools | **Fully auto** | Comparison templates, feature lists, year-rotate |
 | Follow-Up Automation | **Semi-auto** | Template structures per audience, AI draft + review |
 | Case Studies | **Manual** | Requires real client data, interviews, approval |
+| Credit Union & Community Bank | **Semi-auto** | Compliance-sensitive, needs review; template structures per institution type |
 
 **Automation summary:**
 - Fully auto (3): Hyper-Local SEO, Market Intelligence, Tech & Tools
-- Semi-auto (7): Lead Gen, CRM, Biz Systems, Title Insurance, Regulations, Builder Mktg, Lender Mktg
+- Semi-auto (8): Lead Gen, CRM, Biz Systems, Title Insurance, Regulations, Builder Mktg, Lender Mktg, Credit Union & Community Bank
 - Manual (2): Title News, Case Studies
 
 ---
 
 ## 4. Publishing Cadence
 
-**Target: 12 posts/day (84/week) — evenly balanced across all 4 audiences**
-**Audience split: ~3 posts/day per audience (Agents, Loan Officers, Builders, Credit Unions)**
+**Target: 14 posts/day (98/week) — evenly balanced across all 4 audiences**
+**Audience split: ~3.5 posts/day per audience (Agents, Loan Officers, Builders, Credit Unions/Community Banks) — 25% each**
 
-### Phase 1: Foundation (Weeks 1-4) — 12 posts/day
+### Phase 1: Foundation (Weeks 1-4) — 14 posts/day
 
 | Pillar | Posts/Day | Primary Audience | Auto Level |
 |--------|----------|------------------|------------|
@@ -194,8 +206,9 @@
 | Lead Generation | 2 | Agents, Loan Officers | Semi-auto |
 | Lender Marketing | 2 | Loan Officers, Credit Unions | Semi-auto |
 | Builder Marketing | 2 | Builders | Semi-auto |
+| Credit Union & Community Bank | 2 | Credit Unions, Community Banks | Semi-auto |
 
-**Why this mix:** Follow-Up Automation is the anchor — it's the product. Hyper-Local SEO scales fastest (city × topic matrix). Lender + Builder pillars launch day 1 to avoid agent-heavy skew.
+**Why this mix:** Follow-Up Automation is the anchor — it's the product. Hyper-Local SEO scales fastest (city × topic matrix). Lender + Builder + Credit Union pillars launch day 1 to avoid agent-heavy skew. Credit unions are a priority audience — not a Phase 3 afterthought.
 
 ### Phase 2: Authority Layer (Weeks 5-8) — add 4/day (16 total)
 
@@ -236,7 +249,7 @@
 | 1. Writer | Taz | Generate draft from template + variables, apply pillar tone/structure | Raw draft |
 | 2. Editor | TBD | Readability, flow, voice enforcement ("professor meets closer"), kill fluff, verify no GHL/Pruitt selling/geographic pigeon-holing | Edited draft |
 | 3. Fact-Checker | TBD | Validate stats, regulations, legal claims, compliance language. Flag AI hallucinations. Critical for Title, Regulations, News pillars | Verified draft or FLAGGED |
-| 4. SEO Optimizer | Stephen | Slug structure, meta description, H2/H3 hierarchy, keyword placement, internal cross-links, cannibalization check, year-tags, schema, OG tags | Publish-ready post |
+| 4. SEO Optimizer | Auggie | Slug structure, meta description, H2/H3 hierarchy, keyword placement, internal cross-links, cannibalization check, year-tags, schema, OG tags | Publish-ready post |
 
 ### Review Flow
 ```
@@ -319,6 +332,11 @@ Title Insurance ←→ Title News (education → breaking updates)
 Title News ←→ Regulations (news events → regulatory impact)
 Builder Marketing ←→ Lender Marketing (builder → lender co-marketing)
 Market Intelligence ←→ Lead Generation (data insights → prospecting strategy)
+Credit Union & Community Bank ←→ Lender Marketing (institution strategies → LO co-marketing)
+Credit Union & Community Bank ←→ Follow-Up Automation (member pipelines → automated nurture)
+Credit Union & Community Bank ←→ Regulations (compliance marketing → regulatory guides)
+Credit Union & Community Bank ←→ Lead Generation (digital acquisition → lead systems)
+Credit Union & Community Bank ←→ Hyper-Local SEO (local content → community visibility)
 Case Studies ←→ ALL PILLARS (proof layer for every topic)
 ```
 
@@ -337,4 +355,5 @@ Case Studies ←→ ALL PILLARS (proof layer for every topic)
 | Lender Marketing | → `/services/lender-marketing`, `/services/crm-automation` |
 | Market Intelligence | → `/resources/market-data`, `/services/local-seo` |
 | Tech & Tools | → `/services/crm-automation`, `/services/custom-websites` |
+| Credit Union & Community Bank | → `/services/lender-marketing`, `/services/crm-automation`, `/services/local-seo` |
 | Case Studies | → ALL service pages (contextual) |

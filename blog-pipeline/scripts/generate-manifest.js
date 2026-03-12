@@ -22,6 +22,171 @@ const REGISTRY_PATH = path.join(DATA_DIR, 'topic-registry.json');
 
 const AUDIENCES = ['agents', 'loan-officers', 'builders', 'credit-unions'];
 
+// --- Keyword Gap Data ---
+const SEO_DIR = path.join(__dirname, '..', '..', 'seo');
+const KEYWORD_FILES = {
+  'agents': 'keyword-gap-realtors.json',
+  'loan-officers': 'keyword-gap-loan_officers.json',
+  'builders': 'keyword-gap-builders.json',
+  'credit-unions': 'keyword-gap-credit_unions_banks.json',
+};
+
+// Audience-specific filter thresholds (credit unions gets relaxed filters due to smaller keyword universe)
+const AUDIENCE_FILTERS = {
+  'agents':       { minVol: 50,  maxKD: 30 },
+  'loan-officers': { minVol: 50,  maxKD: 30 },
+  'builders':     { minVol: 50,  maxKD: 30 },
+  'credit-unions': { minVol: 20,  maxKD: 40 },  // relaxed — smaller keyword pool
+};
+
+// Keywords from other audiences that also serve credit unions
+const CU_CROSSOVER_TERMS = ['mortgage', 'lender', 'loan', 'banking', 'rate', 'refinance', 'origination', 'member', 'financial', 'community bank'];
+
+function loadKeywordPool() {
+  const pool = {};
+  for (const [audience, file] of Object.entries(KEYWORD_FILES)) {
+    try {
+      const filters = AUDIENCE_FILTERS[audience] || { minVol: 50, maxKD: 30 };
+      const data = JSON.parse(fs.readFileSync(path.join(SEO_DIR, file), 'utf8'));
+      pool[audience] = (data.keywords || [])
+        .filter(k => k.volume >= filters.minVol && k.kd <= filters.maxKD)
+        .sort((a, b) => (b.score || 0) - (a.score || 0));
+    } catch {
+      pool[audience] = [];
+    }
+  }
+
+  // Cross-pollinate: add loan officer keywords relevant to credit unions
+  if (pool['loan-officers'] && pool['credit-unions']) {
+    const cuKeywords = new Set(pool['credit-unions'].map(k => k.keyword.toLowerCase()));
+    const crossover = pool['loan-officers']
+      .filter(k => {
+        if (cuKeywords.has(k.keyword.toLowerCase())) return false; // skip dupes
+        const kw = k.keyword.toLowerCase();
+        return CU_CROSSOVER_TERMS.some(term => kw.includes(term));
+      })
+      .map(k => ({ ...k, crossAudience: 'loan-officers' })); // tag source
+
+    pool['credit-unions'] = [...pool['credit-unions'], ...crossover]
+      .sort((a, b) => (b.score || 0) - (a.score || 0));
+  }
+
+  return pool;
+}
+
+// Map keywords to pillars based on topic matching
+const KEYWORD_PILLAR_MAP = {
+  'lead-generation': ['lead', 'leads', 'lead gen', 'referral', 'database reactivation', 'prospecting', 'cold call', 'sphere of influence', 'open house', 'facebook ads', 'ppc', 'google ads', 'landing page'],
+  'crm-automation': ['crm', 'follow up', 'automation', 'drip', 'nurture', 'pipeline', 'speed to lead', 'response time', 'tag', 'workflow', 'contact management'],
+  'hyper-local-seo': ['seo', 'google business', 'local search', 'neighborhood', 'blog', 'content', 'organic', 'keyword', 'rank', 'serp', 'backlink', 'sitemap', 'schema', 'gmb', 'google my business', 'idx', 'website'],
+  'builder-marketing': ['builder', 'new construction', 'pre-sale', 'model home', 'community', 'new home', 'construction'],
+  'lender-marketing': ['loan officer', 'mortgage', 'lender', 'rate', 'refinance', 'borrower', 'origination', 'loan originator'],
+  'follow-up-automation': ['follow up', 'drip', 're-engagement', 'win back', 'post-closing', 'touchpoint', 'stay in touch', 'past client'],
+  'credit-union-banking': ['credit union', 'community bank', 'bank marketing', 'member', 'fintech', 'banking', 'branch'],
+  'tech-tools': ['tool', 'software', 'platform', 'zapier', 'make.com', 'ai tool', 'tech stack', 'app', 'integration'],
+  'market-intelligence': ['market report', 'inventory', 'home price', 'interest rate', 'housing market', 'forecast', 'trend'],
+  'case-studies': ['case study', 'roi', 'success story', 'result', 'transformation'],
+};
+
+function keywordMatchesPillar(keyword, pillarId) {
+  const terms = KEYWORD_PILLAR_MAP[pillarId] || [];
+  const kw = keyword.toLowerCase();
+  return terms.some(t => kw.includes(t));
+}
+
+function getUsedKeywords() {
+  const registry = loadRegistry();
+  const used = new Set();
+  for (const entry of (registry.entries || [])) {
+    if (entry.primaryKeyword) used.add(entry.primaryKeyword.toLowerCase());
+  }
+  // Also check existing manifests from last 30 days
+  try {
+    const manifests = fs.readdirSync(MANIFEST_DIR).filter(f => f.endsWith('.json')).sort().reverse().slice(0, 30);
+    for (const mf of manifests) {
+      const data = JSON.parse(fs.readFileSync(path.join(MANIFEST_DIR, mf), 'utf8'));
+      for (const entry of (data.entries || [])) {
+        if (entry.primaryKeyword) used.add(entry.primaryKeyword.toLowerCase());
+      }
+    }
+  } catch {}
+  return used;
+}
+
+const AUDIENCE_LABELS = {
+  'agents': 'Real Estate Agents',
+  'loan-officers': 'Loan Officers',
+  'builders': 'Builders',
+  'credit-unions': 'Credit Unions and Banks',
+};
+
+function generateTitleFromKeyword(keyword, audience, year) {
+  let kw = keyword.keyword;
+  // Clean keyword: strip dates, dashes-as-spaces
+  kw = kw.replace(/\b20\d{2}\b/g, '').replace(/ - /g, ': ').replace(/\s+/g, ' ').trim();
+  const tc = titleCase(kw);
+  const singular = {
+    'agents': 'Real Estate Agent',
+    'loan-officers': 'Loan Officer',
+    'builders': 'Builder',
+    'credit-unions': 'Credit Union or Community Bank',
+  }[audience] || 'Professional';
+  const plural = AUDIENCE_LABELS[audience] || audience;
+  const wordCount = kw.split(' ').length;
+  const vol = keyword.volume || 0;
+  const hasNumber = /\d/.test(kw);
+
+  // High-volume keywords (500+) get authority/definitive patterns
+  // Low-volume long-tail keywords get action-oriented patterns
+  // Keyword ALWAYS appears verbatim in the title for SEO
+
+  const authorityPatterns = [
+    `${tc}: The Definitive ${year} Guide for ${plural}`,
+    `${tc} — What Top ${plural} Are Doing Differently in ${year}`,
+    `The ${singular}'s Playbook for ${tc} in ${year}`,
+    `${tc}: ${year} Strategies That Actually Work for ${plural}`,
+  ];
+
+  const actionPatterns = [
+    `How to Master ${tc} as a ${singular} in ${year}`,
+    `${tc}: ${Math.floor(Math.random() * 5) + 5} Proven Strategies for ${plural} in ${year}`,
+    `Why ${tc} Matters for ${plural} — And How to Get It Right in ${year}`,
+    `${tc} Done Right: A ${year} Blueprint for ${plural}`,
+  ];
+
+  const longTailPatterns = [
+    `${tc}: A Step-by-Step Guide for ${plural}`,
+    `${tc} in ${year} — What Every ${singular} Should Know`,
+    `The Smart ${singular}'s Guide to ${tc}`,
+    `${tc}: How ${plural} Can Win in ${year}`,
+  ];
+
+  // Branded/tool keywords get comparison/review patterns
+  const isToolKeyword = /\b(crm|idx|software|platform|app|tool|zapier|make\.com|hubspot|sierra|kvcore|follow up boss|chime|boomtown|realgeeks)\b/i.test(kw);
+  const toolPatterns = [
+    `${tc} Review: Is It Worth It for ${plural} in ${year}?`,
+    `${tc} vs the Competition: What ${plural} Need to Know`,
+    `The ${singular}'s Honest Take on ${tc} in ${year}`,
+    `${tc}: Setup Guide and ROI Analysis for ${plural}`,
+  ];
+
+  let pool;
+  if (isToolKeyword) pool = toolPatterns;
+  else if (wordCount >= 5) pool = longTailPatterns;
+  else if (vol >= 500) pool = authorityPatterns;
+  else pool = actionPatterns;
+
+  return pickRandom(pool);
+}
+
+function titleCase(str) {
+  const minor = new Set(['a','an','the','and','but','or','for','nor','at','by','in','of','on','to','up','is','it','as','vs']);
+  return str.split(' ').map((w, i) => {
+    if (i === 0 || !minor.has(w.toLowerCase())) return w.charAt(0).toUpperCase() + w.slice(1).toLowerCase();
+    return w.toLowerCase();
+  }).join(' ');
+}
+
 // --- CLI Args ---
 function parseArgs() {
   const args = process.argv.slice(2);
@@ -233,6 +398,26 @@ const TOPIC_GENERATORS = {
     return pickRandom(types);
   },
 
+  'credit-union-banking': (audience, city, year) => {
+    const topics = [
+      `Credit Union Digital Marketing Playbook: How to Compete with Big Banks in ${year}`,
+      `Community Bank SEO Strategy: Owning Local Search in ${year}`,
+      `Member Acquisition Funnels for Credit Unions — What Actually Works in ${year}`,
+      `How Credit Unions Are Using Content Marketing to Beat Fintech Apps`,
+      `Credit Union Email Automation: The Onboarding Sequence That Drives Cross-Sell`,
+      `Community Bank Website Design: What Converts Members vs What Doesn't`,
+      `Credit Union Social Media Strategy: Beyond Rate Posts in ${year}`,
+      `Digital Marketing ROI for Credit Unions: How to Measure What Matters`,
+      `Bank Marketing Automation: ${Math.floor(Math.random() * 5) + 3} Campaigns That Run Without Staff`,
+      `Credit Union vs Fintech: Winning the Digital Marketing Battle in ${year}`,
+      `Google Business Profile for Credit Unions: The Local SEO Playbook`,
+      `Community Bank Lead Generation: From Branch Traffic to Digital Pipeline`,
+      `Credit Union Mortgage Marketing: How to Grow Originations with Digital`,
+      `Bank Branding in the Digital Age: Standing Out When Everyone Looks the Same`,
+    ];
+    return pickRandom(topics);
+  },
+
   'case-studies': (audience, city, year) => {
     const cases = [
       `How a Northern Virginia Agent Went from 12 to 47 Transactions with CRM Automation`,
@@ -290,70 +475,179 @@ function selectPillarForAudience(audience, activePillars, usedPillars) {
   return pickRandom(weighted) || pickRandom(matching);
 }
 
+// --- Dedup Helper ---
+// Normalize title to structural pattern: strip audience labels, numbers, years
+function structuralKey(t) {
+  return t.toLowerCase()
+    .replace(/\b(agents?|loan officers?|builders?|credit unions?|banks?|lenders?|realtors?|professionals?|los?)\b/g, 'ROLE')
+    .replace(/\b20\d{2}\b/g, 'YEAR')
+    .replace(/\b\d+\b/g, 'N')
+    .replace(/[^a-z\s]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function isSimilarToEntries(title, entries, pillarId, audience) {
+  const tokens = title.toLowerCase().replace(/[^a-z0-9\s]/g, '').split(/\s+/).filter(t => t.length > 2);
+  const tokenSet = new Set(tokens);
+  const titleStruct = structuralKey(title);
+
+  for (const existing of entries) {
+    // Block exact pillar+audience combo within same manifest
+    if (existing.pillar === pillarId && existing.audiences[0] === audience) return true;
+
+    // Structural pattern match (catches "Agent's Follow-Up System: N Touchpoints" vs "Builder's Follow-Up System: N Touchpoints")
+    if (structuralKey(existing.title) === titleStruct) return true;
+
+    // Jaccard similarity at 0.45 threshold
+    const exTokens = existing.title.toLowerCase().replace(/[^a-z0-9\s]/g, '').split(/\s+/).filter(t => t.length > 2);
+    const exSet = new Set(exTokens);
+    const inter = new Set([...tokenSet].filter(t => exSet.has(t)));
+    const uni = new Set([...tokenSet, ...exSet]);
+    if (uni.size > 0 && inter.size / uni.size > 0.45) return true;
+
+    // Block same primary keyword
+    if (existing.primaryKeyword && existing.primaryKeyword.toLowerCase() === (tokens.join(' ').slice(0, 50))) return true;
+  }
+  return false;
+}
+
 // --- Main ---
 function generateManifest() {
   const opts = parseArgs();
   const { date, count, phase } = opts;
   const year = date.slice(0, 4);
   const activePillars = getActivePillars(phase);
-  const registry = loadRegistry();
   const audienceSlots = balanceAudiences(count);
-  const usedPillars = [];
   const entries = [];
 
+  // Load keyword pool and track what's been used
+  const keywordPool = loadKeywordPool();
+  const usedKeywords = getUsedKeywords();
+  const sessionUsedKeywords = new Set(); // track within this manifest run
+  const usedPillars = [];
+
+  // Build per-audience available keyword queues (sorted by score, unused first)
+  const kwQueues = {};
+  for (const aud of AUDIENCES) {
+    kwQueues[aud] = (keywordPool[aud] || []).filter(k => !usedKeywords.has(k.keyword.toLowerCase()));
+  }
+
+  const totalKw = Object.values(kwQueues).reduce((s, q) => s + q.length, 0);
   console.log(`\n📝 Generating manifest for ${date} | ${count} posts | Phase ${phase}`);
-  console.log(`   Active pillars: ${activePillars.map(p => p.id).join(', ')}\n`);
+  console.log(`   Active pillars: ${activePillars.map(p => p.id).join(', ')}`);
+  console.log(`   Keyword pool: ${totalKw} unused keywords across 4 audiences`);
+  console.log(`   Source: SEO keyword gap data (640 total, KD ≤ 30, vol ≥ 50)\n`);
 
   for (let i = 0; i < count; i++) {
     const audience = audienceSlots[i];
-    const pillar = selectPillarForAudience(audience, activePillars, usedPillars);
-    usedPillars.push(pillar.id);
-
-    // Pick geo if pillar needs it
-    const needsGeo = ['hyper-local-seo', 'builder-marketing', 'market-intelligence'].includes(pillar.id);
-    const city = needsGeo ? pickWeightedCity(GEOGRAPHY) : null;
-
-    // Generate topic
-    const generator = TOPIC_GENERATORS[pillar.id];
-    const title = generator ? generator(audience, city, year) : `${pillar.name} Post for ${audience} — ${year}`;
-    const slug = slugify(title);
     const id = generateId(date, i + 1);
+    const needsGeo = false; // Keyword-driven titles don't need random geo
 
-    const entry = {
-      id,
-      title,
-      slug,
-      pillar: pillar.id,
-      audiences: [audience],
-      primaryKeyword: slug.replace(/-/g, ' ').slice(0, 50),
-      secondaryKeywords: [],
-      city: city ? city.name : null,
-      county: city ? city.county : null,
-      state: city ? city.state : null,
-      angle: title,
-      publishDate: date,
-      status: 'manifest',
-      automationLevel: pillar.automationLevel,
-      templateFile: pillar.templateFile,
-      similarityScore: null,
-      similarTo: null,
-      flagged: false,
-      flagReason: null,
-      createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString(),
-    };
+    // STRATEGY: Pick keyword first, then map to pillar
+    let entry = null;
+    const queue = kwQueues[audience] || [];
 
-    entries.push(entry);
-    console.log(`   [${i + 1}/${count}] ${pillar.id} → ${audience} → "${title.slice(0, 70)}..."`);
+    for (let k = 0; k < queue.length; k++) {
+      const kw = queue[k];
+      if (sessionUsedKeywords.has(kw.keyword.toLowerCase())) continue;
+
+      // Find which pillar this keyword maps to
+      let matchedPillar = null;
+      for (const p of activePillars) {
+        if (keywordMatchesPillar(kw.keyword, p.id)) {
+          matchedPillar = p;
+          break;
+        }
+      }
+      // Default to hyper-local-seo for unmapped keywords (most are content/SEO related)
+      if (!matchedPillar) {
+        matchedPillar = activePillars.find(p => p.id === 'hyper-local-seo') || activePillars[0];
+      }
+
+      const title = generateTitleFromKeyword(kw, audience, year);
+      const slug = slugify(title);
+
+      if (isSimilarToEntries(title, entries, matchedPillar.id, audience)) continue;
+
+      entry = {
+        id, title, slug,
+        pillar: matchedPillar.id,
+        audiences: [audience],
+        primaryKeyword: kw.keyword,
+        secondaryKeywords: [],
+        targetVolume: kw.volume,
+        targetKD: kw.kd,
+        targetScore: kw.score || 0,
+        city: null, county: null, state: null,
+        angle: title,
+        publishDate: date,
+        status: 'manifest',
+        automationLevel: matchedPillar.automationLevel,
+        templateFile: matchedPillar.templateFile,
+        similarityScore: null, similarTo: null,
+        flagged: false, flagReason: null,
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+      };
+
+      sessionUsedKeywords.add(kw.keyword.toLowerCase());
+      usedPillars.push(matchedPillar.id);
+      entries.push(entry);
+      console.log(`   [${i + 1}/${count}] 🔑 "${kw.keyword}" (vol=${kw.volume}, KD=${kw.kd}) → ${matchedPillar.id} → ${audience}`);
+      console.log(`           → "${title.slice(0, 75)}..."`);
+      break;
+    }
+
+    // FALLBACK: If no keyword available, try up to 5 pillar+topic combos from template generators
+    if (!entry) {
+      const MAX_FALLBACK = 5;
+      const triedFallbackPillars = new Set();
+      let placed = false;
+
+      for (let attempt = 0; attempt < MAX_FALLBACK && !placed; attempt++) {
+        const pillar = selectPillarForAudience(audience, activePillars, [...usedPillars, ...triedFallbackPillars]);
+        triedFallbackPillars.add(pillar.id);
+        const city = ['hyper-local-seo', 'builder-marketing', 'market-intelligence'].includes(pillar.id) ? pickWeightedCity(GEOGRAPHY) : null;
+        const generator = TOPIC_GENERATORS[pillar.id];
+        if (!generator) continue; // skip pillars without generators
+
+        const title = generator(audience, city, year);
+        const slug = slugify(title);
+
+        if (!isSimilarToEntries(title, entries, pillar.id, audience)) {
+          usedPillars.push(pillar.id);
+          entries.push({
+            id, title, slug, pillar: pillar.id,
+            audiences: [audience], primaryKeyword: slug.replace(/-/g, ' ').slice(0, 50),
+            secondaryKeywords: [], targetVolume: 0, targetKD: 0, targetScore: 0,
+            city: city ? city.name : null, county: city ? city.county : null, state: city ? city.state : null,
+            angle: title, publishDate: date, status: 'manifest',
+            automationLevel: pillar.automationLevel, templateFile: pillar.templateFile,
+            similarityScore: null, similarTo: null, flagged: false, flagReason: null,
+            createdAt: new Date().toISOString(), updatedAt: new Date().toISOString(),
+          });
+          console.log(`   [${i + 1}/${count}] 📝 (template fallback${attempt > 0 ? `, attempt ${attempt + 1}` : ''}) ${pillar.id} → ${audience} → "${title.slice(0, 70)}..."`);
+          placed = true;
+        }
+      }
+
+      if (!placed) {
+        console.log(`   ⚠ Slot ${i + 1} skipped — exhausted ${MAX_FALLBACK} fallback attempts for ${audience}`);
+      }
+    }
   }
 
   // Write manifest
   fs.mkdirSync(MANIFEST_DIR, { recursive: true });
   const manifestPath = path.join(MANIFEST_DIR, `manifest-${date}.json`);
+  const kwDriven = entries.filter(e => e.targetVolume > 0).length;
   const manifest = {
     date,
     phase,
     count: entries.length,
+    keywordDriven: kwDriven,
+    templateFallback: entries.length - kwDriven,
     audienceDistribution: AUDIENCES.reduce((acc, a) => {
       acc[a] = entries.filter(e => e.audiences.includes(a)).length;
       return acc;
@@ -368,6 +662,7 @@ function generateManifest() {
 
   fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
   console.log(`\n✅ Manifest written: ${manifestPath}`);
+  console.log(`   Posts: ${entries.length} | Keyword-driven: ${kwDriven} | Template fallback: ${entries.length - kwDriven}`);
   console.log(`   Audience balance: ${JSON.stringify(manifest.audienceDistribution)}`);
   console.log(`   Pillar spread: ${JSON.stringify(manifest.pillarDistribution)}\n`);
 

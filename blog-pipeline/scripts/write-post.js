@@ -210,6 +210,7 @@ async function writePost() {
   const rawTemplate = loadTemplate(entry.templateFile);
   const systemPrompt = interpolateTemplate(rawTemplate, entry);
 
+  const hasKeywordData = entry.primaryKeyword && entry.targetVolume > 0;
   const userPrompt = `Write a blog post with this title: "${entry.title}"
 
 Target audience: ${entry.audiences.map(formatAudience).join(', ')}
@@ -217,7 +218,20 @@ Pillar: ${entry.pillar}
 ${entry.city ? `City: ${entry.city}, ${entry.state}` : ''}
 ${entry.county ? `County: ${entry.county}` : ''}
 Year: ${entry.publishDate.slice(0, 4)}
+${hasKeywordData ? `
+## SEO TARGET KEYWORD
+Primary keyword: "${entry.primaryKeyword}"
+Monthly search volume: ${entry.targetVolume}
+Keyword difficulty: ${entry.targetKD}/100
+${entry.secondaryKeywords && entry.secondaryKeywords.length > 0 ? `Secondary keywords: ${entry.secondaryKeywords.join(', ')}` : ''}
 
+## SEO REQUIREMENTS
+- Use the primary keyword "${entry.primaryKeyword}" naturally in: the H1 title, the first 100 words, at least 2 H2 subheadings, the meta description, and the conclusion
+- Target keyword density: 1-2% (natural, not stuffed)
+- Include semantic variations and related terms throughout
+- Write the meta description (150-160 chars) targeting this keyword
+- Internal linking suggestions: mention 2-3 related topics that could link to other Velocity Builders posts
+` : ''}
 Follow the structure and rules in your system prompt exactly. Output the full blog post in Markdown format with frontmatter:
 
 ---
@@ -225,6 +239,9 @@ title: "${entry.title}"
 slug: "${entry.slug}"
 pillar: "${entry.pillar}"
 audiences: ${JSON.stringify(entry.audiences)}
+primaryKeyword: "${entry.primaryKeyword || ''}"
+${hasKeywordData ? `searchVolume: ${entry.targetVolume}
+keywordDifficulty: ${entry.targetKD}` : ''}
 publishDate: "${entry.publishDate}"
 author: "Will Rapuano"
 ---

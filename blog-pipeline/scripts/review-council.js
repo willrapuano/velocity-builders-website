@@ -106,7 +106,7 @@ Output format:
 [Your editorial notes, issues found, changes made]
 
 ---EDITED DRAFT---
-[The full edited post in Markdown]`,
+[The full edited post in Markdown. CRITICAL: Preserve the original YAML frontmatter (--- delimited) exactly. Do NOT change the year, title, slug, or publishDate. Do NOT wrap output in markdown code fences.]`,
 
     user: (draft) => `Edit this blog post draft. Apply all your editorial rules. Output the review notes first, then the full edited draft.
 
@@ -139,7 +139,7 @@ Issues found:
 - [issue description and recommended fix]
 
 ---VERIFIED DRAFT---
-[The draft with any corrections applied. If flagged, mark uncertain sections with [⚠️ NEEDS VERIFICATION: reason]]`,
+[The draft with any corrections applied. CRITICAL: Preserve the original YAML frontmatter (--- delimited) exactly. Do NOT change the year, title, slug, or publishDate. Do NOT wrap output in markdown code fences. If flagged, mark uncertain sections with [⚠️ NEEDS VERIFICATION: reason]]`,
 
     user: (draft) => `Fact-check this blog post. Check every stat, regulation reference, and factual claim. Be strict.
 
@@ -178,7 +178,19 @@ Issues:
 - [any SEO issues found]
 
 ---OPTIMIZED DRAFT---
-[The final optimized post with updated frontmatter including SEO fields]`,
+[The final optimized post. CRITICAL: Start with proper YAML frontmatter wrapped in --- delimiters. The title, slug, pillar, audiences, publishDate, and author fields from the input MUST be preserved. Do NOT change the year — use the exact year from publishDate. Do NOT wrap in markdown code fences. Format:]
+---
+title: "..."
+slug: "..."
+pillar: "..."
+audiences: [...]
+publishDate: "..."
+author: "..."
+metaDescription: "..."
+ogTitle: "..."
+ogDescription: "..."
+---
+[Post body in markdown]`,
 
     user: (draft) => `SEO-optimize this blog post for publishing. Add meta description, verify keyword usage, suggest internal links, and output the final version.
 
@@ -313,6 +325,31 @@ async function runReviewCouncil() {
     }
   }
 
+  // Ensure final draft has valid frontmatter — inject from original if missing
+  const fmCheck = currentDraft.match(/^---\n[\s\S]*?\n---/);
+  if (!fmCheck) {
+    // Strip any markdown code fences the AI may have added
+    currentDraft = currentDraft.replace(/^```(?:markdown|md|yaml)?\s*\n?/m, '').replace(/\n?```\s*$/m, '');
+
+    // Try to find title from heading
+    const headingMatch = currentDraft.match(/^#{1,3}\s+(.+)/m);
+    const inferredTitle = headingMatch ? headingMatch[1].trim() : postId;
+    const slug = inferredTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 80);
+
+    // Read the original draft's frontmatter to get manifest data
+    const origContent = fs.readFileSync(draftPath, 'utf8');
+    const origFm = origContent.match(/^---\n([\s\S]*?)\n---/);
+    let frontmatter;
+    if (origFm) {
+      frontmatter = origFm[0];
+    } else {
+      frontmatter = `---\ntitle: "${inferredTitle}"\nslug: "${slug}"\nauthor: "Will Rapuano"\npublishDate: "${new Date().toISOString().split('T')[0]}"\n---`;
+    }
+
+    currentDraft = frontmatter + '\n\n' + currentDraft;
+    console.log(`   ⚠️  Injected frontmatter (AI dropped it)`);
+  }
+
   // Save final draft
   const finalPath = path.join(DRAFTS_DIR, `${postId}-final.md`);
   fs.writeFileSync(finalPath, currentDraft);
@@ -320,6 +357,15 @@ async function runReviewCouncil() {
   // Update registry
   const finalStatus = flagged ? 'flagged' : 'publish-ready';
   updateRegistryStatus(postId, finalStatus, flagged, flagReason);
+
+  // Move non-flagged posts to approved/ for publishing
+  const APPROVED_DIR = path.join(__dirname, '..', 'approved');
+  if (!flagged) {
+    fs.mkdirSync(APPROVED_DIR, { recursive: true });
+    const approvedPath = path.join(APPROVED_DIR, `${postId}-final.md`);
+    fs.copyFileSync(finalPath, approvedPath);
+    console.log(`   📤 Copied to approved/ for publishing`);
+  }
 
   console.log(`\n✅ Review council complete: ${postId}`);
   console.log(`   Final draft: ${finalPath}`);

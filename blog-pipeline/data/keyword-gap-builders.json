@@ -1,0 +1,2237 @@
+{
+  "audience": "builders",
+  "total": 274,
+  "competitors": [
+    "New Home Star",
+    "Builder Lead Converter",
+    "Diamond Group",
+    "Blue Tangerine"
+  ],
+  "filter": "Velocity-service-relevant only (marketing, SEO, CRM, lead gen, automation, websites)",
+  "keywords": [
+    {
+      "keyword": "what to look for in a new home builder blog",
+      "volume": 1300,
+      "kd": 10,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "New Home Star": 9
+      },
+      "score": 236.36363636363637
+    },
+    {
+      "keyword": "types of marketing videos",
+      "volume": 360,
+      "kd": 10,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 26
+      },
+      "score": 65.45454545454545
+    },
+    {
+      "keyword": "dental top notch marketing company",
+      "volume": 720,
+      "kd": 22,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 58
+      },
+      "score": 62.608695652173914
+    },
+    {
+      "keyword": "website maintenance checklist",
+      "volume": 250,
+      "kd": 8,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Blue Tangerine": 12
+      },
+      "score": 55.55555555555556
+    },
+    {
+      "keyword": "how to measure digital marketing roi",
+      "volume": 510,
+      "kd": 19,
+      "cpc": 31.7,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 88
+      },
+      "score": 51.0
+    },
+    {
+      "keyword": "marketing packages",
+      "volume": 360,
+      "kd": 15,
+      "cpc": 3.29,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 65
+      },
+      "score": 45.0
+    },
+    {
+      "keyword": "wilmington seo",
+      "volume": 210,
+      "kd": 10,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 3
+      },
+      "score": 38.18181818181818
+    },
+    {
+      "keyword": "diamond marketing",
+      "volume": 460,
+      "kd": 26,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 84
+      },
+      "score": 34.074074074074076
+    },
+    {
+      "keyword": "orthodontist marketing agency",
+      "volume": 270,
+      "kd": 15,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 22
+      },
+      "score": 33.75
+    },
+    {
+      "keyword": "marketing to realtors",
+      "volume": 320,
+      "kd": 18,
+      "cpc": 4.65,
+      "our_rank": 0,
+      "competitors": {
+        "New Home Star": 95
+      },
+      "score": 33.68421052631579
+    },
+    {
+      "keyword": "builder marketing",
+      "volume": 230,
+      "kd": 13,
+      "cpc": 5.42,
+      "our_rank": 0,
+      "competitors": {
+        "New Home Star": 5,
+        "Blue Tangerine": 13
+      },
+      "score": 32.857142857142854
+    },
+    {
+      "keyword": "online marketing packages",
+      "volume": 195,
+      "kd": 11,
+      "cpc": 13.64,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 92
+      },
+      "score": 32.5
+    },
+    {
+      "keyword": "orthodontics marketing",
+      "volume": 200,
+      "kd": 12,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 84
+      },
+      "score": 30.76923076923077
+    },
+    {
+      "keyword": "digital marketing roi",
+      "volume": 270,
+      "kd": 17,
+      "cpc": 9.6,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 37
+      },
+      "score": 30.0
+    },
+    {
+      "keyword": "contractor marketing services",
+      "volume": 180,
+      "kd": 11,
+      "cpc": 6.74,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 46
+      },
+      "score": 30.0
+    },
+    {
+      "keyword": "inbound marketing stages",
+      "volume": 190,
+      "kd": 12,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 26
+      },
+      "score": 29.23076923076923
+    },
+    {
+      "keyword": "if you're using remarketing to reach people who've used your mobile app, they see your ads:",
+      "volume": 320,
+      "kd": 21,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Blue Tangerine": 41
+      },
+      "score": 29.09090909090909
+    },
+    {
+      "keyword": "digital marketing wilmington nc",
+      "volume": 260,
+      "kd": 18,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 44
+      },
+      "score": 27.36842105263158
+    },
+    {
+      "keyword": "google analytics insights",
+      "volume": 340,
+      "kd": 24,
+      "cpc": 4.02,
+      "our_rank": 0,
+      "competitors": {
+        "Blue Tangerine": 32
+      },
+      "score": 27.2
+    },
+    {
+      "keyword": "marketing new construction homes",
+      "volume": 180,
+      "kd": 13,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "New Home Star": 6,
+        "Builder Lead Converter": 85
+      },
+      "score": 25.714285714285715
+    },
+    {
+      "keyword": "inbound marketing process",
+      "volume": 230,
+      "kd": 18,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 23
+      },
+      "score": 24.210526315789473
+    },
+    {
+      "keyword": "cause marketing campaigns",
+      "volume": 220,
+      "kd": 18,
+      "cpc": 7.54,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 54
+      },
+      "score": 23.157894736842106
+    },
+    {
+      "keyword": "marketing ideas for home builders",
+      "volume": 135,
+      "kd": 11,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "New Home Star": 37,
+        "Builder Lead Converter": 10
+      },
+      "score": 22.5
+    },
+    {
+      "keyword": "best dental marketing companies",
+      "volume": 270,
+      "kd": 24,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 32
+      },
+      "score": 21.6
+    },
+    {
+      "keyword": "web design wilmington nc",
+      "volume": 180,
+      "kd": 16,
+      "cpc": 6.89,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 32
+      },
+      "score": 21.176470588235293
+    },
+    {
+      "keyword": "home builder marketing agency",
+      "volume": 125,
+      "kd": 11,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "New Home Star": 4,
+        "Builder Lead Converter": 63,
+        "Blue Tangerine": 16
+      },
+      "score": 20.833333333333332
+    },
+    {
+      "keyword": "website development austin",
+      "volume": 195,
+      "kd": 18,
+      "cpc": 18.1,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 44
+      },
+      "score": 20.526315789473685
+    },
+    {
+      "keyword": "asking for referrals real estate",
+      "volume": 200,
+      "kd": 19,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "New Home Star": 51
+      },
+      "score": 20.0
+    },
+    {
+      "keyword": "custom home builder marketing strategies",
+      "volume": 90,
+      "kd": 8,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "New Home Star": 13,
+        "Builder Lead Converter": 27
+      },
+      "score": 20.0
+    },
+    {
+      "keyword": "digital marketing for construction companies",
+      "volume": 90,
+      "kd": 8,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Builder Lead Converter": 28
+      },
+      "score": 20.0
+    },
+    {
+      "keyword": "digital marketing packages",
+      "volume": 180,
+      "kd": 17,
+      "cpc": 6.81,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 76
+      },
+      "score": 20.0
+    },
+    {
+      "keyword": "how to ask for a referral in real estate",
+      "volume": 230,
+      "kd": 23,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "New Home Star": 45
+      },
+      "score": 19.166666666666668
+    },
+    {
+      "keyword": "real estate text message marketing",
+      "volume": 180,
+      "kd": 18,
+      "cpc": 8.4,
+      "our_rank": 0,
+      "competitors": {
+        "New Home Star": 8
+      },
+      "score": 18.94736842105263
+    },
+    {
+      "keyword": "best cause marketing campaigns",
+      "volume": 250,
+      "kd": 26,
+      "cpc": 8.9,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 11
+      },
+      "score": 18.51851851851852
+    },
+    {
+      "keyword": "dental marketing utah",
+      "volume": 110,
+      "kd": 11,
+      "cpc": 30.95,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 71
+      },
+      "score": 18.333333333333332
+    },
+    {
+      "keyword": "home improvement marketing companies",
+      "volume": 100,
+      "kd": 10,
+      "cpc": 11.57,
+      "our_rank": 0,
+      "competitors": {
+        "New Home Star": 52,
+        "Diamond Group": 71
+      },
+      "score": 18.181818181818183
+    },
+    {
+      "keyword": "customer retention email marketing",
+      "volume": 190,
+      "kd": 20,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 89
+      },
+      "score": 18.095238095238095
+    },
+    {
+      "keyword": "marketing ideas for dental office",
+      "volume": 125,
+      "kd": 13,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 85
+      },
+      "score": 17.857142857142858
+    },
+    {
+      "keyword": "marketing for home builders",
+      "volume": 80,
+      "kd": 8,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "New Home Star": 65,
+        "Builder Lead Converter": 66,
+        "Blue Tangerine": 44
+      },
+      "score": 17.77777777777778
+    },
+    {
+      "keyword": "marketing agency wilmington nc",
+      "volume": 180,
+      "kd": 20,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 32
+      },
+      "score": 17.142857142857142
+    },
+    {
+      "keyword": "google index website",
+      "volume": 180,
+      "kd": 20,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 56
+      },
+      "score": 17.142857142857142
+    },
+    {
+      "keyword": "types of marketing video",
+      "volume": 135,
+      "kd": 15,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 38
+      },
+      "score": 16.875
+    },
+    {
+      "keyword": "orthodontist seo",
+      "volume": 75,
+      "kd": 8,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 11
+      },
+      "score": 16.666666666666668
+    },
+    {
+      "keyword": "seo austin texas",
+      "volume": 230,
+      "kd": 27,
+      "cpc": 22.98,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 99
+      },
+      "score": 16.428571428571427
+    },
+    {
+      "keyword": "creative dental marketing ideas",
+      "volume": 135,
+      "kd": 16,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 44
+      },
+      "score": 15.882352941176471
+    },
+    {
+      "keyword": "marketing for realtors",
+      "volume": 190,
+      "kd": 23,
+      "cpc": 6.7,
+      "our_rank": 0,
+      "competitors": {
+        "New Home Star": 6
+      },
+      "score": 15.833333333333334
+    },
+    {
+      "keyword": "define inbound marketing",
+      "volume": 180,
+      "kd": 22,
+      "cpc": 6.84,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 58
+      },
+      "score": 15.652173913043478
+    },
+    {
+      "keyword": "marketing to generations",
+      "volume": 125,
+      "kd": 15,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 25
+      },
+      "score": 15.625
+    },
+    {
+      "keyword": "marketing for builders",
+      "volume": 100,
+      "kd": 12,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "New Home Star": 83,
+        "Builder Lead Converter": 65,
+        "Blue Tangerine": 51
+      },
+      "score": 15.384615384615385
+    },
+    {
+      "keyword": "best dental websites",
+      "volume": 220,
+      "kd": 28,
+      "cpc": 16.92,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 47
+      },
+      "score": 15.172413793103448
+    },
+    {
+      "keyword": "dental marketing consultants",
+      "volume": 150,
+      "kd": 19,
+      "cpc": 33.81,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 84
+      },
+      "score": 15.0
+    },
+    {
+      "keyword": "marketing dental office",
+      "volume": 150,
+      "kd": 19,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 59
+      },
+      "score": 15.0
+    },
+    {
+      "keyword": "facebook ads for dentists",
+      "volume": 90,
+      "kd": 11,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 35
+      },
+      "score": 15.0
+    },
+    {
+      "keyword": "ppc trends",
+      "volume": 90,
+      "kd": 11,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 3
+      },
+      "score": 15.0
+    },
+    {
+      "keyword": "marketing to gen x",
+      "volume": 90,
+      "kd": 11,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 49
+      },
+      "score": 15.0
+    },
+    {
+      "keyword": "how to ask for a real estate referral",
+      "volume": 125,
+      "kd": 16,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "New Home Star": 42
+      },
+      "score": 14.705882352941176
+    },
+    {
+      "keyword": "construction company marketing plan",
+      "volume": 125,
+      "kd": 16,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "New Home Star": 62,
+        "Builder Lead Converter": 86
+      },
+      "score": 14.705882352941176
+    },
+    {
+      "keyword": "get website indexed by google",
+      "volume": 125,
+      "kd": 16,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 50
+      },
+      "score": 14.705882352941176
+    },
+    {
+      "keyword": "social media marketing for dental practices",
+      "volume": 110,
+      "kd": 14,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 65
+      },
+      "score": 14.666666666666666
+    },
+    {
+      "keyword": "digital marketing for contractors",
+      "volume": 80,
+      "kd": 10,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Builder Lead Converter": 35
+      },
+      "score": 14.545454545454545
+    },
+    {
+      "keyword": "immigration law firm marketing",
+      "volume": 80,
+      "kd": 10,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 19
+      },
+      "score": 14.545454545454545
+    },
+    {
+      "keyword": "why is my website slow",
+      "volume": 180,
+      "kd": 24,
+      "cpc": 0.44,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 87
+      },
+      "score": 14.4
+    },
+    {
+      "keyword": "generation x marketing",
+      "volume": 90,
+      "kd": 12,
+      "cpc": 4.59,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 41
+      },
+      "score": 13.846153846153847
+    },
+    {
+      "keyword": "how to optimize website for mobile",
+      "volume": 135,
+      "kd": 19,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 27
+      },
+      "score": 13.5
+    },
+    {
+      "keyword": "traditional media marketing",
+      "volume": 135,
+      "kd": 19,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 78
+      },
+      "score": 13.5
+    },
+    {
+      "keyword": "orthodontic marketing ideas",
+      "volume": 80,
+      "kd": 11,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 22
+      },
+      "score": 13.333333333333334
+    },
+    {
+      "keyword": "seo header tags",
+      "volume": 125,
+      "kd": 18,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 19
+      },
+      "score": 13.157894736842104
+    },
+    {
+      "keyword": "new construction marketing ideas",
+      "volume": 110,
+      "kd": 16,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "New Home Star": 18
+      },
+      "score": 12.941176470588236
+    },
+    {
+      "keyword": "referral generator",
+      "volume": 90,
+      "kd": 13,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Builder Lead Converter": 6
+      },
+      "score": 12.857142857142858
+    },
+    {
+      "keyword": "dental marketing companies",
+      "volume": 180,
+      "kd": 27,
+      "cpc": 13.86,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 52
+      },
+      "score": 12.857142857142858
+    },
+    {
+      "keyword": "home services marketing agency",
+      "volume": 135,
+      "kd": 20,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 33
+      },
+      "score": 12.857142857142858
+    },
+    {
+      "keyword": "inbound marketing methodology",
+      "volume": 90,
+      "kd": 13,
+      "cpc": 26.67,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 75
+      },
+      "score": 12.857142857142858
+    },
+    {
+      "keyword": "new homes marketing",
+      "volume": 70,
+      "kd": 10,
+      "cpc": 8.99,
+      "our_rank": 0,
+      "competitors": {
+        "New Home Star": 57
+      },
+      "score": 12.727272727272727
+    },
+    {
+      "keyword": "how to ask for referrals in real estate",
+      "volume": 100,
+      "kd": 15,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "New Home Star": 46
+      },
+      "score": 12.5
+    },
+    {
+      "keyword": "marketing ideas for dentists",
+      "volume": 80,
+      "kd": 12,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 49
+      },
+      "score": 12.307692307692308
+    },
+    {
+      "keyword": "dentist marketing",
+      "volume": 135,
+      "kd": 21,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 56
+      },
+      "score": 12.272727272727273
+    },
+    {
+      "keyword": "how to index my website on google",
+      "volume": 135,
+      "kd": 21,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 51
+      },
+      "score": 12.272727272727273
+    },
+    {
+      "keyword": "orthodontic website design",
+      "volume": 110,
+      "kd": 17,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 94
+      },
+      "score": 12.222222222222221
+    },
+    {
+      "keyword": "seo services wilmington nc",
+      "volume": 55,
+      "kd": 8,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 2
+      },
+      "score": 12.222222222222221
+    },
+    {
+      "keyword": "marketing agency traverse city",
+      "volume": 125,
+      "kd": 20,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 51
+      },
+      "score": 11.904761904761905
+    },
+    {
+      "keyword": "cause branding",
+      "volume": 125,
+      "kd": 20,
+      "cpc": 0.44,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 36
+      },
+      "score": 11.904761904761905
+    },
+    {
+      "keyword": "traditional marketing definition",
+      "volume": 165,
+      "kd": 27,
+      "cpc": 0.97,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 94
+      },
+      "score": 11.785714285714286
+    },
+    {
+      "keyword": "web design charleston",
+      "volume": 80,
+      "kd": 13,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 24
+      },
+      "score": 11.428571428571429
+    },
+    {
+      "keyword": "dental marketing specialists",
+      "volume": 125,
+      "kd": 21,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 44
+      },
+      "score": 11.363636363636363
+    },
+    {
+      "keyword": "realtor marketing ideas",
+      "volume": 135,
+      "kd": 23,
+      "cpc": 3.19,
+      "our_rank": 0,
+      "competitors": {
+        "New Home Star": 48
+      },
+      "score": 11.25
+    },
+    {
+      "keyword": "dentist seo",
+      "volume": 90,
+      "kd": 15,
+      "cpc": 27.71,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 16
+      },
+      "score": 11.25
+    },
+    {
+      "keyword": "digital marketing for home builders",
+      "volume": 61,
+      "kd": 10,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "New Home Star": 34,
+        "Builder Lead Converter": 35,
+        "Diamond Group": 10,
+        "Blue Tangerine": 65
+      },
+      "score": 11.090909090909092
+    },
+    {
+      "keyword": "combining traditional and digital marketing",
+      "volume": 44,
+      "kd": 7,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 88
+      },
+      "score": 11.0
+    },
+    {
+      "keyword": "orthodontist marketing company",
+      "volume": 125,
+      "kd": 22,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 24
+      },
+      "score": 10.869565217391305
+    },
+    {
+      "keyword": "digital marketing growth",
+      "volume": 125,
+      "kd": 22,
+      "cpc": 1.59,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 42
+      },
+      "score": 10.869565217391305
+    },
+    {
+      "keyword": "marketing ideas for real estate agents",
+      "volume": 135,
+      "kd": 24,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "New Home Star": 60
+      },
+      "score": 10.8
+    },
+    {
+      "keyword": "marketing for custom home builders",
+      "volume": 70,
+      "kd": 12,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "New Home Star": 17,
+        "Builder Lead Converter": 83,
+        "Diamond Group": 10,
+        "Blue Tangerine": 61
+      },
+      "score": 10.76923076923077
+    },
+    {
+      "keyword": "real estate sms marketing",
+      "volume": 90,
+      "kd": 16,
+      "cpc": 5.56,
+      "our_rank": 0,
+      "competitors": {
+        "New Home Star": 47
+      },
+      "score": 10.588235294117647
+    },
+    {
+      "keyword": "how to ask for real estate referrals",
+      "volume": 110,
+      "kd": 20,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "New Home Star": 63
+      },
+      "score": 10.476190476190476
+    },
+    {
+      "keyword": "websites take forever to load",
+      "volume": 135,
+      "kd": 25,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 79
+      },
+      "score": 10.384615384615385
+    },
+    {
+      "keyword": "text marketing for realtors",
+      "volume": 70,
+      "kd": 13,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "New Home Star": 59
+      },
+      "score": 10.0
+    },
+    {
+      "keyword": "wilmington nc marketing",
+      "volume": 100,
+      "kd": 19,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 44
+      },
+      "score": 10.0
+    },
+    {
+      "keyword": "gen x marketing",
+      "volume": 90,
+      "kd": 17,
+      "cpc": 0.42,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 59
+      },
+      "score": 10.0
+    },
+    {
+      "keyword": "seo wilmington",
+      "volume": 70,
+      "kd": 13,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 12
+      },
+      "score": 10.0
+    },
+    {
+      "keyword": "benefits of guest blogging",
+      "volume": 60,
+      "kd": 11,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 15
+      },
+      "score": 10.0
+    },
+    {
+      "keyword": "dental google ads",
+      "volume": 44,
+      "kd": 8,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 47
+      },
+      "score": 9.777777777777779
+    },
+    {
+      "keyword": "milesbrand",
+      "volume": 44,
+      "kd": 8,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Blue Tangerine": 18
+      },
+      "score": 9.777777777777779
+    },
+    {
+      "keyword": "new home sales marketing ideas",
+      "volume": 100,
+      "kd": 20,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "New Home Star": 72,
+        "Builder Lead Converter": 77
+      },
+      "score": 9.523809523809524
+    },
+    {
+      "keyword": "seo headings",
+      "volume": 90,
+      "kd": 18,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 69
+      },
+      "score": 9.473684210526315
+    },
+    {
+      "keyword": "marketing to boomers",
+      "volume": 90,
+      "kd": 18,
+      "cpc": 3.99,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 65
+      },
+      "score": 9.473684210526315
+    },
+    {
+      "keyword": "inbound marketing techniques",
+      "volume": 90,
+      "kd": 18,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 39
+      },
+      "score": 9.473684210526315
+    },
+    {
+      "keyword": "marketing to millennials and gen z",
+      "volume": 70,
+      "kd": 14,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 74
+      },
+      "score": 9.333333333333334
+    },
+    {
+      "keyword": "internet marketing for contractors",
+      "volume": 46,
+      "kd": 9,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Builder Lead Converter": 30
+      },
+      "score": 9.2
+    },
+    {
+      "keyword": "dental marketing for new patients",
+      "volume": 55,
+      "kd": 11,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 28
+      },
+      "score": 9.166666666666666
+    },
+    {
+      "keyword": "how to get your website indexed by google",
+      "volume": 100,
+      "kd": 21,
+      "cpc": 3.81,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 33
+      },
+      "score": 9.090909090909092
+    },
+    {
+      "keyword": "digital marketing for home services",
+      "volume": 90,
+      "kd": 19,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 52
+      },
+      "score": 9.0
+    },
+    {
+      "keyword": "seo header",
+      "volume": 90,
+      "kd": 19,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 37
+      },
+      "score": 9.0
+    },
+    {
+      "keyword": "blue corona marketing",
+      "volume": 135,
+      "kd": 29,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Blue Tangerine": 92
+      },
+      "score": 9.0
+    },
+    {
+      "keyword": "seo company raleigh nc",
+      "volume": 110,
+      "kd": 24,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 55
+      },
+      "score": 8.8
+    },
+    {
+      "keyword": "facebook marketing for dentists",
+      "volume": 44,
+      "kd": 9,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 32
+      },
+      "score": 8.8
+    },
+    {
+      "keyword": "stages of inbound marketing",
+      "volume": 44,
+      "kd": 9,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 21
+      },
+      "score": 8.8
+    },
+    {
+      "keyword": "seo h1 tags best practices",
+      "volume": 65,
+      "kd": 14,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 36
+      },
+      "score": 8.666666666666666
+    },
+    {
+      "keyword": "seo raleigh",
+      "volume": 90,
+      "kd": 20,
+      "cpc": 14.31,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 53
+      },
+      "score": 8.571428571428571
+    },
+    {
+      "keyword": "what makes a website ada compliant",
+      "volume": 90,
+      "kd": 20,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 84
+      },
+      "score": 8.571428571428571
+    },
+    {
+      "keyword": "digital marketing strategy for construction company",
+      "volume": 55,
+      "kd": 12,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Builder Lead Converter": 31
+      },
+      "score": 8.461538461538462
+    },
+    {
+      "keyword": "what digital marketing agency do",
+      "volume": 80,
+      "kd": 18,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 12
+      },
+      "score": 8.421052631578947
+    },
+    {
+      "keyword": "web design traverse city",
+      "volume": 80,
+      "kd": 18,
+      "cpc": 5.18,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 17
+      },
+      "score": 8.421052631578947
+    },
+    {
+      "keyword": "marketing for new real estate agents",
+      "volume": 100,
+      "kd": 23,
+      "cpc": 17.32,
+      "our_rank": 0,
+      "competitors": {
+        "New Home Star": 22
+      },
+      "score": 8.333333333333334
+    },
+    {
+      "keyword": "website running slow",
+      "volume": 125,
+      "kd": 29,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 78
+      },
+      "score": 8.333333333333334
+    },
+    {
+      "keyword": "ppc or seo",
+      "volume": 75,
+      "kd": 17,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 62
+      },
+      "score": 8.333333333333334
+    },
+    {
+      "keyword": "dental marketing seo",
+      "volume": 50,
+      "kd": 11,
+      "cpc": 15.14,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 36
+      },
+      "score": 8.333333333333334
+    },
+    {
+      "keyword": "seo raleigh nc",
+      "volume": 110,
+      "kd": 26,
+      "cpc": 15.01,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 57
+      },
+      "score": 8.148148148148149
+    },
+    {
+      "keyword": "dental facebook ads",
+      "volume": 44,
+      "kd": 10,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 38
+      },
+      "score": 8.0
+    },
+    {
+      "keyword": "google ads for dentists",
+      "volume": 44,
+      "kd": 10,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 26
+      },
+      "score": 8.0
+    },
+    {
+      "keyword": "integrating traditional and digital marketing",
+      "volume": 44,
+      "kd": 10,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 66
+      },
+      "score": 8.0
+    },
+    {
+      "keyword": "marketing to generation x",
+      "volume": 44,
+      "kd": 10,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 33
+      },
+      "score": 8.0
+    },
+    {
+      "keyword": "homebuilder marketing",
+      "volume": 55,
+      "kd": 13,
+      "cpc": 7.59,
+      "our_rank": 0,
+      "competitors": {
+        "Builder Lead Converter": 73,
+        "Blue Tangerine": 25
+      },
+      "score": 7.857142857142857
+    },
+    {
+      "keyword": "dentist content marketing",
+      "volume": 55,
+      "kd": 13,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 95
+      },
+      "score": 7.857142857142857
+    },
+    {
+      "keyword": "marketing pack",
+      "volume": 90,
+      "kd": 22,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 62
+      },
+      "score": 7.826086956521739
+    },
+    {
+      "keyword": "web design ada compliance",
+      "volume": 90,
+      "kd": 22,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 57
+      },
+      "score": 7.826086956521739
+    },
+    {
+      "keyword": "digital marketing return on investment",
+      "volume": 80,
+      "kd": 20,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 31
+      },
+      "score": 7.619047619047619
+    },
+    {
+      "keyword": "branding for millennials",
+      "volume": 100,
+      "kd": 26,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 55
+      },
+      "score": 7.407407407407407
+    },
+    {
+      "keyword": "digital marketing agency charleston sc",
+      "volume": 100,
+      "kd": 26,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 21
+      },
+      "score": 7.407407407407407
+    },
+    {
+      "keyword": "home builder marketing ideas",
+      "volume": 44,
+      "kd": 11,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Builder Lead Converter": 57
+      },
+      "score": 7.333333333333333
+    },
+    {
+      "keyword": "seo headers",
+      "volume": 55,
+      "kd": 14,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 30
+      },
+      "score": 7.333333333333333
+    },
+    {
+      "keyword": "long term marketing goals",
+      "volume": 44,
+      "kd": 11,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 59
+      },
+      "score": 7.333333333333333
+    },
+    {
+      "keyword": "personal leadership brand",
+      "volume": 44,
+      "kd": 11,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 67
+      },
+      "score": 7.333333333333333
+    },
+    {
+      "keyword": "home builder seo",
+      "volume": 44,
+      "kd": 11,
+      "cpc": 10.41,
+      "our_rank": 0,
+      "competitors": {
+        "Blue Tangerine": 12
+      },
+      "score": 7.333333333333333
+    },
+    {
+      "keyword": "pipeline builder linkedin",
+      "volume": 90,
+      "kd": 24,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Builder Lead Converter": 87
+      },
+      "score": 7.2
+    },
+    {
+      "keyword": "consistent brand identity",
+      "volume": 90,
+      "kd": 24,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 36
+      },
+      "score": 7.2
+    },
+    {
+      "keyword": "how to index website",
+      "volume": 80,
+      "kd": 22,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 27
+      },
+      "score": 6.956521739130435
+    },
+    {
+      "keyword": "website loading slowly",
+      "volume": 90,
+      "kd": 25,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 74
+      },
+      "score": 6.923076923076923
+    },
+    {
+      "keyword": "cause based marketing",
+      "volume": 90,
+      "kd": 25,
+      "cpc": 5.38,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 23
+      },
+      "score": 6.923076923076923
+    },
+    {
+      "keyword": "boost referral program",
+      "volume": 55,
+      "kd": 15,
+      "cpc": 36.9,
+      "our_rank": 0,
+      "competitors": {
+        "Builder Lead Converter": 67
+      },
+      "score": 6.875
+    },
+    {
+      "keyword": "visual impairment website compliance",
+      "volume": 55,
+      "kd": 15,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 80
+      },
+      "score": 6.875
+    },
+    {
+      "keyword": "marketing strategies for home builders",
+      "volume": 44,
+      "kd": 12,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Builder Lead Converter": 41
+      },
+      "score": 6.769230769230769
+    },
+    {
+      "keyword": "facebook ads dentist",
+      "volume": 44,
+      "kd": 12,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 21
+      },
+      "score": 6.769230769230769
+    },
+    {
+      "keyword": "invisalign facebook ads",
+      "volume": 44,
+      "kd": 12,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 90
+      },
+      "score": 6.769230769230769
+    },
+    {
+      "keyword": "how to improve roi in digital marketing",
+      "volume": 44,
+      "kd": 12,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 38
+      },
+      "score": 6.769230769230769
+    },
+    {
+      "keyword": "generation x in marketing",
+      "volume": 44,
+      "kd": 12,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 46
+      },
+      "score": 6.769230769230769
+    },
+    {
+      "keyword": "website maintenance schedule",
+      "volume": 44,
+      "kd": 12,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Blue Tangerine": 19
+      },
+      "score": 6.769230769230769
+    },
+    {
+      "keyword": "cheap facebook ads",
+      "volume": 90,
+      "kd": 26,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 85
+      },
+      "score": 6.666666666666667
+    },
+    {
+      "keyword": "dental patient marketing",
+      "volume": 60,
+      "kd": 17,
+      "cpc": 1.58,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 94
+      },
+      "score": 6.666666666666667
+    },
+    {
+      "keyword": "immigration law marketing",
+      "volume": 50,
+      "kd": 14,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 15
+      },
+      "score": 6.666666666666667
+    },
+    {
+      "keyword": "social media marketing for orthodontists",
+      "volume": 55,
+      "kd": 16,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 86
+      },
+      "score": 6.470588235294118
+    },
+    {
+      "keyword": "personal leadership branding",
+      "volume": 55,
+      "kd": 16,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 95
+      },
+      "score": 6.470588235294118
+    },
+    {
+      "keyword": "how to index a website in google",
+      "volume": 55,
+      "kd": 16,
+      "cpc": 4.82,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 40
+      },
+      "score": 6.470588235294118
+    },
+    {
+      "keyword": "ada compliant website design",
+      "volume": 80,
+      "kd": 24,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 69
+      },
+      "score": 6.4
+    },
+    {
+      "keyword": "marketing firms in wilmington nc",
+      "volume": 70,
+      "kd": 21,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 31
+      },
+      "score": 6.363636363636363
+    },
+    {
+      "keyword": "marketing to the generations",
+      "volume": 44,
+      "kd": 13,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 14
+      },
+      "score": 6.285714285714286
+    },
+    {
+      "keyword": "cause marketing strategy",
+      "volume": 44,
+      "kd": 13,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 57
+      },
+      "score": 6.285714285714286
+    },
+    {
+      "keyword": "dental marketing statistics",
+      "volume": 44,
+      "kd": 13,
+      "cpc": 8.91,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 39
+      },
+      "score": 6.285714285714286
+    },
+    {
+      "keyword": "marketing package",
+      "volume": 44,
+      "kd": 13,
+      "cpc": 7.45,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 69
+      },
+      "score": 6.285714285714286
+    },
+    {
+      "keyword": "heading structure seo",
+      "volume": 44,
+      "kd": 13,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 87
+      },
+      "score": 6.285714285714286
+    },
+    {
+      "keyword": "seo sales pitch",
+      "volume": 65,
+      "kd": 20,
+      "cpc": 10.06,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 97
+      },
+      "score": 6.190476190476191
+    },
+    {
+      "keyword": "home builder marketing plan",
+      "volume": 34,
+      "kd": 10,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Builder Lead Converter": 41,
+        "Blue Tangerine": 30
+      },
+      "score": 6.181818181818182
+    },
+    {
+      "keyword": "digital marketing for professional services",
+      "volume": 34,
+      "kd": 10,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 4
+      },
+      "score": 6.181818181818182
+    },
+    {
+      "keyword": "charleston sc website design",
+      "volume": 40,
+      "kd": 12,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 37
+      },
+      "score": 6.153846153846154
+    },
+    {
+      "keyword": "diamond marketing group",
+      "volume": 40,
+      "kd": 12,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 68
+      },
+      "score": 6.153846153846154
+    },
+    {
+      "keyword": "perfection marketing",
+      "volume": 70,
+      "kd": 22,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Blue Tangerine": 18
+      },
+      "score": 6.086956521739131
+    },
+    {
+      "keyword": "home marketing",
+      "volume": 80,
+      "kd": 26,
+      "cpc": 0.8,
+      "our_rank": 0,
+      "competitors": {
+        "New Home Star": 63
+      },
+      "score": 5.925925925925926
+    },
+    {
+      "keyword": "how to get your website indexed",
+      "volume": 44,
+      "kd": 14,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 12
+      },
+      "score": 5.866666666666666
+    },
+    {
+      "keyword": "facebook b2b marketing",
+      "volume": 44,
+      "kd": 14,
+      "cpc": 2.03,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 61
+      },
+      "score": 5.866666666666666
+    },
+    {
+      "keyword": "text message marketing real estate",
+      "volume": 70,
+      "kd": 23,
+      "cpc": 4.26,
+      "our_rank": 0,
+      "competitors": {
+        "New Home Star": 5
+      },
+      "score": 5.833333333333333
+    },
+    {
+      "keyword": "marketing plan for professional services",
+      "volume": 70,
+      "kd": 23,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 85
+      },
+      "score": 5.833333333333333
+    },
+    {
+      "keyword": "dental marketing agencies",
+      "volume": 70,
+      "kd": 23,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 44
+      },
+      "score": 5.833333333333333
+    },
+    {
+      "keyword": "raleigh seo services",
+      "volume": 55,
+      "kd": 18,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 56
+      },
+      "score": 5.7894736842105265
+    },
+    {
+      "keyword": "pay per click facebook ads",
+      "volume": 55,
+      "kd": 18,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 62
+      },
+      "score": 5.7894736842105265
+    },
+    {
+      "keyword": "automated follow up system",
+      "volume": 75,
+      "kd": 25,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Builder Lead Converter": 15
+      },
+      "score": 5.769230769230769
+    },
+    {
+      "keyword": "roi online marketing",
+      "volume": 75,
+      "kd": 25,
+      "cpc": 0.43,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 34
+      },
+      "score": 5.769230769230769
+    },
+    {
+      "keyword": "marketing custom home builders",
+      "volume": 40,
+      "kd": 13,
+      "cpc": 7.35,
+      "our_rank": 0,
+      "competitors": {
+        "Builder Lead Converter": 9,
+        "Diamond Group": 13
+      },
+      "score": 5.714285714285714
+    },
+    {
+      "keyword": "charleston web design company",
+      "volume": 40,
+      "kd": 13,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 31
+      },
+      "score": 5.714285714285714
+    },
+    {
+      "keyword": "dental marketing facebook",
+      "volume": 40,
+      "kd": 13,
+      "cpc": 26.21,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 39
+      },
+      "score": 5.714285714285714
+    },
+    {
+      "keyword": "home builder digital marketing",
+      "volume": 42,
+      "kd": 14,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Builder Lead Converter": 36,
+        "Diamond Group": 12,
+        "Blue Tangerine": 43
+      },
+      "score": 5.6
+    },
+    {
+      "keyword": "social cause marketing",
+      "volume": 55,
+      "kd": 19,
+      "cpc": 5.73,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 75
+      },
+      "score": 5.5
+    },
+    {
+      "keyword": "website design charleston sc",
+      "volume": 55,
+      "kd": 19,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 26
+      },
+      "score": 5.5
+    },
+    {
+      "keyword": "what is ppc and seo",
+      "volume": 44,
+      "kd": 15,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 74
+      },
+      "score": 5.5
+    },
+    {
+      "keyword": "social media marketing for dentists",
+      "volume": 44,
+      "kd": 15,
+      "cpc": 17.81,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 55
+      },
+      "score": 5.5
+    },
+    {
+      "keyword": "seo agency raleigh",
+      "volume": 44,
+      "kd": 15,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 50
+      },
+      "score": 5.5
+    },
+    {
+      "keyword": "targeting email marketing",
+      "volume": 44,
+      "kd": 15,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 19
+      },
+      "score": 5.5
+    },
+    {
+      "keyword": "dental facebook marketing",
+      "volume": 44,
+      "kd": 15,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 34
+      },
+      "score": 5.5
+    },
+    {
+      "keyword": "seo dental websites",
+      "volume": 44,
+      "kd": 15,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 14
+      },
+      "score": 5.5
+    },
+    {
+      "keyword": "online marketing for contractors",
+      "volume": 40,
+      "kd": 14,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Builder Lead Converter": 94
+      },
+      "score": 5.333333333333333
+    },
+    {
+      "keyword": "heading seo",
+      "volume": 55,
+      "kd": 20,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 46
+      },
+      "score": 5.238095238095238
+    },
+    {
+      "keyword": "website taking too long to load",
+      "volume": 55,
+      "kd": 20,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Diamond Group": 31
+      },
+      "score": 5.238095238095238
+    }
+  ]
+}

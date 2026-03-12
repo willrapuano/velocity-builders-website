@@ -4,9 +4,10 @@ import { getAllPostSlugs } from "@/lib/blog/api";
 
 const siteUrl = "https://velocity-builders.com";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const locationHub = shouldIndexPage(getQualityForHubPage()) ? ["/locations"] : [];
-  const blogSlugs = getAllPostSlugs().map((s) => `/blog/${s}`);
+  const slugs = await getAllPostSlugs();
+  const blogSlugs = slugs.map((s) => `/blog/${s}`);
   const blogCategories = ["/blog/category/marketing-systems", "/blog/category/real-estate-news", "/blog/category/ai-tools", "/blog/category/title-insurance"];
   const routes = ["", "/about", "/services", "/contact", "/blog", ...blogCategories, "/legal", ...locationHub, ...getIndexableLocationPaths(), ...blogSlugs];
   const lastModified = new Date();

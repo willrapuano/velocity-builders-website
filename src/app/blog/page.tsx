@@ -22,15 +22,15 @@ const CATEGORIES = [
   { slug: "title-insurance", name: "Title Insurance", teaser: "cleaner handoffs and better partner communication" },
 ];
 
-export default function BlogIndex() {
-  const posts = getAllPosts();
+export default async function BlogIndex() {
+  const posts = await getAllPosts();
 
   return (
     <main className="max-w-6xl mx-auto px-6 py-16">
       <div className="mb-12">
         <h1 className="text-4xl font-bold text-white mb-3">No-Fluff Growth Playbooks for real estate Agents and Lenders.</h1>
         <p className="text-slate-400 text-lg max-w-3xl">
-          What’s working now in Fairfax, Loudoun, and Prince William—from speed-to-lead to post-close retention.
+          What's working now in Fairfax, Loudoun, and Prince William—from speed-to-lead to post-close retention.
         </p>
         <p className="text-slate-300 mt-4 max-w-3xl">
           This is where we publish practical systems your team can use right away. No theory pieces. No trend-chasing. Just workflows, scripts, and structure that help you convert more of the leads you already have.

@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import { PortableText } from "@portabletext/react";
 import { getAllPostSlugs, getPostBySlug } from "@/lib/blog/api";
 import type { Metadata } from "next";
 
@@ -14,29 +15,10 @@ const CATEGORY_MAP: Record<string, { name: string; color: string }> = {
   "title-insurance": { name: "Title Insurance", color: "text-amber-400 border-amber-400/30 bg-amber-400/10" },
 };
 
-function detectCategory(tags: string[]): string {
-  if (tags.some(t => t.toLowerCase().includes("title"))) return "title-insurance";
-  if (tags.some(t => ["ai", "artificial intelligence"].some(w => t.toLowerCase().includes(w)))) return "ai-tools";
-  if (tags.some(t => ["news", "market", "regulation", "nar"].some(w => t.toLowerCase().includes(w)))) return "real-estate-news";
-  return "marketing-systems";
-}
-
-const NEWS_TAGS = ["real estate news", "news", "market", "regulation", "nar"];
-
-export async function generateStaticParams() {
-  return getAllPostSlugs().map((slug) => ({ slug }));
-}
-
-const META_OVERRIDES: Record<string, string> = {
-  "crm-automation-roi-real-estate-teams": "See how Real estate teams improve speed-to-lead and consult conversion with CRM automation that removes pipeline bottlenecks.",
-  "loan-officers-digital-marketing-strategy-2026": "Loan officer marketing strategy: local search visibility, trust-building follow-up, and funnel improvements that increase consult volume.",
-  "real-estate-agents-automated-marketing-leads": "Automated marketing for Agents: faster response systems, smarter nurture, and practical fixes that recover missed opportunities.",
-};
-
 const CTA_OVERRIDES: Record<string, { title: string; body: string; button: string }> = {
   "crm-automation-roi-real-estate-teams": {
     title: "Get a 14-Day CRM Automation Plan",
-    body: "We’ll map the exact sequence changes to improve response time and consult conversion.",
+    body: "We'll map the exact sequence changes to improve response time and consult conversion.",
     button: "Get a 14-Day CRM Automation Plan",
   },
   "loan-officers-digital-marketing-strategy-2026": {
@@ -46,21 +28,89 @@ const CTA_OVERRIDES: Record<string, { title: string; body: string; button: strin
   },
   "real-estate-agents-automated-marketing-leads": {
     title: "Fix My Speed-to-Lead in 10 Days",
-    body: "We’ll prioritize the response-time and nurture fixes that recover missed opportunities fast.",
+    body: "We'll prioritize the response-time and nurture fixes that recover missed opportunities fast.",
     button: "Fix My Speed-to-Lead in 10 Days",
   },
 };
+
+// Portable Text serializers styled to match existing prose design
+const portableTextComponents = {
+  block: {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    normal: ({ children }: any) => <p className="text-slate-300 text-[17px] leading-[1.85] mb-5">{children}</p>,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    h2: ({ children }: any) => <h2 className="text-[1.6rem] font-bold text-white mt-14 mb-4 pb-3 border-b border-white/10">{children}</h2>,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    h3: ({ children }: any) => <h3 className="text-xl font-bold text-emerald-300 mt-10 mb-3">{children}</h3>,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    h4: ({ children }: any) => <h4 className="text-base font-semibold text-slate-200 mt-6 mb-2">{children}</h4>,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    blockquote: ({ children }: any) => (
+      <blockquote className="border-l-4 border-emerald-400 bg-white/5 px-6 py-4 rounded-r-xl text-slate-300 text-[17px] my-6">
+        {children}
+      </blockquote>
+    ),
+  },
+  list: {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    bullet: ({ children }: any) => <ul className="text-slate-300 my-4 space-y-2 list-disc pl-6">{children}</ul>,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    number: ({ children }: any) => <ol className="text-slate-300 my-4 space-y-2 list-decimal pl-6">{children}</ol>,
+  },
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  listItem: ({ children }: any) => <li className="text-[17px] leading-[1.8] pl-1">{children}</li>,
+  marks: {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    strong: ({ children }: any) => <strong className="text-white font-semibold">{children}</strong>,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    em: ({ children }: any) => <em className="italic">{children}</em>,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    code: ({ children }: any) => (
+      <code className="text-emerald-300 bg-white/5 px-1.5 py-0.5 rounded text-sm">{children}</code>
+    ),
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    link: ({ value, children }: any) => (
+      <a href={value?.href} className="text-emerald-400 font-medium hover:underline" target={value?.href?.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer">
+        {children}
+      </a>
+    ),
+  },
+  types: {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    image: ({ value }: any) => {
+      if (!value?.asset?.url && !value?.url) return null;
+      return (
+        <figure className="my-10">
+          <img
+            src={value.asset?.url || value.url}
+            alt={value.alt || ""}
+            className="rounded-xl w-full object-cover"
+          />
+          {value.caption && (
+            <figcaption className="text-center text-sm text-slate-500 mt-2">{value.caption}</figcaption>
+          )}
+        </figure>
+      );
+    },
+  },
+};
+
+export async function generateStaticParams() {
+  const slugs = await getAllPostSlugs();
+  return slugs.map((slug) => ({ slug }));
+}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = await getPostBySlug(slug);
   if (!post) return {};
-  const description = META_OVERRIDES[slug] ?? post.excerpt;
+  const title = post.seoTitle || post.title;
+  const description = post.seoDescription || post.excerpt;
   return {
-    title: `${post.title} | Velocity Builders Blog`,
+    title: `${title} | Velocity Builders Blog`,
     description,
     openGraph: {
-      title: post.title,
+      title,
       description,
       type: "article",
       publishedTime: post.date,
@@ -68,7 +118,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `/blog/${slug}`,
       ...(post.featuredImage && { images: [post.featuredImage] }),
     },
-    twitter: { card: "summary_large_image", title: post.title, description },
+    twitter: { card: "summary_large_image", title, description },
   };
 }
 
@@ -77,10 +127,9 @@ export default async function BlogPost({ params }: Props) {
   const post = await getPostBySlug(slug);
   if (!post) notFound();
 
-  const isNews = post.tags.some(t => NEWS_TAGS.some(nt => t.toLowerCase().includes(nt)));
-  const articleType = isNews ? "NewsArticle" : "BlogPosting";
-  const categorySlug = detectCategory(post.tags);
-  const category = CATEGORY_MAP[categorySlug];
+  const categorySlug = post.category || "marketing-systems";
+  const category = CATEGORY_MAP[categorySlug] ?? CATEGORY_MAP["marketing-systems"];
+
   const cta = CTA_OVERRIDES[slug] ?? {
     title: "Book a 20-Minute Growth Blueprint",
     body: "See where your lead handoff and follow-up are leaking deals, then fix the right things first.",
@@ -91,7 +140,7 @@ export default async function BlogPost({ params }: Props) {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": articleType,
+        "@type": "BlogPosting",
         "@id": `https://velocity-builders.com/blog/${slug}/#article`,
         headline: post.title,
         description: post.excerpt,
@@ -113,7 +162,6 @@ export default async function BlogPost({ params }: Props) {
         mainEntityOfPage: { "@type": "WebPage", "@id": `https://velocity-builders.com/blog/${slug}/` },
         ...(post.featuredImage && { image: post.featuredImage }),
         articleSection: category.name,
-        keywords: post.tags,
         inLanguage: "en-US",
       },
       {
@@ -171,31 +219,10 @@ export default async function BlogPost({ params }: Props) {
           </div>
         )}
 
-        {/* Article body */}
-        <div
-          className="
-            prose prose-invert max-w-none
-            prose-p:text-slate-300 prose-p:text-[17px] prose-p:leading-[1.85] prose-p:mb-5
-            prose-headings:text-white prose-headings:font-bold
-            prose-h2:text-[1.6rem] prose-h2:mt-14 prose-h2:mb-4 prose-h2:pb-3 prose-h2:border-b prose-h2:border-white/10
-            prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-3 prose-h3:text-emerald-300
-            prose-h4:text-base prose-h4:mt-6 prose-h4:mb-2 prose-h4:text-slate-200 prose-h4:font-semibold
-            prose-a:text-emerald-400 prose-a:no-underline hover:prose-a:underline prose-a:font-medium
-            prose-strong:text-white prose-strong:font-semibold
-            prose-ul:text-slate-300 prose-ul:my-4 prose-ul:space-y-2
-            prose-ol:text-slate-300 prose-ol:my-4 prose-ol:space-y-2
-            prose-li:text-[17px] prose-li:leading-[1.8] prose-li:pl-1
-            prose-blockquote:border-l-4 prose-blockquote:border-emerald-400 prose-blockquote:bg-white/5 prose-blockquote:px-6 prose-blockquote:py-4 prose-blockquote:rounded-r-xl prose-blockquote:not-italic
-            prose-blockquote:text-slate-300 prose-blockquote:text-[17px]
-            prose-img:rounded-xl prose-img:my-10 prose-img:w-full
-            prose-hr:border-white/10 prose-hr:my-10
-            prose-table:text-sm prose-table:w-full
-            prose-th:text-white prose-th:font-semibold prose-th:border prose-th:border-slate-700 prose-th:bg-white/5 prose-th:px-4 prose-th:py-2
-            prose-td:text-slate-300 prose-td:border prose-td:border-slate-800 prose-td:px-4 prose-td:py-2
-            prose-code:text-emerald-300 prose-code:bg-white/5 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm
-          "
-          dangerouslySetInnerHTML={{ __html: post.contentHtml }}
-        />
+        {/* Article body — Portable Text */}
+        <div className="blog-body">
+          <PortableText value={post.body as Parameters<typeof PortableText>[0]["value"]} components={portableTextComponents} />
+        </div>
 
         {/* Author card */}
         <div className="mt-16 p-6 rounded-2xl border border-white/10 bg-white/5 flex gap-4 items-start">

@@ -1,0 +1,288 @@
+{
+  "audience": "credit_unions_and_banks",
+  "total": 29,
+  "source": "SpyFu keyword research + competitor gap",
+  "competitors": [
+    "Jives Media",
+    "Spinutech",
+    "Mission Disrupt",
+    "Umbrella Digital"
+  ],
+  "filter": "CU/Bank + Velocity-service-relevant only",
+  "keywords": [
+    {
+      "keyword": "credit union social media spending",
+      "volume": 630,
+      "kd": 12,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {},
+      "score": 96.92307692307692
+    },
+    {
+      "keyword": "credit union social media marketing budget",
+      "volume": 420,
+      "kd": 0,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {},
+      "score": 76.36363636363636
+    },
+    {
+      "keyword": "mortgage marketing ideas",
+      "volume": 510,
+      "kd": 14,
+      "cpc": 14.47,
+      "our_rank": 0,
+      "competitors": {},
+      "score": 68.0
+    },
+    {
+      "keyword": "bank website design",
+      "volume": 480,
+      "kd": 14,
+      "cpc": 5.9,
+      "our_rank": 0,
+      "competitors": {},
+      "score": 64.0
+    },
+    {
+      "keyword": "credit union marketing campaigns",
+      "volume": 135,
+      "kd": 8,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Jives Media": 44
+      },
+      "score": 30.0
+    },
+    {
+      "keyword": "digital marketing for financial services",
+      "volume": 210,
+      "kd": 14,
+      "cpc": 8.37,
+      "our_rank": 0,
+      "competitors": {},
+      "score": 28.0
+    },
+    {
+      "keyword": "fintech marketing",
+      "volume": 250,
+      "kd": 18,
+      "cpc": 5.76,
+      "our_rank": 0,
+      "competitors": {},
+      "score": 26.31578947368421
+    },
+    {
+      "keyword": "mortgage marketing services",
+      "volume": 165,
+      "kd": 13,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Spinutech": 32
+      },
+      "score": 23.571428571428573
+    },
+    {
+      "keyword": "credit union advertising",
+      "volume": 115,
+      "kd": 12,
+      "cpc": 8.76,
+      "our_rank": 0,
+      "competitors": {},
+      "score": 17.692307692307693
+    },
+    {
+      "keyword": "credit union website design",
+      "volume": 90,
+      "kd": 10,
+      "cpc": 3.89,
+      "our_rank": 0,
+      "competitors": {},
+      "score": 16.363636363636363
+    },
+    {
+      "keyword": "bank website design template",
+      "volume": 90,
+      "kd": 0,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {},
+      "score": 16.363636363636363
+    },
+    {
+      "keyword": "credit union digital marketing",
+      "volume": 40,
+      "kd": 7,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Jives Media": 48,
+        "Mission Disrupt": 20,
+        "Umbrella Digital": 17
+      },
+      "score": 10.0
+    },
+    {
+      "keyword": "credit union marketing plan",
+      "volume": 36,
+      "kd": 7,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Jives Media": 80
+      },
+      "score": 9.0
+    },
+    {
+      "keyword": "credit union marketing services",
+      "volume": 44,
+      "kd": 9,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Jives Media": 44,
+        "Mission Disrupt": 19
+      },
+      "score": 8.8
+    },
+    {
+      "keyword": "seo for credit unions",
+      "volume": 26,
+      "kd": 7,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {},
+      "score": 6.5
+    },
+    {
+      "keyword": "ada compliant website design credit union",
+      "volume": 30,
+      "kd": 0,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {},
+      "score": 5.454545454545454
+    },
+    {
+      "keyword": "credit union seo",
+      "volume": 20,
+      "kd": 7,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {},
+      "score": 5.0
+    },
+    {
+      "keyword": "seo services for credit unions",
+      "volume": 27,
+      "kd": 0,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {},
+      "score": 4.909090909090909
+    },
+    {
+      "keyword": "americas first credit union utah website design",
+      "volume": 24,
+      "kd": 0,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {},
+      "score": 4.363636363636363
+    },
+    {
+      "keyword": "america's first credit union utah website design vendor",
+      "volume": 24,
+      "kd": 0,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {},
+      "score": 4.363636363636363
+    },
+    {
+      "keyword": "america's first credit union utah website design",
+      "volume": 24,
+      "kd": 0,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {},
+      "score": 4.363636363636363
+    },
+    {
+      "keyword": "local seo for credit unions",
+      "volume": 22,
+      "kd": 0,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {},
+      "score": 4.0
+    },
+    {
+      "keyword": "auto loan lead generator for credit unions",
+      "volume": 12,
+      "kd": 0,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {},
+      "score": 2.1818181818181817
+    },
+    {
+      "keyword": "seo credit union",
+      "volume": 12,
+      "kd": 0,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {},
+      "score": 2.1818181818181817
+    },
+    {
+      "keyword": "credit union marketing automation emails",
+      "volume": 12,
+      "kd": 0,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {},
+      "score": 2.1818181818181817
+    },
+    {
+      "keyword": "credit union marketing automation emails onapproach",
+      "volume": 12,
+      "kd": 0,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {},
+      "score": 2.1818181818181817
+    },
+    {
+      "keyword": "credit union marketing member journey emails",
+      "volume": 12,
+      "kd": 0,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {},
+      "score": 2.1818181818181817
+    },
+    {
+      "keyword": "credit union marketing member journey email template",
+      "volume": 12,
+      "kd": 0,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {},
+      "score": 2.1818181818181817
+    },
+    {
+      "keyword": "email marketing for credit unions",
+      "volume": 5,
+      "kd": 8,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {},
+      "score": 1.1111111111111112
+    }
+  ]
+}

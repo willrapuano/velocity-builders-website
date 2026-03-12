@@ -54,28 +54,63 @@ const CONFIG = {
   apiVersion: "2024-01-01",
 };
 
-// --- Frontmatter parser ---
+// --- Frontmatter parser (handles AI output variations) ---
 function parseFrontmatter(content) {
-  const match = content.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
-  if (!match) return { meta: {}, body: content };
+  // Strip markdown code fences that AI sometimes wraps output in
+  let cleaned = content.replace(/^```(?:markdown|md|yaml)?\s*\n?/m, '').replace(/\n?```\s*$/m, '');
 
+  // Try standard --- delimited frontmatter first
+  const stdMatch = cleaned.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
+  if (stdMatch) {
+    return { meta: parseMetaLines(stdMatch[1]), body: stdMatch[2].trim() };
+  }
+
+  // Fallback: detect YAML-like key: value block at the top (no --- delimiters)
+  const lines = cleaned.split('\n');
+  let fmEnd = 0;
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    // Frontmatter line: key: value (or key: "value" or key: [...])
+    if (/^[\w][\w-]*\s*:/.test(line)) {
+      fmEnd = i + 1;
+    } else if (line.trim() === '') {
+      // Blank line after frontmatter block = end of frontmatter
+      if (fmEnd > 0) break;
+    } else {
+      break; // Non-frontmatter content
+    }
+  }
+
+  if (fmEnd > 0) {
+    const fmBlock = lines.slice(0, fmEnd).join('\n');
+    const body = lines.slice(fmEnd).join('\n').trim();
+    return { meta: parseMetaLines(fmBlock), body };
+  }
+
+  // Last resort: extract title from first heading (# or ##)
+  const headingMatch = cleaned.match(/^#{1,2}\s+(.+)/m);
+  if (headingMatch) {
+    const title = headingMatch[1].trim();
+    const body = cleaned.replace(/^#{1,2}\s+.+\n?/, '').trim();
+    return { meta: { title }, body };
+  }
+
+  return { meta: {}, body: cleaned };
+}
+
+function parseMetaLines(block) {
   const meta = {};
-  const lines = match[1].split("\n");
-  for (const line of lines) {
+  for (const line of block.split('\n')) {
     const kv = line.match(/^(\w[\w-]*)\s*:\s*(.+)$/);
     if (kv) {
-      let val = kv[2].trim().replace(/^["']|["']$/g, "");
-      // Handle arrays like [tag1, tag2]
-      if (val.startsWith("[") && val.endsWith("]")) {
-        val = val
-          .slice(1, -1)
-          .split(",")
-          .map((s) => s.trim().replace(/^["']|["']$/g, ""));
+      let val = kv[2].trim().replace(/^["']|["']$/g, '');
+      if (val.startsWith('[') && val.endsWith(']')) {
+        val = val.slice(1, -1).split(',').map((s) => s.trim().replace(/^["']|["']$/g, ''));
       }
       meta[kv[1]] = val;
     }
   }
-  return { meta, body: match[2].trim() };
+  return meta;
 }
 
 // --- Slug generator ---

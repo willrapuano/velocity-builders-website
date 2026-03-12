@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getAllPosts } from "@/lib/blog/api";
+import { getPostsByCategory } from "@/lib/blog/api";
 import type { Metadata } from "next";
 
 const CATEGORIES: Record<string, { name: string; header: string; description: string; meta: string }> = {
@@ -49,24 +49,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-function postMatchesCategory(postTags: string[], categorySlug: string): boolean {
-  return postTags.some((tag) => {
-    const tagLower = tag.toLowerCase();
-    if (categorySlug === "marketing-systems" && ["marketing", "crm", "automation", "lead", "seo"].some((w) => tagLower.includes(w))) return true;
-    if (categorySlug === "real-estate-news" && ["news", "market", "regulation", "nar"].some((w) => tagLower.includes(w))) return true;
-    if (categorySlug === "ai-tools" && ["ai", "artificial intelligence", "chatgpt", "automation"].some((w) => tagLower.includes(w))) return true;
-    if (categorySlug === "title-insurance" && ["title", "closing", "settlement", "escrow"].some((w) => tagLower.includes(w))) return true;
-    return false;
-  });
-}
-
 export default async function CategoryPage({ params }: Props) {
   const { category } = await params;
   const cat = CATEGORIES[category];
   if (!cat) notFound();
 
-  const allPosts = getAllPosts();
-  const posts = allPosts.filter((p) => postMatchesCategory(p.tags, category));
+  const posts = await getPostsByCategory(category);
 
   return (
     <main className="max-w-5xl mx-auto px-6 py-16">

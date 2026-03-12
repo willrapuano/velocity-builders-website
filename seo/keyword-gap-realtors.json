@@ -1,0 +1,2270 @@
+{
+  "audience": "realtors",
+  "total": 200,
+  "competitors": [
+    "Luxury Presence",
+    "Tom Ferry",
+    "Real Geeks",
+    "Sierra Interactive"
+  ],
+  "filter": "Velocity-service-relevant only (marketing, SEO, CRM, lead gen, automation, websites)",
+  "keywords": [
+    {
+      "keyword": "idx broker",
+      "volume": 2400,
+      "kd": 11,
+      "cpc": 3.83,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 35
+      },
+      "score": 400.0
+    },
+    {
+      "keyword": "set up google analytics",
+      "volume": 1000,
+      "kd": 12,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 12
+      },
+      "score": 153.84615384615384
+    },
+    {
+      "keyword": "sample probate marketing letter",
+      "volume": 600,
+      "kd": 7,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Tom Ferry": 59
+      },
+      "score": 150.0
+    },
+    {
+      "keyword": "real estate coaching reviews",
+      "volume": 630,
+      "kd": 8,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 34
+      },
+      "score": 140.0
+    },
+    {
+      "keyword": "data services provided by idx broker",
+      "volume": 900,
+      "kd": 15,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 56
+      },
+      "score": 112.5
+    },
+    {
+      "keyword": "virtual tours real estate",
+      "volume": 690,
+      "kd": 12,
+      "cpc": 2.42,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 54
+      },
+      "score": 106.15384615384616
+    },
+    {
+      "keyword": "real estate blogs",
+      "volume": 1000,
+      "kd": 18,
+      "cpc": 3.69,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 13
+      },
+      "score": 105.26315789473684
+    },
+    {
+      "keyword": "real estate blog ideas",
+      "volume": 1100,
+      "kd": 20,
+      "cpc": 3.98,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 92
+      },
+      "score": 104.76190476190476
+    },
+    {
+      "keyword": "real estate social media marketing packages",
+      "volume": 930,
+      "kd": 17,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 58,
+        "Sierra Interactive": 96
+      },
+      "score": 103.33333333333333
+    },
+    {
+      "keyword": "facebook ads - targeting high end real estate buyers",
+      "volume": 630,
+      "kd": 12,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 46
+      },
+      "score": 96.92307692307692
+    },
+    {
+      "keyword": "free real estate videos for marketing",
+      "volume": 870,
+      "kd": 17,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 43
+      },
+      "score": 96.66666666666667
+    },
+    {
+      "keyword": "geek real estate marketing",
+      "volume": 180,
+      "kd": 3,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 15
+      },
+      "score": 90.0
+    },
+    {
+      "keyword": "real estate funnels",
+      "volume": 750,
+      "kd": 16,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 58,
+        "Sierra Interactive": 2
+      },
+      "score": 88.23529411764706
+    },
+    {
+      "keyword": "real estate marketing plan pdf",
+      "volume": 1200,
+      "kd": 27,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Tom Ferry": 2
+      },
+      "score": 85.71428571428571
+    },
+    {
+      "keyword": "logo size for website",
+      "volume": 1100,
+      "kd": 25,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 71
+      },
+      "score": 84.61538461538461
+    },
+    {
+      "keyword": "real estate listing marketing plan",
+      "volume": 840,
+      "kd": 19,
+      "cpc": 7.55,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 26,
+        "Tom Ferry": 6
+      },
+      "score": 84.0
+    },
+    {
+      "keyword": "google ads for real estate",
+      "volume": 540,
+      "kd": 13,
+      "cpc": 33.39,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 8,
+        "Tom Ferry": 7
+      },
+      "score": 77.14285714285714
+    },
+    {
+      "keyword": "top real estate blogs",
+      "volume": 570,
+      "kd": 15,
+      "cpc": 4.92,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 61
+      },
+      "score": 71.25
+    },
+    {
+      "keyword": "best real estate crm 2018",
+      "volume": 1000,
+      "kd": 28,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 54,
+        "Sierra Interactive": 59
+      },
+      "score": 68.96551724137932
+    },
+    {
+      "keyword": "real estate marketing ideas",
+      "volume": 720,
+      "kd": 20,
+      "cpc": 7.82,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 15
+      },
+      "score": 68.57142857142857
+    },
+    {
+      "keyword": "best realtor blogs",
+      "volume": 440,
+      "kd": 12,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 69
+      },
+      "score": 67.6923076923077
+    },
+    {
+      "keyword": "real estate follow up email templates",
+      "volume": 420,
+      "kd": 12,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 11
+      },
+      "score": 64.61538461538461
+    },
+    {
+      "keyword": "best crm for real estate",
+      "volume": 930,
+      "kd": 28,
+      "cpc": 31.74,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 97,
+        "Tom Ferry": 74
+      },
+      "score": 64.13793103448276
+    },
+    {
+      "keyword": "luxury real estate marketing materials",
+      "volume": 510,
+      "kd": 15,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 83,
+        "Tom Ferry": 28
+      },
+      "score": 63.75
+    },
+    {
+      "keyword": "real estate idx",
+      "volume": 400,
+      "kd": 12,
+      "cpc": 6.79,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 19
+      },
+      "score": 61.53846153846154
+    },
+    {
+      "keyword": "website logo size",
+      "volume": 750,
+      "kd": 24,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 42
+      },
+      "score": 60.0
+    },
+    {
+      "keyword": "real estate marketing plan",
+      "volume": 720,
+      "kd": 23,
+      "cpc": 5.65,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 14,
+        "Tom Ferry": 67
+      },
+      "score": 60.0
+    },
+    {
+      "keyword": "ylopo reviews",
+      "volume": 180,
+      "kd": 5,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 35
+      },
+      "score": 60.0
+    },
+    {
+      "keyword": "real estate website builder with idx",
+      "volume": 380,
+      "kd": 12,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 34,
+        "Real Geeks": 13,
+        "Sierra Interactive": 11
+      },
+      "score": 58.46153846153846
+    },
+    {
+      "keyword": "clickfunnels real estate funnel",
+      "volume": 230,
+      "kd": 7,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 59,
+        "Sierra Interactive": 13
+      },
+      "score": 57.5
+    },
+    {
+      "keyword": "idx feed",
+      "volume": 440,
+      "kd": 15,
+      "cpc": 6.05,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 47
+      },
+      "score": 55.0
+    },
+    {
+      "keyword": "real estate lead generation",
+      "volume": 630,
+      "kd": 22,
+      "cpc": 20.5,
+      "our_rank": 0,
+      "competitors": {
+        "Tom Ferry": 22,
+        "Sierra Interactive": 5
+      },
+      "score": 54.78260869565217
+    },
+    {
+      "keyword": "real estate agent website builder",
+      "volume": 840,
+      "kd": 30,
+      "cpc": 15.4,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 79
+      },
+      "score": 54.193548387096776
+    },
+    {
+      "keyword": "idx real estate",
+      "volume": 750,
+      "kd": 27,
+      "cpc": 7.76,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 2,
+        "Real Geeks": 21,
+        "Sierra Interactive": 52
+      },
+      "score": 53.57142857142857
+    },
+    {
+      "keyword": "virtual tour real estate",
+      "volume": 480,
+      "kd": 17,
+      "cpc": 1.61,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 79
+      },
+      "score": 53.333333333333336
+    },
+    {
+      "keyword": "google ads for realtors",
+      "volume": 320,
+      "kd": 12,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 7,
+        "Tom Ferry": 3
+      },
+      "score": 49.23076923076923
+    },
+    {
+      "keyword": "squarespace idx",
+      "volume": 220,
+      "kd": 8,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 53
+      },
+      "score": 48.888888888888886
+    },
+    {
+      "keyword": "real estate affiliate marketing",
+      "volume": 360,
+      "kd": 14,
+      "cpc": 4.94,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 48
+      },
+      "score": 48.0
+    },
+    {
+      "keyword": "google analytics property name",
+      "volume": 360,
+      "kd": 14,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 21
+      },
+      "score": 48.0
+    },
+    {
+      "keyword": "fall real estate marketing ideas",
+      "volume": 400,
+      "kd": 16,
+      "cpc": 4.37,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 56,
+        "Sierra Interactive": 49
+      },
+      "score": 47.05882352941177
+    },
+    {
+      "keyword": "real estate facebook ads",
+      "volume": 540,
+      "kd": 22,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 72,
+        "Sierra Interactive": 30
+      },
+      "score": 46.95652173913044
+    },
+    {
+      "keyword": "sierra tracking",
+      "volume": 135,
+      "kd": 5,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 27
+      },
+      "score": 45.0
+    },
+    {
+      "keyword": "real estate seo expert",
+      "volume": 290,
+      "kd": 12,
+      "cpc": 4.59,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 8,
+        "Real Geeks": 57
+      },
+      "score": 44.61538461538461
+    },
+    {
+      "keyword": "real estate referral network",
+      "volume": 420,
+      "kd": 18,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 24
+      },
+      "score": 44.21052631578947
+    },
+    {
+      "keyword": "real estate marketing calendar",
+      "volume": 420,
+      "kd": 18,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Tom Ferry": 14
+      },
+      "score": 44.21052631578947
+    },
+    {
+      "keyword": "real estate marketing plan for sellers",
+      "volume": 460,
+      "kd": 20,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 21,
+        "Tom Ferry": 38
+      },
+      "score": 43.80952380952381
+    },
+    {
+      "keyword": "boomtown lead generation",
+      "volume": 380,
+      "kd": 17,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 74
+      },
+      "score": 42.22222222222222
+    },
+    {
+      "keyword": "postcard marketing for real estate agents",
+      "volume": 400,
+      "kd": 18,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 47
+      },
+      "score": 42.10526315789474
+    },
+    {
+      "keyword": "real estate marketing materials",
+      "volume": 440,
+      "kd": 20,
+      "cpc": 9.73,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 17
+      },
+      "score": 41.904761904761905
+    },
+    {
+      "keyword": "crm integration with website",
+      "volume": 600,
+      "kd": 28,
+      "cpc": 7.67,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 81
+      },
+      "score": 41.37931034482759
+    },
+    {
+      "keyword": "google analytics web property id",
+      "volume": 270,
+      "kd": 13,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 36
+      },
+      "score": 38.57142857142857
+    },
+    {
+      "keyword": "landing page conversion rates",
+      "volume": 400,
+      "kd": 20,
+      "cpc": 12.26,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 42
+      },
+      "score": 38.095238095238095
+    },
+    {
+      "keyword": "realtor marketing plan",
+      "volume": 340,
+      "kd": 18,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 89,
+        "Tom Ferry": 74
+      },
+      "score": 35.78947368421053
+    },
+    {
+      "keyword": "real estate email drip campaign",
+      "volume": 300,
+      "kd": 16,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 1,
+        "Real Geeks": 55,
+        "Sierra Interactive": 36
+      },
+      "score": 35.294117647058826
+    },
+    {
+      "keyword": "best crm for real estate investors",
+      "volume": 270,
+      "kd": 15,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 66
+      },
+      "score": 33.75
+    },
+    {
+      "keyword": "marketing to realtors",
+      "volume": 320,
+      "kd": 18,
+      "cpc": 4.65,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 64,
+        "Tom Ferry": 38
+      },
+      "score": 33.68421052631579
+    },
+    {
+      "keyword": "real estate lead follow up script",
+      "volume": 320,
+      "kd": 18,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 11
+      },
+      "score": 33.68421052631579
+    },
+    {
+      "keyword": "real estate branding",
+      "volume": 400,
+      "kd": 23,
+      "cpc": 5.64,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 39,
+        "Tom Ferry": 61
+      },
+      "score": 33.333333333333336
+    },
+    {
+      "keyword": "referral fees",
+      "volume": 440,
+      "kd": 27,
+      "cpc": 1.27,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 71
+      },
+      "score": 31.428571428571427
+    },
+    {
+      "keyword": "real estate holiday marketing ideas",
+      "volume": 250,
+      "kd": 15,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 87
+      },
+      "score": 31.25
+    },
+    {
+      "keyword": "real estate lead follow up",
+      "volume": 230,
+      "kd": 14,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 33,
+        "Tom Ferry": 14,
+        "Sierra Interactive": 26
+      },
+      "score": 30.666666666666668
+    },
+    {
+      "keyword": "real estate ppc",
+      "volume": 260,
+      "kd": 16,
+      "cpc": 7.93,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 12,
+        "Real Geeks": 34,
+        "Sierra Interactive": 7
+      },
+      "score": 30.58823529411765
+    },
+    {
+      "keyword": "real estate marketing techniques",
+      "volume": 360,
+      "kd": 23,
+      "cpc": 11.51,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 30,
+        "Tom Ferry": 61
+      },
+      "score": 30.0
+    },
+    {
+      "keyword": "best logo size for website",
+      "volume": 320,
+      "kd": 21,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 52
+      },
+      "score": 29.09090909090909
+    },
+    {
+      "keyword": "www.google.com/analytics",
+      "volume": 400,
+      "kd": 27,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 69
+      },
+      "score": 28.571428571428573
+    },
+    {
+      "keyword": "real geeks website",
+      "volume": 270,
+      "kd": 18,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 1
+      },
+      "score": 28.42105263157895
+    },
+    {
+      "keyword": "facebook ads for real estate sellers",
+      "volume": 360,
+      "kd": 25,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 4,
+        "Real Geeks": 8,
+        "Sierra Interactive": 76
+      },
+      "score": 27.692307692307693
+    },
+    {
+      "keyword": "facebook ads for real estate listings",
+      "volume": 360,
+      "kd": 25,
+      "cpc": 11.64,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 17
+      },
+      "score": 27.692307692307693
+    },
+    {
+      "keyword": "facebook marketing for realtors",
+      "volume": 220,
+      "kd": 15,
+      "cpc": 7.16,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 21,
+        "Real Geeks": 2
+      },
+      "score": 27.5
+    },
+    {
+      "keyword": "real estate blogging",
+      "volume": 230,
+      "kd": 16,
+      "cpc": 0.9,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 38,
+        "Real Geeks": 11
+      },
+      "score": 27.058823529411764
+    },
+    {
+      "keyword": "marketing for real estate agents",
+      "volume": 360,
+      "kd": 26,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 33
+      },
+      "score": 26.666666666666668
+    },
+    {
+      "keyword": "real estate social media marketing",
+      "volume": 360,
+      "kd": 26,
+      "cpc": 6.04,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 18,
+        "Sierra Interactive": 25
+      },
+      "score": 26.666666666666668
+    },
+    {
+      "keyword": "real estate landing page",
+      "volume": 320,
+      "kd": 23,
+      "cpc": 13.77,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 62,
+        "Sierra Interactive": 13
+      },
+      "score": 26.666666666666668
+    },
+    {
+      "keyword": "boomtown crm",
+      "volume": 360,
+      "kd": 26,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 12
+      },
+      "score": 26.666666666666668
+    },
+    {
+      "keyword": "what does crm stand for in real estate",
+      "volume": 250,
+      "kd": 18,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Tom Ferry": 71,
+        "Sierra Interactive": 23
+      },
+      "score": 26.31578947368421
+    },
+    {
+      "keyword": "placester websites",
+      "volume": 260,
+      "kd": 19,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 69
+      },
+      "score": 26.0
+    },
+    {
+      "keyword": "how many keywords per page seo",
+      "volume": 220,
+      "kd": 16,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 63
+      },
+      "score": 25.88235294117647
+    },
+    {
+      "keyword": "real estate idx providers",
+      "volume": 180,
+      "kd": 13,
+      "cpc": 7.84,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 1,
+        "Sierra Interactive": 33
+      },
+      "score": 25.714285714285715
+    },
+    {
+      "keyword": "placester reviews",
+      "volume": 180,
+      "kd": 13,
+      "cpc": 11.79,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 34
+      },
+      "score": 25.714285714285715
+    },
+    {
+      "keyword": "real estate postcard marketing",
+      "volume": 300,
+      "kd": 23,
+      "cpc": 11.13,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 83
+      },
+      "score": 25.0
+    },
+    {
+      "keyword": "facebook ads for real estate",
+      "volume": 270,
+      "kd": 21,
+      "cpc": 12.09,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 18,
+        "Real Geeks": 9
+      },
+      "score": 24.545454545454547
+    },
+    {
+      "keyword": "real estate facebook marketing",
+      "volume": 135,
+      "kd": 10,
+      "cpc": 12.44,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 3
+      },
+      "score": 24.545454545454547
+    },
+    {
+      "keyword": "google analytics add property",
+      "volume": 135,
+      "kd": 10,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 22
+      },
+      "score": 24.545454545454547
+    },
+    {
+      "keyword": "sign up for google analytics",
+      "volume": 180,
+      "kd": 14,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 11
+      },
+      "score": 24.0
+    },
+    {
+      "keyword": "real estate bloggers",
+      "volume": 320,
+      "kd": 26,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 55
+      },
+      "score": 23.703703703703702
+    },
+    {
+      "keyword": "idx broker websites",
+      "volume": 320,
+      "kd": 26,
+      "cpc": 11.25,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 51,
+        "Real Geeks": 9,
+        "Sierra Interactive": 13
+      },
+      "score": 23.703703703703702
+    },
+    {
+      "keyword": "seo agency atlanta",
+      "volume": 260,
+      "kd": 21,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 71
+      },
+      "score": 23.636363636363637
+    },
+    {
+      "keyword": "build a recruiting website",
+      "volume": 165,
+      "kd": 13,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 9
+      },
+      "score": 23.571428571428573
+    },
+    {
+      "keyword": "real estate marketing on facebook",
+      "volume": 200,
+      "kd": 16,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 6,
+        "Sierra Interactive": 92
+      },
+      "score": 23.529411764705884
+    },
+    {
+      "keyword": "real estate content marketing",
+      "volume": 220,
+      "kd": 18,
+      "cpc": 5.15,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 95,
+        "Sierra Interactive": 62
+      },
+      "score": 23.157894736842106
+    },
+    {
+      "keyword": "real estate conversion",
+      "volume": 220,
+      "kd": 18,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 17,
+        "Sierra Interactive": 10
+      },
+      "score": 23.157894736842106
+    },
+    {
+      "keyword": "real estate analytics",
+      "volume": 320,
+      "kd": 27,
+      "cpc": 12.43,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 38
+      },
+      "score": 22.857142857142858
+    },
+    {
+      "keyword": "how much is a referral fee",
+      "volume": 260,
+      "kd": 22,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 24
+      },
+      "score": 22.608695652173914
+    },
+    {
+      "keyword": "direct mail marketing real estate investors",
+      "volume": 260,
+      "kd": 22,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 43
+      },
+      "score": 22.608695652173914
+    },
+    {
+      "keyword": "pro agent websites",
+      "volume": 270,
+      "kd": 23,
+      "cpc": 1.84,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 48
+      },
+      "score": 22.5
+    },
+    {
+      "keyword": "facebook marketing for real estate agents",
+      "volume": 180,
+      "kd": 15,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 2
+      },
+      "score": 22.5
+    },
+    {
+      "keyword": "add property to google analytics",
+      "volume": 180,
+      "kd": 15,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 25
+      },
+      "score": 22.5
+    },
+    {
+      "keyword": "what is idx real estate",
+      "volume": 180,
+      "kd": 15,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 81
+      },
+      "score": 22.5
+    },
+    {
+      "keyword": "real estate crm comparison chart",
+      "volume": 300,
+      "kd": 26,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 52
+      },
+      "score": 22.22222222222222
+    },
+    {
+      "keyword": "real estate referral fee",
+      "volume": 270,
+      "kd": 24,
+      "cpc": 2.61,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 1
+      },
+      "score": 21.6
+    },
+    {
+      "keyword": "how to link google analytics to website",
+      "volume": 220,
+      "kd": 20,
+      "cpc": 3.72,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 51
+      },
+      "score": 20.952380952380953
+    },
+    {
+      "keyword": "realtor website builder",
+      "volume": 250,
+      "kd": 23,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 14
+      },
+      "score": 20.833333333333332
+    },
+    {
+      "keyword": "blog sidebar",
+      "volume": 250,
+      "kd": 23,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 72
+      },
+      "score": 20.833333333333332
+    },
+    {
+      "keyword": "wise agent crm",
+      "volume": 270,
+      "kd": 25,
+      "cpc": 3.2,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 31
+      },
+      "score": 20.76923076923077
+    },
+    {
+      "keyword": "real estate landing pages",
+      "volume": 270,
+      "kd": 26,
+      "cpc": 13.07,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 60,
+        "Sierra Interactive": 9
+      },
+      "score": 20.0
+    },
+    {
+      "keyword": "asking for referrals real estate",
+      "volume": 200,
+      "kd": 19,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Tom Ferry": 2
+      },
+      "score": 20.0
+    },
+    {
+      "keyword": "crm real estate definition",
+      "volume": 190,
+      "kd": 18,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 75,
+        "Sierra Interactive": 9
+      },
+      "score": 20.0
+    },
+    {
+      "keyword": "real estate referral companies",
+      "volume": 180,
+      "kd": 17,
+      "cpc": 4.54,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 41
+      },
+      "score": 20.0
+    },
+    {
+      "keyword": "facebook ads for realtors",
+      "volume": 180,
+      "kd": 17,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 4
+      },
+      "score": 20.0
+    },
+    {
+      "keyword": "install facebook pixel on website",
+      "volume": 150,
+      "kd": 14,
+      "cpc": 3.07,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 59
+      },
+      "score": 20.0
+    },
+    {
+      "keyword": "real estate social media automation",
+      "volume": 190,
+      "kd": 18,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 89
+      },
+      "score": 20.0
+    },
+    {
+      "keyword": "real estate lead generation ideas",
+      "volume": 180,
+      "kd": 17,
+      "cpc": 23.85,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 10
+      },
+      "score": 20.0
+    },
+    {
+      "keyword": "real estate sales funnel",
+      "volume": 180,
+      "kd": 17,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 24
+      },
+      "score": 20.0
+    },
+    {
+      "keyword": "add new google analytics account",
+      "volume": 135,
+      "kd": 13,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 63
+      },
+      "score": 19.285714285714285
+    },
+    {
+      "keyword": "referral real estate agent",
+      "volume": 230,
+      "kd": 23,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 11
+      },
+      "score": 19.166666666666668
+    },
+    {
+      "keyword": "how to ask for a referral in real estate",
+      "volume": 230,
+      "kd": 23,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 27,
+        "Tom Ferry": 2
+      },
+      "score": 19.166666666666668
+    },
+    {
+      "keyword": "real estate email campaigns",
+      "volume": 220,
+      "kd": 22,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 25,
+        "Tom Ferry": 39,
+        "Sierra Interactive": 17
+      },
+      "score": 19.130434782608695
+    },
+    {
+      "keyword": "landing page conversion rate",
+      "volume": 220,
+      "kd": 22,
+      "cpc": 10.85,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 62
+      },
+      "score": 19.130434782608695
+    },
+    {
+      "keyword": "diverse solutions idx",
+      "volume": 220,
+      "kd": 22,
+      "cpc": 7.86,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 8,
+        "Sierra Interactive": 45
+      },
+      "score": 19.130434782608695
+    },
+    {
+      "keyword": "can i use google analytics for any website",
+      "volume": 220,
+      "kd": 22,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 95
+      },
+      "score": 19.130434782608695
+    },
+    {
+      "keyword": "seo keywords for real estate",
+      "volume": 150,
+      "kd": 15,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 1
+      },
+      "score": 18.75
+    },
+    {
+      "keyword": "real estate agent branding package",
+      "volume": 165,
+      "kd": 17,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 57
+      },
+      "score": 18.333333333333332
+    },
+    {
+      "keyword": "local seo for real estate agents",
+      "volume": 100,
+      "kd": 10,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 4
+      },
+      "score": 18.181818181818183
+    },
+    {
+      "keyword": "geek squad review",
+      "volume": 135,
+      "kd": 14,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 47
+      },
+      "score": 18.0
+    },
+    {
+      "keyword": "set up google analytics account",
+      "volume": 135,
+      "kd": 14,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 10
+      },
+      "score": 18.0
+    },
+    {
+      "keyword": "real estate marketing funnels",
+      "volume": 135,
+      "kd": 14,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 25
+      },
+      "score": 18.0
+    },
+    {
+      "keyword": "real estate follow up email",
+      "volume": 135,
+      "kd": 14,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 26
+      },
+      "score": 18.0
+    },
+    {
+      "keyword": "best seo keywords for real estate",
+      "volume": 150,
+      "kd": 16,
+      "cpc": 7.9,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 1
+      },
+      "score": 17.647058823529413
+    },
+    {
+      "keyword": "real estate automation software",
+      "volume": 190,
+      "kd": 21,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 22
+      },
+      "score": 17.272727272727273
+    },
+    {
+      "keyword": "how to use google analytics for your website",
+      "volume": 180,
+      "kd": 20,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 41
+      },
+      "score": 17.142857142857142
+    },
+    {
+      "keyword": "real estate lead follow up email",
+      "volume": 110,
+      "kd": 12,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 36
+      },
+      "score": 16.923076923076923
+    },
+    {
+      "keyword": "real estate marketing budget",
+      "volume": 110,
+      "kd": 12,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 19
+      },
+      "score": 16.923076923076923
+    },
+    {
+      "keyword": "real estate agent marketing budget",
+      "volume": 125,
+      "kd": 14,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 10
+      },
+      "score": 16.666666666666668
+    },
+    {
+      "keyword": "real estate marketing plans",
+      "volume": 165,
+      "kd": 19,
+      "cpc": 5.01,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 75
+      },
+      "score": 16.5
+    },
+    {
+      "keyword": "sphere of influence real estate template",
+      "volume": 135,
+      "kd": 16,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 74
+      },
+      "score": 15.882352941176471
+    },
+    {
+      "keyword": "realtor blog",
+      "volume": 220,
+      "kd": 27,
+      "cpc": 3.03,
+      "our_rank": 0,
+      "competitors": {
+        "Luxury Presence": 75
+      },
+      "score": 15.714285714285714
+    },
+    {
+      "keyword": "online marketing for real estate agents",
+      "volume": 165,
+      "kd": 20,
+      "cpc": 2.86,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 96
+      },
+      "score": 15.714285714285714
+    },
+    {
+      "keyword": "real estate blog content",
+      "volume": 135,
+      "kd": 17,
+      "cpc": 2.15,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 57
+      },
+      "score": 15.0
+    },
+    {
+      "keyword": "add facebook pixel to website",
+      "volume": 180,
+      "kd": 24,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 18
+      },
+      "score": 14.4
+    },
+    {
+      "keyword": "real estate email marketing",
+      "volume": 180,
+      "kd": 24,
+      "cpc": 16.83,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 20
+      },
+      "score": 14.4
+    },
+    {
+      "keyword": "facebook ads for real estate agents",
+      "volume": 135,
+      "kd": 18,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 7
+      },
+      "score": 14.210526315789474
+    },
+    {
+      "keyword": "firepoint crm",
+      "volume": 135,
+      "kd": 18,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 68
+      },
+      "score": 14.210526315789474
+    },
+    {
+      "keyword": "motivated seller facebook ads",
+      "volume": 145,
+      "kd": 20,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 69
+      },
+      "score": 13.80952380952381
+    },
+    {
+      "keyword": "cinc crm pricing",
+      "volume": 150,
+      "kd": 21,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 42,
+        "Sierra Interactive": 69
+      },
+      "score": 13.636363636363637
+    },
+    {
+      "keyword": "crm for wholesalers",
+      "volume": 135,
+      "kd": 19,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 73
+      },
+      "score": 13.5
+    },
+    {
+      "keyword": "idx website for realtors",
+      "volume": 135,
+      "kd": 19,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 5,
+        "Sierra Interactive": 8
+      },
+      "score": 13.5
+    },
+    {
+      "keyword": "using google contacts as crm",
+      "volume": 180,
+      "kd": 26,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 65
+      },
+      "score": 13.333333333333334
+    },
+    {
+      "keyword": "drip campaigns for real estate",
+      "volume": 125,
+      "kd": 18,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 35
+      },
+      "score": 13.157894736842104
+    },
+    {
+      "keyword": "brivity crm",
+      "volume": 135,
+      "kd": 20,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 53
+      },
+      "score": 12.857142857142858
+    },
+    {
+      "keyword": "idx listings",
+      "volume": 135,
+      "kd": 20,
+      "cpc": 4.77,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 17,
+        "Sierra Interactive": 16
+      },
+      "score": 12.857142857142858
+    },
+    {
+      "keyword": "real estate google ads",
+      "volume": 90,
+      "kd": 13,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 8
+      },
+      "score": 12.857142857142858
+    },
+    {
+      "keyword": "real estate lead follow up system",
+      "volume": 150,
+      "kd": 23,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 37,
+        "Sierra Interactive": 56
+      },
+      "score": 12.5
+    },
+    {
+      "keyword": "real estate lead generation company",
+      "volume": 125,
+      "kd": 19,
+      "cpc": 19.09,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 9
+      },
+      "score": 12.5
+    },
+    {
+      "keyword": "implement google analytics",
+      "volume": 135,
+      "kd": 21,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 28
+      },
+      "score": 12.272727272727273
+    },
+    {
+      "keyword": "velocify crm",
+      "volume": 135,
+      "kd": 21,
+      "cpc": 15.98,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 13
+      },
+      "score": 12.272727272727273
+    },
+    {
+      "keyword": "best idx websites for realtors",
+      "volume": 135,
+      "kd": 21,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 16
+      },
+      "score": 12.272727272727273
+    },
+    {
+      "keyword": "real estate follow up system",
+      "volume": 165,
+      "kd": 26,
+      "cpc": 7.86,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 80
+      },
+      "score": 12.222222222222221
+    },
+    {
+      "keyword": "sales funnel for real estate",
+      "volume": 80,
+      "kd": 13,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 36
+      },
+      "score": 11.428571428571429
+    },
+    {
+      "keyword": "real estate email marketing services",
+      "volume": 135,
+      "kd": 23,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 15
+      },
+      "score": 11.25
+    },
+    {
+      "keyword": "idx meaning",
+      "volume": 135,
+      "kd": 23,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 66
+      },
+      "score": 11.25
+    },
+    {
+      "keyword": "real estate funnel",
+      "volume": 90,
+      "kd": 15,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 3
+      },
+      "score": 11.25
+    },
+    {
+      "keyword": "chime crm pricing",
+      "volume": 90,
+      "kd": 15,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 87
+      },
+      "score": 11.25
+    },
+    {
+      "keyword": "vyral marketing omaha",
+      "volume": 150,
+      "kd": 26,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 71
+      },
+      "score": 11.11111111111111
+    },
+    {
+      "keyword": "crm for real estate developers",
+      "volume": 150,
+      "kd": 26,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 15
+      },
+      "score": 11.11111111111111
+    },
+    {
+      "keyword": "real geeks sample websites",
+      "volume": 150,
+      "kd": 26,
+      "cpc": 19.21,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 38,
+        "Sierra Interactive": 62
+      },
+      "score": 11.11111111111111
+    },
+    {
+      "keyword": "sales funnel real estate",
+      "volume": 100,
+      "kd": 17,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 48
+      },
+      "score": 11.11111111111111
+    },
+    {
+      "keyword": "marketing strategies for real estate",
+      "volume": 110,
+      "kd": 19,
+      "cpc": 5.14,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 9
+      },
+      "score": 11.0
+    },
+    {
+      "keyword": "marketing for real estate investors",
+      "volume": 125,
+      "kd": 22,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 79
+      },
+      "score": 10.869565217391305
+    },
+    {
+      "keyword": "real estate lead generation software",
+      "volume": 135,
+      "kd": 24,
+      "cpc": 28.39,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 17
+      },
+      "score": 10.8
+    },
+    {
+      "keyword": "best real estate website design",
+      "volume": 135,
+      "kd": 24,
+      "cpc": 10.67,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 43
+      },
+      "score": 10.8
+    },
+    {
+      "keyword": "real estate seo services",
+      "volume": 80,
+      "kd": 14,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 95
+      },
+      "score": 10.666666666666666
+    },
+    {
+      "keyword": "real estate sms marketing",
+      "volume": 90,
+      "kd": 16,
+      "cpc": 5.56,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 13
+      },
+      "score": 10.588235294117647
+    },
+    {
+      "keyword": "real estate facebook ads that work",
+      "volume": 90,
+      "kd": 16,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 77
+      },
+      "score": 10.588235294117647
+    },
+    {
+      "keyword": "idx integration",
+      "volume": 90,
+      "kd": 16,
+      "cpc": 7.89,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 24
+      },
+      "score": 10.588235294117647
+    },
+    {
+      "keyword": "idx real estate websites",
+      "volume": 90,
+      "kd": 16,
+      "cpc": 9.25,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 11
+      },
+      "score": 10.588235294117647
+    },
+    {
+      "keyword": "creative real estate marketing ideas",
+      "volume": 100,
+      "kd": 18,
+      "cpc": 9.29,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 8
+      },
+      "score": 10.526315789473685
+    },
+    {
+      "keyword": "how to set up google analytics for website",
+      "volume": 135,
+      "kd": 25,
+      "cpc": 6.13,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 16
+      },
+      "score": 10.384615384615385
+    },
+    {
+      "keyword": "idx websites",
+      "volume": 135,
+      "kd": 26,
+      "cpc": 8.28,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 3,
+        "Sierra Interactive": 16
+      },
+      "score": 10.0
+    },
+    {
+      "keyword": "follow up real estate",
+      "volume": 100,
+      "kd": 19,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 4
+      },
+      "score": 10.0
+    },
+    {
+      "keyword": "what does crm mean in real estate",
+      "volume": 90,
+      "kd": 18,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 15
+      },
+      "score": 9.473684210526315
+    },
+    {
+      "keyword": "real estate drip campaigns",
+      "volume": 90,
+      "kd": 18,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 2
+      },
+      "score": 9.473684210526315
+    },
+    {
+      "keyword": "real estate website hosting with idx",
+      "volume": 80,
+      "kd": 16,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 65
+      },
+      "score": 9.411764705882353
+    },
+    {
+      "keyword": "best idx real estate websites",
+      "volume": 135,
+      "kd": 29,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 2,
+        "Sierra Interactive": 10
+      },
+      "score": 9.0
+    },
+    {
+      "keyword": "creative real estate marketing",
+      "volume": 90,
+      "kd": 19,
+      "cpc": 7.31,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 5
+      },
+      "score": 9.0
+    },
+    {
+      "keyword": "real estate brokerage website design",
+      "volume": 135,
+      "kd": 30,
+      "cpc": 23.01,
+      "our_rank": 0,
+      "competitors": {
+        "Real Geeks": 56,
+        "Sierra Interactive": 60
+      },
+      "score": 8.709677419354838
+    },
+    {
+      "keyword": "lead conversion funnel",
+      "volume": 135,
+      "kd": 30,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 47
+      },
+      "score": 8.709677419354838
+    },
+    {
+      "keyword": "real estate crm with idx",
+      "volume": 100,
+      "kd": 22,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 35
+      },
+      "score": 8.695652173913043
+    },
+    {
+      "keyword": "agent metrics",
+      "volume": 90,
+      "kd": 20,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 19
+      },
+      "score": 8.571428571428571
+    },
+    {
+      "keyword": "ways to lead generate in real estate",
+      "volume": 80,
+      "kd": 18,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 15
+      },
+      "score": 8.421052631578947
+    },
+    {
+      "keyword": "ppc real estate",
+      "volume": 80,
+      "kd": 18,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 15
+      },
+      "score": 8.421052631578947
+    },
+    {
+      "keyword": "automated real estate marketing",
+      "volume": 80,
+      "kd": 18,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 71
+      },
+      "score": 8.421052631578947
+    },
+    {
+      "keyword": "lead generation for real estate investors",
+      "volume": 90,
+      "kd": 21,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 40
+      },
+      "score": 8.181818181818182
+    },
+    {
+      "keyword": "follow up script real estate",
+      "volume": 90,
+      "kd": 21,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 74
+      },
+      "score": 8.181818181818182
+    },
+    {
+      "keyword": "free lead generation real estate",
+      "volume": 110,
+      "kd": 26,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 32
+      },
+      "score": 8.148148148148149
+    },
+    {
+      "keyword": "real estate marketing campaign",
+      "volume": 80,
+      "kd": 19,
+      "cpc": 9.99,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 21
+      },
+      "score": 8.0
+    },
+    {
+      "keyword": "commercial real estate lead generation",
+      "volume": 90,
+      "kd": 22,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 66
+      },
+      "score": 7.826086956521739
+    },
+    {
+      "keyword": "idx boost",
+      "volume": 90,
+      "kd": 22,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 75
+      },
+      "score": 7.826086956521739
+    },
+    {
+      "keyword": "real estate idx websites",
+      "volume": 90,
+      "kd": 22,
+      "cpc": 12.87,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 27
+      },
+      "score": 7.826086956521739
+    },
+    {
+      "keyword": "crm real estate meaning",
+      "volume": 90,
+      "kd": 22,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 66
+      },
+      "score": 7.826086956521739
+    },
+    {
+      "keyword": "lead conversion real estate",
+      "volume": 70,
+      "kd": 17,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Sierra Interactive": 1
+      },
+      "score": 7.777777777777778
+    }
+  ]
+}

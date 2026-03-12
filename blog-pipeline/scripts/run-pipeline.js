@@ -112,7 +112,8 @@ function stageWrite(opts) {
     console.log(`  Using latest manifest: ${manifests[0]}`);
     const latestManifest = path.join(MANIFESTS_DIR, manifests[0]);
 
-    const entries = JSON.parse(fs.readFileSync(latestManifest, "utf-8"));
+    const rawLatest = JSON.parse(fs.readFileSync(latestManifest, "utf-8"));
+    const entries = Array.isArray(rawLatest) ? rawLatest : (rawLatest.entries || []);
     for (let i = 0; i < Math.min(entries.length, opts.limit); i++) {
       run("write-post.js", `--manifest ${latestManifest} --index ${i}`, {
         ...opts,
@@ -122,7 +123,8 @@ function stageWrite(opts) {
     return;
   }
 
-  const entries = JSON.parse(fs.readFileSync(manifestFile, "utf-8"));
+  const raw = JSON.parse(fs.readFileSync(manifestFile, "utf-8"));
+  const entries = Array.isArray(raw) ? raw : (raw.entries || []);
   for (let i = 0; i < Math.min(entries.length, opts.limit); i++) {
     run("write-post.js", `--manifest ${manifestFile} --index ${i}`, {
       ...opts,

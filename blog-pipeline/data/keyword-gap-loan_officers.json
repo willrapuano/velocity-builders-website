@@ -1,0 +1,1415 @@
+{
+  "audience": "loan_officers",
+  "total": 122,
+  "competitors": [
+    "Core Training",
+    "BNTouch",
+    "Total Expert",
+    "Surefire (TopOfMind)",
+    "Mortgage Coach"
+  ],
+  "filter": "Velocity-service-relevant only (marketing, SEO, CRM, lead gen, automation, websites)",
+  "keywords": [
+    {
+      "keyword": "mortgage marketing ideas",
+      "volume": 510,
+      "kd": 14,
+      "cpc": 14.47,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 85,
+        "Surefire (TopOfMind)": 51
+      },
+      "score": 68.0
+    },
+    {
+      "keyword": "surefire crm",
+      "volume": 360,
+      "kd": 16,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Surefire (TopOfMind)": 100
+      },
+      "score": 42.35294117647059
+    },
+    {
+      "keyword": "white glove marketing",
+      "volume": 220,
+      "kd": 10,
+      "cpc": 2.77,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 28
+      },
+      "score": 40.0
+    },
+    {
+      "keyword": "mortgage website design",
+      "volume": 380,
+      "kd": 19,
+      "cpc": 14.2,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 76
+      },
+      "score": 38.0
+    },
+    {
+      "keyword": "mortgage sales funnel",
+      "volume": 190,
+      "kd": 10,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 49,
+        "Surefire (TopOfMind)": 93
+      },
+      "score": 34.54545454545455
+    },
+    {
+      "keyword": "marketing to realtors",
+      "volume": 320,
+      "kd": 18,
+      "cpc": 4.65,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 92
+      },
+      "score": 33.68421052631579
+    },
+    {
+      "keyword": "rob chrisman blog",
+      "volume": 150,
+      "kd": 8,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 19
+      },
+      "score": 33.333333333333336
+    },
+    {
+      "keyword": "mortgage newsletters for marketing",
+      "volume": 250,
+      "kd": 15,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 52,
+        "Total Expert": 43,
+        "Surefire (TopOfMind)": 36
+      },
+      "score": 31.25
+    },
+    {
+      "keyword": "mortgage lead generation",
+      "volume": 320,
+      "kd": 20,
+      "cpc": 19.7,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 48,
+        "Surefire (TopOfMind)": 21
+      },
+      "score": 30.476190476190474
+    },
+    {
+      "keyword": "marketing ideas for loan officers",
+      "volume": 180,
+      "kd": 11,
+      "cpc": 7.99,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 37,
+        "Surefire (TopOfMind)": 31
+      },
+      "score": 30.0
+    },
+    {
+      "keyword": "credit union marketing campaigns",
+      "volume": 135,
+      "kd": 8,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Surefire (TopOfMind)": 84
+      },
+      "score": 30.0
+    },
+    {
+      "keyword": "partner referral program",
+      "volume": 290,
+      "kd": 19,
+      "cpc": 8.8,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 35
+      },
+      "score": 29.0
+    },
+    {
+      "keyword": "mortgage broker website design",
+      "volume": 230,
+      "kd": 15,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 51
+      },
+      "score": 28.75
+    },
+    {
+      "keyword": "mortgage crm",
+      "volume": 400,
+      "kd": 27,
+      "cpc": 22.05,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 78,
+        "Surefire (TopOfMind)": 11
+      },
+      "score": 28.571428571428573
+    },
+    {
+      "keyword": "mortgage marketing strategies",
+      "volume": 200,
+      "kd": 14,
+      "cpc": 12.68,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 14,
+        "Surefire (TopOfMind)": 82
+      },
+      "score": 26.666666666666668
+    },
+    {
+      "keyword": "single property websites",
+      "volume": 180,
+      "kd": 13,
+      "cpc": 2.64,
+      "our_rank": 0,
+      "competitors": {
+        "Surefire (TopOfMind)": 37
+      },
+      "score": 25.714285714285715
+    },
+    {
+      "keyword": "top of mind crm",
+      "volume": 90,
+      "kd": 6,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Surefire (TopOfMind)": 1
+      },
+      "score": 25.714285714285715
+    },
+    {
+      "keyword": "mortgage marketing services",
+      "volume": 165,
+      "kd": 13,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Total Expert": 9,
+        "Surefire (TopOfMind)": 90
+      },
+      "score": 23.571428571428573
+    },
+    {
+      "keyword": "emm loans reviews",
+      "volume": 180,
+      "kd": 15,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 30
+      },
+      "score": 22.5
+    },
+    {
+      "keyword": "marketing ideas for mortgage lenders",
+      "volume": 135,
+      "kd": 12,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 59,
+        "Surefire (TopOfMind)": 38
+      },
+      "score": 20.76923076923077
+    },
+    {
+      "keyword": "best crm for mortgage brokers",
+      "volume": 230,
+      "kd": 24,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 92
+      },
+      "score": 18.4
+    },
+    {
+      "keyword": "facebook ads for mortgage loan officers",
+      "volume": 100,
+      "kd": 10,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 8,
+        "Surefire (TopOfMind)": 57
+      },
+      "score": 18.181818181818183
+    },
+    {
+      "keyword": "financial brand forum",
+      "volume": 135,
+      "kd": 14,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Total Expert": 18
+      },
+      "score": 18.0
+    },
+    {
+      "keyword": "marketing ideas for credit unions",
+      "volume": 80,
+      "kd": 8,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Surefire (TopOfMind)": 34
+      },
+      "score": 17.77777777777778
+    },
+    {
+      "keyword": "crm for mortgage brokers",
+      "volume": 180,
+      "kd": 20,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 68,
+        "Surefire (TopOfMind)": 27
+      },
+      "score": 17.142857142857142
+    },
+    {
+      "keyword": "loan officer marketing ideas",
+      "volume": 110,
+      "kd": 12,
+      "cpc": 10.15,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 78,
+        "Surefire (TopOfMind)": 44
+      },
+      "score": 16.923076923076923
+    },
+    {
+      "keyword": "loan officer marketing",
+      "volume": 135,
+      "kd": 15,
+      "cpc": 8.49,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 54,
+        "Total Expert": 57,
+        "Surefire (TopOfMind)": 25
+      },
+      "score": 16.875
+    },
+    {
+      "keyword": "mortgage marketing tools",
+      "volume": 150,
+      "kd": 17,
+      "cpc": 17.09,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 5,
+        "Total Expert": 1,
+        "Surefire (TopOfMind)": 74
+      },
+      "score": 16.666666666666668
+    },
+    {
+      "keyword": "mortgage marketing",
+      "volume": 135,
+      "kd": 16,
+      "cpc": 8.92,
+      "our_rank": 0,
+      "competitors": {
+        "Surefire (TopOfMind)": 5
+      },
+      "score": 15.882352941176471
+    },
+    {
+      "keyword": "mortgage broker facebook ads",
+      "volume": 55,
+      "kd": 6,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 23,
+        "Surefire (TopOfMind)": 18
+      },
+      "score": 15.714285714285714
+    },
+    {
+      "keyword": "bullseye crm",
+      "volume": 100,
+      "kd": 13,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Total Expert": 25
+      },
+      "score": 14.285714285714286
+    },
+    {
+      "keyword": "mortgage facebook ads",
+      "volume": 80,
+      "kd": 11,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 36,
+        "Surefire (TopOfMind)": 22
+      },
+      "score": 13.333333333333334
+    },
+    {
+      "keyword": "mortgage landing page",
+      "volume": 125,
+      "kd": 18,
+      "cpc": 7.11,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 67,
+        "Surefire (TopOfMind)": 5
+      },
+      "score": 13.157894736842104
+    },
+    {
+      "keyword": "seo for mortgage brokers",
+      "volume": 44,
+      "kd": 6,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 78
+      },
+      "score": 12.571428571428571
+    },
+    {
+      "keyword": "social media marketing for loan officers",
+      "volume": 90,
+      "kd": 15,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 23,
+        "Surefire (TopOfMind)": 67
+      },
+      "score": 11.25
+    },
+    {
+      "keyword": "loan officer lead generation",
+      "volume": 90,
+      "kd": 15,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 25,
+        "Surefire (TopOfMind)": 18
+      },
+      "score": 11.25
+    },
+    {
+      "keyword": "marketing automation customer journey",
+      "volume": 90,
+      "kd": 15,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Total Expert": 35
+      },
+      "score": 11.25
+    },
+    {
+      "keyword": "credit crm",
+      "volume": 110,
+      "kd": 19,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Surefire (TopOfMind)": 25
+      },
+      "score": 11.0
+    },
+    {
+      "keyword": "cms marketing guidelines",
+      "volume": 135,
+      "kd": 24,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Total Expert": 39
+      },
+      "score": 10.8
+    },
+    {
+      "keyword": "facebook ads for mortgage brokers",
+      "volume": 70,
+      "kd": 12,
+      "cpc": 11.67,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 12,
+        "Surefire (TopOfMind)": 20
+      },
+      "score": 10.76923076923077
+    },
+    {
+      "keyword": "mortgage broker marketing",
+      "volume": 90,
+      "kd": 16,
+      "cpc": 6.81,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 20,
+        "Surefire (TopOfMind)": 22
+      },
+      "score": 10.588235294117647
+    },
+    {
+      "keyword": "mortgage lead generation companies",
+      "volume": 125,
+      "kd": 23,
+      "cpc": 29.27,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 62,
+        "Surefire (TopOfMind)": 17
+      },
+      "score": 10.416666666666666
+    },
+    {
+      "keyword": "loan pipeline",
+      "volume": 100,
+      "kd": 19,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 77,
+        "Surefire (TopOfMind)": 21
+      },
+      "score": 10.0
+    },
+    {
+      "keyword": "top of mind marketing",
+      "volume": 90,
+      "kd": 17,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Surefire (TopOfMind)": 7
+      },
+      "score": 10.0
+    },
+    {
+      "keyword": "bntouch mortgage crm",
+      "volume": 44,
+      "kd": 8,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 1
+      },
+      "score": 9.777777777777779
+    },
+    {
+      "keyword": "medicare marketing strategies",
+      "volume": 80,
+      "kd": 16,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Total Expert": 80
+      },
+      "score": 9.411764705882353
+    },
+    {
+      "keyword": "marketing for credit unions",
+      "volume": 42,
+      "kd": 8,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Surefire (TopOfMind)": 67
+      },
+      "score": 9.333333333333334
+    },
+    {
+      "keyword": "credit union marketing services",
+      "volume": 44,
+      "kd": 9,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Total Expert": 89,
+        "Surefire (TopOfMind)": 15
+      },
+      "score": 8.8
+    },
+    {
+      "keyword": "credit union marketing",
+      "volume": 44,
+      "kd": 9,
+      "cpc": 3.79,
+      "our_rank": 0,
+      "competitors": {
+        "Total Expert": 97,
+        "Surefire (TopOfMind)": 96
+      },
+      "score": 8.8
+    },
+    {
+      "keyword": "single property websites for realtors",
+      "volume": 44,
+      "kd": 9,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Surefire (TopOfMind)": 66
+      },
+      "score": 8.8
+    },
+    {
+      "keyword": "crm for mortgage loan officers",
+      "volume": 100,
+      "kd": 23,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 13,
+        "Surefire (TopOfMind)": 60
+      },
+      "score": 8.333333333333334
+    },
+    {
+      "keyword": "medicare communications and marketing guidelines",
+      "volume": 70,
+      "kd": 16,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Total Expert": 67
+      },
+      "score": 8.235294117647058
+    },
+    {
+      "keyword": "mortgage automation software",
+      "volume": 90,
+      "kd": 21,
+      "cpc": 9.1,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 36,
+        "Total Expert": 50
+      },
+      "score": 8.181818181818182
+    },
+    {
+      "keyword": "mortgage referral",
+      "volume": 90,
+      "kd": 21,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 27,
+        "Surefire (TopOfMind)": 85
+      },
+      "score": 8.181818181818182
+    },
+    {
+      "keyword": "mortgage lender blogs",
+      "volume": 44,
+      "kd": 10,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 30
+      },
+      "score": 8.0
+    },
+    {
+      "keyword": "facebook ads for loan officers",
+      "volume": 40,
+      "kd": 9,
+      "cpc": 12.05,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 21
+      },
+      "score": 8.0
+    },
+    {
+      "keyword": "salesforce mortgage crm",
+      "volume": 90,
+      "kd": 23,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Surefire (TopOfMind)": 92
+      },
+      "score": 7.5
+    },
+    {
+      "keyword": "loan officer social media marketing",
+      "volume": 55,
+      "kd": 14,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 15,
+        "Surefire (TopOfMind)": 26
+      },
+      "score": 7.333333333333333
+    },
+    {
+      "keyword": "mortgage lead conversion rates",
+      "volume": 55,
+      "kd": 14,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 56
+      },
+      "score": 7.333333333333333
+    },
+    {
+      "keyword": "mortgage landing pages",
+      "volume": 44,
+      "kd": 11,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 68,
+        "Surefire (TopOfMind)": 5
+      },
+      "score": 7.333333333333333
+    },
+    {
+      "keyword": "nurture right 360 instructions",
+      "volume": 55,
+      "kd": 14,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Total Expert": 55
+      },
+      "score": 7.333333333333333
+    },
+    {
+      "keyword": "surefire mortgage crm",
+      "volume": 44,
+      "kd": 11,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Surefire (TopOfMind)": 98
+      },
+      "score": 7.333333333333333
+    },
+    {
+      "keyword": "best mortgage crm",
+      "volume": 90,
+      "kd": 25,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 31,
+        "Surefire (TopOfMind)": 7
+      },
+      "score": 6.923076923076923
+    },
+    {
+      "keyword": "surefire marketing",
+      "volume": 44,
+      "kd": 12,
+      "cpc": 2.89,
+      "our_rank": 0,
+      "competitors": {
+        "Surefire (TopOfMind)": 5
+      },
+      "score": 6.769230769230769
+    },
+    {
+      "keyword": "life event marketing",
+      "volume": 36,
+      "kd": 10,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Total Expert": 42
+      },
+      "score": 6.545454545454546
+    },
+    {
+      "keyword": "mortgage content marketing",
+      "volume": 44,
+      "kd": 13,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 48,
+        "Total Expert": 20,
+        "Surefire (TopOfMind)": 42
+      },
+      "score": 6.285714285714286
+    },
+    {
+      "keyword": "mortgage crm software",
+      "volume": 80,
+      "kd": 26,
+      "cpc": 26.25,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 89,
+        "Surefire (TopOfMind)": 53
+      },
+      "score": 5.925925925925926
+    },
+    {
+      "keyword": "marketing ideas for mortgage loan officers",
+      "volume": 44,
+      "kd": 14,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 50,
+        "Surefire (TopOfMind)": 85
+      },
+      "score": 5.866666666666666
+    },
+    {
+      "keyword": "lead generation for mortgage brokers",
+      "volume": 44,
+      "kd": 14,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 35,
+        "Surefire (TopOfMind)": 22
+      },
+      "score": 5.866666666666666
+    },
+    {
+      "keyword": "social media marketing for mortgage loan officers",
+      "volume": 44,
+      "kd": 14,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 21,
+        "Surefire (TopOfMind)": 57
+      },
+      "score": 5.866666666666666
+    },
+    {
+      "keyword": "mortgage lead marketing",
+      "volume": 70,
+      "kd": 23,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 95,
+        "Surefire (TopOfMind)": 49
+      },
+      "score": 5.833333333333333
+    },
+    {
+      "keyword": "business card scanner crm",
+      "volume": 80,
+      "kd": 27,
+      "cpc": 45.12,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 42
+      },
+      "score": 5.714285714285714
+    },
+    {
+      "keyword": "lead generation for mortgage lenders",
+      "volume": 40,
+      "kd": 13,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 26
+      },
+      "score": 5.714285714285714
+    },
+    {
+      "keyword": "adwerx review",
+      "volume": 80,
+      "kd": 27,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Total Expert": 75
+      },
+      "score": 5.714285714285714
+    },
+    {
+      "keyword": "google ads for mortgage brokers",
+      "volume": 31,
+      "kd": 10,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 51
+      },
+      "score": 5.636363636363637
+    },
+    {
+      "keyword": "crm with business card scanner",
+      "volume": 75,
+      "kd": 26,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 66
+      },
+      "score": 5.555555555555555
+    },
+    {
+      "keyword": "digital marketing for loan officers",
+      "volume": 44,
+      "kd": 15,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 44,
+        "Total Expert": 19,
+        "Surefire (TopOfMind)": 34
+      },
+      "score": 5.5
+    },
+    {
+      "keyword": "mortgage direct mail marketing",
+      "volume": 44,
+      "kd": 15,
+      "cpc": 30.83,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 42,
+        "Surefire (TopOfMind)": 9
+      },
+      "score": 5.5
+    },
+    {
+      "keyword": "topbroker crm",
+      "volume": 44,
+      "kd": 15,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Surefire (TopOfMind)": 19
+      },
+      "score": 5.5
+    },
+    {
+      "keyword": "lead generation for loan officers",
+      "volume": 40,
+      "kd": 14,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 40
+      },
+      "score": 5.333333333333333
+    },
+    {
+      "keyword": "crm software for mortgage professionals",
+      "volume": 55,
+      "kd": 20,
+      "cpc": 46.57,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 45,
+        "Surefire (TopOfMind)": 9
+      },
+      "score": 5.238095238095238
+    },
+    {
+      "keyword": "marketing automation for banks",
+      "volume": 44,
+      "kd": 16,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Total Expert": 54,
+        "Surefire (TopOfMind)": 92
+      },
+      "score": 5.176470588235294
+    },
+    {
+      "keyword": "customer journey automation",
+      "volume": 44,
+      "kd": 16,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Total Expert": 47
+      },
+      "score": 5.176470588235294
+    },
+    {
+      "keyword": "digital mortgage marketing",
+      "volume": 40,
+      "kd": 15,
+      "cpc": 12.43,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 52,
+        "Total Expert": 13
+      },
+      "score": 5.0
+    },
+    {
+      "keyword": "medicare advantage marketing rules",
+      "volume": 50,
+      "kd": 19,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Total Expert": 90
+      },
+      "score": 5.0
+    },
+    {
+      "keyword": "mortgage loan officer marketing ideas",
+      "volume": 32,
+      "kd": 12,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 53
+      },
+      "score": 4.923076923076923
+    },
+    {
+      "keyword": "mortgage automation",
+      "volume": 44,
+      "kd": 17,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 76
+      },
+      "score": 4.888888888888889
+    },
+    {
+      "keyword": "mortgage website marketing",
+      "volume": 44,
+      "kd": 17,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 53,
+        "Total Expert": 20,
+        "Surefire (TopOfMind)": 17
+      },
+      "score": 4.888888888888889
+    },
+    {
+      "keyword": "financial brand conference",
+      "volume": 44,
+      "kd": 17,
+      "cpc": 6.05,
+      "our_rank": 0,
+      "competitors": {
+        "Total Expert": 12
+      },
+      "score": 4.888888888888889
+    },
+    {
+      "keyword": "marketing automation journey",
+      "volume": 44,
+      "kd": 17,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Total Expert": 26
+      },
+      "score": 4.888888888888889
+    },
+    {
+      "keyword": "mortgage broker crm software",
+      "volume": 40,
+      "kd": 16,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 12
+      },
+      "score": 4.705882352941177
+    },
+    {
+      "keyword": "mortgage landing page templates",
+      "volume": 44,
+      "kd": 18,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Surefire (TopOfMind)": 15
+      },
+      "score": 4.631578947368421
+    },
+    {
+      "keyword": "direct mail mortgage marketing",
+      "volume": 40,
+      "kd": 17,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 15
+      },
+      "score": 4.444444444444445
+    },
+    {
+      "keyword": "mortgage pipeline",
+      "volume": 44,
+      "kd": 19,
+      "cpc": 0.29,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 33,
+        "Surefire (TopOfMind)": 27
+      },
+      "score": 4.4
+    },
+    {
+      "keyword": "medicare marketing guidelines",
+      "volume": 44,
+      "kd": 19,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Total Expert": 59
+      },
+      "score": 4.4
+    },
+    {
+      "keyword": "mortgage marketing flyers",
+      "volume": 44,
+      "kd": 20,
+      "cpc": 5.1,
+      "our_rank": 0,
+      "competitors": {
+        "Surefire (TopOfMind)": 72
+      },
+      "score": 4.190476190476191
+    },
+    {
+      "keyword": "single property website",
+      "volume": 44,
+      "kd": 20,
+      "cpc": 2.26,
+      "our_rank": 0,
+      "competitors": {
+        "Surefire (TopOfMind)": 10
+      },
+      "score": 4.190476190476191
+    },
+    {
+      "keyword": "loan crm",
+      "volume": 44,
+      "kd": 21,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 21,
+        "Surefire (TopOfMind)": 43
+      },
+      "score": 4.0
+    },
+    {
+      "keyword": "crm with facebook integration",
+      "volume": 32,
+      "kd": 15,
+      "cpc": 27.59,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 73
+      },
+      "score": 4.0
+    },
+    {
+      "keyword": "mortgage broker lead generation",
+      "volume": 55,
+      "kd": 27,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 80,
+        "Surefire (TopOfMind)": 34
+      },
+      "score": 3.9285714285714284
+    },
+    {
+      "keyword": "expert crm",
+      "volume": 44,
+      "kd": 22,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Total Expert": 96,
+        "Surefire (TopOfMind)": 53
+      },
+      "score": 3.8260869565217392
+    },
+    {
+      "keyword": "pipeline in finance",
+      "volume": 50,
+      "kd": 26,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 76
+      },
+      "score": 3.7037037037037037
+    },
+    {
+      "keyword": "mortgage marketing companies",
+      "volume": 44,
+      "kd": 23,
+      "cpc": 13.95,
+      "our_rank": 0,
+      "competitors": {
+        "Surefire (TopOfMind)": 5
+      },
+      "score": 3.6666666666666665
+    },
+    {
+      "keyword": "customer focused marketing",
+      "volume": 44,
+      "kd": 23,
+      "cpc": 7.93,
+      "our_rank": 0,
+      "competitors": {
+        "Surefire (TopOfMind)": 28
+      },
+      "score": 3.6666666666666665
+    },
+    {
+      "keyword": "surefire crm pricing",
+      "volume": 44,
+      "kd": 24,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Surefire (TopOfMind)": 85
+      },
+      "score": 3.52
+    },
+    {
+      "keyword": "consumer focus marketing",
+      "volume": 44,
+      "kd": 24,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Surefire (TopOfMind)": 82
+      },
+      "score": 3.52
+    },
+    {
+      "keyword": "crm software for mortgage brokers",
+      "volume": 40,
+      "kd": 22,
+      "cpc": 62.84,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 83
+      },
+      "score": 3.4782608695652173
+    },
+    {
+      "keyword": "mortgage broker crm",
+      "volume": 44,
+      "kd": 25,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 9,
+        "Surefire (TopOfMind)": 5
+      },
+      "score": 3.3846153846153846
+    },
+    {
+      "keyword": "mortgage loan officer crm",
+      "volume": 40,
+      "kd": 23,
+      "cpc": 28.65,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 44,
+        "Total Expert": 82
+      },
+      "score": 3.3333333333333335
+    },
+    {
+      "keyword": "mortgage lead generation websites",
+      "volume": 44,
+      "kd": 26,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 29,
+        "Surefire (TopOfMind)": 18
+      },
+      "score": 3.259259259259259
+    },
+    {
+      "keyword": "crm power dialer",
+      "volume": 44,
+      "kd": 26,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Surefire (TopOfMind)": 32
+      },
+      "score": 3.259259259259259
+    },
+    {
+      "keyword": "marketing association of credit unions",
+      "volume": 40,
+      "kd": 24,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Total Expert": 32
+      },
+      "score": 3.2
+    },
+    {
+      "keyword": "bombbomb review",
+      "volume": 42,
+      "kd": 26,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Surefire (TopOfMind)": 69
+      },
+      "score": 3.111111111111111
+    },
+    {
+      "keyword": "business loan facebook ads",
+      "volume": 44,
+      "kd": 28,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 91
+      },
+      "score": 3.0344827586206895
+    },
+    {
+      "keyword": "best crm for loan officers",
+      "volume": 44,
+      "kd": 28,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 39,
+        "Surefire (TopOfMind)": 14
+      },
+      "score": 3.0344827586206895
+    },
+    {
+      "keyword": "crm expert",
+      "volume": 44,
+      "kd": 28,
+      "cpc": 14.42,
+      "our_rank": 0,
+      "competitors": {
+        "Total Expert": 34
+      },
+      "score": 3.0344827586206895
+    },
+    {
+      "keyword": "mortgage lead generation website",
+      "volume": 40,
+      "kd": 26,
+      "cpc": 24.28,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 71
+      },
+      "score": 2.962962962962963
+    },
+    {
+      "keyword": "crm for loan officers",
+      "volume": 44,
+      "kd": 29,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 19,
+        "Total Expert": 84,
+        "Surefire (TopOfMind)": 64
+      },
+      "score": 2.933333333333333
+    },
+    {
+      "keyword": "mortgage direct marketing",
+      "volume": 30,
+      "kd": 20,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "BNTouch": 15
+      },
+      "score": 2.857142857142857
+    },
+    {
+      "keyword": "union crm",
+      "volume": 30,
+      "kd": 20,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Total Expert": 30
+      },
+      "score": 2.857142857142857
+    },
+    {
+      "keyword": "power dialer crm",
+      "volume": 44,
+      "kd": 30,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Surefire (TopOfMind)": 11
+      },
+      "score": 2.838709677419355
+    },
+    {
+      "keyword": "intercap lending review",
+      "volume": 40,
+      "kd": 30,
+      "cpc": 0,
+      "our_rank": 0,
+      "competitors": {
+        "Total Expert": 38
+      },
+      "score": 2.5806451612903225
+    }
+  ]
+}
