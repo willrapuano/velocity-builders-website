@@ -1,17 +1,18 @@
 # SEO Review — post-2026-0312-003
 
-Date: 2026-03-12T18:54:00.753Z
+Date: 2026-03-12T21:08:06.506Z
 
 Score: 9
-Slug: idx-broker-review-real-estate-agents-2026
-Meta Description: Discover if IDX Broker is the right tool for real estate agents in 2026. Leverage IDX for hyper-local SEO success and dominate your market.
-Primary Keyword: idx broker
-Keyword Density: 5 appearances / 607 words
+Slug: set-up-google-analytics-2026-strategies-real-estate
+Meta Description: Learn how to set up Google Analytics for real estate in 2026. Master hyper-local SEO and dominate your market with these proven strategies.
+Primary Keyword: set up google analytics
+Keyword Density: 4 appearances / 623 words
 Internal Links Suggested:
-- [Advanced Real Estate SEO Tactics] → /advanced-real-estate-seo-tactics/
-- [Leveraging Social Media in Real Estate] → /leveraging-social-media-in-real-estate/
+- [Local SEO strategies for real estate agents] → /pillar/local-seo-strategies-real-estate-agents
+- [Optimizing Google Analytics for neighborhood pages] → /pillar/optimizing-google-analytics-neighborhood-pages
+- [Real estate Google Analytics setup guide] → /pillar/real-estate-google-analytics-setup-guide
 Schema: Article — headline, datePublished, author
-OG Title: IDX Broker Review: Is It Worth It for Real Estate Agents in 2026?
-OG Description: Explore the benefits of IDX Broker for real estate agents in 2026. Enhance your hyper-local SEO strategy and gain a competitive edge.
+OG Title: Set Up Google Analytics: 2026 Strategies for Real Estate Agents
+OG Description: Discover effective 2026 strategies to set up Google Analytics for real estate agents. Enhance your hyper-local SEO and gain a competitive edge.
 Issues:
 - None

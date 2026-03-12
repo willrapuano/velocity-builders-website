@@ -1,6 +1,6 @@
 {
   "meta": {
-    "description": "14 content pillars for Velocity Builders blog automation",
+    "description": "12 content pillars for Velocity Builders blog automation",
     "version": "1.0.0",
     "lastUpdated": "2026-03-12"
   },
@@ -51,7 +51,7 @@
       "automationLevel": "semi-auto",
       "postsPerDay": 2,
       "phase": 1,
-      "templatePattern": "[CRM Concept/Workflow] for [Audience] \u2014 [Year]",
+      "templatePattern": "[CRM Concept/Workflow] for [Audience] — [Year]",
       "variables": [
         "concept",
         "audience",
@@ -80,7 +80,7 @@
       "automationLevel": "fully-auto",
       "postsPerDay": 2,
       "phase": 1,
-      "templatePattern": "[SEO Strategy] for [Audience] in [City/County] \u2014 [Year]",
+      "templatePattern": "[SEO Strategy] for [Audience] in [City/County] — [Year]",
       "variables": [
         "strategy",
         "audience",
@@ -128,65 +128,6 @@
       "templateFile": "business-systems.md"
     },
     {
-      "id": "title-insurance",
-      "name": "Title Insurance & Settlement",
-      "slug": "title-insurance",
-      "audiences": [
-        "agents",
-        "loan-officers",
-        "builders"
-      ],
-      "automationLevel": "semi-auto",
-      "postsPerDay": 1,
-      "phase": 2,
-      "templatePattern": "[Title Topic] Explained: What [Audience] in [State] Should Know",
-      "variables": [
-        "topic",
-        "audience",
-        "state"
-      ],
-      "crossLinks": [
-        "regulations",
-        "title-news"
-      ],
-      "servicePageLinks": [
-        "/partners/pruitt-title"
-      ],
-      "description": "Title process education, common issues, and how-to guides",
-      "templateFile": "title-insurance.md"
-    },
-    {
-      "id": "title-news",
-      "name": "Title & Real Estate News",
-      "slug": "title-news",
-      "audiences": [
-        "agents",
-        "loan-officers",
-        "builders",
-        "credit-unions"
-      ],
-      "automationLevel": "manual",
-      "postsPerDay": 1,
-      "phase": 3,
-      "templatePattern": "[Regulation/Event] Update [Month] [Year]: Impact on [Audience]",
-      "variables": [
-        "event",
-        "month",
-        "year",
-        "audience"
-      ],
-      "crossLinks": [
-        "title-insurance",
-        "regulations"
-      ],
-      "servicePageLinks": [
-        "/partners/pruitt-title",
-        "/resources/industry-news"
-      ],
-      "description": "Breaking regulatory, legal, and industry news with analysis",
-      "templateFile": "title-news.md"
-    },
-    {
       "id": "regulations",
       "name": "Real Estate Regulations & Compliance",
       "slug": "regulations",
@@ -198,7 +139,7 @@
       "automationLevel": "semi-auto",
       "postsPerDay": 1,
       "phase": 3,
-      "templatePattern": "[Regulation Name] Compliance for [Audience] \u2014 [Year] Guide",
+      "templatePattern": "[Regulation Name] Compliance for [Audience] — [Year] Guide",
       "variables": [
         "regulation",
         "audience",
@@ -225,7 +166,7 @@
       "automationLevel": "semi-auto",
       "postsPerDay": 2,
       "phase": 1,
-      "templatePattern": "[Strategy] for [City/Region] Builders \u2014 [Year] Playbook",
+      "templatePattern": "[Strategy] for [City/Region] Builders — [Year] Playbook",
       "variables": [
         "strategy",
         "city",
@@ -283,7 +224,7 @@
       "automationLevel": "fully-auto",
       "postsPerDay": 1,
       "phase": 2,
-      "templatePattern": "[County/City] [Report Type] \u2014 [Month/Quarter] [Year]",
+      "templatePattern": "[County/City] [Report Type] — [Month/Quarter] [Year]",
       "variables": [
         "location",
         "report",
@@ -312,7 +253,7 @@
       "automationLevel": "fully-auto",
       "postsPerDay": 1,
       "phase": 2,
-      "templatePattern": "Best [Tool Category] for [Audience] \u2014 [Year] [Format]",
+      "templatePattern": "Best [Tool Category] for [Audience] — [Year] [Format]",
       "variables": [
         "category",
         "audience",
@@ -401,7 +342,7 @@
       "automationLevel": "semi-auto",
       "postsPerDay": 2,
       "phase": 1,
-      "templatePattern": "[Strategy/Topic] for Credit Unions/Community Banks \u2014 [Year] [Format]",
+      "templatePattern": "[Strategy/Topic] for Credit Unions/Community Banks — [Year] [Format]",
       "variables": [
         "strategy",
         "institution_type",

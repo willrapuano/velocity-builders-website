@@ -1,18 +1,18 @@
 # SEO Review — post-2026-0312-007
 
-Date: 2026-03-12T18:57:20.247Z
+Date: 2026-03-12T21:09:57.325Z
 
 Score: 9
-Slug: why-white-glove-marketing-matters-for-loan-officers-2026
-Meta Description: Discover why white glove marketing is essential for loan officers in 2026. Learn how to deliver a personalized, high-touch client experience today.
-Primary Keyword: white glove marketing
-Keyword Density: 4 appearances / 720 words
+Slug: mortgage-website-design-2026-blueprint-credit-unions-banks
+Meta Description: Discover the 2026 mortgage website design blueprint for credit unions and banks. Enhance local SEO, attract borrowers, and dominate the mortgage market.
+Primary Keyword: mortgage website design
+Keyword Density: 5 appearances / 669 words
 Internal Links Suggested:
-- "Maximizing Your Google Business Profile for Local SEO Success" → /maximizing-google-business-profile-local-seo
-- "The Power of Video Marketing for Loan Officers" → /power-video-marketing-loan-officers
-- "Community Engagement Strategies for Real Estate Professionals" → /community-engagement-strategies-real-estate
+- [Local SEO strategies for banks] → /pillar/local-seo-strategies-banks
+- [Credit union mortgage marketing tips] → /pillar/credit-union-mortgage-marketing
+- [Improving mortgage conversion rates] → /pillar/improving-mortgage-conversion-rates
 Schema: Article — headline, datePublished, author
-OG Title: Why White Glove Marketing Matters for Loan Officers in 2026
-OG Description: Learn the importance of white glove marketing for loan officers in 2026 and how to implement it for a personalized client experience.
+OG Title: Mortgage Website Design Done Right: A 2026 Blueprint for Credit Unions and Banks
+OG Description: Discover how to enhance your mortgage website design in 2026 with local SEO strategies tailored for credit unions and banks.
 Issues:
 - None

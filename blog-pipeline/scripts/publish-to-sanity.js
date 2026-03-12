@@ -126,7 +126,6 @@ const CATEGORY_MAP = {
   "marketing-systems": "marketingSystems",
   "real-estate-news": "realEstateNews",
   "ai-tools": "aiTools",
-  "title-insurance": "titleInsurance",
   "crm-automation": "marketingSystems",
   "lead-generation": "marketingSystems",
   "follow-up-automation": "marketingSystems",
@@ -137,8 +136,6 @@ const CATEGORY_MAP = {
   "regulations": "realEstateNews",
   "tech-tools": "aiTools",
   "business-systems": "aiTools",
-  "title-news": "titleInsurance",
-  "title-insurance": "titleInsurance",
   "case-studies": "marketingSystems",
 };
 

@@ -1,16 +1,14 @@
 # FACT-CHECK Review — post-2026-0312-008
 
-Date: 2026-03-12T18:57:54.452Z
+Date: 2026-03-12T21:10:19.827Z
 
 PASS
 
 Claims checked:
-1. "Each lost lead costs around $3,000." → UNCERTAIN — This claim lacks a specific source or study reference. The cost of a lost lead can vary greatly depending on the market and individual business metrics.
-2. "78% of customers buy from the first responder." → PLAUSIBLE — This statistic is commonly cited in sales literature, but specific studies should be referenced for accuracy.
-3. "Assume your average commission per deal is $5,000." → PLAUSIBLE — This is a reasonable assumption for many real estate markets, but it can vary significantly.
-4. "By integrating your CRM with your website, you capture and close just five additional deals a year." → UNCERTAIN — This is a hypothetical scenario and should be clearly stated as such; actual results can vary.
+1. "The Rob Chrisman Blog is a cornerstone in the mortgage industry, offering daily updates and expert opinions." → VERIFIED — The Rob Chrisman Blog is well-known in the mortgage industry for providing daily updates and expert opinions.
+2. "The blog significantly influences search trends, shaping the queries potential clients use when seeking mortgage services." → PLAUSIBLE — While the blog is influential, specific evidence of its impact on search trends is not readily available.
+3. "Use the blog's insights to spot local market opportunities." → PLAUSIBLE — The blog provides industry insights that could be used to identify local market opportunities, but this is subjective and dependent on the reader's interpretation.
+4. "After 90 days, measure your progress using Google Search Console (GSC):" → VERIFIED — Google Search Console is a standard tool for tracking website performance metrics such as organic traffic growth and click-through rates.
 
 Issues found:
-- The claim about the cost of a lost lead should be supported by a specific study or source to enhance credibility.
-- The statistic about customers buying from the first responder should reference a specific study or industry report.
-- The hypothetical nature of the ROI math should be clarified to avoid misleading readers.
+- None

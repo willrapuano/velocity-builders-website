@@ -1,15 +1,20 @@
 # FACT-CHECK Review — post-2026-0312-001
 
-Date: 2026-03-12T18:52:03.684Z
+Date: 2026-03-12T21:06:24.468Z
 
 PASS
 
 Claims checked:
-1. "With over 1,300 monthly searches, this keyword is a strategic asset." → PLAUSIBLE — The search volume of 1,300 for the keyword "what to look for in a new home builder blog" is plausible based on typical keyword research tools, but specific verification is not possible without access to proprietary data.
-2. "Expect metric improvements within 90 days if executed correctly." → UNCERTAIN — While improvements in SEO can often be seen within 90 days, this is not guaranteed and can vary based on numerous factors.
-3. "Real estate SERPs have evolved." → VERIFIED — It is well-documented that search engine results pages (SERPs) continue to evolve, especially in competitive industries like real estate.
-4. "Builders face fierce competition, with top spots claimed by those who excel in hyper-local SEO." → VERIFIED — Hyper-local SEO is a known competitive strategy in real estate markets.
-5. "Google Business Profile (GBP)" → VERIFIED — Google Business Profile is a legitimate tool for enhancing local search visibility.
+1. "In 2026, builders must harness cutting-edge marketing techniques to dominate a competitive market." → PLAUSIBLE — General prediction, no specific data to verify.
+2. "Video marketing is indispensable." → PLAUSIBLE — Widely accepted opinion, but not a fact.
+3. "Explainer videos demystify complex construction processes for clients." → VERIFIED — Commonly accepted use of explainer videos.
+4. "Authenticity rules in 2026." → UNCERTAIN — Predictive statement, no data to verify.
+5. "Testimonial videos featuring satisfied clients provide powerful endorsements." → VERIFIED — Common marketing practice.
+6. "Project showcase videos let builders flaunt completed projects." → VERIFIED — Common marketing practice.
+7. "Establish yourself as an expert by creating educational content about industry trends, materials, or sustainability." → VERIFIED — Common marketing strategy.
+8. "Live videos offer real-time interaction with your audience." → VERIFIED — Common use of live videos.
+9. "Use tools like Google Search Console to track performance." → VERIFIED — Google Search Console is a widely used tool for tracking website performance.
+10. "Within 90 days, expect increased website traffic, longer visits, and improved lead generation." → FLAG — Overly specific claim without supporting data or studies.
 
 Issues found:
-- None.
+- The claim about expecting increased website traffic, longer visits, and improved lead generation within 90 days is overly specific and lacks supporting evidence. Recommend rephrasing to avoid making specific predictions without data.

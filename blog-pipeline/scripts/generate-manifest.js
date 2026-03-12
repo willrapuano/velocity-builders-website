@@ -301,28 +301,6 @@ const TOPIC_GENERATORS = {
     return pickRandom(systems);
   },
 
-  'title-insurance': (audience, city, year) => {
-    const topics = [
-      `Title Insurance Explained: What Every ${city ? city.name + ' ' : ''}${audience === 'agents' ? 'Agent' : audience === 'loan-officers' ? 'Loan Officer' : 'Builder'} Should Tell Buyers`,
-      `Wire Fraud Prevention Checklist for Real Estate Closings — ${year}`,
-      `How Title Issues Kill Deals (And How to Catch Them Early)`,
-      `Settlement Timeline in Virginia: What ${audience === 'agents' ? 'Agents' : 'Loan Officers'} Need to Know in ${year}`,
-      `Owner's Title Insurance vs Lender's Title Insurance — The ${audience === 'agents' ? 'Agent' : 'LO'}'s Script`,
-    ];
-    return pickRandom(topics);
-  },
-
-  'title-news': (audience, city, year) => {
-    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-    const month = months[new Date().getMonth()];
-    const events = [
-      `NAR Settlement Update ${month} ${year}: What Changes for Virginia ${audience === 'agents' ? 'Agents' : 'Professionals'}`,
-      `Virginia Real Estate Commission Update — ${month} ${year} Recap`,
-      `RESPA Enforcement Trends ${year}: What Title Companies Are Watching`,
-    ];
-    return pickRandom(events);
-  },
-
   'regulations': (audience, city, year) => {
     const regs = [
       `Virginia Real Estate License Renewal Checklist — ${year}`,
