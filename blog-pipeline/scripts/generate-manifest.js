@@ -86,6 +86,7 @@ const KEYWORD_PILLAR_MAP = {
   'tech-tools': ['tool', 'software', 'platform', 'zapier', 'make.com', 'ai tool', 'tech stack', 'app', 'integration'],
   'market-intelligence': ['market report', 'inventory', 'home price', 'interest rate', 'housing market', 'forecast', 'trend'],
   'case-studies': ['case study', 'roi', 'success story', 'result', 'transformation'],
+  'direct-mail': ['direct mail', 'postcard', 'farming', 'mailer', 'just listed', 'just sold', 'mailing list', 'thanks.io', 'print marketing', 'mail campaign'],
 };
 
 function keywordMatchesPillar(keyword, pillarId) {
@@ -404,6 +405,36 @@ const TOPIC_GENERATORS = {
       `ROI Breakdown: What a $500/Month Content System Actually Returns`,
     ];
     return pickRandom(cases);
+  },
+
+  'direct-mail': (audience, city, year) => {
+    if (!city) city = pickWeightedCity(GEOGRAPHY);
+    const audienceLabel = {
+      'agents': 'Agent',
+      'loan-officers': 'Loan Officer',
+      'builders': 'Builder',
+      'credit-unions': 'Credit Union',
+    }[audience] || 'Agent';
+    const audiencePlural = {
+      'agents': 'Agents',
+      'loan-officers': 'Loan Officers',
+      'builders': 'Builders',
+      'credit-unions': 'Credit Unions',
+    }[audience] || 'Agents';
+    const topics = [
+      `Geographic Farming with Direct Mail: The ${city.name} ${audienceLabel} Playbook for ${year}`,
+      `Just Listed / Just Sold Mailer Systems That Generate Listings in ${city.name} — ${year}`,
+      `Thanks.io Direct Mail Automation for ${audiencePlural}: Set It Up in a Weekend`,
+      `Direct Mail vs Digital Marketing ROI for ${audiencePlural}: The ${year} Data`,
+      `List Building and Targeting Strategies for Real Estate Farming in ${city.county}`,
+      `Postcard Design That Converts: What Top-Producing ${audiencePlural} Are Sending in ${year}`,
+      `Direct Mail Drip Campaigns for Sphere of Influence: The ${Math.floor(Math.random() * 5) + 6}-Touch System`,
+      `Seasonal Mailer Campaigns That Keep ${audiencePlural} Top-of-Mind Year-Round`,
+      `Direct Mail for New Construction: How ${city.name} Builders Are Moving Communities Before Groundbreak`,
+      `Credit Union Direct Mail Member Acquisition: Campaigns That Beat Digital CPL in ${year}`,
+      `Co-Branded Mailers for ${audiencePlural} and Lenders: The Partnership Play That Works`,
+    ];
+    return pickRandom(topics);
   },
 };
 

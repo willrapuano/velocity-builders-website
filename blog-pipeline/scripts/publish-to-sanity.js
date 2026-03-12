@@ -137,6 +137,7 @@ const CATEGORY_MAP = {
   "tech-tools": "aiTools",
   "business-systems": "aiTools",
   "case-studies": "marketingSystems",
+  "direct-mail": "marketingSystems",
 };
 
 // --- Sanity API ---

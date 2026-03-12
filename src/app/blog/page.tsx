@@ -19,6 +19,7 @@ const CATEGORIES = [
   { slug: "marketing-systems", name: "Marketing Systems", teaser: "CRM, follow-up, lead routing, conversion operations" },
   { slug: "real-estate-news", name: "Real Estate News", teaser: "local market shifts and what they change in your pipeline" },
   { slug: "ai-tools", name: "AI Tools", teaser: "practical automation that saves time without hurting trust" },
+  { slug: "direct-mail", name: "Direct Mail", teaser: "farming campaigns, mailer automation, and print-to-digital conversion" },
 ];
 
 export default async function BlogIndex() {

@@ -333,6 +333,39 @@
       "templateFile": "case-studies.md"
     },
     {
+      "id": "direct-mail",
+      "name": "Direct Mail Marketing",
+      "slug": "direct-mail",
+      "audiences": [
+        "agents",
+        "loan-officers",
+        "builders",
+        "credit-unions"
+      ],
+      "automationLevel": "semi-auto",
+      "postsPerDay": 2,
+      "phase": 1,
+      "templatePattern": "[Direct Mail Strategy] for [Audience] in [Year]",
+      "variables": [
+        "strategy",
+        "audience",
+        "year",
+        "city"
+      ],
+      "crossLinks": [
+        "lead-generation",
+        "crm-automation",
+        "hyper-local-seo",
+        "follow-up-automation"
+      ],
+      "servicePageLinks": [
+        "/services/direct-mail",
+        "/services/crm-automation"
+      ],
+      "description": "Direct mail campaigns, farming strategies, list building, ROI tracking, and automation for real estate professionals",
+      "templateFile": "direct-mail.md"
+    },
+    {
       "id": "credit-union-banking",
       "name": "Credit Union & Bank Marketing",
       "slug": "credit-union-banking",
