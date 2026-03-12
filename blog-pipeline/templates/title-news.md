@@ -37,7 +37,7 @@ Title & Real Estate News — breaking regulatory, legal, and industry news with 
 - No Pruitt Title CTAs
 - Include specific dates, ruling numbers, regulatory body names
 - Time-sensitive — include publish date prominently
-- H2/H3 hierarchy
+- Heading hierarchy (STRICT): ## (H2) for main sections (4–6 per post), ### (H3) sparingly — max 2–3 total, never back-to-back, never a list of H3s; NO #### or deeper; NO H1 in body (page renders the title); DO NOT repeat the title as a heading
 
 ## Author Attribution
 Author: Will Rapuano, Velocity Builders LLC

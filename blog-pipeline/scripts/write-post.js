@@ -221,17 +221,45 @@ Year: ${entry.publishDate.slice(0, 4)}
 ${hasKeywordData ? `
 ## SEO TARGET KEYWORD
 Primary keyword: "${entry.primaryKeyword}"
-Monthly search volume: ${entry.targetVolume}
-Keyword difficulty: ${entry.targetKD}/100
 ${entry.secondaryKeywords && entry.secondaryKeywords.length > 0 ? `Secondary keywords: ${entry.secondaryKeywords.join(', ')}` : ''}
 
 ## SEO REQUIREMENTS
-- Use the primary keyword "${entry.primaryKeyword}" naturally in: the H1 title, the first 100 words, at least 2 H2 subheadings, the meta description, and the conclusion
+- Use the primary keyword "${entry.primaryKeyword}" naturally in: the opening paragraph, at least 2 H2 subheadings, the meta description, and the conclusion
 - Target keyword density: 1-2% (natural, not stuffed)
 - Include semantic variations and related terms throughout
 - Write the meta description (150-160 chars) targeting this keyword
-- Internal linking suggestions: mention 2-3 related topics that could link to other Velocity Builders posts
+
+## ABSOLUTE RULE — NEVER IN THE POST BODY
+- NEVER mention search volume numbers, keyword difficulty scores, or any SEO metrics in the post body
+- NEVER write phrases like "with over 1,000 monthly searches", "this high-volume keyword", "search volume of", "KD score", "keyword difficulty", or ANY reference to internal SEO data
+- The keyword data above is for YOUR structural use only — it is NOT content
+- Write for the reader, not for SEO tools
 ` : ''}
+
+## HEADING HIERARCHY — MANDATORY
+The page template renders the post title as H1. Your body must follow these rules EXACTLY:
+
+1. DO NOT start the body with an H1 (#) — the title is already rendered by the page
+2. DO NOT repeat the post title as a heading anywhere in the body
+3. Use ## (H2) for main sections — aim for 4–6 H2 sections per post
+4. Use ### (H3) SPARINGLY — only for genuine sub-topics within an H2 section, max 2–3 per post total
+5. NO #### (H4) or deeper — flatten any sub-sub-sections into prose or a list
+6. Most content should live in paragraphs and bullet lists, not under a wall of headings
+
+BAD (too many H3s):
+## The Strategy
+### Step 1
+### Step 2
+### Step 3
+### Step 4
+### Step 5
+
+GOOD (H3 used sparingly):
+## The Strategy
+Walk through the five steps...
+### The One Exception
+If your market is X, handle it differently...
+
 Follow the structure and rules in your system prompt exactly. Output the full blog post in Markdown format with frontmatter:
 
 ---
@@ -240,8 +268,6 @@ slug: "${entry.slug}"
 pillar: "${entry.pillar}"
 audiences: ${JSON.stringify(entry.audiences)}
 primaryKeyword: "${entry.primaryKeyword || ''}"
-${hasKeywordData ? `searchVolume: ${entry.targetVolume}
-keywordDifficulty: ${entry.targetKD}` : ''}
 publishDate: "${entry.publishDate}"
 author: "Will Rapuano"
 ---

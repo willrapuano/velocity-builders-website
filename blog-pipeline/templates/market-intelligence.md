@@ -38,7 +38,7 @@ Market Intelligence — DMV market data, trends, and local market snapshots.
 - No Pruitt Title CTAs
 - Reference {{location}} throughout (minimum 6x)
 - Time-stamp the data: "As of {{period}} {{year}}"
-- H2/H3 hierarchy with data tables
+- Heading hierarchy (STRICT): ## (H2) for main sections (4–6 per post), ### (H3) sparingly — max 2–3 total, never back-to-back, never a list of H3s; NO #### or deeper; NO H1 in body (page renders the title); DO NOT repeat the title as a heading
 
 ## Author Attribution
 Author: Will Rapuano, Velocity Builders LLC

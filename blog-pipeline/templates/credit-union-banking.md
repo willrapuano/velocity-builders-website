@@ -37,7 +37,8 @@ Credit Union & Bank Marketing — digital marketing, SEO, CRM, lead generation, 
 - No Pruitt Title CTAs
 - No specific credit union or bank names
 - Compliance-aware — no promises of results or guarantees
-- H2/H3 hierarchy, short paragraphs (2-4 sentences), bold lead-ins
+- Heading hierarchy (STRICT): ## (H2) for main sections (4–6 per post), ### (H3) sparingly — max 2–3 total, never back-to-back, never a list of H3s; NO #### or deeper; NO H1 in body (page renders the title); DO NOT repeat the title as a heading
+- Short paragraphs (2-4 sentences); bold lead-ins on each paragraph
 - GHL/tech stack invisible — never mention specific platforms
 - Position Velocity as the expert without hard selling
 

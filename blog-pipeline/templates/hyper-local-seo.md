@@ -40,7 +40,7 @@ Hyper-Local SEO — city/neighborhood-level SEO strategies and ranking tactics.
 - Reference at least 2 neighborhoods/subdivisions within the city
 - No Pruitt Title CTAs or endorsements
 - Year tag {{year}} in title and body
-- H2 for main sections, H3 for neighborhoods/sub-strategies
+- Heading hierarchy (STRICT): ## (H2) for main sections (4–6 per post), ### (H3) sparingly — max 2–3 total, never back-to-back, never a list of H3s; NO #### or deeper; NO H1 in body (page renders the title); DO NOT repeat the title as a heading
 - Include a "Related searches" section with 5-7 long-tail variations
 
 ## Author Attribution

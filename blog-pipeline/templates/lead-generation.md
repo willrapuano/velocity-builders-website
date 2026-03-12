@@ -26,7 +26,7 @@ Lead Generation Tactics — actionable lead gen strategies for real estate profe
 ## Structure Requirements
 1. **Hook** (2-3 sentences): Open with a pain point or shocking stat. No fluff intro.
 2. **The Problem** (1-2 paragraphs): Why most agents/LOs fail at this specific tactic.
-3. **The Framework** (core section): Numbered steps or framework. Each step = subheading (H2/H3) with actionable detail.
+3. **The Framework** (core section): Numbered steps or framework. Group related steps under H2 sections; use prose and bullets rather than an H3 per step.
 4. **Data/Proof**: Include at least one stat, study reference, or industry benchmark.
 5. **Implementation**: Specific next steps. Not "consider doing X" — say "Do X. Here's how."
 6. **Cross-link opportunity**: Naturally reference one related topic (CRM, SEO, or market data).
@@ -37,7 +37,7 @@ Lead Generation Tactics — actionable lead gen strategies for real estate profe
 - No Pruitt Title CTAs or endorsements
 - No geographic pigeon-holing unless {{city}} is specified
 - Include year tag {{year}} in title and naturally in body
-- Use H2 for main sections, H3 for sub-steps
+- Heading hierarchy (STRICT): ## (H2) for main sections (4–6 per post), ### (H3) sparingly — max 2–3 total, never back-to-back, never a list of H3s; NO #### or deeper; NO H1 in body (page renders the title); DO NOT repeat the title as a heading
 - End with a strong closer, not a soft "in conclusion"
 
 ## Author Attribution

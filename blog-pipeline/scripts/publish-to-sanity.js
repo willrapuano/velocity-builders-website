@@ -173,31 +173,212 @@ async function sanityMutate(mutations, dryRun = false) {
   return res.json();
 }
 
+// --- Markdown → Sanity Portable Text converter ---
+// Full inline-mark support: **bold**, *italic*, `code`, [link](url), blockquotes, lists.
+// Heading hierarchy: # and ## → h2, ### → h3, #### → h3 (no H4+ in blog posts).
+// H1 that duplicates the post title is stripped entirely.
+
+let _blockCounter = 0;
+function bkey() { return `block-${_blockCounter++}`; }
+function skey(i) { return `span-${i}`; }
+
+/**
+ * Parse inline markdown text into Sanity span children + markDefs.
+ * Handles: **bold**, *italic*, ***bold+italic***, `code`, [text](url)
+ */
+function parseInline(text, markDefs) {
+  const children = [];
+  // Regex: match bold+italic, bold, italic, code, links in order of precedence
+  const pattern = /(\*\*\*(.+?)\*\*\*|\*\*(.+?)\*\*|\*(.+?)\*|`(.+?)`|\[([^\]]+)\]\(([^)]+)\))/g;
+  let lastIndex = 0;
+  let spanIdx = 0;
+  let match;
+
+  while ((match = pattern.exec(text)) !== null) {
+    // Push plain text before this match
+    if (match.index > lastIndex) {
+      children.push({ _type: "span", _key: skey(spanIdx++), text: text.slice(lastIndex, match.index), marks: [] });
+    }
+
+    if (match[2]) {
+      // ***bold+italic***
+      children.push({ _type: "span", _key: skey(spanIdx++), text: match[2], marks: ["strong", "em"] });
+    } else if (match[3]) {
+      // **bold**
+      children.push({ _type: "span", _key: skey(spanIdx++), text: match[3], marks: ["strong"] });
+    } else if (match[4]) {
+      // *italic*
+      children.push({ _type: "span", _key: skey(spanIdx++), text: match[4], marks: ["em"] });
+    } else if (match[5]) {
+      // `code`
+      children.push({ _type: "span", _key: skey(spanIdx++), text: match[5], marks: ["code"] });
+    } else if (match[6] && match[7]) {
+      // [text](url) — link markDef
+      const linkKey = `link-${markDefs.length}`;
+      markDefs.push({ _key: linkKey, _type: "link", href: match[7] });
+      children.push({ _type: "span", _key: skey(spanIdx++), text: match[6], marks: [linkKey] });
+    }
+    lastIndex = match.index + match[0].length;
+  }
+
+  // Remaining plain text
+  if (lastIndex < text.length) {
+    children.push({ _type: "span", _key: skey(spanIdx++), text: text.slice(lastIndex), marks: [] });
+  }
+
+  // Fallback: empty text
+  if (children.length === 0) {
+    children.push({ _type: "span", _key: skey(0), text: text, marks: [] });
+  }
+
+  return children;
+}
+
+/** Build a Sanity block from a parsed paragraph or heading. */
+function makeBlock(style, text, markDefs, extra = {}) {
+  const md = markDefs || [];
+  return {
+    _type: "block",
+    _key: bkey(),
+    style,
+    markDefs: md,
+    children: parseInline(text, md),
+    ...extra,
+  };
+}
+
+/**
+ * Convert a full markdown body string to an array of Sanity Portable Text blocks.
+ *
+ * Rules:
+ *  - # Title  → strip (page template renders H1 from post.title)
+ *  - ##        → h2
+ *  - ###       → h3
+ *  - ####+     → h3 (flatten; no H4 in blog)
+ *  - - item / * item / + item  → bullet list block
+ *  - N. item   → number list block
+ *  - > text    → blockquote
+ *  - ---/***   → ignored (decorative HR)
+ *  - blank line → paragraph separator
+ *  - everything else → normal paragraph (lines joined with space)
+ */
+function markdownToPortableText(markdown, postTitle) {
+  _blockCounter = 0;
+  const lines = markdown.replace(/\r\n/g, "\n").split("\n");
+  const blocks = [];
+
+  // Normalise the post title for H1-stripping comparison
+  const titleNorm = (postTitle || "").trim().toLowerCase().replace(/[^a-z0-9]+/g, " ");
+
+  let paraLines = []; // accumulate normal paragraph lines
+
+  function flushPara() {
+    if (paraLines.length === 0) return;
+    const text = paraLines.join(" ").trim();
+    if (text) {
+      const md = [];
+      blocks.push(makeBlock("normal", text, md));
+    }
+    paraLines = [];
+  }
+
+  for (let i = 0; i < lines.length; i++) {
+    const raw = lines[i];
+    const line = raw.trimEnd();
+
+    // --- Blank line: flush accumulated paragraph ---
+    if (line.trim() === "") {
+      flushPara();
+      continue;
+    }
+
+    // --- Headings ---
+    const h4match = line.match(/^####\s+(.*)/);
+    const h3match = line.match(/^###\s+(.*)/);
+    const h2match = line.match(/^##\s+(.*)/);
+    const h1match = line.match(/^#\s+(.*)/);
+
+    if (h4match) {
+      flushPara();
+      const md = [];
+      blocks.push(makeBlock("h3", h4match[1].trim(), md)); // flatten H4 → h3
+      continue;
+    }
+    if (h3match) {
+      flushPara();
+      const md = [];
+      blocks.push(makeBlock("h3", h3match[1].trim(), md));
+      continue;
+    }
+    if (h2match) {
+      flushPara();
+      const md = [];
+      blocks.push(makeBlock("h2", h2match[1].trim(), md));
+      continue;
+    }
+    if (h1match) {
+      flushPara();
+      // Strip H1 if it matches the post title (page template renders it)
+      const h1norm = h1match[1].trim().toLowerCase().replace(/[^a-z0-9]+/g, " ");
+      const isTitleDupe = titleNorm && (h1norm === titleNorm || h1norm.includes(titleNorm) || titleNorm.includes(h1norm));
+      if (!isTitleDupe) {
+        // Demote stray H1 to H2
+        const md = [];
+        blocks.push(makeBlock("h2", h1match[1].trim(), md));
+      }
+      // If it IS the title, skip entirely
+      continue;
+    }
+
+    // --- Horizontal rule ---
+    if (/^(---+|\*\*\*+|___+)\s*$/.test(line)) {
+      flushPara();
+      continue;
+    }
+
+    // --- Blockquote ---
+    const bqMatch = line.match(/^>\s*(.*)/);
+    if (bqMatch) {
+      flushPara();
+      const md = [];
+      blocks.push(makeBlock("blockquote", bqMatch[1].trim(), md));
+      continue;
+    }
+
+    // --- Bullet list item ---
+    const bulletMatch = line.match(/^[-*+]\s+(.*)/);
+    if (bulletMatch) {
+      flushPara();
+      const md = [];
+      blocks.push(makeBlock("normal", bulletMatch[1].trim(), md, { listItem: "bullet", level: 1 }));
+      continue;
+    }
+
+    // --- Numbered list item ---
+    const numMatch = line.match(/^\d+\.\s+(.*)/);
+    if (numMatch) {
+      flushPara();
+      const md = [];
+      blocks.push(makeBlock("normal", numMatch[1].trim(), md, { listItem: "number", level: 1 }));
+      continue;
+    }
+
+    // --- Normal paragraph line (accumulate) ---
+    paraLines.push(line.trim());
+  }
+
+  // Flush remaining paragraph
+  flushPara();
+
+  return blocks;
+}
+
 // --- Build Sanity document from markdown ---
 function buildSanityDoc(meta, body) {
   const slug = meta.slug || slugify(meta.title || "untitled");
   const category = CATEGORY_MAP[meta.pillar] || CATEGORY_MAP[meta.category] || "marketingSystems";
 
-  // Convert markdown body to Sanity portable text (simplified — single block)
-  // For production, use @sanity/block-tools for full conversion
-  const blocks = body.split("\n\n").filter(Boolean).map((paragraph, i) => ({
-    _type: "block",
-    _key: `block-${i}`,
-    style: paragraph.startsWith("## ")
-      ? "h2"
-      : paragraph.startsWith("### ")
-      ? "h3"
-      : "normal",
-    children: [
-      {
-        _type: "span",
-        _key: `span-${i}`,
-        text: paragraph.replace(/^#{1,3}\s+/, ""),
-        marks: [],
-      },
-    ],
-    markDefs: [],
-  }));
+  const blocks = markdownToPortableText(body, meta.title);
 
   return {
     _type: "blogPost",
