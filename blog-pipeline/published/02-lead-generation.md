@@ -103,4 +103,4 @@ Own your sources. Automate your speed. Measure your conversion. The pipeline fol
 
 ---
 
-*Will Rapuano is the founder of Velocity Builders, a real estate marketing and automation agency serving agents, lenders, builders, and credit unions in Northern Virginia. He also leads Business Development for Pruitt Title, a settlement services company in Vienna, VA.*
+*Will Rapuano is the founder of Velocity Builders, a real estate marketing and automation agency serving agents, lenders, builders, banks, and credit unions in Northern Virginia. He also leads Business Development for Pruitt Title, a settlement services company in Vienna, VA.*

@@ -2,12 +2,12 @@ import type { Testimonial } from "@/data/site";
 
 export function TestimonialCard({ quote, name, role, company }: Testimonial) {
   return (
-    <figure className="rounded-2xl border border-white/5 bg-white/5 p-6 shadow-inner shadow-black/20">
-      <blockquote className="text-lg font-medium text-white/90">
-        “{quote}”
+    <figure className="rounded-xl border border-gray-200 bg-gray-50 p-6 shadow-sm">
+      <blockquote className="text-lg font-medium text-gray-800 italic">
+        &ldquo;{quote}&rdquo;
       </blockquote>
-      <figcaption className="mt-4 text-sm text-slate-300">
-        <span className="font-semibold text-white">{name}</span> · {role}, {company}
+      <figcaption className="mt-4 text-sm text-gray-600">
+        <span className="font-semibold text-gray-900">{name}</span> · {role}, {company}
       </figcaption>
     </figure>
   );

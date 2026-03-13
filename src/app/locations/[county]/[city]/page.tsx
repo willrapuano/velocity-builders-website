@@ -70,8 +70,8 @@ export default async function CityPage({ params }: Props) {
 
       <BreadcrumbTrail crumbs={crumbs} />
       <header className="space-y-4">
-        <h1 className="text-4xl font-semibold text-white">{cityData.name} Community Pages</h1>
-        <p className="text-slate-300">{cityData.blurb}</p>
+        <h1 className="text-4xl font-semibold text-gray-900">{cityData.name} Community Pages</h1>
+        <p className="text-gray-600">{cityData.blurb}</p>
         {quality && !quality.passes ? <p className="text-xs text-amber-300">Quality guardrail active: this page is noindex until score threshold is met.</p> : null}
       </header>
 
@@ -79,10 +79,10 @@ export default async function CityPage({ params }: Props) {
 
       <section className="grid gap-4 sm:grid-cols-2">
         {cityData.communities.map((community) => (
-          <article key={community.slug} className="rounded-2xl border border-white/10 bg-white/5 p-5">
-            <h2 className="text-xl font-semibold text-white">{community.name}</h2>
-            <p className="mt-2 text-sm text-slate-300">{community.marketFocus}</p>
-            <Link href={`${path}/${community.slug}`} className="mt-4 inline-flex text-sm font-semibold text-emerald-300 hover:text-emerald-200">
+          <article key={community.slug} className="rounded-lg border border-gray-200 bg-gray-50 p-5">
+            <h2 className="text-xl font-semibold text-gray-900">{community.name}</h2>
+            <p className="mt-2 text-sm text-gray-600">{community.marketFocus}</p>
+            <Link href={`${path}/${community.slug}`} className="mt-4 inline-flex text-sm font-semibold text-blue-600 hover:text-blue-600">
               View {community.name} strategy →
             </Link>
           </article>

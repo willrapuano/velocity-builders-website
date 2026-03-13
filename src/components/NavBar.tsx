@@ -10,19 +10,21 @@ const links = [
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
   { href: "/portal", label: "Portal" },
-
 ];
-
-const mobileLinks = links;
 
 export function NavBar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-white/10 bg-slate-950/95 backdrop-blur-xl shadow-lg shadow-black/20">
+    <header className="sticky top-0 z-40 border-b border-gray-200 bg-white/95 backdrop-blur-xl shadow-sm">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link href="/" className="text-xl font-bold tracking-tight text-white">
-          Velocity Builders
+        <Link href="/" className="flex items-center gap-2">
+          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-600 text-white font-bold text-sm">
+            VB
+          </div>
+          <span className="text-xl font-bold tracking-tight text-gray-900">
+            Velocity Builders
+          </span>
         </Link>
 
         {/* Desktop nav */}
@@ -31,7 +33,7 @@ export function NavBar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-slate-300 transition hover:text-emerald-300"
+              className="text-gray-600 transition hover:text-blue-600"
             >
               {link.label}
             </Link>
@@ -41,7 +43,7 @@ export function NavBar() {
         {/* Desktop CTA */}
         <Link
           href="/contact"
-          className="hidden rounded-full bg-emerald-400 px-5 py-2 text-sm font-semibold text-slate-900 transition hover:bg-emerald-300 md:inline-block"
+          className="hidden rounded-full bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-700 shadow-md shadow-blue-600/25 md:inline-block"
         >
           Work With Us
         </Link>
@@ -49,7 +51,7 @@ export function NavBar() {
         {/* Mobile hamburger */}
         <button
           onClick={() => setOpen(!open)}
-          className="flex h-10 w-10 items-center justify-center rounded-lg text-slate-300 transition hover:bg-white/10 md:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-lg text-gray-600 transition hover:bg-gray-100 md:hidden"
           aria-label="Toggle menu"
         >
           {open ? (
@@ -66,14 +68,14 @@ export function NavBar() {
 
       {/* Mobile menu dropdown */}
       {open && (
-        <nav className="border-t border-white/10 bg-slate-950 px-6 pb-6 pt-4 md:hidden">
+        <nav className="border-t border-gray-200 bg-white px-6 pb-6 pt-4 md:hidden">
           <div className="flex flex-col gap-4">
-            {mobileLinks.map((link) => (
+            {links.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="text-base font-medium text-slate-200 transition hover:text-emerald-300"
+                className="text-base font-medium text-gray-700 transition hover:text-blue-600"
               >
                 {link.label}
               </Link>
@@ -81,7 +83,7 @@ export function NavBar() {
             <Link
               href="/contact"
               onClick={() => setOpen(false)}
-              className="mt-2 rounded-full bg-emerald-400 px-5 py-3 text-center text-sm font-semibold text-slate-900 transition hover:bg-emerald-300"
+              className="mt-2 rounded-full bg-blue-600 px-5 py-3 text-center text-sm font-semibold text-white transition hover:bg-blue-700"
             >
               Work With Us
             </Link>

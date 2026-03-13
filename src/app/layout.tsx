@@ -48,7 +48,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-950 text-slate-50`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-gray-800`}>
         <script
           type="application/ld+json"
           suppressHydrationWarning
@@ -72,7 +72,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
         <NavBar />
-        <main className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(12,74,110,0.35),_transparent_55%)]">
+        <main className="min-h-screen">
           {children}
         </main>
         <Footer />

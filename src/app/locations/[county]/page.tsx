@@ -69,8 +69,8 @@ export default async function CountyPage({ params }: Props) {
       <BreadcrumbTrail crumbs={crumbs} />
 
       <header className="space-y-4">
-        <h1 className="text-4xl font-semibold text-white">{countyData.name} Growth Hub</h1>
-        <p className="text-slate-300">{countyData.positioning}</p>
+        <h1 className="text-4xl font-semibold text-gray-900">{countyData.name} Growth Hub</h1>
+        <p className="text-gray-600">{countyData.positioning}</p>
         {quality && !quality.passes ? <p className="text-xs text-amber-300">Quality guardrail active: this page is noindex until content score improves.</p> : null}
       </header>
 
@@ -78,11 +78,11 @@ export default async function CountyPage({ params }: Props) {
 
       <section className="grid gap-6 md:grid-cols-2">
         {countyData.cities.map((city) => (
-          <article key={city.slug} className="rounded-3xl border border-white/10 bg-white/5 p-6">
-            <h2 className="text-2xl font-semibold text-white">{city.name}</h2>
-            <p className="mt-3 text-slate-300">{city.blurb}</p>
-            <p className="mt-3 text-sm text-slate-400">{city.communities.length} indexed community pages</p>
-            <Link href={`${path}/${city.slug}`} className="mt-5 inline-flex text-sm font-semibold text-emerald-300 hover:text-emerald-200">
+          <article key={city.slug} className="rounded-xl border border-gray-200 bg-gray-50 p-6">
+            <h2 className="text-2xl font-semibold text-gray-900">{city.name}</h2>
+            <p className="mt-3 text-gray-600">{city.blurb}</p>
+            <p className="mt-3 text-sm text-gray-500">{city.communities.length} indexed community pages</p>
+            <Link href={`${path}/${city.slug}`} className="mt-5 inline-flex text-sm font-semibold text-blue-600 hover:text-blue-600">
               Open {city.name} cluster →
             </Link>
           </article>

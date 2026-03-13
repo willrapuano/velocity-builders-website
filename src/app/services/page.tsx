@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Services | Velocity Builders",
@@ -10,6 +12,7 @@ export const metadata: Metadata = {
 const services = [
   {
     title: "Hyper-Local SEO Website Systems",
+    icon: "🌐",
     solve: "Traffic without conversion.",
     build: "Local landing pages, neighborhood content clusters, and clear conversion paths tied to intent.",
     outcome: "More qualified inquiries from local search terms and fewer dead-end visits.",
@@ -18,6 +21,7 @@ const services = [
   },
   {
     title: "CRM Automation and Speed-to-Lead",
+    icon: "⚡",
     solve: "Slow first response and lead drop-off.",
     build: "Instant routing, channel-triggered follow-up, and stage-based task automation.",
     outcome: "Faster first touch, better consult booking consistency, less pipeline drift.",
@@ -26,6 +30,7 @@ const services = [
   },
   {
     title: "Listing Launch and Seller Workflows",
+    icon: "🏠",
     solve: "Launch chaos and inconsistent execution.",
     build: "Pre-listing communication systems, launch-day sequences, and post-launch follow-up.",
     outcome: "Better early momentum and stronger seller confidence in your process.",
@@ -34,6 +39,7 @@ const services = [
   },
   {
     title: "Buyer and Relocation Nurture Systems",
+    icon: "🎯",
     solve: "Warm leads that go cold before consult.",
     build: "Segment-specific nurture for move-up buyers, relocations, and value-driven shoppers.",
     outcome: "More conversations from leads already in your database.",
@@ -42,6 +48,7 @@ const services = [
   },
   {
     title: "Referral and Post-Close Retention",
+    icon: "🔄",
     solve: "One-and-done client relationships.",
     build: "Post-close check-ins, homeownership value content, and referral reactivation campaigns.",
     outcome: "More repeat transactions and referral opportunities over time.",
@@ -52,50 +59,95 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <div className="mx-auto max-w-5xl space-y-10 px-6 py-16">
-      <section className="text-center">
-        <p className="text-sm uppercase tracking-[0.3em] text-emerald-300/80">Services</p>
-        <h1 className="mt-3 text-4xl font-bold text-white">Services Built to Fix Pipeline Leaks and Increase Closings.</h1>
-        <p className="mx-auto mt-4 max-w-3xl text-lg text-slate-300">
-          Most teams don’t need more tools. They need clean handoffs, faster response times, and follow-up that runs without babysitting.
-        </p>
-        <div className="mt-6 flex flex-col justify-center gap-4 sm:flex-row">
-          <a href="/contact" className="rounded-full bg-emerald-400 px-6 py-3 text-sm font-semibold text-slate-900 hover:bg-emerald-300">Find Your 3 Biggest Pipeline Leaks</a>
-          <a href="/contact" className="rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white hover:border-emerald-300">Book a Launch Blueprint Call</a>
+    <>
+      {/* Hero */}
+      <section className="relative overflow-hidden bg-gray-900 py-20">
+        <Image
+          src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&q=80"
+          alt="Digital marketing workspace"
+          fill
+          className="object-cover opacity-30"
+          priority
+        />
+        <div className="relative mx-auto max-w-5xl px-6 text-center">
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-300">Services</p>
+          <h1 className="mt-4 text-4xl font-bold text-white sm:text-5xl">
+            Services Built to Fix Pipeline Leaks and Increase Closings.
+          </h1>
+          <p className="mx-auto mt-5 max-w-3xl text-lg text-gray-300">
+            Most teams don&apos;t need more tools. They need clean handoffs, faster response times, and follow-up that runs without babysitting.
+          </p>
+          <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+            <Link href="/contact" className="rounded-full bg-blue-600 px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-blue-600/30 hover:bg-blue-700 transition">
+              Find Your 3 Biggest Pipeline Leaks
+            </Link>
+            <Link href="/contact" className="rounded-full border-2 border-white/30 px-7 py-3.5 text-sm font-semibold text-white hover:border-white hover:bg-white/10 transition">
+              Book a Launch Blueprint Call
+            </Link>
+          </div>
         </div>
       </section>
 
-      <section className="grid gap-6">
-        {services.map((service) => (
-          <article key={service.title} className="rounded-3xl border border-white/10 bg-white/5 p-7">
-            <h2 className="text-2xl font-semibold text-white">{service.title}</h2>
-            <p className="mt-4 text-slate-300"><span className="font-semibold text-white">What we solve:</span> {service.solve}</p>
-            <p className="mt-2 text-slate-300"><span className="font-semibold text-white">What we build:</span> {service.build}</p>
-            <p className="mt-2 text-slate-300"><span className="font-semibold text-white">Outcome focus:</span> {service.outcome}</p>
-            {service.proof && <p className="mt-2 text-slate-300"><span className="font-semibold text-white">Why it matters:</span> {service.proof}</p>}
-            <a href="/contact" className="mt-5 inline-block text-sm font-semibold text-emerald-300 hover:text-emerald-200">{service.cta}</a>
-          </article>
-        ))}
+      {/* Services Grid */}
+      <section className="bg-white py-20">
+        <div className="mx-auto max-w-5xl px-6 space-y-8">
+          {services.map((service, i) => (
+            <article key={service.title} className={`rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-md transition ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
+              <div className="flex items-start gap-4">
+                <span className="text-3xl">{service.icon}</span>
+                <div className="flex-1">
+                  <h2 className="text-2xl font-bold text-gray-900">{service.title}</h2>
+                  <div className="mt-4 space-y-2">
+                    <p className="text-gray-700"><span className="font-semibold text-gray-900">What we solve:</span> {service.solve}</p>
+                    <p className="text-gray-700"><span className="font-semibold text-gray-900">What we build:</span> {service.build}</p>
+                    <p className="text-gray-700"><span className="font-semibold text-gray-900">Outcome focus:</span> {service.outcome}</p>
+                    {service.proof && <p className="text-gray-700"><span className="font-semibold text-gray-900">Why it matters:</span> {service.proof}</p>}
+                  </div>
+                  <Link href="/contact" className="mt-5 inline-block text-sm font-semibold text-blue-600 hover:text-blue-800 transition">
+                    {service.cta} →
+                  </Link>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
       </section>
 
-      <section className="rounded-3xl border border-white/10 bg-white/5 p-8 text-slate-200">
-        <h3 className="text-xl font-semibold text-white">Service Delivery</h3>
-        <p className="mt-3">You get clear priorities, direct implementation, and measurable checkpoints.</p>
-        <ul className="mt-4 space-y-2">
-          <li>• What to fix first</li>
-          <li>• What to automate next</li>
-          <li>• What to stop doing</li>
-        </ul>
-        <p className="mt-4">No bloated plans. No jargon. Just execution.</p>
+      {/* Service Delivery */}
+      <section className="bg-gray-50 py-16">
+        <div className="mx-auto max-w-5xl px-6">
+          <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
+            <h3 className="text-xl font-bold text-gray-900">Service Delivery</h3>
+            <p className="mt-3 text-gray-600">You get clear priorities, direct implementation, and measurable checkpoints.</p>
+            <div className="mt-5 grid gap-4 sm:grid-cols-3">
+              <div className="flex items-center gap-3 rounded-lg bg-blue-50 p-4">
+                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-600 text-white text-sm font-bold">1</div>
+                <span className="text-sm font-medium text-gray-800">What to fix first</span>
+              </div>
+              <div className="flex items-center gap-3 rounded-lg bg-blue-50 p-4">
+                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-600 text-white text-sm font-bold">2</div>
+                <span className="text-sm font-medium text-gray-800">What to automate next</span>
+              </div>
+              <div className="flex items-center gap-3 rounded-lg bg-blue-50 p-4">
+                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-600 text-white text-sm font-bold">3</div>
+                <span className="text-sm font-medium text-gray-800">What to stop doing</span>
+              </div>
+            </div>
+            <p className="mt-4 text-gray-600">No bloated plans. No jargon. Just execution.</p>
+          </div>
+        </div>
       </section>
 
-      <section className="rounded-3xl border border-emerald-400/20 bg-emerald-400/5 p-8 text-center">
-        <h2 className="text-2xl font-semibold text-white">Ready to Build the Version of Your Pipeline That Actually Closes?</h2>
-        <p className="mt-3 text-slate-300">We’ll map your biggest leaks and show you the fastest route to better conversion.</p>
-        <a href="/contact" className="mt-6 inline-block rounded-full bg-emerald-400 px-6 py-3 text-sm font-semibold text-slate-900 hover:bg-emerald-300">
-          Find Your 3 Biggest Pipeline Leaks
-        </a>
+      {/* Bottom CTA */}
+      <section className="bg-gradient-to-br from-blue-600 to-blue-800 py-16">
+        <div className="mx-auto max-w-3xl px-6 text-center">
+          <h2 className="text-3xl font-bold text-white">Ready to Build the Version of Your Pipeline That Actually Closes?</h2>
+          <p className="mt-4 text-blue-100">We&apos;ll map your biggest leaks and show you the fastest route to better conversion.</p>
+          <Link href="/contact" className="mt-8 inline-block rounded-full bg-white px-8 py-3.5 text-sm font-semibold text-blue-700 shadow-lg transition hover:bg-gray-100">
+            Find Your 3 Biggest Pipeline Leaks
+          </Link>
+        </div>
       </section>
-    </div>
+    </>
   );
 }

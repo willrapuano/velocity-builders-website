@@ -14,13 +14,8 @@ const hubQuality = getQualityForHubPage();
 export const metadata: Metadata = {
   title: "DMV Locations | Velocity Builders",
   description: "Explore county and city-specific real estate marketing systems across DC, Maryland, and Virginia.",
-  alternates: {
-    canonical: path,
-  },
-  robots: {
-    index: shouldIndexPage(hubQuality),
-    follow: true,
-  },
+  alternates: { canonical: path },
+  robots: { index: shouldIndexPage(hubQuality), follow: true },
 };
 
 export default function LocationsHubPage() {
@@ -41,52 +36,54 @@ export default function LocationsHubPage() {
   const marketMetrics = getMarketMetrics({ scope: "county", countySlug: locationSeed.counties[0].slug });
 
   return (
-    <div className="mx-auto max-w-6xl space-y-10 px-6 py-14">
-      {schemas.map((schema, index) => (
-        <script key={index} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      ))}
-
-      <BreadcrumbTrail crumbs={crumbs} />
-      <header className="space-y-4">
-        <p className="text-sm uppercase tracking-[0.2em] text-emerald-300/90">Service Areas</p>
-        <h1 className="text-4xl font-semibold text-white sm:text-5xl">{locationSeed.region} SEO Growth Architecture</h1>
-        <p className="max-w-3xl text-slate-300">
-          Explore county, city, and community-level pages designed for discoverability, conversion, and long-term local authority.
-        </p>
-      </header>
-
-      <MarketMetricsPanel title="Regional market benchmark" metrics={marketMetrics} />
-
-      <section className="grid gap-4 md:grid-cols-3">
-        {locationSeed.topics.map((topic) => (
-          <article key={topic.title} className="rounded-2xl border border-white/10 bg-white/5 p-5">
-            <h2 className="font-semibold text-white">{topic.title}</h2>
-            <p className="mt-2 text-sm text-slate-300">{topic.summary}</p>
-          </article>
+    <div className="bg-white">
+      <div className="mx-auto max-w-6xl space-y-10 px-6 py-14">
+        {schemas.map((schema, index) => (
+          <script key={index} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
         ))}
-      </section>
 
-      <section className="grid gap-6 md:grid-cols-2">
-        {locationSeed.counties.map((county) => (
-          <article key={county.slug} className="rounded-3xl border border-white/10 bg-slate-900/60 p-6">
-            <h2 className="text-2xl font-semibold text-white">{county.name}</h2>
-            <p className="mt-3 text-slate-300">{county.positioning}</p>
-            <p className="mt-4 text-sm text-slate-400">
-              {county.cities.length} city clusters • {county.cities.reduce((sum, city) => sum + city.communities.length, 0)} community pages
-            </p>
-            <Link
-              href={`/locations/${county.slug}`}
-              className="mt-6 inline-flex rounded-full border border-emerald-300/70 px-5 py-2 text-sm font-medium text-emerald-200 hover:bg-emerald-300/10"
-            >
-              Explore {county.name}
-            </Link>
-          </article>
-        ))}
-      </section>
+        <BreadcrumbTrail crumbs={crumbs} />
+        <header className="space-y-4">
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-600">Service Areas</p>
+          <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl">{locationSeed.region} SEO Growth Architecture</h1>
+          <p className="max-w-3xl text-gray-600">
+            Explore county, city, and community-level pages designed for discoverability, conversion, and long-term local authority.
+          </p>
+        </header>
 
-      <LocationCtas route={{ depth: "hub", path }} />
+        <MarketMetricsPanel title="Regional market benchmark" metrics={marketMetrics} />
 
-      <p className="text-xs text-slate-500">Canonical: {buildCanonical(path)}</p>
+        <section className="grid gap-4 md:grid-cols-3">
+          {locationSeed.topics.map((topic) => (
+            <article key={topic.title} className="rounded-xl border border-gray-200 bg-gray-50 p-5">
+              <h2 className="font-semibold text-gray-900">{topic.title}</h2>
+              <p className="mt-2 text-sm text-gray-600">{topic.summary}</p>
+            </article>
+          ))}
+        </section>
+
+        <section className="grid gap-6 md:grid-cols-2">
+          {locationSeed.counties.map((county) => (
+            <article key={county.slug} className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition">
+              <h2 className="text-2xl font-bold text-gray-900">{county.name}</h2>
+              <p className="mt-3 text-gray-600">{county.positioning}</p>
+              <p className="mt-4 text-sm text-gray-500">
+                {county.cities.length} city clusters • {county.cities.reduce((sum, city) => sum + city.communities.length, 0)} community pages
+              </p>
+              <Link
+                href={`/locations/${county.slug}`}
+                className="mt-6 inline-flex rounded-full bg-blue-600 px-5 py-2 text-sm font-semibold text-white hover:bg-blue-700 transition shadow-md shadow-blue-600/25"
+              >
+                Explore {county.name}
+              </Link>
+            </article>
+          ))}
+        </section>
+
+        <LocationCtas route={{ depth: "hub", path }} />
+
+        <p className="text-xs text-gray-400">Canonical: {buildCanonical(path)}</p>
+      </div>
     </div>
   );
 }

@@ -100,34 +100,34 @@ export default async function CommunityPage({ params }: Props) {
       <BreadcrumbTrail crumbs={crumbs} />
 
       <header className="space-y-4">
-        <p className="text-sm uppercase tracking-[0.2em] text-emerald-300/90">Community Playbook</p>
-        <h1 className="text-4xl font-semibold text-white">{communityData.name}</h1>
-        <p className="text-lg text-slate-300">{communityData.intro}</p>
+        <p className="text-sm uppercase tracking-[0.2em] text-blue-600">Community Playbook</p>
+        <h1 className="text-4xl font-semibold text-gray-900">{communityData.name}</h1>
+        <p className="text-lg text-gray-600">{communityData.intro}</p>
         {quality && !quality.passes ? <p className="text-xs text-amber-300">Quality guardrail active: this page is excluded from indexation.</p> : null}
       </header>
 
       <MarketMetricsPanel title={`${communityData.name} market snapshot`} metrics={marketMetrics} />
 
-      <section className="grid gap-4 rounded-3xl border border-white/10 bg-white/5 p-6 sm:grid-cols-3">
+      <section className="grid gap-4 rounded-xl border border-gray-200 bg-gray-50 p-6 sm:grid-cols-3">
         <div>
-          <p className="text-xs uppercase tracking-wide text-slate-400">Market focus</p>
-          <p className="mt-2 text-sm text-white">{communityData.marketFocus}</p>
+          <p className="text-xs uppercase tracking-wide text-gray-500">Market focus</p>
+          <p className="mt-2 text-sm text-gray-900">{communityData.marketFocus}</p>
         </div>
         <div>
-          <p className="text-xs uppercase tracking-wide text-slate-400">Primary audience</p>
-          <p className="mt-2 text-sm text-white">{communityData.audience}</p>
+          <p className="text-xs uppercase tracking-wide text-gray-500">Primary audience</p>
+          <p className="mt-2 text-sm text-gray-900">{communityData.audience}</p>
         </div>
         <div>
-          <p className="text-xs uppercase tracking-wide text-slate-400">Coverage route</p>
-          <p className="mt-2 text-sm text-white">Hub → County → City → Community</p>
+          <p className="text-xs uppercase tracking-wide text-gray-500">Coverage route</p>
+          <p className="mt-2 text-sm text-gray-900">Hub → County → City → Community</p>
         </div>
       </section>
 
       <section className="space-y-3">
-        <h2 className="text-2xl font-semibold text-white">Execution highlights</h2>
+        <h2 className="text-2xl font-semibold text-gray-900">Execution highlights</h2>
         <ul className="grid gap-3 sm:grid-cols-3">
           {communityData.highlights.map((highlight) => (
-            <li key={highlight} className="rounded-2xl border border-white/10 bg-slate-900/50 p-4 text-sm text-slate-200">
+            <li key={highlight} className="rounded-lg border border-gray-200 bg-slate-900/50 p-4 text-sm text-gray-700">
               {highlight}
             </li>
           ))}
@@ -135,12 +135,12 @@ export default async function CommunityPage({ params }: Props) {
       </section>
 
       <section className="space-y-5">
-        <h2 className="text-2xl font-semibold text-white">Frequently asked questions</h2>
+        <h2 className="text-2xl font-semibold text-gray-900">Frequently asked questions</h2>
         <div className="space-y-4">
           {communityData.faqs.map((faq) => (
-            <article key={faq.question} className="rounded-2xl border border-white/10 bg-white/5 p-5">
-              <h3 className="font-semibold text-white">{faq.question}</h3>
-              <p className="mt-2 text-sm text-slate-300">{faq.answer}</p>
+            <article key={faq.question} className="rounded-lg border border-gray-200 bg-gray-50 p-5">
+              <h3 className="font-semibold text-gray-900">{faq.question}</h3>
+              <p className="mt-2 text-sm text-gray-600">{faq.answer}</p>
             </article>
           ))}
         </div>

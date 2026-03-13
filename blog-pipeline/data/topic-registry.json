@@ -41,13 +41,13 @@
       "state": null,
       "angle": "Types of Marketing Videos: 5 Proven Strategies for Builders in 2026",
       "publishDate": "2026-03-12",
-      "status": "flagged",
+      "status": "publish-ready",
       "similarityScore": null,
       "similarTo": null,
-      "flagged": true,
-      "flagReason": "Fact-check flagged uncertain claims — needs Will's review",
+      "flagged": false,
+      "flagReason": null,
       "createdAt": "2026-03-12T21:01:27.128Z",
-      "updatedAt": "2026-03-12T21:06:35.503Z"
+      "updatedAt": "2026-03-12T23:15:54.127Z"
     },
     {
       "id": "post-2026-0312-002",
@@ -70,7 +70,7 @@
       "flagged": false,
       "flagReason": null,
       "createdAt": "2026-03-12T21:01:27.128Z",
-      "updatedAt": "2026-03-12T21:07:02.792Z"
+      "updatedAt": "2026-03-12T23:16:38.660Z"
     },
     {
       "id": "post-2026-0312-003",
@@ -93,7 +93,7 @@
       "flagged": false,
       "flagReason": null,
       "createdAt": "2026-03-12T21:01:27.128Z",
-      "updatedAt": "2026-03-12T21:08:06.508Z"
+      "updatedAt": "2026-03-12T23:17:30.773Z"
     },
     {
       "id": "post-2026-0312-004",
@@ -116,7 +116,7 @@
       "flagged": true,
       "flagReason": "Fact-check flagged uncertain claims — needs Will's review",
       "createdAt": "2026-03-12T21:01:27.129Z",
-      "updatedAt": "2026-03-12T21:08:35.351Z"
+      "updatedAt": "2026-03-12T23:18:28.157Z"
     },
     {
       "id": "post-2026-0312-005",
@@ -139,7 +139,7 @@
       "flagged": false,
       "flagReason": null,
       "createdAt": "2026-03-12T21:01:27.129Z",
-      "updatedAt": "2026-03-12T21:09:03.215Z"
+      "updatedAt": "2026-03-12T23:19:14.280Z"
     },
     {
       "id": "post-2026-0312-006",
@@ -156,13 +156,13 @@
       "state": null,
       "angle": "How to Master Inbound Marketing Stages as a Builder in 2026",
       "publishDate": "2026-03-12",
-      "status": "flagged",
+      "status": "publish-ready",
       "similarityScore": null,
       "similarTo": null,
-      "flagged": true,
-      "flagReason": "Fact-check flagged uncertain claims — needs Will's review",
+      "flagged": false,
+      "flagReason": null,
       "createdAt": "2026-03-12T21:01:27.129Z",
-      "updatedAt": "2026-03-12T21:09:32.484Z"
+      "updatedAt": "2026-03-12T23:20:01.814Z"
     },
     {
       "id": "post-2026-0312-009",
@@ -179,13 +179,13 @@
       "state": null,
       "angle": "Credit Union Marketing Campaigns: 5 Proven Strategies for Loan Officers in 2026",
       "publishDate": "2026-03-12",
-      "status": "publish-ready",
+      "status": "draft",
       "similarityScore": null,
       "similarTo": null,
       "flagged": false,
       "flagReason": null,
       "createdAt": "2026-03-12T21:01:27.129Z",
-      "updatedAt": "2026-03-12T21:10:49.912Z"
+      "updatedAt": "2026-03-12T23:09:41.446Z"
     },
     {
       "id": "post-2026-0312-010",
@@ -202,13 +202,13 @@
       "state": null,
       "angle": "The Smart Builder's Guide to Marketing Ideas for Home Builders",
       "publishDate": "2026-03-12",
-      "status": "publish-ready",
+      "status": "draft",
       "similarityScore": null,
       "similarTo": null,
       "flagged": false,
       "flagReason": null,
       "createdAt": "2026-03-12T21:01:27.130Z",
-      "updatedAt": "2026-03-12T21:11:21.698Z"
+      "updatedAt": "2026-03-12T23:09:55.669Z"
     },
     {
       "id": "post-2026-0312-011",
@@ -225,13 +225,13 @@
       "state": null,
       "angle": "Mortgage Newsletters for Marketing: 5 Proven Strategies for Credit Unions and Banks in 2026",
       "publishDate": "2026-03-12",
-      "status": "publish-ready",
+      "status": "draft",
       "similarityScore": null,
       "similarTo": null,
       "flagged": false,
       "flagReason": null,
       "createdAt": "2026-03-12T21:01:27.130Z",
-      "updatedAt": "2026-03-12T21:12:03.545Z"
+      "updatedAt": "2026-03-12T23:10:14.872Z"
     },
     {
       "id": "post-2026-0312-012",
@@ -248,13 +248,13 @@
       "state": null,
       "angle": "The Real Estate Agent's Honest Take on Best Real Estate Crm in 2026",
       "publishDate": "2026-03-12",
-      "status": "publish-ready",
+      "status": "draft",
       "similarityScore": null,
       "similarTo": null,
       "flagged": false,
       "flagReason": null,
       "createdAt": "2026-03-12T21:01:27.130Z",
-      "updatedAt": "2026-03-12T21:12:46.851Z"
+      "updatedAt": "2026-03-12T23:10:33.843Z"
     },
     {
       "id": "post-2026-0312-007",
@@ -277,7 +277,7 @@
       "flagged": false,
       "flagReason": null,
       "createdAt": "2026-03-12T21:01:27.129Z",
-      "updatedAt": "2026-03-12T21:09:57.328Z"
+      "updatedAt": "2026-03-12T23:20:53.089Z"
     },
     {
       "id": "post-2026-0312-008",
@@ -294,13 +294,335 @@
       "state": null,
       "angle": "How to Master Rob Chrisman Blog as a Loan Officer in 2026",
       "publishDate": "2026-03-12",
-      "status": "publish-ready",
+      "status": "draft",
       "similarityScore": null,
       "similarTo": null,
       "flagged": false,
       "flagReason": null,
       "createdAt": "2026-03-12T21:01:27.129Z",
-      "updatedAt": "2026-03-12T21:10:25.627Z"
+      "updatedAt": "2026-03-12T23:09:22.729Z"
+    },
+    {
+      "id": "post-2026-0313-013",
+      "title": "Facebook Ads for Mortgage Loan Officers: How Loan Officers Can Win in 2026",
+      "slug": "facebook-ads-for-mortgage-loan-officers-how-loan-officers-can-win-in-2026",
+      "pillar": "lead-generation",
+      "audiences": [
+        "loan-officers"
+      ],
+      "primaryKeyword": "facebook ads for mortgage loan officers",
+      "secondaryKeywords": [],
+      "city": null,
+      "county": null,
+      "state": null,
+      "angle": "Facebook Ads for Mortgage Loan Officers: How Loan Officers Can Win in 2026",
+      "publishDate": "2026-03-13",
+      "status": "flagged",
+      "similarityScore": null,
+      "similarTo": null,
+      "flagged": true,
+      "flagReason": "Fact-check flagged uncertain claims — needs Will's review",
+      "createdAt": "2026-03-12T23:00:19.927Z",
+      "updatedAt": "2026-03-12T23:26:31.425Z"
+    },
+    {
+      "id": "post-2026-0313-014",
+      "title": "Bank Website Design: 8 Proven Strategies for Credit Unions and Banks in 2026",
+      "slug": "bank-website-design-8-proven-strategies-for-credit-unions-and-banks-in-2026",
+      "pillar": "hyper-local-seo",
+      "audiences": [
+        "credit-unions"
+      ],
+      "primaryKeyword": "bank website design",
+      "secondaryKeywords": [],
+      "city": null,
+      "county": null,
+      "state": null,
+      "angle": "Bank Website Design: 8 Proven Strategies for Credit Unions and Banks in 2026",
+      "publishDate": "2026-03-13",
+      "status": "publish-ready",
+      "similarityScore": null,
+      "similarTo": null,
+      "flagged": false,
+      "flagReason": null,
+      "createdAt": "2026-03-12T23:00:19.928Z",
+      "updatedAt": "2026-03-12T23:26:57.039Z"
+    },
+    {
+      "id": "post-2026-0313-001",
+      "title": "Idx Broker: Setup Guide and ROI Analysis for Real Estate Agents",
+      "slug": "idx-broker-setup-guide-and-roi-analysis-for-real-estate-agents",
+      "pillar": "hyper-local-seo",
+      "audiences": [
+        "agents"
+      ],
+      "primaryKeyword": "idx broker",
+      "secondaryKeywords": [],
+      "city": null,
+      "county": null,
+      "state": null,
+      "angle": "Idx Broker: Setup Guide and ROI Analysis for Real Estate Agents",
+      "publishDate": "2026-03-13",
+      "status": "publish-ready",
+      "similarityScore": null,
+      "similarTo": null,
+      "flagged": false,
+      "flagReason": null,
+      "createdAt": "2026-03-12T23:00:19.924Z",
+      "updatedAt": "2026-03-12T23:21:25.569Z"
+    },
+    {
+      "id": "post-2026-0313-002",
+      "title": "What to Look for in a New Home Builder Blog: How Builders Can Win in 2026",
+      "slug": "what-to-look-for-in-a-new-home-builder-blog-how-builders-can-win-in-2026",
+      "pillar": "hyper-local-seo",
+      "audiences": [
+        "builders"
+      ],
+      "primaryKeyword": "what to look for in a new home builder blog",
+      "secondaryKeywords": [],
+      "city": null,
+      "county": null,
+      "state": null,
+      "angle": "What to Look for in a New Home Builder Blog: How Builders Can Win in 2026",
+      "publishDate": "2026-03-13",
+      "status": "publish-ready",
+      "similarityScore": null,
+      "similarTo": null,
+      "flagged": false,
+      "flagReason": null,
+      "createdAt": "2026-03-12T23:00:19.924Z",
+      "updatedAt": "2026-03-12T23:21:50.526Z"
+    },
+    {
+      "id": "post-2026-0313-003",
+      "title": "Why Builder Marketing Matters for Builders — And How to Get It Right in 2026",
+      "slug": "why-builder-marketing-matters-for-builders-and-how-to-get-it-right-in-2026",
+      "pillar": "builder-marketing",
+      "audiences": [
+        "builders"
+      ],
+      "primaryKeyword": "builder marketing",
+      "secondaryKeywords": [],
+      "city": null,
+      "county": null,
+      "state": null,
+      "angle": "Why Builder Marketing Matters for Builders — And How to Get It Right in 2026",
+      "publishDate": "2026-03-13",
+      "status": "publish-ready",
+      "similarityScore": null,
+      "similarTo": null,
+      "flagged": false,
+      "flagReason": null,
+      "createdAt": "2026-03-12T23:00:19.924Z",
+      "updatedAt": "2026-03-12T23:22:08.525Z"
+    },
+    {
+      "id": "post-2026-0313-004",
+      "title": "Asking for Referrals Real Estate: A Step-by-Step Guide for Builders",
+      "slug": "asking-for-referrals-real-estate-a-step-by-step-guide-for-builders",
+      "pillar": "lead-generation",
+      "audiences": [
+        "builders"
+      ],
+      "primaryKeyword": "asking for referrals real estate",
+      "secondaryKeywords": [],
+      "city": null,
+      "county": null,
+      "state": null,
+      "angle": "Asking for Referrals Real Estate: A Step-by-Step Guide for Builders",
+      "publishDate": "2026-03-13",
+      "status": "flagged",
+      "similarityScore": null,
+      "similarTo": null,
+      "flagged": true,
+      "flagReason": "Fact-check flagged uncertain claims — needs Will's review",
+      "createdAt": "2026-03-12T23:00:19.925Z",
+      "updatedAt": "2026-03-12T23:22:30.013Z"
+    },
+    {
+      "id": "post-2026-0313-005",
+      "title": "Facebook Ads: Targeting High End Real Estate Buyers: A Step-by-Step Guide for Real Estate Agents",
+      "slug": "facebook-ads-targeting-high-end-real-estate-buyers-a-step-by-step-guide-for-real",
+      "pillar": "lead-generation",
+      "audiences": [
+        "agents"
+      ],
+      "primaryKeyword": "facebook ads - targeting high end real estate buyers",
+      "secondaryKeywords": [],
+      "city": null,
+      "county": null,
+      "state": null,
+      "angle": "Facebook Ads: Targeting High End Real Estate Buyers: A Step-by-Step Guide for Real Estate Agents",
+      "publishDate": "2026-03-13",
+      "status": "flagged",
+      "similarityScore": null,
+      "similarTo": null,
+      "flagged": true,
+      "flagReason": "Fact-check flagged uncertain claims — needs Will's review",
+      "createdAt": "2026-03-12T23:00:19.925Z",
+      "updatedAt": "2026-03-12T23:22:54.859Z"
+    },
+    {
+      "id": "post-2026-0313-006",
+      "title": "Real Estate Follow up Email Templates in 2026 — What Every Real Estate Agent Should Know",
+      "slug": "real-estate-follow-up-email-templates-in-2026-what-every-real-estate-agent-shoul",
+      "pillar": "crm-automation",
+      "audiences": [
+        "agents"
+      ],
+      "primaryKeyword": "real estate follow up email templates",
+      "secondaryKeywords": [],
+      "city": null,
+      "county": null,
+      "state": null,
+      "angle": "Real Estate Follow up Email Templates in 2026 — What Every Real Estate Agent Should Know",
+      "publishDate": "2026-03-13",
+      "status": "flagged",
+      "similarityScore": null,
+      "similarTo": null,
+      "flagged": true,
+      "flagReason": "Fact-check flagged uncertain claims — needs Will's review",
+      "createdAt": "2026-03-12T23:00:19.926Z",
+      "updatedAt": "2026-03-12T23:23:21.940Z"
+    },
+    {
+      "id": "post-2026-0313-007",
+      "title": "The Smart Real Estate Agent's Guide to Postcard Marketing for Real Estate Agents",
+      "slug": "the-smart-real-estate-agent-s-guide-to-postcard-marketing-for-real-estate-agents",
+      "pillar": "direct-mail",
+      "audiences": [
+        "agents"
+      ],
+      "primaryKeyword": "postcard marketing for real estate agents",
+      "secondaryKeywords": [],
+      "city": null,
+      "county": null,
+      "state": null,
+      "angle": "The Smart Real Estate Agent's Guide to Postcard Marketing for Real Estate Agents",
+      "publishDate": "2026-03-13",
+      "status": "flagged",
+      "similarityScore": null,
+      "similarTo": null,
+      "flagged": true,
+      "flagReason": "Fact-check flagged uncertain claims — needs Will's review",
+      "createdAt": "2026-03-12T23:00:19.926Z",
+      "updatedAt": "2026-03-12T23:23:58.753Z"
+    },
+    {
+      "id": "post-2026-0313-008",
+      "title": "The Loan Officer's Honest Take on Surefire Crm in 2026",
+      "slug": "the-loan-officer-s-honest-take-on-surefire-crm-in-2026",
+      "pillar": "crm-automation",
+      "audiences": [
+        "loan-officers"
+      ],
+      "primaryKeyword": "surefire crm",
+      "secondaryKeywords": [],
+      "city": null,
+      "county": null,
+      "state": null,
+      "angle": "The Loan Officer's Honest Take on Surefire Crm in 2026",
+      "publishDate": "2026-03-13",
+      "status": "flagged",
+      "similarityScore": null,
+      "similarTo": null,
+      "flagged": true,
+      "flagReason": "Fact-check flagged uncertain claims — needs Will's review",
+      "createdAt": "2026-03-12T23:00:19.926Z",
+      "updatedAt": "2026-03-12T23:24:24.790Z"
+    },
+    {
+      "id": "post-2026-0313-009",
+      "title": "Mortgage Sales Funnel Done Right: A 2026 Blueprint for Loan Officers",
+      "slug": "mortgage-sales-funnel-done-right-a-2026-blueprint-for-loan-officers",
+      "pillar": "lender-marketing",
+      "audiences": [
+        "loan-officers"
+      ],
+      "primaryKeyword": "mortgage sales funnel",
+      "secondaryKeywords": [],
+      "city": null,
+      "county": null,
+      "state": null,
+      "angle": "Mortgage Sales Funnel Done Right: A 2026 Blueprint for Loan Officers",
+      "publishDate": "2026-03-13",
+      "status": "publish-ready",
+      "similarityScore": null,
+      "similarTo": null,
+      "flagged": false,
+      "flagReason": null,
+      "createdAt": "2026-03-12T23:00:19.926Z",
+      "updatedAt": "2026-03-12T23:24:47.996Z"
+    },
+    {
+      "id": "post-2026-0313-010",
+      "title": "The Smart Credit Union or Community Bank's Guide to Credit Union Social Media Spending",
+      "slug": "the-smart-credit-union-or-community-bank-s-guide-to-credit-union-social-media-sp",
+      "pillar": "credit-union-banking",
+      "audiences": [
+        "credit-unions"
+      ],
+      "primaryKeyword": "credit union social media spending",
+      "secondaryKeywords": [],
+      "city": null,
+      "county": null,
+      "state": null,
+      "angle": "The Smart Credit Union or Community Bank's Guide to Credit Union Social Media Spending",
+      "publishDate": "2026-03-13",
+      "status": "publish-ready",
+      "similarityScore": null,
+      "similarTo": null,
+      "flagged": false,
+      "flagReason": null,
+      "createdAt": "2026-03-12T23:00:19.927Z",
+      "updatedAt": "2026-03-12T23:25:06.906Z"
+    },
+    {
+      "id": "post-2026-0313-011",
+      "title": "Marketing Ideas for Loan Officers in 2026 — What Every Credit Union or Community Bank Should Know",
+      "slug": "marketing-ideas-for-loan-officers-in-2026-what-every-credit-union-or-community-b",
+      "pillar": "lender-marketing",
+      "audiences": [
+        "credit-unions"
+      ],
+      "primaryKeyword": "marketing ideas for loan officers",
+      "secondaryKeywords": [],
+      "city": null,
+      "county": null,
+      "state": null,
+      "angle": "Marketing Ideas for Loan Officers in 2026 — What Every Credit Union or Community Bank Should Know",
+      "publishDate": "2026-03-13",
+      "status": "publish-ready",
+      "similarityScore": null,
+      "similarTo": null,
+      "flagged": false,
+      "flagReason": null,
+      "createdAt": "2026-03-12T23:00:19.927Z",
+      "updatedAt": "2026-03-12T23:25:32.303Z"
+    },
+    {
+      "id": "post-2026-0313-012",
+      "title": "White Glove Marketing: 8 Proven Strategies for Loan Officers in 2026",
+      "slug": "white-glove-marketing-8-proven-strategies-for-loan-officers-in-2026",
+      "pillar": "hyper-local-seo",
+      "audiences": [
+        "loan-officers"
+      ],
+      "primaryKeyword": "white glove marketing",
+      "secondaryKeywords": [],
+      "city": null,
+      "county": null,
+      "state": null,
+      "angle": "White Glove Marketing: 8 Proven Strategies for Loan Officers in 2026",
+      "publishDate": "2026-03-13",
+      "status": "publish-ready",
+      "similarityScore": null,
+      "similarTo": null,
+      "flagged": false,
+      "flagReason": null,
+      "createdAt": "2026-03-12T23:00:19.927Z",
+      "updatedAt": "2026-03-12T23:25:55.894Z"
     }
   ]
 }

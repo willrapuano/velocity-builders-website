@@ -1,16 +1,14 @@
 # FACT-CHECK Review — post-2026-0312-006
 
-Date: 2026-03-12T21:09:22.302Z
+Date: 2026-03-12T23:19:54.226Z
 
 PASS
 
 Claims checked:
-1. "Builders without a streamlined CRM system can lose up to 30% of potential revenue due to inefficiencies and human error." → FLAG — [No specific study or source provided to verify this statistic. Needs citation or clarification.]
-2. "Automation saves you 20 hours per month, valued at $100 per hour. That’s a monthly saving of $2,000." → PLAUSIBLE — [This is a hypothetical scenario; while plausible, it depends on individual circumstances and should be presented as an example rather than a universal truth.]
-3. "With a 30% increase in lead conversion due to better follow-up, you gain an additional $10,000 in sales monthly." → FLAG — [No source or study provided to substantiate the 30% increase in lead conversion. Needs citation or clarification.]
-4. "Monthly ROI: $12,000 - (initial setup cost of $5,000 amortized over 12 months) = $11,583." → PLAUSIBLE — [The calculation is mathematically correct, but the assumptions need to be clearly stated as hypothetical.]
+1. "Builders who fail to automate lose approximately 25% of potential leads due to response delays and missed follow-ups." → UNCERTAIN — This statistic is specific but lacks a cited source or study for verification.
+2. "Imagine automation increases your lead conversion rate by 15%." → PLAUSIBLE — This is a hypothetical scenario and not a factual claim, thus it does not require verification.
+3. "For a builder averaging 100 leads per month, this means 15 additional conversions." → PLAUSIBLE — This is a mathematical extrapolation based on the hypothetical 15% increase in conversion rate.
+4. "If each conversion represents $10,000 in revenue, that's an extra $150,000 per month." → PLAUSIBLE — This is a continuation of the hypothetical scenario and does not require verification.
 
 Issues found:
-- The claim about losing 30% of potential revenue without a CRM system needs a source or should be rephrased to indicate it is a hypothetical example.
-- The claim of a 30% increase in lead conversion due to automation needs a source or should be presented as a hypothetical scenario.
-- Ensure that hypothetical scenarios are clearly marked as such to avoid being misconstrued as factual data.
+- The claim about losing 25% of potential leads due to lack of automation is specific and should be supported by a credible source or study to be considered verified.

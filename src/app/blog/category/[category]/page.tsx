@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getPostsByCategory } from "@/lib/blog/api";
 import type { Metadata } from "next";
@@ -57,36 +58,46 @@ export default async function CategoryPage({ params }: Props) {
   const posts = await getPostsByCategory(category);
 
   return (
-    <main className="max-w-5xl mx-auto px-6 py-16">
-      <nav className="text-sm text-slate-500 mb-6 flex items-center gap-1">
-        <Link href="/blog" className="hover:text-emerald-400 transition">Blog</Link>
-        <span>›</span>
-        <span className="text-slate-300">{cat.name}</span>
-      </nav>
+    <div className="bg-white">
+      <main className="max-w-5xl mx-auto px-6 py-16">
+        <nav className="text-sm text-gray-500 mb-6 flex items-center gap-1">
+          <Link href="/blog" className="hover:text-blue-600 transition">Blog</Link>
+          <span>›</span>
+          <span className="text-gray-900 font-medium">{cat.name}</span>
+        </nav>
 
-      <h1 className="text-4xl font-bold text-white mb-4">{cat.header}</h1>
-      <p className="text-slate-400 mb-12 text-lg">{cat.description}</p>
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">{cat.header}</h1>
+        <p className="text-gray-600 mb-12 text-lg">{cat.description}</p>
 
-      {posts.length === 0 ? (
-        <p className="text-slate-500">No posts in this category yet. Publish 2–3 foundational posts now or temporarily noindex this archive.</p>
-      ) : (
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {posts.map((post) => (
-            <Link key={post.slug} href={`/blog/${post.slug}`} className="group block rounded-xl border border-white/10 bg-white/5 overflow-hidden hover:border-emerald-400/40 hover:bg-white/10 transition-all">
-              {post.featuredImage && (
-                <div className="aspect-video overflow-hidden bg-slate-800">
-                  <img src={post.featuredImage} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+        {posts.length === 0 ? (
+          <p className="text-gray-500">No posts in this category yet. Check back soon.</p>
+        ) : (
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {posts.map((post) => (
+              <Link key={post.slug} href={`/blog/${post.slug}`} className="group block rounded-xl border border-gray-200 bg-white overflow-hidden hover:shadow-lg transition-all">
+                <div className="aspect-video overflow-hidden bg-gray-100">
+                  {post.featuredImage ? (
+                    <img src={post.featuredImage} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                  ) : (
+                    <Image
+                      src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80"
+                      alt={post.title}
+                      width={600}
+                      height={338}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  )}
                 </div>
-              )}
-              <div className="p-5">
-                <time className="text-xs text-slate-500">{post.date}</time>
-                <h2 className="text-base font-semibold text-white mt-1 mb-2 group-hover:text-emerald-400 transition-colors leading-snug">{post.title}</h2>
-                <p className="text-slate-400 text-sm line-clamp-3">{post.excerpt}</p>
-              </div>
-            </Link>
-          ))}
-        </div>
-      )}
-    </main>
+                <div className="p-5">
+                  <time className="text-xs text-gray-500">{post.date}</time>
+                  <h2 className="text-base font-bold text-gray-900 mt-1 mb-2 group-hover:text-blue-600 transition-colors leading-snug">{post.title}</h2>
+                  <p className="text-gray-600 text-sm line-clamp-3">{post.excerpt}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        )}
+      </main>
+    </div>
   );
 }

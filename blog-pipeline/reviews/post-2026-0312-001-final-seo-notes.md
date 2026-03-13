@@ -1,17 +1,18 @@
 # SEO Review — post-2026-0312-001-final
 
-Date: 2026-03-12T18:51:39.596Z
+Date: 2026-03-12T23:15:30.159Z
 
 Score: 9
-Slug: set-up-google-analytics-real-estate-2026
-Meta Description: Learn how to set up Google Analytics for real estate in 2026. Master analytics to outmaneuver competitors and enhance your online presence.
-Primary Keyword: Google Analytics for real estate
-Keyword Density: 5 appearances / 687 words
+Slug: types-marketing-videos-builders-2026
+Meta Description: Discover top marketing video types for builders in 2026. Boost engagement and trust with proven strategies for effective video content.
+Primary Keyword: marketing videos for builders
+Keyword Density: 5 appearances / 573 words
 Internal Links Suggested:
-- [enhancing your real estate website] → /enhance-real-estate-website
-- [Google My Business optimization] → /google-my-business-tips
+- [Hyper-Local SEO Strategies] → /hyper-local-seo-strategies/
+- [Real Estate Video Marketing Tips] → /real-estate-video-marketing-tips/
+- [Building Trust in Real Estate] → /building-trust-real-estate/
 Schema: Article — headline, datePublished, author
-OG Title: Set up Google Analytics: What Real Estate Agents Need to Know in 2026
-OG Description: Discover essential steps to set up Google Analytics for real estate agents in 2026. Gain insights to stay ahead in a competitive market.
+OG Title: Types of Marketing Videos: 5 Proven Strategies for Builders in 2026
+OG Description: Learn how builders can leverage different types of marketing videos in 2026 to enhance visibility and client engagement.
 Issues:
 - None
