@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Blog | Velocity Builders",
   description:
-    "Real estate growth blog: practical playbooks for lead response, CRM automation, local SEO, and retention across Fairfax, Loudoun, and Prince William.",
+    "NoVA real estate growth blog: practical playbooks for lead response, CRM automation, local SEO, and retention across Fairfax, Loudoun, and Prince William.",
   openGraph: {
     title: "Blog | Velocity Builders",
     description:
@@ -20,7 +20,7 @@ const CATEGORIES = [
   { slug: "marketing-systems", name: "Marketing Systems", teaser: "CRM, follow-up, lead routing, conversion operations", color: "bg-blue-50 border-blue-200 hover:border-blue-400" },
   { slug: "real-estate-news", name: "Real Estate News", teaser: "Local market shifts and what they change in your pipeline", color: "bg-green-50 border-green-200 hover:border-green-400" },
   { slug: "ai-tools", name: "AI Tools", teaser: "Practical automation that saves time without hurting trust", color: "bg-purple-50 border-purple-200 hover:border-purple-400" },
-  { slug: "direct-mail", name: "Direct Mail", teaser: "Farming campaigns, mailer automation, and print-to-digital conversion", color: "bg-amber-50 border-amber-200 hover:border-amber-400" },
+  { slug: "title-insurance", name: "Title Insurance", teaser: "Cleaner handoffs and better partner communication", color: "bg-amber-50 border-amber-200 hover:border-amber-400" },
 ];
 
 export default async function BlogIndex() {
@@ -32,7 +32,7 @@ export default async function BlogIndex() {
       <section className="bg-gray-50 py-16 border-b border-gray-200">
         <div className="mx-auto max-w-6xl px-6">
           <h1 className="text-4xl font-bold text-gray-900 mb-3">
-            No-Fluff Growth Playbooks for Real Estate Agents and Lenders.
+            No-Fluff Growth Playbooks for Real Estate Agents, Lenders, Builders and Financial Institutions
           </h1>
           <p className="text-gray-500 text-lg max-w-3xl">
             What&apos;s working now in Fairfax, Loudoun, and Prince William — from speed-to-lead to post-close retention.

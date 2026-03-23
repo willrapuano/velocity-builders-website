@@ -16,7 +16,7 @@ export function Footer() {
               <span className="text-lg font-bold text-white">Velocity Builders</span>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed">
-              Real estate growth systems for agents, lenders, and title professionals across Northern Virginia, DC, and Maryland.
+              Real estate growth systems for agents, lenders, builders, banks, and credit unions accross Northern Virginia, DC, Maryland, and Nationwide.
             </p>
           </div>
 
