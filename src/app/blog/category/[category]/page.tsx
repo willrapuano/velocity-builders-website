@@ -23,10 +23,10 @@ const CATEGORIES: Record<string, { name: string; header: string; description: st
     description: "Practical AI workflows for faster response, better content production, and cleaner follow-up without losing the human touch.",
     meta: "AI tools and workflows we use to speed up lead response, content production, and follow-up in real estate operations.",
   },
-  "title-insurance": {
-    name: "Title Insurance",
-    header: "Title Workflows and Partner Playbooks",
-    description: "Systems for cleaner lender-agent-title coordination, fewer surprises, and better client communication from contract to close.",
+  "seo": {
+    name: "SEO",
+    header: "Local SEO & Organic Growth",
+    description: "Google rankings, local search optimization, and organic lead generation strategies for real estate professionals.",
     meta: "Title workflow insights for Real estate teams: cleaner handoffs, better communication, and fewer closing-stage surprises.",
   },
 };

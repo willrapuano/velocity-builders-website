@@ -9,7 +9,7 @@ const SANITY_CATEGORY_TO_SLUG: Record<string, string> = {
   marketingSystems: "marketing-systems",
   realEstateNews: "real-estate-news",
   aiTools: "ai-tools",
-  titleInsurance: "title-insurance",
+  seo: "seo",
 };
 
 export interface PostMeta {

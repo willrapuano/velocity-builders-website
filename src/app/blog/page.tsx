@@ -20,6 +20,7 @@ const CATEGORIES = [
   { slug: "marketing-systems", name: "Marketing Systems", teaser: "CRM, follow-up, lead routing, conversion operations", color: "bg-blue-50 border-blue-200 hover:border-blue-400" },
   { slug: "real-estate-news", name: "Real Estate News", teaser: "Local market shifts and what they change in your pipeline", color: "bg-green-50 border-green-200 hover:border-green-400" },
   { slug: "ai-tools", name: "AI Tools", teaser: "Practical automation that saves time without hurting trust", color: "bg-purple-50 border-purple-200 hover:border-purple-400" },
+  { slug: "seo", name: "SEO", teaser: "Local search, Google rankings, and organic lead generation", color: "bg-amber-50 border-amber-200 hover:border-amber-400" },
 
 ];
 
