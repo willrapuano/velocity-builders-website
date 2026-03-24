@@ -16,6 +16,7 @@ export interface PostMeta {
   slug: string;
   title: string;
   date: string;
+  dateISO: string;
   excerpt: string;
   author: string;
   tags: string[];
@@ -64,6 +65,7 @@ function toPostMeta(doc: Record<string, unknown>): PostMeta {
     category:
       SANITY_CATEGORY_TO_SLUG[(doc.category as string) || ""] ||
       "marketing-systems",
+    dateISO: (doc.publishedAt as string)?.slice(0, 10) || "",
     featuredImage: (doc.featuredImage as string) || undefined,
   };
 }

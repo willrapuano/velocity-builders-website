@@ -7,7 +7,7 @@ import { Footer } from "@/components/Footer";
 const siteUrl = "https://velocity-builders.com";
 const title = "Velocity Builders | Real Estate Growth Systems";
 const description =
-  "Agents and lenders: get faster lead response, better follow-up, and more closings with websites and CRM systems built for Fairfax, Loudoun, and Prince William.";
+  "Real estate growth systems: faster lead response, better follow-up, and more closings with SEO websites and CRM automation for agents, lenders, and builders.";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -67,7 +67,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 addressRegion: "VA",
                 addressCountry: "US",
               },
-              areaServed: "DC, Maryland, and Virginia",
+              areaServed: "United States",
             }),
           }}
         />

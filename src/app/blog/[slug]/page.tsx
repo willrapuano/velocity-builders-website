@@ -118,6 +118,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       ...(post.featuredImage && { images: [post.featuredImage] }),
     },
     twitter: { card: "summary_large_image", title, description },
+    alternates: { canonical: `https://velocity-builders.com/blog/${slug}` },
   };
 }
 
@@ -142,9 +143,9 @@ export default async function BlogPost({ params }: Props) {
         "@type": "BlogPosting",
         "@id": `https://velocity-builders.com/blog/${slug}/#article`,
         headline: post.title,
-        description: post.excerpt,
-        datePublished: post.date,
-        dateModified: post.date,
+        description: post.seoDescription || post.excerpt || post.title,
+        datePublished: post.dateISO || post.date,
+        dateModified: post.dateISO || post.date,
         author: {
           "@type": "Person",
           name: "Will Rapuano",
