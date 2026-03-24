@@ -69,7 +69,7 @@ export const fallbackContent: SiteContent = {
       "Give every partner the leverage of a full-stack marketing team without the overhead, so their title, lending, and brokerage deals stay sticky.",
     email: "hello@velocity-builders.com",
     phone: "(703) 859-1467",
-    hq: "Vienna, Virginia",
+    hq: "United States",
   },
   hero: {
     eyebrow: "Velocity Builders LLC",

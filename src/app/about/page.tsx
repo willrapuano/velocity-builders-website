@@ -59,15 +59,15 @@ export default function AboutPage() {
           <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
             <h2 className="text-2xl font-bold text-gray-900">Our Position</h2>
             <p className="mt-3 text-gray-700">We&apos;re built for real estate teams that want systems, not guesswork.</p>
-            <p className="mt-3 text-gray-700">We know the referral dynamics, listing cycles, and lender-agent-title handoff points here because we work inside them.</p>
+            <p className="mt-3 text-gray-700">We know the referral dynamics, listing cycles, and lender-agent-title handoff points because we work inside them every day.</p>
             <div className="mt-6 grid gap-4 sm:grid-cols-3">
               {[
-                { county: "Fairfax County", desc: "School-bound timing and move-up pressure" },
-                { county: "Loudoun County", desc: "Relocation demand and new-construction velocity" },
-                { county: "Prince William County", desc: "Value-first buyers and speed-first decision windows" },
+                { area: "Real Estate Agents", desc: "SEO websites, listing launch kits, and CRM automation that turn leads into closings" },
+                { area: "Lenders & Credit Unions", desc: "Co-branded campaigns, mortgage marketing systems, and loan officer enablement" },
+                { area: "Builders & Developers", desc: "New construction marketing, community pages, and buyer pipeline automation" },
               ].map((item) => (
-                <div key={item.county} className="rounded-lg bg-blue-50 p-5">
-                  <h3 className="font-semibold text-blue-800">{item.county}</h3>
+                <div key={item.area} className="rounded-lg bg-blue-50 p-5">
+                  <h3 className="font-semibold text-blue-800">{item.area}</h3>
                   <p className="mt-2 text-sm text-gray-600">{item.desc}</p>
                 </div>
               ))}

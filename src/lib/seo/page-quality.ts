@@ -81,7 +81,7 @@ export function getQualityForHubPage() {
 
   const result = scoreProgrammaticPage({
     depth: "hub",
-    title: "DMV Locations",
+    title: "Markets We Serve",
     description: "Explore county, city, and community-level pages designed for discoverability and conversion.",
     highlightsCount: highlights,
     faqCount: 0,

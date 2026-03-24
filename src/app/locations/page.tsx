@@ -12,8 +12,8 @@ const path = "/locations";
 const hubQuality = getQualityForHubPage();
 
 export const metadata: Metadata = {
-  title: "DMV Locations | Velocity Builders",
-  description: "Explore county and city-specific real estate marketing systems across DC, Maryland, and Virginia.",
+  title: "Markets We Serve | Velocity Builders",
+  description: "Velocity Builders serves real estate agents, lenders, builders, and financial institutions nationwide with websites, SEO, and marketing automation.",
   alternates: { canonical: path },
   robots: { index: shouldIndexPage(hubQuality), follow: true },
 };
@@ -27,7 +27,7 @@ export default function LocationsHubPage() {
   const schemas = [
     professionalServiceSchema({
       description: "County and city-level marketing operations for real estate teams.",
-      areaServed: "DC, Maryland, and Virginia",
+      areaServed: "United States",
       path,
     }),
     breadcrumbSchema(crumbs),
