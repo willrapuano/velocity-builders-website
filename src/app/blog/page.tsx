@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Blog | Velocity Builders",
     description:
-      "Real estate growth blog: practical playbooks for lead response, CRM automation, local SEO, and retention across Fairfax, Loudoun, and Prince William.",
+      "Real estate growth blog: practical playbooks for lead response, CRM automation, SEO, and retention for agents, lenders, and builders.",
     type: "website",
     url: "/blog",
   },
@@ -33,10 +33,10 @@ export default async function BlogIndex() {
       <section className="bg-gray-50 py-16 border-b border-gray-200">
         <div className="mx-auto max-w-6xl px-6">
           <h1 className="text-4xl font-bold text-gray-900 mb-3">
-            No-Fluff Growth Playbooks for Real Estate Agents, Lenders, Builders and Financial Institutions
+            No-Fluff Growth Playbooks for Real Estate Agents, Lenders, and Builders
           </h1>
           <p className="text-gray-500 text-lg max-w-3xl">
-            What&apos;s working now in Fairfax, Loudoun, and Prince William — from speed-to-lead to post-close retention.
+            What&apos;s working now — from speed-to-lead to post-close retention.
           </p>
           <p className="text-gray-600 mt-4 max-w-3xl">
             This is where we publish practical systems your team can use right away. No theory pieces. No trend-chasing. Just workflows, scripts, and structure that help you convert more of the leads you already have.
