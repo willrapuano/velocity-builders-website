@@ -154,9 +154,9 @@ export default async function Home() {
           </p>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {[
-              { county: "Fairfax", desc: "Move-up and school-bound decisions" },
-              { county: "Loudoun", desc: "Growth corridors and relocation flow" },
-              { county: "Prince William", desc: "Value-first buyers who need fast clarity" },
+              { county: "Suburban Markets", desc: "Move-up buyers and school-driven decisions" },
+              { county: "Growth Corridors", desc: "New construction and relocation flow" },
+              { county: "Urban Markets", desc: "Fast-moving inventory that demands speed to lead" },
             ].map((item) => (
               <div key={item.county} className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
                 <h3 className="text-lg font-bold text-blue-700">{item.county}</h3>
