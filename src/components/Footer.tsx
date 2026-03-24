@@ -86,7 +86,7 @@ export function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-gray-800">
-        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-5 text-xs text-gray-500 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-5 text-xs text-gray-500 text-center">
           <p>© {year} Velocity Builders, LLC. All rights reserved.</p>
           <p>Powered by Velocity Builders — Vienna, VA</p>
         </div>
