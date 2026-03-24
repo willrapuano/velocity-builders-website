@@ -30,5 +30,5 @@ export const testimonialsQuery = `*[_type == "testimonial"] | order(order asc)`;
 export const featuredTestimonialsQuery = `*[_type == "testimonial" && featured == true] | order(order asc)`;
 export const caseStudiesQuery = `*[_type == "caseStudy"] | order(publishedAt desc)`;
 export const featuredCaseStudiesQuery = `*[_type == "caseStudy" && featured == true] | order(publishedAt desc)`;
-export const allPostsQuery = `*[_type == "post"] | order(publishedAt desc) { _id, title, slug, excerpt, author, publishedAt, category, tags, mainImage }`;
-export const postBySlugQuery = `*[_type == "post" && slug.current == $slug][0]`;
+export const allPostsQuery = `*[_type == "blogPost"] | order(publishedAt desc) { _id, title, slug, excerpt, author, publishedAt, category, tags, "featuredImage": mainImage.asset->url }`;
+export const postBySlugQuery = `*[_type == "blogPost" && slug.current == $slug][0] { ..., "featuredImage": mainImage.asset->url }`;
