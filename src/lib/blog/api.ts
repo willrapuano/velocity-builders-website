@@ -38,7 +38,8 @@ const META_FIELDS = `
   publishedAt,
   seoTitle,
   seoDescription,
-  featured
+  featured,
+  "featuredImage": mainImage.asset->url
 `;
 
 const FULL_FIELDS = `
@@ -63,7 +64,7 @@ function toPostMeta(doc: Record<string, unknown>): PostMeta {
     category:
       SANITY_CATEGORY_TO_SLUG[(doc.category as string) || ""] ||
       "marketing-systems",
-    featuredImage: undefined,
+    featuredImage: (doc.featuredImage as string) || undefined,
   };
 }
 
