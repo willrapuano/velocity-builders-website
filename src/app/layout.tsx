@@ -5,9 +5,9 @@ import { NavBar } from "@/components/NavBar";
 import { Footer } from "@/components/Footer";
 
 const siteUrl = "https://velocity-builders.com";
-const title = "Velocity Builders | Real Estate Growth Systems";
+const title = "Velocity Builders | Websites, SEO & Marketing for Real Estate Agents, Lenders & Builders";
 const description =
-  "Real estate growth systems: faster lead response, better follow-up, and more closings with SEO websites and CRM automation for agents, lenders, and builders.";
+  "Velocity Builders builds high-converting websites, local SEO strategies, and automated marketing systems that help real estate agents, lenders, builders, and financial institutions generate leads, close more deals, and dominate their market.";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

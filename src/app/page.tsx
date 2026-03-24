@@ -4,9 +4,9 @@ import { getAllPosts } from "@/lib/blog/api";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Velocity Builders | Real Estate Growth Systems",
+  title: "Velocity Builders | Websites, SEO & Marketing for Real Estate Agents, Lenders & Builders",
   description:
-    "Velocity Builders helps real estate agents and lenders close more deals with SEO websites, CRM automation, and follow-up systems that actually convert.",
+    "Velocity Builders builds high-converting websites, local SEO strategies, and automated marketing systems that help real estate agents, lenders, builders, and financial institutions generate leads, close more deals, and dominate their market.",
   alternates: { canonical: "/" },
 };
 
@@ -260,7 +260,7 @@ export default async function Home() {
                       {placeholder.title}
                     </h3>
                     <p className="mt-2 text-sm text-gray-600 line-clamp-3 flex-1">
-                      Practical insights for agents and lenders who want to grow.
+                      Practical insights for agents, lenders, builders, and financial institutions who want to grow.
                     </p>
                     <Link
                       href="/blog"
