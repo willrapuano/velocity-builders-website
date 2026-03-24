@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 const CATEGORIES: Record<string, { name: string; header: string; description: string; meta: string }> = {
   "marketing-systems": {
     name: "Marketing Systems",
-    header: "Marketing Systems That Convert Faster in the DMV",
+    header: "Marketing Systems That Convert Faster",
     description: "CRM and automation workflows that help agents and lenders respond faster, book more consults, and keep referrals warm.",
     meta: "CRM and automation systems that help Agents and lenders respond faster, convert more leads, and keep referrals warm.",
   },
