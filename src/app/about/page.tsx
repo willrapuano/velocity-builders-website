@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About Velocity Builders",
   description:
-    "About Velocity Builders — a Northern Virginia real estate marketing agency helping agents, lenders & title teams fix lead response, handoffs, and closing rates.",
+    "About Velocity Builders — a real estate marketing agency helping agents, lenders & title teams fix lead response, handoffs, and closing rates.",
   alternates: { canonical: "/about" },
 };
 

@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Services | Velocity Builders",
   description:
-    "Real estate marketing services for NoVA agents and lenders: local SEO websites, CRM automation, listing workflows & follow-up systems that drive more closings.",
+    "Real estate marketing services for agents and lenders: SEO websites, CRM automation, listing workflows & follow-up systems that drive more closings.",
   alternates: { canonical: "/services" },
 };
 

@@ -4,9 +4,9 @@ import { getAllPosts } from "@/lib/blog/api";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Velocity Builders | Real Estate Growth Systems for NoVA",
+  title: "Velocity Builders | Real Estate Growth Systems",
   description:
-    "Velocity Builders helps NoVA agents and lenders close more deals with local SEO websites, CRM automation, and follow-up systems built for Fairfax, Loudoun & Prince William.",
+    "Velocity Builders helps real estate agents and lenders close more deals with SEO websites, CRM automation, and follow-up systems that actually convert.",
   alternates: { canonical: "/" },
 };
 
@@ -38,7 +38,7 @@ export default async function Home() {
             Get More Closings from the Leads You Already Have.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-gray-300 leading-relaxed">
-            NoVA-focused websites, CRM automations, and follow-up systems that turn inquiries into appointments — and appointments into closings.
+            SEO-optimized websites, CRM automations, and follow-up systems that turn inquiries into appointments — and appointments into closings.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <Link
@@ -51,13 +51,13 @@ export default async function Home() {
               href="/services"
               className="rounded-full border-2 border-white/30 px-8 py-3.5 text-center text-sm font-semibold text-white transition hover:border-white hover:bg-white/10"
             >
-              See 3 NoVA System Builds
+              See 3 System Builds
             </Link>
           </div>
           {/* Trust Strip */}
           <div className="mt-10 inline-block rounded-xl border border-white/20 bg-white/10 px-6 py-4 backdrop-blur-sm">
             <p className="text-sm text-gray-200">
-              Trusted by agents, lenders, builders, banks, & credit unions across the DC, Maryland, and Virginia-areas.
+              Trusted by agents, lenders, builders, banks, & credit unions nationwide.
             </p>
           </div>
         </div>
@@ -100,9 +100,9 @@ export default async function Home() {
           <div className="mt-12 grid gap-8 md:grid-cols-3">
             <div className="rounded-2xl border border-gray-200 bg-white p-7 shadow-sm hover:shadow-md transition">
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-2xl mb-5">🌐</div>
-              <h3 className="text-lg font-bold text-gray-900">NoVA SEO Websites That Convert</h3>
+              <h3 className="text-lg font-bold text-gray-900">SEO Websites That Convert</h3>
               <p className="mt-3 text-sm text-gray-600 leading-relaxed">
-                Local pages built around real search behavior in Northern Virginia. Clear calls to action. Clean routing into your CRM.
+                Pages built around real search behavior in your market. Clear calls to action. Clean routing into your CRM.
               </p>
             </div>
             <div className="rounded-2xl border border-gray-200 bg-white p-7 shadow-sm hover:shadow-md transition">
@@ -148,9 +148,9 @@ export default async function Home() {
       {/* ==================== BUILT FOR HOW NOVA ACTUALLY MOVES ==================== */}
       <section className="bg-gray-50 py-20">
         <div className="mx-auto max-w-5xl px-6">
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">Built for How NoVA Actually Moves</h2>
+          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">Built for How Real Estate Actually Moves</h2>
           <p className="mt-4 text-lg text-gray-600">
-            Northern Virginia is not one market. Your funnel has to match local behavior, not generic national playbooks.
+            Every market is different. Your funnel has to match local behavior, not generic one-size-fits-all playbooks.
           </p>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {[
@@ -242,7 +242,7 @@ export default async function Home() {
               {[
                 { title: "Using Video Traffic Data to Power Smart Real Estate Marketing", img: "photo-1551434678-e076c223a692" },
                 { title: "How to Choose the Right Title Company and Close with Confidence", img: "photo-1560518883-ce09059eeffa" },
-                { title: "Closing Costs in the DMV: What Buyers and Sellers Should Know", img: "photo-1582407947092-a87e42ce4946" },
+                { title: "Closing Costs: What Buyers and Sellers Should Know", img: "photo-1582407947092-a87e42ce4946" },
               ].map((placeholder, i) => (
                 <article key={i} className="group flex flex-col overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm hover:shadow-lg transition">
                   <div className="aspect-[16/9] overflow-hidden bg-gray-100">
@@ -260,7 +260,7 @@ export default async function Home() {
                       {placeholder.title}
                     </h3>
                     <p className="mt-2 text-sm text-gray-600 line-clamp-3 flex-1">
-                      Practical insights for agents and lenders in the NoVA market.
+                      Practical insights for agents and lenders who want to grow.
                     </p>
                     <Link
                       href="/blog"
@@ -304,7 +304,7 @@ export default async function Home() {
               href="/services"
               className="rounded-full border-2 border-white/40 px-8 py-3.5 text-sm font-semibold text-white transition hover:border-white hover:bg-white/10"
             >
-              See 3 NoVA System Builds
+              See 3 System Builds
             </Link>
           </div>
         </div>

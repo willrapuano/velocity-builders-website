@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Blog | Velocity Builders",
   description:
-    "NoVA real estate growth blog: practical playbooks for lead response, CRM automation, local SEO, and retention across Fairfax, Loudoun, and Prince William.",
+    "Real estate growth blog: practical playbooks for lead response, CRM automation, SEO, and retention for agents and lenders.",
   openGraph: {
     title: "Blog | Velocity Builders",
     description:

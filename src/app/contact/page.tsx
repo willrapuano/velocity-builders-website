@@ -4,7 +4,7 @@ import Image from "next/image";
 export const metadata = {
   title: "Contact Velocity Builders",
   description:
-    "Contact Velocity Builders for a free NoVA growth blueprint — we'll identify your biggest pipeline leaks, fix lead response times & automate your follow-up.",
+    "Contact Velocity Builders for a free growth blueprint — we'll identify your biggest pipeline leaks, fix lead response times & automate your follow-up.",
 };
 
 export default function ContactPage() {
