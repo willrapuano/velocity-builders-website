@@ -3,6 +3,9 @@ import Link from "next/link";
 import { PortableText } from "@portabletext/react";
 import { getAllPostSlugs, getPostBySlug } from "@/lib/blog/api";
 import type { Metadata } from "next";
+import { Callout } from "@/components/portable-text/Callout";
+import { Table } from "@/components/portable-text/Table";
+import { Accordion } from "@/components/portable-text/Accordion";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -95,6 +98,12 @@ const portableTextComponents = {
         </figure>
       );
     },
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    callout: ({ value }: any) => <Callout value={value} />,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    table: ({ value }: any) => <Table value={value} />,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    accordion: ({ value }: any) => <Accordion value={value} />,
   },
 };
 

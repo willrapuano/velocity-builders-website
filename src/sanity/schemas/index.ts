@@ -5,6 +5,7 @@ import { service } from "./service";
 import { about } from "./about";
 import { testimonial } from "./testimonial";
 import { caseStudy } from "./caseStudy";
+import { calloutBlock, tableBlock, accordionBlock } from "./blockTypes";
 
 export const schemaTypes = [
   // Singletons
@@ -16,4 +17,8 @@ export const schemaTypes = [
   service,
   testimonial,
   caseStudy,
+  // Portable Text block types
+  calloutBlock,
+  tableBlock,
+  accordionBlock,
 ];
