@@ -56,8 +56,12 @@ const portableTextComponents = {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     number: ({ children }: any) => <ol className="text-gray-700 my-4 space-y-2 list-decimal pl-6">{children}</ol>,
   },
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  listItem: ({ children }: any) => <li className="text-[17px] leading-[1.8] pl-1">{children}</li>,
+  listItem: {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    bullet: ({ children }: any) => <li className="text-[17px] leading-[1.8] pl-1">{children}</li>,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    number: ({ children }: any) => <li className="text-[17px] leading-[1.8] pl-1">{children}</li>,
+  },
   marks: {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     strong: ({ children }: any) => <strong className="text-gray-900 font-semibold">{children}</strong>,
