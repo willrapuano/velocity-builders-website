@@ -193,26 +193,24 @@ export default async function BlogPost({ params }: Props) {
         </nav>
 
         {/* Category pill */}
-        <div className="text-center">
-          <Link
-            href={`/blog/category/${categorySlug}`}
-            className={`inline-block px-3 py-1 rounded-full border text-xs font-semibold uppercase tracking-wide mb-5 ${category.color}`}
-          >
-            {category.name}
-          </Link>
+        <Link
+          href={`/blog/category/${categorySlug}`}
+          className={`inline-block px-3 py-1 rounded-full border text-xs font-semibold uppercase tracking-wide mb-5 ${category.color}`}
+        >
+          {category.name}
+        </Link>
 
-          {/* Title */}
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-4">
-            {post.title}
-          </h1>
+        {/* Title */}
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-4">
+          {post.title}
+        </h1>
 
-          {/* Byline */}
-          <p className="text-sm text-gray-500 mb-8 pb-8 border-b border-gray-200">
-            By <span className="text-gray-900 font-medium">{post.author}</span>
-            <span className="mx-2 text-gray-300">|</span>
-            <time>{post.date}</time>
-          </p>
-        </div>
+        {/* Byline */}
+        <p className="text-sm text-gray-500 mb-8 pb-8 border-b border-gray-200">
+          By <span className="text-gray-900 font-medium">{post.author}</span>
+          <span className="mx-2 text-gray-300">|</span>
+          <time>{post.date}</time>
+        </p>
 
         {/* Featured image */}
         {post.featuredImage && (
