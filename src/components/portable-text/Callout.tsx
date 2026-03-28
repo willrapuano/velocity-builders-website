@@ -11,14 +11,30 @@ export function Callout({ value }: { value: { tone?: string; title?: string; bod
   const tone = value.tone || "info";
   const style = TONE_STYLES[tone] || TONE_STYLES.info;
 
+  // Split on bullet separator · or newline for list rendering
+  const body = value.body || "";
+  const items = body.split(/\s*·\s*|\n/).map(s => s.trim()).filter(Boolean);
+  const isList = items.length > 1;
+
   return (
     <div className={`border-l-4 rounded-r-xl px-5 py-4 my-6 ${style.wrapper}`}>
       {value.title && (
-        <p className="font-semibold text-sm mb-1">
+        <p className="font-semibold text-sm mb-2">
           {style.icon} {value.title}
         </p>
       )}
-      <p className="text-[16px] leading-relaxed">{value.body}</p>
+      {isList ? (
+        <ul className="space-y-1 text-[15px] leading-relaxed list-none pl-0">
+          {items.map((item, idx) => (
+            <li key={idx} className="flex items-start gap-2">
+              <span className="mt-[3px] text-current opacity-50 shrink-0">—</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p className="text-[15px] leading-relaxed">{body}</p>
+      )}
     </div>
   );
 }
