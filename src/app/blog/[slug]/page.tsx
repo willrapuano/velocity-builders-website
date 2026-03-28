@@ -41,6 +41,7 @@ const portableTextComponents = {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     normal: ({ children }: any) => <p className="text-gray-700 text-[17px] leading-[1.85] mb-5">{children}</p>,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    caption: ({ children }: any) => <p className="text-center text-sm italic text-gray-500 mt-2 mb-4">{children}</p>,
     h2: ({ children }: any) => <h2 className="text-[1.6rem] font-bold text-gray-900 mt-14 mb-4 pb-3 border-b border-gray-200">{children}</h2>,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     h3: ({ children }: any) => <h3 className="text-xl font-bold text-blue-800 mt-10 mb-3">{children}</h3>,

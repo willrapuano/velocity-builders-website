@@ -11,10 +11,20 @@ export function Callout({ value }: { value: { tone?: string; title?: string; bod
   const tone = value.tone || "info";
   const style = TONE_STYLES[tone] || TONE_STYLES.info;
 
-  // Split on bullet separator · or newline for list rendering
   const body = value.body || "";
   const items = body.split(/\s*·\s*|\n/).map(s => s.trim()).filter(Boolean);
   const isList = items.length > 1;
+
+  // If first item ends with ':', it's an intro sentence — render separately above the list
+  const hasIntro = isList && items[0].endsWith(":");
+  const intro = hasIntro ? items[0] : null;
+  const listItems = hasIntro ? items.slice(1) : items;
+  // Detect closing sentence: long last item when bullets are short
+  const avgBulletLen = listItems.slice(0, -1).reduce((s, i) => s + i.length, 0) / Math.max(listItems.length - 1, 1);
+  const lastItem = listItems[listItems.length - 1];
+  const hasOutro = listItems.length > 1 && lastItem && lastItem.length > 80 && avgBulletLen < 80;
+  const outro = hasOutro ? lastItem : null;
+  const bulletItems = hasOutro ? listItems.slice(0, -1) : listItems;
 
   return (
     <div className={`border-l-4 rounded-r-xl px-5 py-4 my-6 ${style.wrapper}`}>
@@ -24,14 +34,18 @@ export function Callout({ value }: { value: { tone?: string; title?: string; bod
         </p>
       )}
       {isList ? (
-        <ul className="space-y-1 text-[15px] leading-relaxed list-none pl-0">
-          {items.map((item, idx) => (
-            <li key={idx} className="flex items-start gap-2">
-              <span className="mt-[3px] text-current opacity-50 shrink-0">—</span>
-              <span>{item}</span>
-            </li>
-          ))}
-        </ul>
+        <div className="space-y-2 text-[15px] leading-relaxed">
+          {intro && <p className="mb-1">{intro}</p>}
+          <ul className="space-y-1 list-none pl-0">
+            {bulletItems.map((item, idx) => (
+              <li key={idx} className="flex items-start gap-2">
+                <span className="mt-[3px] text-current opacity-50 shrink-0">—</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+          {outro && <p className="mt-2">{outro}</p>}
+        </div>
       ) : (
         <p className="text-[15px] leading-relaxed">{body}</p>
       )}
