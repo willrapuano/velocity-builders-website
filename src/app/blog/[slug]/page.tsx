@@ -100,6 +100,18 @@ const portableTextComponents = {
         );
       }
 
+      // Step N: pattern — bold the "Step N:" label
+      if (/^Step \d+:/i.test(trimmed)) {
+        const match = trimmed.match(/^(Step \d+:)(.*)/is);
+        if (match) {
+          return (
+            <p className="text-gray-700 text-[17px] leading-[1.85] mb-3 mt-6">
+              <strong className="text-gray-900">{match[1]}</strong>{match[2]}
+            </p>
+          );
+        }
+      }
+
       // Blockquote / email script lines starting with ">"
       if (trimmed.startsWith(">")) {
         const clean = trimmed.replace(/^>\s?/, "").trim();
