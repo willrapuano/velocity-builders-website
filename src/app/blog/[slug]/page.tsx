@@ -50,15 +50,28 @@ function stripAsterisks(text: string): string {
   return text.replace(/^\*+|\*+$/g, "").trim();
 }
 
+/** Matches HTML-style comments Sanity sometimes stores as plain text: <!-- ... --> */
+const HTML_COMMENT_RE = /^<!--[\s\S]*?-->$/;
+
+/** Matches Q&A paragraph prefixes */
+const QA_Q_RE = /^Q:\s/;
+const QA_A_RE = /^A:\s/;
+
 const portableTextComponents = {
   block: {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     normal: ({ value, children }: any) => {
       const raw = blockText(value);
+      const trimmed = raw.trim();
 
-      // Issue 1: render "---" as <hr>
-      if (raw.trim() === "---") {
+      // Issue 1a: render "---" (plain text) as <hr>
+      if (trimmed === "---" || trimmed === "- - -" || trimmed === "—") {
         return <hr className="my-8 border-t border-gray-200" />;
+      }
+
+      // Issue 1b: hide Sanity editor comment markers <!-- ... -->
+      if (HTML_COMMENT_RE.test(trimmed)) {
+        return null;
       }
 
       // Issue 2: render Equal Housing disclaimer as centered bold-italic
@@ -71,14 +84,30 @@ const portableTextComponents = {
         );
       }
 
+      // Issue 4: Q&A / FAQ blocks — style Q: and A: pairs for readability
+      if (QA_Q_RE.test(raw)) {
+        return (
+          <p className="text-[17px] font-semibold text-gray-900 leading-[1.7] mt-6 mb-1">
+            {children}
+          </p>
+        );
+      }
+      if (QA_A_RE.test(raw)) {
+        return (
+          <p className="text-gray-700 text-[17px] leading-[1.85] mb-5 pl-4 border-l-2 border-blue-100">
+            {children}
+          </p>
+        );
+      }
+
       return <p className="text-gray-700 text-[17px] leading-[1.85] mb-5">{children}</p>;
     },
     caption: ({ children }: any) => <p className="text-center text-sm italic text-gray-500 mt-2 mb-4">{children}</p>,
-    h2: ({ children }: any) => <h2 className="text-[1.6rem] font-bold text-gray-900 mt-14 mb-4 pb-3 border-b border-gray-200">{children}</h2>,
+    h2: ({ children }: any) => <h2 className="text-[1.6rem] font-bold text-gray-900 mt-14 mb-5 pb-3 border-b border-gray-200">{children}</h2>,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    h3: ({ children }: any) => <h3 className="text-xl font-bold text-blue-800 mt-10 mb-3">{children}</h3>,
+    h3: ({ children }: any) => <h3 className="text-xl font-bold text-blue-800 mt-10 mb-4">{children}</h3>,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    h4: ({ children }: any) => <h4 className="text-base font-semibold text-gray-800 mt-6 mb-2">{children}</h4>,
+    h4: ({ children }: any) => <h4 className="text-base font-semibold text-gray-800 mt-8 mb-3">{children}</h4>,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     blockquote: ({ children }: any) => (
       <blockquote className="border-l-4 border-blue-500 bg-blue-50 px-6 py-4 rounded-r-xl text-gray-700 text-[17px] my-6">
@@ -137,6 +166,8 @@ const portableTextComponents = {
     table: ({ value }: any) => <Table value={value} />,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     accordion: ({ value }: any) => <Accordion value={value} />,
+    // Issue 1c: native Sanity hr block type
+    hr: () => <hr className="my-8 border-t border-gray-200" />,
   },
 };
 
