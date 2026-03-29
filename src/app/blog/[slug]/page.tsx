@@ -123,6 +123,12 @@ const portableTextComponents = {
         );
       }
 
+      // Boilerplate footer blocks wrapped in *asterisks* — strip and render italic
+      if (trimmed.startsWith("*") && trimmed.endsWith("*") && trimmed.length > 2) {
+        const clean = trimmed.slice(1, -1).trim();
+        return <p className="text-sm italic text-gray-500 mt-6 mb-2">{clean}</p>;
+      }
+
       // Issue 5: Plain-paragraph FAQ questions — detect questions by:
       //   1. Text ends with "?"
       //   2. Under ~120 chars (short question, not a long sentence ending mid-thought)
