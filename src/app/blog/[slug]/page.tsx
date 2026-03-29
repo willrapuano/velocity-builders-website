@@ -36,11 +36,43 @@ const CTA_OVERRIDES: Record<string, { title: string; body: string; button: strin
   },
 };
 
+/** Extract the plain-text string from a portable-text block's children array. */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function blockText(value: any): string {
+  return (value?.children ?? []).map((c: any) => c.text ?? "").join("");
+}
+
+/** Equal Housing disclaimer pattern */
+const EQUAL_HOUSING_RE = /equal\s+housing\s+opportunit/i;
+
+/** Strip leading/trailing asterisks used as markdown bold/italic markers */
+function stripAsterisks(text: string): string {
+  return text.replace(/^\*+|\*+$/g, "").trim();
+}
+
 const portableTextComponents = {
   block: {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    normal: ({ children }: any) => <p className="text-gray-700 text-[17px] leading-[1.85] mb-5">{children}</p>,
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    normal: ({ value, children }: any) => {
+      const raw = blockText(value);
+
+      // Issue 1: render "---" as <hr>
+      if (raw.trim() === "---") {
+        return <hr className="my-8 border-t border-gray-200" />;
+      }
+
+      // Issue 2: render Equal Housing disclaimer as centered bold-italic
+      if (EQUAL_HOUSING_RE.test(raw)) {
+        const clean = stripAsterisks(raw);
+        return (
+          <p className="mt-10 text-center text-sm italic font-semibold text-gray-500">
+            {clean}
+          </p>
+        );
+      }
+
+      return <p className="text-gray-700 text-[17px] leading-[1.85] mb-5">{children}</p>;
+    },
     caption: ({ children }: any) => <p className="text-center text-sm italic text-gray-500 mt-2 mb-4">{children}</p>,
     h2: ({ children }: any) => <h2 className="text-[1.6rem] font-bold text-gray-900 mt-14 mb-4 pb-3 border-b border-gray-200">{children}</h2>,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -234,8 +266,20 @@ export default async function BlogPost({ params }: Props) {
         )}
 
         {/* Article body — Portable Text */}
+        {/* Issue 3: strip first block if it duplicates the post title */}
         <div className="blog-body">
-          <PortableText value={post.body as Parameters<typeof PortableText>[0]["value"]} components={portableTextComponents} />
+          <PortableText
+            value={(() => {
+              const body = post.body as any[];
+              if (!body?.length) return body;
+              const first = body[0];
+              const firstText = (first?.children ?? []).map((c: any) => c.text ?? "").join("").trim();
+              const normalize = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, "");
+              if (normalize(firstText) === normalize(post.title)) return body.slice(1);
+              return body;
+            })() as Parameters<typeof PortableText>[0]["value"]}
+            components={portableTextComponents}
+          />
         </div>
 
         {/* Author card */}
