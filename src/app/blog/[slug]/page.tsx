@@ -100,6 +100,34 @@ const portableTextComponents = {
         );
       }
 
+      // Blockquote / email script lines starting with ">"
+      if (trimmed.startsWith(">")) {
+        const clean = trimmed.replace(/^>\s?/, "").trim();
+        if (!clean) return <div className="h-2" />;
+        return (
+          <p className="text-gray-700 text-[15px] leading-relaxed pl-4 border-l-2 border-gray-300 my-1 font-mono">
+            {clean}
+          </p>
+        );
+      }
+
+      // Issue 5: Plain-paragraph FAQ questions — detect questions by:
+      //   1. Text ends with "?"
+      //   2. Under ~120 chars (short question, not a long sentence ending mid-thought)
+      //   3. Does NOT start with a lowercase word (rules out mid-paragraph sentences)
+      const isImpliedQuestion =
+        trimmed.endsWith("?") &&
+        trimmed.length < 120 &&
+        /^[A-Z0-9"'"\u2018\u201C]/.test(trimmed);
+
+      if (isImpliedQuestion) {
+        return (
+          <p className="font-semibold text-gray-900 mt-8 mb-2 text-base leading-snug">
+            {children}
+          </p>
+        );
+      }
+
       return <p className="text-gray-700 text-[17px] leading-[1.85] mb-5">{children}</p>;
     },
     caption: ({ children }: any) => <p className="text-center text-sm italic text-gray-500 mt-2 mb-4">{children}</p>,
