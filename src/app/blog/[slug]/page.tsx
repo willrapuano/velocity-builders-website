@@ -140,7 +140,7 @@ const portableTextComponents = {
 
       if (isImpliedQuestion) {
         return (
-          <p className="font-semibold text-gray-900 mt-8 mb-2 text-base leading-snug">
+          <p className="font-bold text-blue-700 mt-10 mb-1 text-[17px] leading-snug border-l-4 border-blue-500 pl-3">
             {children}
           </p>
         );
