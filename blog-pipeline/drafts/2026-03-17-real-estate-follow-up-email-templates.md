@@ -8,7 +8,8 @@ schema: ["BlogPosting", "HowTo"]
 pillar: "follow-up-automation"
 audience: ["agents", "loan-officers"]
 author: "Will Rapuano"
-status: draft
+
+mainImage: clients/velocity-builders/blog-queue/images/2026-03-17-real-estate-follow-up-email-templates.jpg
 publish_date: 2026-03-17
 internal_links:
   - /services → "CRM automation services"
@@ -276,3 +277,12 @@ That's not a marketing problem. That's a systems problem. And systems are fixabl
 These templates work. But they work better inside a [CRM automation system](/blog/crm-automation-roi-real-estate-teams) that triggers them automatically, tracks responses, and surfaces the leads who engage.
 
 **Want us to build your follow-up system?** [Book a 20-minute Growth Blueprint →](/contact)
+
+---
+
+Velocity Builders helps real estate agents, lenders, and brokerages build websites and marketing systems that generate and convert leads automatically.
+
+Will Rapuano  
+Founder, Velocity Builders LLC. Business Development Officer at Pruitt Title. Helping real estate agents and loan officers scale with better marketing systems.
+
+[Book a 20-Minute Growth Blueprint →](/contact)

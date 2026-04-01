@@ -134,4 +134,9 @@ Six months from now, you'll have 500 homeowners who've seen your face six times.
 
 ---
 
-*Will Rapuano is the founder of Velocity Builders LLC, a real estate marketing agency serving agents, lenders, and builders in Northern Virginia. He also leads Business Development for Pruitt Title, a settlement services company in Vienna, VA.*
+Velocity Builders helps real estate agents, lenders, and brokerages build websites and marketing systems that generate and convert leads automatically.
+
+Will Rapuano  
+Founder, Velocity Builders LLC. Business Development Officer at Pruitt Title. Helping real estate agents and loan officers scale with better marketing systems.
+
+[Book a 20-Minute Growth Blueprint →](/contact)

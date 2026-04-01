@@ -63,3 +63,12 @@ After implementing these video strategies, measure their impact. Use tools like 
 - "video marketing trends 2026"
 
 Incorporate these marketing videos into your strategy now. Each type serves a unique purpose, creating a robust marketing ecosystem that drives results. Delaying integration costs you clients and market share. Act decisively and leverage video marketing to its fullest potential in 2026.
+
+---
+
+Velocity Builders helps real estate agents, lenders, and brokerages build websites and marketing systems that generate and convert leads automatically.
+
+Will Rapuano  
+Founder, Velocity Builders LLC. Business Development Officer at Pruitt Title. Helping real estate agents and loan officers scale with better marketing systems.
+
+[Book a 20-Minute Growth Blueprint →](/contact)

@@ -61,3 +61,12 @@ Leverage local cross-links to boost your website's authority. Connect neighborho
 ## Dominate Your Market
 
 Setting up Google Analytics in 2026 is a cornerstone of your marketing strategy. Customize your analytics, establish neighborhood pages, and track metrics diligently. These strategies position you to dominate your local market. Act now—don't let competitors outpace you.
+
+---
+
+Velocity Builders helps real estate agents, lenders, and brokerages build websites and marketing systems that generate and convert leads automatically.
+
+Will Rapuano  
+Founder, Velocity Builders LLC. Business Development Officer at Pruitt Title. Helping real estate agents and loan officers scale with better marketing systems.
+
+[Book a 20-Minute Growth Blueprint →](/contact)

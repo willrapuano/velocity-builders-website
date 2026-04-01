@@ -57,3 +57,12 @@ Track these vital metrics to ensure your strategies are effective:
 - **Cost per Funded Loan**: Monitor your marketing spend relative to the number of loans closed. Optimizing this metric significantly impacts profitability.
 
 The top loan officers in 2026 are integrating relationship-building with systems and digital strategies. Adopt these approaches to break through the plateau and scale your business effectively. Your top competitor is already doing this—don't let them leave you behind.
+
+---
+
+Velocity Builders helps real estate agents, lenders, and brokerages build websites and marketing systems that generate and convert leads automatically.
+
+Will Rapuano  
+Founder, Velocity Builders LLC. Business Development Officer at Pruitt Title. Helping real estate agents and loan officers scale with better marketing systems.
+
+[Book a 20-Minute Growth Blueprint →](/contact)

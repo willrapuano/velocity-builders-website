@@ -65,3 +65,12 @@ Enhance your authority by interlinking your mortgage site with other local resou
 ## Seize the Opportunity
 
 In 2026, an optimized mortgage website design is your ticket to dominating the local mortgage market. Follow this blueprint to effectively attract and convert local borrowers. The cost of waiting is lost opportunities, reduced market share, and missed revenue. Act now and secure your position as a leader in the digital mortgage space.
+
+---
+
+Velocity Builders helps real estate agents, lenders, and brokerages build websites and marketing systems that generate and convert leads automatically.
+
+Will Rapuano  
+Founder, Velocity Builders LLC. Business Development Officer at Pruitt Title. Helping real estate agents and loan officers scale with better marketing systems.
+
+[Book a 20-Minute Growth Blueprint →](/contact)

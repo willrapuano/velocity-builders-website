@@ -78,3 +78,12 @@ Automating your inbound marketing stages boosts revenue. Let's crunch the number
 3. **Feedback and Referral Requests:** After a successful sale, automate gathering client feedback and requesting referrals to drive continuous growth.
 
 Master inbound marketing stages as a builder in 2026 by leveraging technology to work smarter, not harder. Every delay is a missed opportunity to enhance efficiency and profitability. Commit to these changes now, and watch your business thrive.
+
+---
+
+Velocity Builders helps real estate agents, lenders, and brokerages build websites and marketing systems that generate and convert leads automatically.
+
+Will Rapuano  
+Founder, Velocity Builders LLC. Business Development Officer at Pruitt Title. Helping real estate agents and loan officers scale with better marketing systems.
+
+[Book a 20-Minute Growth Blueprint →](/contact)

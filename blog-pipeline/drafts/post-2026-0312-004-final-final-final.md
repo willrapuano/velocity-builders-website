@@ -78,3 +78,12 @@ Integrate your Google Ads with your CRM system to track and nurture leads more e
 Stop wasting time and money with ineffective Google Ads strategies. Follow this guide to harness Google Ads' power, generate high-quality leads, and close more deals in 2026. The competition isn't slowing down—act now, or be left behind.
 
 For more insights, explore our [Lead Generation Strategies for Real Estate](/lead-generation-strategies-real-estate) and [Effective Real Estate Marketing Techniques](/real-estate-marketing-techniques). Additionally, learn how to [Use CRM in Real Estate](/crm-real-estate-guide) to enhance your marketing efforts.
+
+---
+
+Velocity Builders helps real estate agents, lenders, and brokerages build websites and marketing systems that generate and convert leads automatically.
+
+Will Rapuano  
+Founder, Velocity Builders LLC. Business Development Officer at Pruitt Title. Helping real estate agents and loan officers scale with better marketing systems.
+
+[Book a 20-Minute Growth Blueprint →](/contact)

@@ -42,8 +42,8 @@ function blockText(value: any): string {
   return (value?.children ?? []).map((c: any) => c.text ?? "").join("");
 }
 
-/** Equal Housing disclaimer pattern */
-const EQUAL_HOUSING_RE = /equal\s+housing\s+opportunit/i;
+// Equal Housing pattern removed — Velocity Builders is not a real estate brokerage (2026-03-29)
+// const EQUAL_HOUSING_RE = /equal\s+housing\s+opportunit/i;
 
 /** Strip leading/trailing asterisks used as markdown bold/italic markers */
 function stripAsterisks(text: string): string {
@@ -74,15 +74,6 @@ const portableTextComponents = {
         return null;
       }
 
-      // Issue 2: render Equal Housing disclaimer as centered bold-italic
-      if (EQUAL_HOUSING_RE.test(raw)) {
-        const clean = stripAsterisks(raw);
-        return (
-          <p className="mt-10 text-center text-sm italic font-semibold text-gray-500">
-            {clean}
-          </p>
-        );
-      }
 
       // Issue 4: Q&A / FAQ blocks — style Q: and A: pairs for readability
       if (QA_Q_RE.test(raw)) {
@@ -359,8 +350,13 @@ export default async function BlogPost({ params }: Props) {
           />
         </div>
 
+        {/* Caption line */}
+        <p className="mt-16 text-center text-sm italic text-gray-500">
+          Velocity Builders helps real estate agents, lenders, and brokerages build websites and marketing systems that generate and convert leads automatically.
+        </p>
+
         {/* Author card */}
-        <div className="mt-16 p-6 rounded-xl border border-gray-200 bg-gray-50 flex gap-4 items-start">
+        <div className="mt-6 p-6 rounded-xl border border-gray-200 bg-gray-50 flex gap-4 items-start">
           <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center shrink-0">
             <span className="text-blue-700 font-bold text-lg">W</span>
           </div>

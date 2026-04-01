@@ -8,7 +8,8 @@ schema: ["BlogPosting", "HowTo"]
 pillar: "lead-generation"
 audience: ["agents", "loan-officers"]
 author: "Will Rapuano"
-status: draft
+
+mainImage: clients/velocity-builders/blog-queue/images/2026-03-21-real-estate-lead-generation-nova-2026.jpg
 publish_date: 2026-03-21
 internal_links:
   - /services → "lead generation services"
@@ -220,3 +221,12 @@ Lead generation in NoVA isn't about finding the one magic channel. It's about bu
 Stop chasing leads. Start building the system that attracts them.
 
 **Want us to build your lead gen system?** [Book a 20-minute Growth Blueprint →](/contact)
+
+---
+
+Velocity Builders helps real estate agents, lenders, and brokerages build websites and marketing systems that generate and convert leads automatically.
+
+Will Rapuano  
+Founder, Velocity Builders LLC. Business Development Officer at Pruitt Title. Helping real estate agents and loan officers scale with better marketing systems.
+
+[Book a 20-Minute Growth Blueprint →](/contact)

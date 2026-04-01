@@ -49,3 +49,12 @@ While fintechs are nimble, they often lack deep regulatory understanding. **Use 
 Focus on metrics that align with strategic goals. **Track member acquisition costs, mortgage origination growth, digital engagement rates, and ROI on social media investments.** This data-driven approach allows dynamic strategy adjustments, optimizing budget allocation for maximum impact.
 
 The 2026 landscape demands a strategic approach to your social media marketing budget. **Embrace digital tools, enhance member experiences, and leverage regulatory knowledge to not only compete but thrive in a digital-first world.**
+
+---
+
+Velocity Builders helps real estate agents, lenders, and brokerages build websites and marketing systems that generate and convert leads automatically.
+
+Will Rapuano  
+Founder, Velocity Builders LLC. Business Development Officer at Pruitt Title. Helping real estate agents and loan officers scale with better marketing systems.
+
+[Book a 20-Minute Growth Blueprint →](/contact)

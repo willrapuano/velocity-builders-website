@@ -37,3 +37,12 @@ In a financial landscape dominated by fintechs and big banks, credit unions and 
 **Tracking key metrics is vital.** Focus on member acquisition cost, mortgage origination growth, digital engagement rates, and overall ROI. Regular analysis of these metrics allows credit unions to adjust strategies, ensuring their **credit union social media marketing budget** is well-spent. Fine-tune your approach for maximum impact and efficiency.
 
 A carefully crafted **credit union social media marketing budget** is essential for thriving in a digital-first world. Embrace a comprehensive digital playbook, leverage automation, and turn compliance into a competitive edge. Stand strong against fintechs and big banks, and dominate your market.
+
+---
+
+Velocity Builders helps real estate agents, lenders, and brokerages build websites and marketing systems that generate and convert leads automatically.
+
+Will Rapuano  
+Founder, Velocity Builders LLC. Business Development Officer at Pruitt Title. Helping real estate agents and loan officers scale with better marketing systems.
+
+[Book a 20-Minute Growth Blueprint →](/contact)

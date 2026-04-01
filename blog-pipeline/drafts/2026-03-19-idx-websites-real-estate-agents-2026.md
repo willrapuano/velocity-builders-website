@@ -8,7 +8,8 @@ schema: ["BlogPosting", "HowTo"]
 pillar: "tech-tools"
 audience: ["agents", "builders"]
 author: "Will Rapuano"
-status: draft
+
+mainImage: clients/velocity-builders/blog-queue/images/2026-03-19-idx-websites-real-estate-agents-2026.jpg
 publish_date: 2026-03-19
 internal_links:
   - /services → "custom website services"
@@ -214,3 +215,12 @@ No ad spend. No Zillow subscription. Just compounding SEO value from content you
 Your IDX website is the foundation. But it only works if you pair it with local content, CRM automation, and a [follow-up system](/blog/real-estate-follow-up-email-templates) that converts visitors into consults.
 
 **Want us to build your IDX site the right way?** [Book a 20-minute Growth Blueprint →](/contact)
+
+---
+
+Velocity Builders helps real estate agents, lenders, and brokerages build websites and marketing systems that generate and convert leads automatically.
+
+Will Rapuano  
+Founder, Velocity Builders LLC. Business Development Officer at Pruitt Title. Helping real estate agents and loan officers scale with better marketing systems.
+
+[Book a 20-Minute Growth Blueprint →](/contact)

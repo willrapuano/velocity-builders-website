@@ -8,7 +8,8 @@ schema: ["BlogPosting", "FAQPage"]
 category: "Real Estate News"
 audience: ["agents"]
 author: "Will Rapuano"
-status: draft
+
+mainImage: clients/velocity-builders/blog-queue/images/2026-03-27-geek-real-estate-marketing.jpg
 publish_date: 2026-03-27
 internal_links:
   - /services → "marketing systems"
@@ -109,3 +110,12 @@ And in a market this competitive, certainty is the most valuable thing you can h
 ---
 
 *Velocity Builders builds marketing systems for real estate agents, loan officers, and builders. If you want a system that actually generates predictable leads, [we should talk](https://velocity-builders.com/contact).*
+
+---
+
+Velocity Builders helps real estate agents, lenders, and brokerages build websites and marketing systems that generate and convert leads automatically.
+
+Will Rapuano  
+Founder, Velocity Builders LLC. Business Development Officer at Pruitt Title. Helping real estate agents and loan officers scale with better marketing systems.
+
+[Book a 20-Minute Growth Blueprint →](/contact)

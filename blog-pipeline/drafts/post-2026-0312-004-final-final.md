@@ -62,3 +62,12 @@ Don't let competitors corner the digital market. By 2026, agents not using Googl
 For further reading, check out our guide on [optimizing your CRM for improved lead management and conversion rates](/lead-generation/crm-optimization).
 
 Mastering Google Ads for real estate isn't optional—it's essential. Take the leap today and outshine the competition.
+
+---
+
+Velocity Builders helps real estate agents, lenders, and brokerages build websites and marketing systems that generate and convert leads automatically.
+
+Will Rapuano  
+Founder, Velocity Builders LLC. Business Development Officer at Pruitt Title. Helping real estate agents and loan officers scale with better marketing systems.
+
+[Book a 20-Minute Growth Blueprint →](/contact)

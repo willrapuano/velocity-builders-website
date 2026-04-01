@@ -83,3 +83,12 @@ After 90 days, a successful campaign should show increased engagement and visibi
 7. Trends in real estate video marketing
 
 Adopt these five strategies to harness video marketing's power and propel your brand forward in 2026. Don't let the competition outpace you; start crafting compelling video content now and watch your business grow.
+
+---
+
+Velocity Builders helps real estate agents, lenders, and brokerages build websites and marketing systems that generate and convert leads automatically.
+
+Will Rapuano  
+Founder, Velocity Builders LLC. Business Development Officer at Pruitt Title. Helping real estate agents and loan officers scale with better marketing systems.
+
+[Book a 20-Minute Growth Blueprint →](/contact)
