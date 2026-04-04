@@ -23,7 +23,7 @@ export default function ContactPage() {
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-300">Contact</p>
           <h1 className="mt-4 text-4xl font-bold text-white sm:text-5xl">Tell Us What&apos;s Breaking in Your Pipeline.</h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-300">
-            We reply in 1 business day with a clear plan: what to fix first, what to automate, and what to ignore.
+            We reply within 24 hours.
           </p>
         </div>
       </section>
