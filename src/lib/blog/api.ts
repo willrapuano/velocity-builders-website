@@ -4,6 +4,9 @@
  */
 import { client } from "@/sanity/client";
 
+// Blog routes should read fresh published content so newly-published posts don't 404
+const blogClient = client.withConfig({ useCdn: false, perspective: "published" });
+
 // Map Sanity category values to frontend URL slugs
 const SANITY_CATEGORY_TO_SLUG: Record<string, string> = {
   marketingSystems: "marketing-systems",
@@ -72,7 +75,7 @@ function toPostMeta(doc: Record<string, unknown>): PostMeta {
 
 /** Fetch all published blog posts, newest first. */
 export async function getAllPosts(): Promise<PostMeta[]> {
-  const docs = await client.fetch(
+  const docs = await blogClient.fetch(
     `*[_type == "blogPost"] | order(publishedAt desc) {${META_FIELDS}}`,
     {},
     { next: { revalidate: 60 } }
@@ -82,7 +85,7 @@ export async function getAllPosts(): Promise<PostMeta[]> {
 
 /** Fetch all post slugs (for generateStaticParams). */
 export async function getAllPostSlugs(): Promise<string[]> {
-  const docs = await client.fetch(
+  const docs = await blogClient.fetch(
     `*[_type == "blogPost"] { "slug": slug.current }`,
     {},
     { next: { revalidate: 3600 } }
@@ -92,7 +95,7 @@ export async function getAllPostSlugs(): Promise<string[]> {
 
 /** Fetch a single post by its slug. */
 export async function getPostBySlug(slug: string): Promise<Post | null> {
-  const doc = await client.fetch(
+  const doc = await blogClient.fetch(
     `*[_type == "blogPost" && slug.current == $slug][0] {${FULL_FIELDS}}`,
     { slug },
     { next: { revalidate: 60 } }
@@ -117,7 +120,7 @@ export async function getPostsByCategory(
 
   if (sanityCategories.length === 0) return [];
 
-  const docs = await client.fetch(
+  const docs = await blogClient.fetch(
     `*[_type == "blogPost" && category in $cats] | order(publishedAt desc) {${META_FIELDS}}`,
     { cats: sanityCategories },
     { next: { revalidate: 60 } }
