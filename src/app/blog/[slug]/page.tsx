@@ -208,6 +208,9 @@ const portableTextComponents = {
   },
 };
 
+// Allow slugs published after the last build to render via SSR instead of 404
+export const dynamicParams = true;
+
 export async function generateStaticParams() {
   const slugs = await getAllPostSlugs();
   return slugs.map((slug) => ({ slug }));
