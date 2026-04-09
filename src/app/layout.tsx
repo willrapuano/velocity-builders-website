@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { NavBar } from "@/components/NavBar";
 import { Footer } from "@/components/Footer";
+import { Analytics } from "@vercel/analytics/next";
 
 const siteUrl = "https://velocity-builders.com";
 const title = "Velocity Builders | Websites, SEO & Marketing for Real Estate Agents, Lenders & Builders";
@@ -76,6 +77,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
         </main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
