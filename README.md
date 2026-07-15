@@ -70,6 +70,8 @@ The staging command verifies the canonical SHA-256 and only writes a `drafts.*`
 document. Review and publish it manually in Sanity Studio. Governed source,
 metric, and compliance fields are read-only; corrections originate in REbuilder.
 The generic blog publishers fail closed for the `case-studies` category.
+The staging command requires an explicit dataset and refuses `production`
+unless a separately authorized operator supplies `--allow-production`.
 
 Set `NEXT_PUBLIC_REBUILDER_PLATFORM_URL` to the REbuilder application origin to
 enable privacy-safe, idempotent view and engagement signals. If it is unset,

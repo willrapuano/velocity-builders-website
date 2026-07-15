@@ -5,6 +5,12 @@ import { createClient } from "@sanity/client";
 const inputPath = valueAfter("--input");
 if (!inputPath) throw new Error("Usage: npm run case-studies:stage -- --input <release.json> [--dry-run]");
 const dryRun = process.argv.includes("--dry-run");
+const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
+const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET;
+if (!projectId || !dataset) throw new Error("NEXT_PUBLIC_SANITY_PROJECT_ID and NEXT_PUBLIC_SANITY_DATASET are required.");
+if (dataset === "production" && !process.argv.includes("--allow-production")) {
+  throw new Error("Refusing to stage into the production dataset without --allow-production.");
+}
 const envelope = JSON.parse(await readFile(inputPath, "utf8"));
 const projection = envelope.public_projection ?? envelope.publicProjection ?? envelope.projection;
 const expectedHash = envelope.projection_sha256 ?? envelope.projectionSha256;
@@ -34,8 +40,7 @@ if (dryRun) {
 } else {
   const token = process.env.SANITY_API_TOKEN;
   if (!token) throw new Error("SANITY_API_TOKEN is required to stage a projection draft.");
-  const client = createClient({ projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "xifumfa3",
-    dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || "production", apiVersion: "2026-07-15", token, useCdn: false });
+  const client = createClient({ projectId, dataset, apiVersion: "2026-07-15", token, useCdn: false });
   await client.createOrReplace(document);
   console.log(`Staged ${document._id}. Review and publish it manually in Sanity Studio.`);
 }
