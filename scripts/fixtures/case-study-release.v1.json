@@ -1,0 +1,32 @@
+{
+  "projectionSha256": "0472d489c423027e8216174dd63dd103e401f8bf21d78f9e5b71175590cc1c4a",
+  "projection": {
+    "schemaVersion": "rebuilder-case-study-projection-v1",
+    "sourceCaseStudyId": "11111111-1111-4111-8111-111111111111",
+    "sourceVersionId": "22222222-2222-4222-8222-222222222222",
+    "slug": "verified-workflow",
+    "title": "A verified workflow result",
+    "summary": "An evidence-backed summary long enough for the public projection contract.",
+    "challenge": "The team needed a durable workflow.",
+    "approach": "Velocity Builders implemented the governed system.",
+    "outcome": "The verified workflow reduced manual effort.",
+    "publicClientLabel": null,
+    "verifiedMetrics": [
+      {
+        "key": "hours_saved",
+        "label": "Hours saved",
+        "value": 12,
+        "unit": "hours",
+        "comparisonPeriod": null
+      }
+    ],
+    "compliance": [
+      {
+        "key": "results_disclaimer",
+        "exactText": "Results are specific to this engagement and are not guaranteed.",
+        "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    ],
+    "releasedAt": "2026-07-15T18:00:00.000Z"
+  }
+}

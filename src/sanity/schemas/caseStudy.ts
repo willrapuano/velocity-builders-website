@@ -1,41 +1,41 @@
 import { defineField, defineType } from "sanity";
 
+const governed = { readOnly: true } as const;
+
 export const caseStudy = defineType({
   name: "caseStudy",
-  title: "Case Study",
+  title: "REbuilder Case Study Projection",
   type: "document",
+  description: "Approved public projection from REbuilder. Governed fields are read-only; corrections start in REbuilder and arrive as a new projection.",
   fields: [
-    defineField({ name: "title", title: "Title", type: "string", validation: (Rule) => Rule.required() }),
-    defineField({ name: "slug", title: "Slug", type: "slug", options: { source: "title" } }),
-    defineField({ name: "clientName", title: "Client Name", type: "string" }),
-    defineField({ name: "clientType", title: "Client Type", type: "string", options: { list: ["Realtor", "Loan Officer", "Real Estate Team", "Mortgage Company", "Brokerage"] } }),
-    defineField({ name: "coverImage", title: "Cover Image", type: "image", options: { hotspot: true } }),
-    defineField({ name: "excerpt", title: "Excerpt", type: "text", rows: 2 }),
-    defineField({
-      name: "results",
-      title: "Key Results",
-      type: "array",
-      of: [{
-        type: "object",
-        fields: [
-          defineField({ name: "metric", title: "Metric", type: "string" }),
-          defineField({ name: "value", title: "Value", type: "string" }),
-        ],
-        preview: { select: { title: "value", subtitle: "metric" } },
-      }],
-    }),
-    defineField({
-      name: "body",
-      title: "Full Case Study",
-      type: "array",
-      of: [{ type: "block" }, { type: "image", options: { hotspot: true } }],
-    }),
+    defineField({ name: "projectionSchemaVersion", title: "Projection schema", type: "string", ...governed, validation: (Rule) => Rule.required().custom((value) => value === "rebuilder-case-study-projection-v1" || "Unsupported projection schema") }),
+    defineField({ name: "sourceCaseStudyId", title: "REbuilder case study ID", type: "string", ...governed, validation: (Rule) => Rule.required() }),
+    defineField({ name: "sourceVersionId", title: "Immutable REbuilder version ID", type: "string", ...governed, validation: (Rule) => Rule.required() }),
+    defineField({ name: "projectionSha256", title: "Projection SHA-256", type: "string", ...governed, validation: (Rule) => Rule.required().regex(/^[a-f0-9]{64}$/) }),
+    defineField({ name: "title", title: "Title", type: "string", ...governed, validation: (Rule) => Rule.required() }),
+    defineField({ name: "slug", title: "Slug", type: "slug", ...governed, validation: (Rule) => Rule.required() }),
+    defineField({ name: "publicClientLabel", title: "Approved public client label", type: "string", ...governed }),
+    defineField({ name: "summary", title: "Summary", type: "text", rows: 3, ...governed, validation: (Rule) => Rule.required() }),
+    defineField({ name: "challenge", title: "Challenge", type: "text", rows: 6, ...governed, validation: (Rule) => Rule.required() }),
+    defineField({ name: "approach", title: "Approach", type: "text", rows: 6, ...governed, validation: (Rule) => Rule.required() }),
+    defineField({ name: "outcome", title: "Outcome", type: "text", rows: 6, ...governed, validation: (Rule) => Rule.required() }),
+    defineField({ name: "verifiedMetrics", title: "Verified metrics", type: "array", ...governed, of: [{ type: "object", fields: [
+      defineField({ name: "key", title: "Key", type: "string" }),
+      defineField({ name: "label", title: "Label", type: "string" }),
+      defineField({ name: "value", title: "Value", type: "number" }),
+      defineField({ name: "unit", title: "Unit", type: "string" }),
+      defineField({ name: "comparisonPeriod", title: "Comparison period", type: "string" })
+    ], preview: { select: { title: "label", subtitle: "value" } } }] }),
+    defineField({ name: "compliance", title: "Locked compliance language", type: "array", ...governed, of: [{ type: "object", fields: [
+      defineField({ name: "key", title: "Key", type: "string" }),
+      defineField({ name: "exactText", title: "Exact text", type: "text" }),
+      defineField({ name: "sha256", title: "SHA-256", type: "string" })
+    ] }] }),
+    defineField({ name: "releasedAt", title: "Released in REbuilder", type: "datetime", ...governed, validation: (Rule) => Rule.required() }),
     defineField({ name: "featured", title: "Featured", type: "boolean", initialValue: false }),
-    defineField({ name: "publishedAt", title: "Published At", type: "datetime" }),
-    defineField({ name: "seoTitle", title: "SEO Title", type: "string" }),
-    defineField({ name: "seoDescription", title: "SEO Description", type: "text", rows: 2 }),
+    defineField({ name: "coverImage", title: "Cover image", type: "image", options: { hotspot: true } }),
+    defineField({ name: "seoTitle", title: "SEO title", type: "string" }),
+    defineField({ name: "seoDescription", title: "SEO description", type: "text", rows: 2 })
   ],
-  preview: {
-    select: { title: "title", subtitle: "clientType", media: "coverImage" },
-  },
+  preview: { select: { title: "title", subtitle: "projectionSha256", media: "coverImage" } }
 });

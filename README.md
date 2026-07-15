@@ -56,3 +56,21 @@ Set the following env vars in Vercel:
 ## License
 
 © {current-year} Velocity Builders, LLC. All rights reserved.
+## Governed case-study projections
+
+Case studies are not blog posts. Export an explicitly released projection from
+the REbuilder dashboard, then stage it as a Sanity draft:
+
+```bash
+npm run case-studies:stage -- --input ./case-study-release.json --dry-run
+npm run case-studies:stage -- --input ./case-study-release.json
+```
+
+The staging command verifies the canonical SHA-256 and only writes a `drafts.*`
+document. Review and publish it manually in Sanity Studio. Governed source,
+metric, and compliance fields are read-only; corrections originate in REbuilder.
+The generic blog publishers fail closed for the `case-studies` category.
+
+Set `NEXT_PUBLIC_REBUILDER_PLATFORM_URL` to the REbuilder application origin to
+enable privacy-safe, idempotent view and engagement signals. If it is unset,
+the public pages remain functional and emit nothing.
