@@ -76,3 +76,7 @@ unless a separately authorized operator supplies `--allow-production`.
 Set `NEXT_PUBLIC_REBUILDER_PLATFORM_URL` to the REbuilder application origin to
 enable privacy-safe, idempotent view and engagement signals. If it is unset,
 the public pages remain functional and emit nothing.
+
+For shared staging publication, revocation, manual Sanity unpublication, and
+the required acceptance evidence, follow
+[`docs/CASE_STUDY_STAGING_RUNBOOK.md`](docs/CASE_STUDY_STAGING_RUNBOOK.md).
