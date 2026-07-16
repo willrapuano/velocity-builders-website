@@ -202,12 +202,14 @@ export default async function Home() {
                   key={post.slug}
                   className="group flex flex-col overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm hover:shadow-lg transition"
                 >
-                  <div className="aspect-[16/9] overflow-hidden bg-gray-100">
+                  <div className="relative aspect-[16/9] overflow-hidden bg-gray-100">
                     {post.featuredImage ? (
-                      <img
+                      <Image
                         src={post.featuredImage}
                         alt={post.title}
-                        className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        fill
+                        sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     ) : (
                       <Image

@@ -252,8 +252,6 @@ function checkContentTracker(proposedTitle, proposedKeyword) {
   try {
     const content = fs.readFileSync(trackerPath, 'utf8');
     const lines = content.split('\n').filter(l => l.match(/^\d{4}-\d{2}-\d{2}\s*\|/));
-    const thirtyDaysAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);
-
     for (const line of lines) {
       const parts = line.split('|').map(s => s.trim());
       if (parts.length < 5) continue;
@@ -286,7 +284,7 @@ function checkContentTracker(proposedTitle, proposedKeyword) {
         }
       }
     }
-  } catch (e) {
+  } catch {
     // Tracker doesn't exist — not fatal
   }
 

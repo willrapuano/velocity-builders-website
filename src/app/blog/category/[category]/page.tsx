@@ -75,9 +75,15 @@ export default async function CategoryPage({ params }: Props) {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {posts.map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`} className="group block rounded-xl border border-gray-200 bg-white overflow-hidden hover:shadow-lg transition-all">
-                <div className="aspect-video overflow-hidden bg-gray-100">
+                <div className="relative aspect-video overflow-hidden bg-gray-100">
                   {post.featuredImage ? (
-                    <img src={post.featuredImage} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                    <Image
+                      src={post.featuredImage}
+                      alt={post.title}
+                      fill
+                      sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
                   ) : (
                     <Image
                       src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80"

@@ -1,5 +1,4 @@
 import { defineField, defineType } from "sanity";
-import { calloutBlock, tableBlock, accordionBlock } from "./blockTypes";
 
 const PILLARS = [
   { title: "Lead Generation Tactics", value: "lead-generation" },

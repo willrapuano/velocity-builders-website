@@ -11,7 +11,6 @@
 
 const fs = require('fs');
 const path = require('path');
-const crypto = require('crypto');
 
 // --- Config ---
 const DATA_DIR = path.join(__dirname, '..', 'data');
@@ -135,7 +134,6 @@ function generateTitleFromKeyword(keyword, audience, year) {
   const plural = AUDIENCE_LABELS[audience] || audience;
   const wordCount = kw.split(' ').length;
   const vol = keyword.volume || 0;
-  const hasNumber = /\d/.test(kw);
 
   // High-volume keywords (500+) get authority/definitive patterns
   // Low-volume long-tail keywords get action-oriented patterns
@@ -397,7 +395,7 @@ const TOPIC_GENERATORS = {
     return pickRandom(topics);
   },
 
-  'case-studies': (audience, city, year) => {
+  'case-studies': () => {
     const cases = [
       `How a Northern Virginia Agent Went from 12 to 47 Transactions with CRM Automation`,
       `Case Study: DMV Builder Sold 80% of Phase 1 Using Hyper-Local SEO`,
@@ -551,8 +549,6 @@ function generateManifest() {
   for (let i = 0; i < count; i++) {
     const audience = audienceSlots[i];
     const id = generateId(date, i + 1);
-    const needsGeo = false; // Keyword-driven titles don't need random geo
-
     // STRATEGY: Pick keyword first, then map to pillar
     let entry = null;
     const queue = kwQueues[audience] || [];
