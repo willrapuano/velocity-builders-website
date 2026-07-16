@@ -289,7 +289,7 @@ function collectFiles() {
 }
 
 // --- Deduplicate by slug (cornerstones win over pipeline duplicates) ---
-function dedupBySlug(files, dryRun) {
+function dedupBySlug(files) {
   const seen = new Map();
   const results = [];
   for (const f of files) {
@@ -323,7 +323,7 @@ async function main() {
   const allFiles = collectFiles();
   console.log(`📁 Found ${allFiles.length} total source files (before dedup)`);
 
-  const posts = dedupBySlug(allFiles, dryRun);
+  const posts = dedupBySlug(allFiles);
   console.log(`📋 ${posts.length} unique posts to re-publish\n`);
 
   let published = 0;

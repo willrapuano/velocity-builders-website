@@ -1,8 +1,14 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { PortableText } from "@portabletext/react";
+import Image from "next/image";
+import {
+  PortableText,
+  type PortableTextBlock,
+  type PortableTextComponents,
+} from "@portabletext/react";
 import { getAllPostSlugs, getPostBySlug } from "@/lib/blog/api";
 import type { Metadata } from "next";
+import type { ComponentProps } from "react";
 import { Callout } from "@/components/portable-text/Callout";
 import { Table } from "@/components/portable-text/Table";
 import { Accordion } from "@/components/portable-text/Accordion";
@@ -37,18 +43,14 @@ const CTA_OVERRIDES: Record<string, { title: string; body: string; button: strin
 };
 
 /** Extract the plain-text string from a portable-text block's children array. */
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function blockText(value: any): string {
-  return (value?.children ?? []).map((c: any) => c.text ?? "").join("");
+function blockText(value: PortableTextBlock): string {
+  return value.children
+    .map((child) => ("text" in child && typeof child.text === "string" ? child.text : ""))
+    .join("");
 }
 
 // Equal Housing pattern removed — Velocity Builders is not a real estate brokerage (2026-03-29)
 // const EQUAL_HOUSING_RE = /equal\s+housing\s+opportunit/i;
-
-/** Strip leading/trailing asterisks used as markdown bold/italic markers */
-function stripAsterisks(text: string): string {
-  return text.replace(/^\*+|\*+$/g, "").trim();
-}
 
 /** Matches HTML-style comments Sanity sometimes stores as plain text: <!-- ... --> */
 const HTML_COMMENT_RE = /^<!--[\s\S]*?-->$/;
@@ -57,10 +59,9 @@ const HTML_COMMENT_RE = /^<!--[\s\S]*?-->$/;
 const QA_Q_RE = /^Q:\s/;
 const QA_A_RE = /^A:\s/;
 
-const portableTextComponents = {
+const portableTextComponents: PortableTextComponents = {
   block: {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    normal: ({ value, children }: any) => {
+    normal: ({ value, children }) => {
       const raw = blockText(value);
       const trimmed = raw.trim();
 
@@ -139,74 +140,80 @@ const portableTextComponents = {
 
       return <p className="text-gray-700 text-[17px] leading-[1.85] mb-5">{children}</p>;
     },
-    caption: ({ children }: any) => <p className="text-center text-sm italic text-gray-500 mt-2 mb-4">{children}</p>,
-    h2: ({ children }: any) => <h2 className="text-[1.6rem] font-bold text-gray-900 mt-14 mb-5 pb-3 border-b border-gray-200">{children}</h2>,
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    h3: ({ children }: any) => <h3 className="text-xl font-bold text-blue-800 mt-10 mb-4">{children}</h3>,
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    h4: ({ children }: any) => <h4 className="text-base font-semibold text-gray-800 mt-8 mb-3">{children}</h4>,
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    blockquote: ({ children }: any) => (
+    caption: ({ children }) => <p className="text-center text-sm italic text-gray-500 mt-2 mb-4">{children}</p>,
+    h2: ({ children }) => <h2 className="text-[1.6rem] font-bold text-gray-900 mt-14 mb-5 pb-3 border-b border-gray-200">{children}</h2>,
+    h3: ({ children }) => <h3 className="text-xl font-bold text-blue-800 mt-10 mb-4">{children}</h3>,
+    h4: ({ children }) => <h4 className="text-base font-semibold text-gray-800 mt-8 mb-3">{children}</h4>,
+    blockquote: ({ children }) => (
       <blockquote className="border-l-4 border-blue-500 bg-blue-50 px-6 py-4 rounded-r-xl text-gray-700 text-[17px] my-6">
         {children}
       </blockquote>
     ),
   },
   list: {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    bullet: ({ children }: any) => <ul className="text-gray-700 my-4 space-y-2 list-disc pl-6">{children}</ul>,
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    number: ({ children }: any) => <ol className="text-gray-700 my-4 space-y-2 list-decimal pl-6">{children}</ol>,
+    bullet: ({ children }) => <ul className="text-gray-700 my-4 space-y-2 list-disc pl-6">{children}</ul>,
+    number: ({ children }) => <ol className="text-gray-700 my-4 space-y-2 list-decimal pl-6">{children}</ol>,
   },
   listItem: {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    bullet: ({ children }: any) => <li className="text-[17px] leading-[1.8] pl-1">{children}</li>,
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    number: ({ children }: any) => <li className="text-[17px] leading-[1.8] pl-1">{children}</li>,
+    bullet: ({ children }) => <li className="text-[17px] leading-[1.8] pl-1">{children}</li>,
+    number: ({ children }) => <li className="text-[17px] leading-[1.8] pl-1">{children}</li>,
   },
   marks: {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    strong: ({ children }: any) => <strong className="text-gray-900 font-semibold">{children}</strong>,
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    em: ({ children }: any) => <em className="italic">{children}</em>,
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    code: ({ children }: any) => (
+    strong: ({ children }) => <strong className="text-gray-900 font-semibold">{children}</strong>,
+    em: ({ children }) => <em className="italic">{children}</em>,
+    code: ({ children }) => (
       <code className="text-blue-700 bg-blue-50 px-1.5 py-0.5 rounded text-sm">{children}</code>
     ),
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    link: ({ value, children }: any) => (
-      <a href={value?.href} className="text-blue-600 font-medium hover:underline" target={value?.href?.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer">
-        {children}
-      </a>
-    ),
+    link: ({ value, children }) => {
+      const href = typeof value?.href === "string" ? value.href : undefined;
+
+      return (
+        <a href={href} className="text-blue-600 font-medium hover:underline" target={href?.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer">
+          {children}
+        </a>
+      );
+    },
   },
   types: {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    image: ({ value }: any) => {
-      if (!value?.asset?.url && !value?.url) return null;
+    image: ({ value }) => {
+      const asset = isRecord(value.asset) ? value.asset : null;
+      const imageUrl = readString(asset?.url) ?? readString(value.url);
+
+      if (!imageUrl) return null;
+
+      const alt = readString(value.alt) ?? "";
+      const caption = readString(value.caption);
+
       return (
         <figure className="my-10">
-          <img
-            src={value.asset?.url || value.url}
-            alt={value.alt || ""}
+          <Image
+            src={imageUrl}
+            alt={alt}
+            width={1200}
+            height={675}
             className="rounded-xl w-full object-cover"
           />
-          {value.caption && (
-            <figcaption className="text-center text-sm text-gray-500 mt-2">{value.caption}</figcaption>
+          {caption && (
+            <figcaption className="text-center text-sm text-gray-500 mt-2">{caption}</figcaption>
           )}
         </figure>
       );
     },
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    callout: ({ value }: any) => <Callout value={value} />,
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    table: ({ value }: any) => <Table value={value} />,
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    accordion: ({ value }: any) => <Accordion value={value} />,
+    callout: ({ value }) => <Callout value={value as ComponentProps<typeof Callout>["value"]} />,
+    table: ({ value }) => <Table value={value as ComponentProps<typeof Table>["value"]} />,
+    accordion: ({ value }) => <Accordion value={value as ComponentProps<typeof Accordion>["value"]} />,
     // Issue 1c: native Sanity hr block type
     hr: () => <hr className="my-8 border-t border-gray-200" />,
   },
 };
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === "object" && value !== null;
+}
+
+function readString(value: unknown) {
+  return typeof value === "string" ? value : undefined;
+}
 
 // Allow slugs published after the last build to render via SSR instead of 404
 export const dynamicParams = true;
@@ -332,7 +339,14 @@ export default async function BlogPost({ params }: Props) {
         {/* Featured image */}
         {post.featuredImage && (
           <div className="mb-10 rounded-xl overflow-hidden">
-            <img src={post.featuredImage} alt={post.title} className="w-full object-cover" />
+            <Image
+              src={post.featuredImage}
+              alt={post.title}
+              width={1200}
+              height={675}
+              className="w-full object-cover"
+              priority
+            />
           </div>
         )}
 
@@ -341,10 +355,10 @@ export default async function BlogPost({ params }: Props) {
         <div className="blog-body">
           <PortableText
             value={(() => {
-              const body = post.body as any[];
+              const body = post.body as PortableTextBlock[];
               if (!body?.length) return body;
               const first = body[0];
-              const firstText = (first?.children ?? []).map((c: any) => c.text ?? "").join("").trim();
+              const firstText = first ? blockText(first).trim() : "";
               const normalize = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, "");
               if (normalize(firstText) === normalize(post.title)) return body.slice(1);
               return body;

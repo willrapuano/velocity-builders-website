@@ -1,17 +1,47 @@
 import { client } from "@/sanity/client";
 import { fallbackContent, SiteContent } from "@/data/site";
 
+type HomepageDocument = {
+  heroCta1Text?: string;
+  heroCta2Text?: string;
+  heroHeadline?: string;
+  heroSubheadline?: string;
+  stats?: Array<{ label?: string; value?: string }>;
+};
+
+type ServiceDocument = {
+  cta?: string;
+  features?: string[];
+  shortDescription?: string;
+  title?: string;
+};
+
+type SettingsDocument = {
+  address?: string;
+  email?: string;
+  phone?: string;
+  siteName?: string;
+  tagline?: string;
+};
+
+type TestimonialDocument = {
+  company?: string;
+  name?: string;
+  quote?: string;
+  title?: string;
+};
+
 export async function getSiteContent(): Promise<SiteContent> {
   try {
     const [homepage, settings, services, testimonials] = await Promise.all([
-      client.fetch(`*[_type == "homepage"][0]`),
-      client.fetch(`*[_type == "siteSettings"][0]`),
-      client.fetch(`*[_type == "service"] | order(order asc)`),
-      client.fetch(`*[_type == "testimonial"] | order(order asc)`),
+      client.fetch<HomepageDocument | null>(`*[_type == "homepage"][0]`),
+      client.fetch<SettingsDocument | null>(`*[_type == "siteSettings"][0]`),
+      client.fetch<ServiceDocument[]>(`*[_type == "service"] | order(order asc)`),
+      client.fetch<TestimonialDocument[]>(`*[_type == "testimonial"] | order(order asc)`),
     ]);
 
     const mappedServices = services?.length
-      ? services.map((s: any) => ({
+      ? services.map((s) => ({
           title: s.title ?? "",
           description: s.shortDescription ?? "",
           bullets: s.features ?? [],
@@ -20,7 +50,7 @@ export async function getSiteContent(): Promise<SiteContent> {
       : fallbackContent.services;
 
     const mappedTestimonials = testimonials?.length
-      ? testimonials.map((t: any) => ({
+      ? testimonials.map((t) => ({
           quote: t.quote ?? "",
           name: t.name ?? "",
           role: t.title ?? "",
@@ -29,7 +59,10 @@ export async function getSiteContent(): Promise<SiteContent> {
       : fallbackContent.testimonials;
 
     const mappedStats = homepage?.stats?.length
-      ? homepage.stats.map((s: any) => ({ label: s.label, value: s.value }))
+      ? homepage.stats.map((s) => ({
+          label: s.label ?? "",
+          value: s.value ?? "",
+        }))
       : fallbackContent.hero.stats;
 
     return {

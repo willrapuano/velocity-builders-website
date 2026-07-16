@@ -21,7 +21,6 @@ const DRAFTS_DIR = path.join(__dirname, '..', 'drafts');
 const REVIEWS_DIR = path.join(__dirname, '..', 'reviews');
 const DATA_DIR = path.join(__dirname, '..', 'data');
 const REGISTRY_PATH = path.join(DATA_DIR, 'topic-registry.json');
-const PILLARS = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'pillars.json'), 'utf8'));
 
 // --- CLI Args ---
 function parseArgs() {
