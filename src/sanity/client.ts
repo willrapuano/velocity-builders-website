@@ -3,9 +3,13 @@ import imageUrlBuilder from "@sanity/image-url";
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type SanityImageSource = any;
 
-export const projectId = "xifumfa3";
-export const dataset = "production";
+export const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
+export const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET;
 export const apiVersion = "2024-01-01";
+
+if (!projectId || !dataset) {
+  throw new Error("NEXT_PUBLIC_SANITY_PROJECT_ID and NEXT_PUBLIC_SANITY_DATASET are required.");
+}
 
 export const client = createClient({
   projectId,
@@ -28,7 +32,9 @@ export const servicesQuery = `*[_type == "service"] | order(order asc)`;
 export const featuredServicesQuery = `*[_type == "service" && featured == true] | order(order asc)`;
 export const testimonialsQuery = `*[_type == "testimonial"] | order(order asc)`;
 export const featuredTestimonialsQuery = `*[_type == "testimonial" && featured == true] | order(order asc)`;
-export const caseStudiesQuery = `*[_type == "caseStudy"] | order(publishedAt desc)`;
-export const featuredCaseStudiesQuery = `*[_type == "caseStudy" && featured == true] | order(publishedAt desc)`;
+const caseStudyProjection = `{ _id, title, slug, publicClientLabel, summary, challenge, approach, outcome, verifiedMetrics, compliance, releasedAt, projectionSha256, sourceVersionId, featured, "coverImageUrl": coverImage.asset->url }`;
+export const caseStudiesQuery = `*[_type == "caseStudy" && projectionSchemaVersion == "rebuilder-case-study-projection-v1" && defined(projectionSha256) && !(_id in path("drafts.**"))] | order(releasedAt desc) ${caseStudyProjection}`;
+export const featuredCaseStudiesQuery = `*[_type == "caseStudy" && projectionSchemaVersion == "rebuilder-case-study-projection-v1" && defined(projectionSha256) && featured == true && !(_id in path("drafts.**"))] | order(releasedAt desc) ${caseStudyProjection}`;
+export const caseStudyBySlugQuery = `*[_type == "caseStudy" && projectionSchemaVersion == "rebuilder-case-study-projection-v1" && slug.current == $slug && defined(projectionSha256) && !(_id in path("drafts.**"))][0] ${caseStudyProjection}`;
 export const allPostsQuery = `*[_type == "blogPost"] | order(publishedAt desc) { _id, title, slug, excerpt, author, publishedAt, category, tags, "featuredImage": mainImage.asset->url }`;
 export const postBySlugQuery = `*[_type == "blogPost" && slug.current == $slug][0] { ..., "featuredImage": mainImage.asset->url }`;

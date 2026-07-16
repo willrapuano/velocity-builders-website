@@ -8,7 +8,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const locationHub = shouldIndexPage(getQualityForHubPage()) ? ["/locations"] : [];
   const slugs = await getAllPostSlugs();
   const blogSlugs = slugs.map((s) => `/blog/${s}`);
-  const blogCategories = ["/blog/category/marketing-systems", "/blog/category/real-estate-news", "/blog/category/ai-tools", "/blog/category/title-insurance"];
+  const blogCategories = ["/blog/category/marketing-systems", "/blog/category/real-estate-news", "/blog/category/ai-tools", "/blog/category/title-insurance", "/case-studies"];
   const routes = ["", "/about", "/services", "/contact", "/blog", ...blogCategories, "/legal", ...locationHub, ...getIndexableLocationPaths(), ...blogSlugs];
   const lastModified = new Date();
 

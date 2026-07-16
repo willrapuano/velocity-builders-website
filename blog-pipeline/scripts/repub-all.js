@@ -116,6 +116,17 @@ const CATEGORY_MAP = {
   "credit-union-marketing": "marketingSystems",
 };
 
+// Case studies must arrive as approved REbuilder projections. The bulk blog
+// republisher is intentionally incapable of creating or updating them.
+delete CATEGORY_MAP["case-studies"];
+
+function assertNotGovernedCaseStudy(meta, filePath) {
+  const category = String(meta.category || meta.pillar || "").toLowerCase();
+  if (category === "case-studies" || category.includes("case stud")) {
+    throw new Error(`Refusing to republish governed case-study content through the blog pipeline: ${filePath}`);
+  }
+}
+
 // --- Sanity API ---
 async function sanityMutate(mutations, dryRun = false) {
   if (!CONFIG.projectId || !CONFIG.token) {
@@ -284,6 +295,7 @@ function dedupBySlug(files, dryRun) {
   for (const f of files) {
     const content = fs.readFileSync(f.path, "utf-8");
     const { meta, body } = parseFrontmatter(content);
+    assertNotGovernedCaseStudy(meta, f.path);
     if (!meta.title) {
       console.warn(`⚠ Skipping ${path.basename(f.path)} — no title`);
       continue;

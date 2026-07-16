@@ -140,6 +140,15 @@ const CATEGORY_MAP = {
   "direct-mail": "marketingSystems",
 };
 
+// Governed case studies are projections from REbuilder, never blog content.
+// Fail closed even when a legacy draft is marked approved.
+function assertNotGovernedCaseStudy(meta, filePath) {
+  const category = String(meta.category || meta.pillar || "").toLowerCase();
+  if (category === "case-studies" || category.includes("case stud")) {
+    throw new Error(`Refusing to publish governed case-study content through the blog pipeline: ${filePath}`);
+  }
+}
+
 // --- Sanity API ---
 async function sanityMutate(mutations, dryRun = false) {
   if (!CONFIG.projectId || !CONFIG.token) {
@@ -397,6 +406,7 @@ function buildSanityDoc(meta, body) {
 async function publishDraft(filePath, dryRun = false) {
   const content = fs.readFileSync(filePath, "utf-8");
   const { meta, body } = parseFrontmatter(content);
+  assertNotGovernedCaseStudy(meta, filePath);
 
   if (!meta.title) {
     console.error(`⚠ Skipping ${path.basename(filePath)} — no title in frontmatter`);
