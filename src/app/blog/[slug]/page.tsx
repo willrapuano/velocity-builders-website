@@ -44,7 +44,9 @@ const CTA_OVERRIDES: Record<string, { title: string; body: string; button: strin
 
 /** Extract the plain-text string from a portable-text block's children array. */
 function blockText(value: PortableTextBlock): string {
-  return value.children
+  const children = Array.isArray(value.children) ? value.children : [];
+
+  return children
     .map((child) => ("text" in child && typeof child.text === "string" ? child.text : ""))
     .join("");
 }
