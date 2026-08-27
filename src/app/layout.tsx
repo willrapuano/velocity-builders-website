@@ -39,10 +39,6 @@ export const metadata: Metadata = {
     title,
     description,
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
