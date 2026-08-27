@@ -46,7 +46,9 @@ iframe[src*="idx" i],
 [role="img"][aria-label*="bright mls" i],
 [role="img"][aria-label*="brightmls" i],
 [style*="brightmls" i],
-[style*="bright-mls" i] {
+[style*="bright-mls" i],
+[style*="position:fixed" i][style*="bottom:" i][style*="right:" i],
+[style*="position: fixed" i][style*="bottom:" i][style*="right:" i] {
   display: none !important;
   visibility: hidden !important;
 }
