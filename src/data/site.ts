@@ -56,10 +56,10 @@ export const fallbackContent: SiteContent = {
     name: "Velocity Builders, LLC",
     tagline: "The Title Rep Who Helps You Scale",
     summary:
-      "Velocity Builders designs the systems agents, lenders, builders, and banks need to convert listings into lifetime clients. From IDX websites to post-close nurture automation, everything is wired for measurable ROI.",
+      "Velocity Builders designs the systems agents, lenders, builders, and banks need to convert listings into lifetime clients. From conversion-focused websites to post-close nurture automation, everything is wired for measurable ROI.",
     focusAreas: [
       "CRM automation",
-      "IDX-enabled agent websites",
+      "Conversion-focused agent websites",
       "Listing launch marketing",
       "Past client nurture",
       "Co-branded campaigns",
@@ -97,12 +97,12 @@ export const fallbackContent: SiteContent = {
       cta: "Book an automation audit",
     },
     {
-      title: "IDX + Agent Website Program",
+      title: "Agent Website + Lead Capture Program",
       description:
-        "Custom-branded, IDX-enabled marketing sites that convert seller and buyer traffic. Built on Next.js with first-class SEO baked in.",
+        "Custom-branded marketing sites that convert seller and buyer interest. Built on Next.js with first-class SEO and clear lead attribution.",
       bullets: [
         "Fast, ADA-ready, mobile-first experience",
-        "Real-time listing alerts + saved searches",
+        "Lead capture with clear source attribution",
         "Sanity CMS for instant content edits",
       ],
       cta: "Request a site build",

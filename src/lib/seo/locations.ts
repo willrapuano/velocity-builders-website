@@ -45,8 +45,8 @@ export const locationSeed: LocationSeed = {
       summary: "Retention workflows that keep your title and lending partners top-of-mind year-round.",
     },
     {
-      title: "IDX + SEO architecture",
-      summary: "Search-ready local pages connected to property funnels and conversion paths.",
+      title: "Local SEO + conversion architecture",
+      summary: "Search-ready local pages connected to clear lead-capture and conversion paths.",
     },
   ],
   counties: [

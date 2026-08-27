@@ -34,7 +34,7 @@ export interface MarketDataSource {
 
 /**
  * Placeholder source for deterministic pseudo-market values.
- * Swap this with a real feed adapter (MLS, data warehouse, API) without
+ * Swap this with a reviewed market-data adapter (warehouse or API) without
  * changing page templates.
  */
 class SeededMarketDataSource implements MarketDataSource {

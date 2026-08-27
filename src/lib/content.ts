@@ -1,5 +1,6 @@
 import { client } from "@/sanity/client";
 import { fallbackContent, SiteContent } from "@/data/site";
+import { containsBlockedMlsDisplayLanguage } from "@/lib/content-policy";
 
 type HomepageDocument = {
   heroCta1Text?: string;
@@ -40,8 +41,19 @@ export async function getSiteContent(): Promise<SiteContent> {
       client.fetch<TestimonialDocument[]>(`*[_type == "testimonial"] | order(order asc)`),
     ]);
 
-    const mappedServices = services?.length
-      ? services.map((s) => ({
+    const safeHomepage = containsBlockedMlsDisplayLanguage(homepage)
+      ? null
+      : homepage;
+    const safeSettings = containsBlockedMlsDisplayLanguage(settings)
+      ? null
+      : settings;
+
+    const allowedServices = services?.filter(
+      (service) => !containsBlockedMlsDisplayLanguage(service)
+    );
+
+    const mappedServices = allowedServices?.length
+      ? allowedServices.map((s) => ({
           title: s.title ?? "",
           description: s.shortDescription ?? "",
           bullets: s.features ?? [],
@@ -49,8 +61,12 @@ export async function getSiteContent(): Promise<SiteContent> {
         }))
       : fallbackContent.services;
 
-    const mappedTestimonials = testimonials?.length
-      ? testimonials.map((t) => ({
+    const allowedTestimonials = testimonials?.filter(
+      (testimonial) => !containsBlockedMlsDisplayLanguage(testimonial)
+    );
+
+    const mappedTestimonials = allowedTestimonials?.length
+      ? allowedTestimonials.map((t) => ({
           quote: t.quote ?? "",
           name: t.name ?? "",
           role: t.title ?? "",
@@ -58,8 +74,8 @@ export async function getSiteContent(): Promise<SiteContent> {
         }))
       : fallbackContent.testimonials;
 
-    const mappedStats = homepage?.stats?.length
-      ? homepage.stats.map((s) => ({
+    const mappedStats = safeHomepage?.stats?.length
+      ? safeHomepage.stats.map((s) => ({
           label: s.label ?? "",
           value: s.value ?? "",
         }))
@@ -69,18 +85,26 @@ export async function getSiteContent(): Promise<SiteContent> {
       ...fallbackContent,
       company: {
         ...fallbackContent.company,
-        name: settings?.siteName ?? fallbackContent.company.name,
-        tagline: settings?.tagline ?? fallbackContent.company.tagline,
-        email: settings?.email ?? fallbackContent.company.email,
-        phone: settings?.phone ?? fallbackContent.company.phone,
-        hq: settings?.address ?? fallbackContent.company.hq,
+        name: safeSettings?.siteName ?? fallbackContent.company.name,
+        tagline: safeSettings?.tagline ?? fallbackContent.company.tagline,
+        email: safeSettings?.email ?? fallbackContent.company.email,
+        phone: safeSettings?.phone ?? fallbackContent.company.phone,
+        hq: safeSettings?.address ?? fallbackContent.company.hq,
       },
       hero: {
         ...fallbackContent.hero,
-        title: homepage?.heroHeadline ?? fallbackContent.hero.title,
-        subtitle: homepage?.heroSubheadline ?? fallbackContent.hero.subtitle,
-        primaryCta: homepage?.heroCta1Text ?? fallbackContent.hero.primaryCta,
-        secondaryCta: homepage?.heroCta2Text ?? fallbackContent.hero.secondaryCta,
+        title:
+          safeHomepage?.heroHeadline &&
+          !containsBlockedMlsDisplayLanguage(safeHomepage.heroHeadline)
+            ? safeHomepage.heroHeadline
+            : fallbackContent.hero.title,
+        subtitle:
+          safeHomepage?.heroSubheadline &&
+          !containsBlockedMlsDisplayLanguage(safeHomepage.heroSubheadline)
+            ? safeHomepage.heroSubheadline
+            : fallbackContent.hero.subtitle,
+        primaryCta: safeHomepage?.heroCta1Text ?? fallbackContent.hero.primaryCta,
+        secondaryCta: safeHomepage?.heroCta2Text ?? fallbackContent.hero.secondaryCta,
         stats: mappedStats,
       },
       services: mappedServices,
