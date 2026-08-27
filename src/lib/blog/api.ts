@@ -5,6 +5,7 @@
 import { client } from "@/sanity/client";
 import {
   containsBlockedMlsDisplayLanguage,
+  isBlockedPublicAssetUrl,
   PUBLIC_BLOG_CONTENT_FILTER,
 } from "@/lib/content-policy";
 
@@ -56,6 +57,9 @@ const FULL_FIELDS = `
 `;
 
 function toPostMeta(doc: Record<string, unknown>): PostMeta {
+  const featuredImage =
+    typeof doc.featuredImage === "string" ? doc.featuredImage : undefined;
+
   return {
     slug: (doc.slug as string) || "",
     title: (doc.title as string) || "",
@@ -73,7 +77,10 @@ function toPostMeta(doc: Record<string, unknown>): PostMeta {
       SANITY_CATEGORY_TO_SLUG[(doc.category as string) || ""] ||
       "marketing-systems",
     dateISO: (doc.publishedAt as string)?.slice(0, 10) || "",
-    featuredImage: (doc.featuredImage as string) || undefined,
+    featuredImage:
+      featuredImage && !isBlockedPublicAssetUrl(featuredImage)
+        ? featuredImage
+        : undefined,
   };
 }
 
