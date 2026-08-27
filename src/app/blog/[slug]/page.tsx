@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -12,6 +12,7 @@ import type { ComponentProps } from "react";
 import { Callout } from "@/components/portable-text/Callout";
 import { Table } from "@/components/portable-text/Table";
 import { Accordion } from "@/components/portable-text/Accordion";
+import { containsBlockedMlsDisplayLanguage } from "@/lib/content-policy";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -250,6 +251,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function BlogPost({ params }: Props) {
   const { slug } = await params;
+  if (containsBlockedMlsDisplayLanguage(slug)) permanentRedirect("/blog");
   const post = await getPostBySlug(slug);
   if (!post) notFound();
 

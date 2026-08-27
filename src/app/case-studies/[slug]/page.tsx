@@ -7,10 +7,19 @@ import {
 } from "@/lib/case-study-format";
 import { client, caseStudyBySlugQuery } from "@/sanity/client";
 import { CaseStudySignal } from "@/components/CaseStudySignal";
+import { containsBlockedMlsDisplayLanguage } from "@/lib/content-policy";
 
 type CaseStudy = { title: string; summary: string; publicClientLabel?: string | null; challenge: string; approach: string; outcome: string; releasedAt: string; projectionSha256: string; verifiedMetrics: Array<{ key: string; label: string; value: number; unit: CaseStudyMetricUnit; comparisonPeriod?: string | null }>; compliance: Array<{ key: string; exactText: string; sha256: string }> };
 
-async function load(slug: string) { return client.fetch<CaseStudy | null>(caseStudyBySlugQuery, { slug }, { next: { revalidate: 300 } }); }
+async function load(slug: string) {
+  const study = await client.fetch<CaseStudy | null>(
+    caseStudyBySlugQuery,
+    { slug },
+    { next: { revalidate: 300 } }
+  );
+
+  return study && !containsBlockedMlsDisplayLanguage(study) ? study : null;
+}
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params; const study = await load(slug);

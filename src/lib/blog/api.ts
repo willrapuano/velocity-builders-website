@@ -3,6 +3,10 @@
  * Previously read from local markdown files; rewired 2026-03-12.
  */
 import { client } from "@/sanity/client";
+import {
+  containsBlockedMlsDisplayLanguage,
+  PUBLIC_BLOG_CONTENT_FILTER,
+} from "@/lib/content-policy";
 
 // Blog routes should read fresh published content so newly-published posts don't 404
 const blogClient = client.withConfig({ useCdn: false, perspective: "published" });
@@ -76,17 +80,19 @@ function toPostMeta(doc: Record<string, unknown>): PostMeta {
 /** Fetch all published blog posts, newest first. */
 export async function getAllPosts(): Promise<PostMeta[]> {
   const docs = await blogClient.fetch(
-    `*[_type == "blogPost"] | order(publishedAt desc) {${META_FIELDS}}`,
+    `*[_type == "blogPost" && ${PUBLIC_BLOG_CONTENT_FILTER}] | order(publishedAt desc) {${META_FIELDS}}`,
     {},
     { next: { revalidate: 60 } }
   );
-  return (docs as Record<string, unknown>[]).map(toPostMeta);
+  return (docs as Record<string, unknown>[])
+    .filter((doc) => !containsBlockedMlsDisplayLanguage(doc))
+    .map(toPostMeta);
 }
 
 /** Fetch all post slugs (for generateStaticParams). */
 export async function getAllPostSlugs(): Promise<string[]> {
   const docs = await blogClient.fetch(
-    `*[_type == "blogPost"] { "slug": slug.current }`,
+    `*[_type == "blogPost" && ${PUBLIC_BLOG_CONTENT_FILTER}] { "slug": slug.current }`,
     {},
     { next: { revalidate: 3600 } }
   );
@@ -96,11 +102,11 @@ export async function getAllPostSlugs(): Promise<string[]> {
 /** Fetch a single post by its slug. */
 export async function getPostBySlug(slug: string): Promise<Post | null> {
   const doc = await blogClient.fetch(
-    `*[_type == "blogPost" && slug.current == $slug][0] {${FULL_FIELDS}}`,
+    `*[_type == "blogPost" && slug.current == $slug && ${PUBLIC_BLOG_CONTENT_FILTER}][0] {${FULL_FIELDS}}`,
     { slug },
     { next: { revalidate: 60 } }
   );
-  if (!doc) return null;
+  if (!doc || containsBlockedMlsDisplayLanguage(doc)) return null;
   const meta = toPostMeta(doc as Record<string, unknown>);
   return {
     ...meta,
@@ -121,9 +127,11 @@ export async function getPostsByCategory(
   if (sanityCategories.length === 0) return [];
 
   const docs = await blogClient.fetch(
-    `*[_type == "blogPost" && category in $cats] | order(publishedAt desc) {${META_FIELDS}}`,
+    `*[_type == "blogPost" && category in $cats && ${PUBLIC_BLOG_CONTENT_FILTER}] | order(publishedAt desc) {${META_FIELDS}}`,
     { cats: sanityCategories },
     { next: { revalidate: 60 } }
   );
-  return (docs as Record<string, unknown>[]).map(toPostMeta);
+  return (docs as Record<string, unknown>[])
+    .filter((doc) => !containsBlockedMlsDisplayLanguage(doc))
+    .map(toPostMeta);
 }

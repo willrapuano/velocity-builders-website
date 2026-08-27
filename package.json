@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "test:content-policy": "node --test scripts/content-policy.test.mjs",
     "case-studies:stage": "node scripts/stage-case-study-projection.mjs"
   },
   "dependencies": {
