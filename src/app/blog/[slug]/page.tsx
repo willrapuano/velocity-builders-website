@@ -1,4 +1,4 @@
-import { notFound, permanentRedirect } from "next/navigation";
+import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -228,6 +228,9 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
+  if (containsBlockedMlsDisplayLanguage(slug)) {
+    return { robots: { index: false, follow: false } };
+  }
   const post = await getPostBySlug(slug);
   if (!post) return {};
   const title = post.seoTitle || post.title;
@@ -251,7 +254,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function BlogPost({ params }: Props) {
   const { slug } = await params;
-  if (containsBlockedMlsDisplayLanguage(slug)) permanentRedirect("/blog");
+  // A redirect lets search engines retain blocked legacy URLs and cached
+  // snippets. A real 404 is the removal signal and prevents client-side visits
+  // from inheriting old article content through the redirect target.
+  if (containsBlockedMlsDisplayLanguage(slug)) notFound();
   const post = await getPostBySlug(slug);
   if (!post) notFound();
 
