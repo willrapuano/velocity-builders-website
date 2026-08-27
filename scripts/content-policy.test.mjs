@@ -84,10 +84,24 @@ test("the runtime guard removes conditional and dynamically injected badges", ()
   assert.match(runtimeGuardSource, /element\.remove\(\)/);
 });
 
+test("the runtime guard removes anonymous fixed bottom-right overlays", () => {
+  assert.match(runtimeGuardSource, /function isBottomRightOverlay/);
+  assert.match(runtimeGuardSource, /style\.position !== "fixed"/);
+  assert.match(runtimeGuardSource, /getBoundingClientRect/);
+  assert.match(runtimeGuardSource, /window\.innerWidth - 96/);
+  assert.match(runtimeGuardSource, /window\.innerHeight - 96/);
+  assert.match(runtimeGuardSource, /Element\.prototype\.attachShadow/);
+  assert.match(runtimeGuardSource, /shadowRoots\.set\(this, root\)/);
+});
+
 test("critical BrightMLS selectors fail closed before JavaScript executes", () => {
   assert.match(globalCssSource, /img\[src\*="brightmls" i\]/);
   assert.match(globalCssSource, /iframe\[src\*="brightmls" i\]/);
   assert.match(globalCssSource, /display: none !important/);
+  assert.match(
+    globalCssSource,
+    /\[style\*="position:fixed" i\]\[style\*="bottom:" i\]\[style\*="right:" i\]/,
+  );
 });
 
 test("public GROQ filter covers text, metadata, and image attribution", () => {
