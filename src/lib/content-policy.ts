@@ -5,6 +5,15 @@
 export const BLOCKED_MLS_DISPLAY_PATTERN =
   /\bidx\b|bright\s*mls|brightmls|internet data exchange/i;
 
+/**
+ * Pixel-level review found prohibited IDX display language baked into this
+ * Sanity image even though its filename, alt text, and CMS metadata were clean.
+ * Match the immutable asset digest so URL transforms cannot make it public
+ * again through a listing card, article hero, Open Graph image, or body block.
+ */
+export const BLOCKED_PUBLIC_ASSET_PATTERN =
+  /0a2cacda999999cdec3d43150dbf59a151e702b9/i;
+
 const GROQ_BLOCKED_TERMS = [
   "*idx*",
   "*bright mls*",
@@ -80,4 +89,10 @@ export function containsBlockedMlsDisplayLanguage(value: unknown): boolean {
   }
 
   return false;
+}
+
+export function isBlockedPublicAssetUrl(value: unknown): boolean {
+  return (
+    typeof value === "string" && BLOCKED_PUBLIC_ASSET_PATTERN.test(value)
+  );
 }

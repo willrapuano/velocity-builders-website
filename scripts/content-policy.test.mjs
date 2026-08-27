@@ -4,8 +4,13 @@ import test from "node:test";
 
 import {
   containsBlockedMlsDisplayLanguage,
+  isBlockedPublicAssetUrl,
   PUBLIC_BLOG_CONTENT_FILTER,
 } from "../src/lib/content-policy.ts";
+const blogApiSource = await readFile(
+  new URL("../src/lib/blog/api.ts", import.meta.url),
+  "utf8",
+);
 
 const blogPostPageSource = await readFile(
   new URL("../src/app/blog/[slug]/page.tsx", import.meta.url),
@@ -38,6 +43,25 @@ test("allows honest website and lead-capture language", () => {
   };
 
   assert.equal(containsBlockedMlsDisplayLanguage(allowed), false);
+});
+
+test("blocks the pixel-only IDX image by immutable Sanity asset digest", () => {
+  const blockedAsset =
+    "https://cdn.sanity.io/images/xifumfa3/production/0a2cacda999999cdec3d43150dbf59a151e702b9-1376x768.png";
+
+  assert.equal(isBlockedPublicAssetUrl(blockedAsset), true);
+  assert.equal(isBlockedPublicAssetUrl(`${blockedAsset}?w=1200&fit=max`), true);
+  assert.equal(
+    isBlockedPublicAssetUrl(
+      "https://cdn.sanity.io/images/xifumfa3/production/b650cebe21daa41a2df4fb5ad34f0c896136ae8a-1376x768.png",
+    ),
+    false,
+  );
+});
+
+test("all public blog image render paths apply the pixel-level denylist", () => {
+  assert.match(blogApiSource, /!isBlockedPublicAssetUrl\(featuredImage\)/);
+  assert.match(blogPostPageSource, /isBlockedPublicAssetUrl\(imageUrl\)/);
 });
 
 test("public GROQ filter covers text, metadata, and image attribution", () => {

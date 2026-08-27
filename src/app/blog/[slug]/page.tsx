@@ -12,7 +12,10 @@ import type { ComponentProps } from "react";
 import { Callout } from "@/components/portable-text/Callout";
 import { Table } from "@/components/portable-text/Table";
 import { Accordion } from "@/components/portable-text/Accordion";
-import { containsBlockedMlsDisplayLanguage } from "@/lib/content-policy";
+import {
+  containsBlockedMlsDisplayLanguage,
+  isBlockedPublicAssetUrl,
+} from "@/lib/content-policy";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -182,7 +185,7 @@ const portableTextComponents: PortableTextComponents = {
       const asset = isRecord(value.asset) ? value.asset : null;
       const imageUrl = readString(asset?.url) ?? readString(value.url);
 
-      if (!imageUrl) return null;
+      if (!imageUrl || isBlockedPublicAssetUrl(imageUrl)) return null;
 
       const alt = readString(value.alt) ?? "";
       const caption = readString(value.caption);
