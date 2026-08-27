@@ -11,13 +11,21 @@ const blogApiSource = await readFile(
   new URL("../src/lib/blog/api.ts", import.meta.url),
   "utf8",
 );
+const rootLayoutSource = await readFile(
+  new URL("../src/app/layout.tsx", import.meta.url),
+  "utf8",
+);
+const runtimeGuardSource = await readFile(
+  new URL("../public/mls-display-guard.js", import.meta.url),
+  "utf8",
+);
+const globalCssSource = await readFile(
+  new URL("../src/app/globals.css", import.meta.url),
+  "utf8",
+);
 
 const blogPostPageSource = await readFile(
   new URL("../src/app/blog/[slug]/page.tsx", import.meta.url),
-  "utf8",
-);
-const rootLayoutSource = await readFile(
-  new URL("../src/app/layout.tsx", import.meta.url),
   "utf8",
 );
 
@@ -62,6 +70,24 @@ test("blocks the pixel-only IDX image by immutable Sanity asset digest", () => {
 test("all public blog image render paths apply the pixel-level denylist", () => {
   assert.match(blogApiSource, /!isBlockedPublicAssetUrl\(featuredImage\)/);
   assert.match(blogPostPageSource, /isBlockedPublicAssetUrl\(imageUrl\)/);
+});
+
+test("the root layout loads the MLS display guard before hydration", () => {
+  assert.match(rootLayoutSource, /src="\/mls-display-guard\.js"/);
+  assert.match(rootLayoutSource, /strategy="beforeInteractive"/);
+});
+
+test("the runtime guard removes conditional and dynamically injected badges", () => {
+  assert.match(runtimeGuardSource, /MutationObserver/);
+  assert.match(runtimeGuardSource, /bright\[\\s_-\]\*mls\|brightmls\|\\bidx\\b/);
+  assert.match(runtimeGuardSource, /data-rebuilder-mls-display-blocked/);
+  assert.match(runtimeGuardSource, /element\.remove\(\)/);
+});
+
+test("critical BrightMLS selectors fail closed before JavaScript executes", () => {
+  assert.match(globalCssSource, /img\[src\*="brightmls" i\]/);
+  assert.match(globalCssSource, /iframe\[src\*="brightmls" i\]/);
+  assert.match(globalCssSource, /display: none !important/);
 });
 
 test("public GROQ filter covers text, metadata, and image attribution", () => {
