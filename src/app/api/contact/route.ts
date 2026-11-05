@@ -1,6 +1,23 @@
 import { NextResponse } from "next/server";
 
+import {
+  clientIpFromHeaders,
+  createRateLimiter,
+  escapeHtml,
+  validateContactPayload,
+} from "@/lib/contact-form";
+
+// Module-level so the counter survives across warm invocations of one instance.
+const allowSubmission = createRateLimiter();
+
 export async function POST(request: Request) {
+  if (!allowSubmission(clientIpFromHeaders(request.headers))) {
+    return NextResponse.json(
+      { ok: false, error: "Too many submissions, please try again later" },
+      { status: 429 },
+    );
+  }
+
   const formData = await request.formData();
   const payload = {
     name: formData.get("name")?.toString() ?? "",
@@ -10,9 +27,10 @@ export async function POST(request: Request) {
     submittedAt: new Date().toISOString(),
   };
 
-  // Validate required fields
-  if (!payload.name || !payload.email || !payload.message) {
-    return NextResponse.json({ ok: false, error: "Missing required fields" }, { status: 400 });
+  // Validate required fields, size caps and email shape
+  const validationError = validateContactPayload(payload);
+  if (validationError) {
+    return NextResponse.json({ ok: false, error: validationError }, { status: 400 });
   }
 
   const webhookUrl = process.env.CONTACT_WEBHOOK_URL;
@@ -38,6 +56,12 @@ export async function POST(request: Request) {
 
   // Option 2: Resend email API
   if (!delivered && resendKey) {
+    const safe = {
+      name: escapeHtml(payload.name),
+      email: escapeHtml(payload.email),
+      company: escapeHtml(payload.company || "—"),
+      message: escapeHtml(payload.message).replace(/\r?\n/g, "<br />"),
+    };
     try {
       const res = await fetch("https://api.resend.com/emails", {
         method: "POST",
@@ -51,14 +75,26 @@ export async function POST(request: Request) {
           subject: `New Contact Form: ${payload.name} — ${payload.company || "No company"}`,
           html: `
             <h2>New Contact Form Submission</h2>
-            <p><strong>Name:</strong> ${payload.name}</p>
-            <p><strong>Email:</strong> ${payload.email}</p>
-            <p><strong>Company:</strong> ${payload.company || "—"}</p>
+            <p><strong>Name:</strong> ${safe.name}</p>
+            <p><strong>Email:</strong> ${safe.email}</p>
+            <p><strong>Company:</strong> ${safe.company}</p>
             <p><strong>Message:</strong></p>
-            <p>${payload.message}</p>
+            <p>${safe.message}</p>
             <hr />
             <p style="color: #666; font-size: 12px;">Submitted ${payload.submittedAt}</p>
           `,
+          text: [
+            "New Contact Form Submission",
+            "",
+            `Name: ${payload.name}`,
+            `Email: ${payload.email}`,
+            `Company: ${payload.company || "—"}`,
+            "",
+            "Message:",
+            payload.message,
+            "",
+            `Submitted ${payload.submittedAt}`,
+          ].join("\n"),
         }),
       });
       if (res.ok) delivered = true;
