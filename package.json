@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "test:content-policy": "node --test scripts/content-policy.test.mjs",
-    "case-studies:stage": "node scripts/stage-case-study-projection.mjs"
+    "case-studies:stage": "node scripts/stage-case-study-projection.mjs",
+    "test:contact-form": "node --test scripts/contact-form.test.mjs"
   },
   "dependencies": {
     "@sanity/client": "^7.23.2",
